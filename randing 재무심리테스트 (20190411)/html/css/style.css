@@ -1,0 +1,849 @@
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NanumGothic'), url(https://fonts.gstatic.com/s/nanumgothic/v14/PN_3Rfi-oW3hYwmKDpxS7F_D89jb.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(https://fonts.gstatic.com/s/nanumgothic/v14/PN_oRfi-oW3hYwmKDpxS7F_LQv3Lw1sj.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    font-size: 12px;
+    overflow: hidden;
+    min-width: 370px;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+  ul.bg li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  ul.bg li h1 {
+    width: 80%;
+    height: 150px;
+    margin: 10px auto;
+    background-repeat: no-repeat;
+  }
+  ul.bg li.bg3 {
+    background-image: url(../img/dd.png);
+    background-position: 37% 50%;
+    background-size: cover;
+  }
+  ul.bg li.bg3 h1 {
+    background-image: url(../img/LOGO3.png);
+    background-size: contain;
+  }
+  ul.bg li.bg2 {
+    background-image: url(../img/5.png);
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  ul.bg li.bg2 h1 {
+    background-image: url(../img/LOGO2.png);
+    background-size: contain;
+  }
+  ul.bg li.bg1 {
+    background-image: url(../img/00.png);
+    background-position: 73% 50%;
+    background-size: cover;
+  }
+  ul.bg li.bg1 h1 {
+    background-image: url(../img/LOGO1.png);
+    background-size: contain;
+  }
+  div.btns {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    bottom: 130px;
+  }
+  div.btns div.btn {
+    width: 30%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  div.btns div.btn:hover {
+    transform: scale(1.1);
+  }
+  div.btns div.btn_left {
+    float: left;
+    margin-left: 15%;
+    background-image: url(../img/btn_man.png);
+  }
+  div.btns div.btn_right {
+    float: right;
+    margin-right: 15%;
+    background-image: url(../img/btn_woman.png);
+  }
+  div.texts {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-sizing: border-box;
+    padding-top: 20px;
+  }
+  div.texts p {
+    width: 100%;
+    line-height: 20px;
+    margin: 0px auto;
+    text-align: center;
+    font-weight: 400;
+    color: white;
+  }
+  div.qa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../img/Qabg.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  div.qa .qu h1 {
+    position: absolute;
+    top: 200px;
+    min-width: 320px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  div.qa .qa_wrap {
+    max-width: 1200px;
+    margin: 0px auto;
+  }
+  div.qa .qa_wrap .btnss {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 260px;
+    text-align: center;
+  }
+  div.qa .qa_wrap .btnss .Qa {
+    width: 30%;
+    height: 48%;
+    background-size: contain;
+    line-height: 110px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  div.qa .qa_wrap .btnss .Qa:hover {
+    transform: scale(1.1);
+  }
+  div.qa .qa_wrap .btnss .qyes {
+    float: left;
+    margin-left: 10%;
+    text-align: center;
+  }
+  div.qa .qa_wrap .btnss .qno {
+    float: right;
+    margin-right: 10%;
+    text-align: center;
+  }
+  div.qa .qa_wrap .btnss .q10 {
+    display: inline-block;
+    margin-top: -10px;
+  }
+  div.qa .qa_wrap .btnss #qa1Yes,
+  div.qa .qa_wrap .btnss #qa4Yes,
+  div.qa .qa_wrap .btnss #qa5Yes,
+  div.qa .qa_wrap .btnss #qa6Yes,
+  div.qa .qa_wrap .btnss #qa8Yes,
+  div.qa .qa_wrap .btnss #qa9Yes {
+    background-image: url(../img/btn_yellow_yes.png);
+  }
+  div.qa .qa_wrap .btnss #qa1No,
+  div.qa .qa_wrap .btnss #qa4No,
+  div.qa .qa_wrap .btnss #qa5No,
+  div.qa .qa_wrap .btnss #qa6No,
+  div.qa .qa_wrap .btnss #qa8No,
+  div.qa .qa_wrap .btnss #qa9No {
+    background-image: url(../img/btn_red_no.png);
+  }
+  div.qa .qa_wrap .btnss #qa2Yes {
+    background-image: url(../img/btn_yellow_a2y.png);
+  }
+  div.qa .qa_wrap .btnss #qa2No {
+    background-image: url(../img/btn_red_a2n.png);
+  }
+  div.qa .qa_wrap .btnss #qa3Yes {
+    background-image: url(../img/btn_yellow_a3y.png);
+  }
+  div.qa .qa_wrap .btnss #qa3No {
+    background-image: url(../img/btn_red_a3n.png);
+  }
+  div.qa .qa_wrap .btnss #qa7Yes {
+    background-image: url(../img/btn_yellow_a7y.png);
+  }
+  div.qa .qa_wrap .btnss #qa7No {
+    background-image: url(../img/btn_red_a7n.png);
+  }
+  div.qa .qa_wrap .btnss #qa10a1 {
+    background-image: url(../img/btn_red_q101.png);
+  }
+  div.qa .qa_wrap .btnss #qa10a2 {
+    background-image: url(../img/btn_yellow_q102.png);
+  }
+  div.qa .qa_wrap .btnss #qa10a3 {
+    background-image: url(../img/btn_red_q103.png);
+  }
+  div.qa .qa_wrap .btnss #qa10a4 {
+    background-image: url(../img/btn_yellow_q104.png);
+  }
+  .bot_bar {
+    width: 100%;
+    height: 100px;
+    background: hotpink;
+    position: absolute;
+    bottom: 0px;
+  }
+  .bot_bar .bar_wrap {
+    max-width: 800px;
+    margin: 0px auto;
+    height: 100%;
+  }
+  .bot_bar .bar_wrap h3 {
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    padding-top: 10px;
+    font-size: 1.4rem;
+    color: white;
+    text-align: center;
+  }
+  .bot_bar .bar_wrap div.inputs {
+    width: 95%;
+    line-height: 30px;
+    margin: 0px auto;
+  }
+  .bot_bar .bar_wrap div.inputs input {
+    display: inline-block;
+    background-color: #eeeeee;
+    border: 0px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+  .bot_bar .bar_wrap div.inputs input.name {
+    height: 30px;
+    width: 25%;
+    margin-left: 10px;
+  }
+  .bot_bar .bar_wrap div.inputs input.phone {
+    height: 30px;
+    width: 40%;
+  }
+  .bot_bar .bar_wrap div.inputs input.submit_btn {
+    width: 25%;
+    height: 30px;
+    background-image: url(../img/sub_btn.png);
+    background-color: hotpink;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: center;
+    background-size: contain;
+  }
+  .consult_wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #f2e2cb;
+    overflow-y: scroll;
+  }
+  .consult_wrap div.main_wrap {
+    max-width: 1200px;
+    margin: 60px auto;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  .consult_wrap div.main_wrap h2 {
+    color: #6a211b;
+    font-size: 2.1rem;
+  }
+  .consult_wrap div.main_wrap h1 {
+    color: #6a211b;
+    font-size: 2.1rem;
+    line-height: 3rem;
+  }
+  .consult_wrap div.main_wrap h1 span {
+    color: #b9626a;
+  }
+  .consult_wrap div.main_wrap p {
+    width: 80%;
+    color: #575350;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+    margin: 0px auto;
+    text-align: center;
+  }
+  .consult_wrap div.main_wrap p span {
+    font-weight: bold;
+  }
+  .consult_wrap div.main_wrap div.icons {
+    width: 100%;
+    max-width: 800px;
+    height: 200px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  .consult_wrap div.main_wrap div.icons div.icon {
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .consult_wrap div.main_wrap div.icons div.icon_plus {
+    width: 10%;
+    height: 100%;
+    background-image: url(../img/consult_icon_plus.png);
+  }
+  .consult_wrap div.main_wrap div.icons div.icon_left {
+    background-image: url(../img/consult_icon1.png);
+  }
+  .consult_wrap div.main_wrap div.icons div.icon_right {
+    background-image: url(../img/consult_icon2.png);
+  }
+  .consult_wrap div.consult_inputs {
+    width: 90%;
+    max-width: 600px;
+    margin: 0px auto;
+  }
+  .consult_wrap div.consult_inputs ul {
+    padding: 0px;
+  }
+  .consult_wrap div.consult_inputs ul li {
+    height: 40px;
+    display: block;
+    margin-bottom: 25px;
+  }
+  .consult_wrap div.consult_inputs ul li div {
+    width: 25%;
+    height: 100%;
+    float: left;
+    line-height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #d65569;
+    text-align: center;
+    color: #d65569;
+    font-weight: bold;
+    border-radius: 150px;
+    font-size: 1.1rem;
+    margin-left: 2%;
+  }
+  .consult_wrap div.consult_inputs ul li input {
+    width: 60%;
+    margin-left: 2%;
+    height: 100%;
+    outline: none;
+    border: 0px;
+    background: white;
+    border-radius: 15px;
+  }
+  .consult_wrap div.consult_inputs ul li input.name {
+    width: 40%;
+  }
+  .consult_wrap div.consult_inputs p {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .consult_wrap div.consult_inputs p input {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+  .consult_wrap div.consult_inputs div.sub_btn {
+    width: 300px;
+    height: 80px;
+    background-color: #e94782;
+    margin: 20px auto;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+  }
+  .result_wrap {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/result1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    overflow-y: scroll;
+  }
+  .result_wrap div.wrap {
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .result_wrap div.wrap h1 {
+    width: 80%;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
+  .result_wrap div.wrap .result1 {
+    background-image: url(../img/result4_h1.png);
+  }
+  .result_wrap div.wrap .result2 {
+    background-image: url(../img/result2_h1.png);
+  }
+  .result_wrap div.wrap .result3 {
+    background-image: url(../img/result3_h1.png);
+  }
+  .result_wrap div.wrap .result4 {
+    background-image: url(../img/result1_h1.png);
+  }
+  .result_wrap div.wrap p {
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    color: #5a7b8c;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+  }
+  .result_wrap div.wrap p span {
+    font-weight: bold;
+  }
+  .result_wrap div.wrap main {
+    margin-top: 50px;
+  }
+  .result_wrap div.wrap main p {
+    width: 80%;
+    margin: 30px auto;
+    color: #2d343c;
+  }
+  .result_wrap div.wrap .label {
+    width: 80%;
+    height: 50px;
+    background-color: #2d343c;
+    color: white;
+    line-height: 50px;
+    border-radius: 150px;
+    margin: 0px auto;
+  }
+}
+@media screen and (min-width: 481px) {
+  html,
+  body {
+    min-width: 1200px;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+  ul.bg li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: top;
+  }
+  ul.bg li.bg3 {
+    background-image: url(../img/index_main2.jpg);
+  }
+  ul.bg li.bg2 {
+    background-image: url(../img/index_main1.jpg);
+  }
+  ul.bg li.bg1 {
+    background-image: url(../img/index_main0.jpg);
+  }
+  div.btns {
+    width: 50%;
+    height: 180px;
+    position: absolute;
+    left: 50%;
+    bottom: 130px;
+    transform: translateX(-50%);
+  }
+  div.btns div.btn {
+    width: 30%;
+    height: 100%;
+    min-width: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  div.btns div.btn:hover {
+    transform: scale(1.1);
+  }
+  div.btns div.btn_left {
+    float: left;
+    margin-left: 5%;
+    background-image: url(../img/btn_man.png);
+  }
+  div.btns div.btn_right {
+    float: right;
+    margin-right: 5%;
+    background-image: url(../img/btn_woman.png);
+  }
+  div.texts {
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  div.texts p {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0px auto;
+    text-align: left;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+  }
+  div.qa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../img/Qabg.jpg);
+    background-size: cover;
+  }
+  div.qa .qu {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%);
+  }
+  div.qa .qu h1 {
+    text-align: center;
+  }
+  div.qa .qa_wrap {
+    max-width: 1200px;
+    margin: 0px auto;
+  }
+  div.qa .qa_wrap .btnss {
+    position: absolute;
+    width: 50%;
+    height: 200px;
+    top: 55%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  div.qa .qa_wrap .btnss .Qa {
+    width: 20%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    line-height: 190px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  div.qa .qa_wrap .btnss .Qa:hover {
+    transform: scale(1.1);
+  }
+  div.qa .qa_wrap .btnss .qyes {
+    float: left;
+    margin-left: 20%;
+    text-align: center;
+  }
+  div.qa .qa_wrap .btnss .qno {
+    float: right;
+    margin-right: 20%;
+    text-align: center;
+  }
+  div.qa .qa_wrap .btnss .q10 {
+    display: inline-block;
+    margin: 10px;
+    margin-top: 0px;
+  }
+  div.qa .qa_wrap .btnss #qa1Yes,
+  div.qa .qa_wrap .btnss #qa4Yes,
+  div.qa .qa_wrap .btnss #qa5Yes,
+  div.qa .qa_wrap .btnss #qa6Yes,
+  div.qa .qa_wrap .btnss #qa8Yes,
+  div.qa .qa_wrap .btnss #qa9Yes {
+    background-image: url(../img/btn_yellow_yes.png);
+  }
+  div.qa .qa_wrap .btnss #qa1No,
+  div.qa .qa_wrap .btnss #qa4No,
+  div.qa .qa_wrap .btnss #qa5No,
+  div.qa .qa_wrap .btnss #qa6No,
+  div.qa .qa_wrap .btnss #qa8No,
+  div.qa .qa_wrap .btnss #qa9No {
+    background-image: url(../img/btn_red_no.png);
+  }
+  div.qa .qa_wrap .btnss #qa2Yes {
+    background-image: url(../img/btn_yellow_a2y.png);
+  }
+  div.qa .qa_wrap .btnss #qa2No {
+    background-image: url(../img/btn_red_a2n.png);
+  }
+  div.qa .qa_wrap .btnss #qa3Yes {
+    background-image: url(../img/btn_yellow_a3y.png);
+  }
+  div.qa .qa_wrap .btnss #qa3No {
+    background-image: url(../img/btn_red_a3n.png);
+  }
+  div.qa .qa_wrap .btnss #qa7Yes {
+    background-image: url(../img/btn_yellow_a7y.png);
+  }
+  div.qa .qa_wrap .btnss #qa7No {
+    background-image: url(../img/btn_red_a7n.png);
+  }
+  div.qa .qa_wrap .btnss #qa10a1 {
+    background-image: url(../img/btn_red_q101.png);
+  }
+  div.qa .qa_wrap .btnss #qa10a2 {
+    background-image: url(../img/btn_yellow_q102.png);
+  }
+  div.qa .qa_wrap .btnss #qa10a3 {
+    background-image: url(../img/btn_red_q103.png);
+  }
+  div.qa .qa_wrap .btnss #qa10a4 {
+    background-image: url(../img/btn_yellow_q104.png);
+  }
+  .bot_bar {
+    width: 100%;
+    height: 70px;
+    background: hotpink;
+    position: absolute;
+    bottom: 0px;
+  }
+  .bot_bar .bar_wrap {
+    max-width: 800px;
+    margin: 0px auto;
+    height: 100%;
+  }
+  .bot_bar .bar_wrap h3 {
+    width: 30%;
+    float: left;
+    height: 100%;
+    line-height: 70px;
+    font-size: 1.4rem;
+    color: white;
+    padding-left: 10px;
+  }
+  .bot_bar .bar_wrap div.inputs {
+    width: 60%;
+    float: left;
+    line-height: 70px;
+  }
+  .bot_bar .bar_wrap div.inputs input {
+    display: inline-block;
+    background-color: lightgray;
+    border: 0px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+  .bot_bar .bar_wrap div.inputs input.name {
+    height: 30px;
+    width: 19%;
+  }
+  .bot_bar .bar_wrap div.inputs input.phone {
+    height: 30px;
+    width: 50%;
+  }
+  .bot_bar .bar_wrap div.inputs input.submit_btn {
+    width: 25%;
+    height: 30px;
+    background-image: url(../img/sub_btn.png);
+    background-color: hotpink;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .consult_wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #f2e2cb;
+  }
+  .consult_wrap div.main_wrap {
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+  }
+  .consult_wrap div.main_wrap h2 {
+    color: #6a211b;
+    font-size: 2.2rem;
+  }
+  .consult_wrap div.main_wrap h1 {
+    color: #6a211b;
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+  .consult_wrap div.main_wrap h1 span {
+    color: #b9626a;
+  }
+  .consult_wrap div.main_wrap p {
+    color: #575350;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+  .consult_wrap div.main_wrap p span {
+    font-weight: bold;
+  }
+  .consult_wrap div.main_wrap div.icons {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+  .consult_wrap div.main_wrap div.icons div.icon {
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .consult_wrap div.main_wrap div.icons div.icon_plus {
+    width: 10%;
+    height: 100%;
+    background-image: url(../img/consult_icon_plus.png);
+  }
+  .consult_wrap div.main_wrap div.icons div.icon_left {
+    background-image: url(../img/consult_icon1.png);
+  }
+  .consult_wrap div.main_wrap div.icons div.icon_right {
+    background-image: url(../img/consult_icon2.png);
+  }
+  .consult_wrap div.consult_inputs {
+    max-width: 600px;
+    margin: 0px auto;
+  }
+  .consult_wrap div.consult_inputs ul {
+    padding: 0px;
+  }
+  .consult_wrap div.consult_inputs ul li {
+    height: 40px;
+    display: block;
+    margin-bottom: 25px;
+  }
+  .consult_wrap div.consult_inputs ul li div {
+    width: 20%;
+    height: 100%;
+    float: left;
+    line-height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #d65569;
+    text-align: center;
+    color: #d65569;
+    font-weight: bold;
+    border-radius: 150px;
+    font-size: 1.2rem;
+    margin-left: 20px;
+  }
+  .consult_wrap div.consult_inputs ul li input {
+    width: 60%;
+    margin-left: 2%;
+    height: 100%;
+    outline: none;
+    border: 0px;
+    background: white;
+    border-radius: 15px;
+  }
+  .consult_wrap div.consult_inputs ul li input.name {
+    width: 40%;
+  }
+  .consult_wrap div.consult_inputs p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .consult_wrap div.consult_inputs p input {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+  .consult_wrap div.consult_inputs div.sub_btn {
+    width: 300px;
+    height: 80px;
+    background-color: #e94782;
+    margin: 20px auto;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+  }
+  .result_wrap {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/result1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+  }
+  .result_wrap div.wrap {
+    max-width: 1200px;
+    margin: 80px auto;
+    text-align: center;
+  }
+  .result_wrap div.wrap h1 {
+    width: 50%;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
+  .result_wrap div.wrap .result1 {
+    background-image: url(../img/result4_h1.png);
+  }
+  .result_wrap div.wrap .result2 {
+    background-image: url(../img/result2_h1.png);
+  }
+  .result_wrap div.wrap .result3 {
+    background-image: url(../img/result3_h1.png);
+  }
+  .result_wrap div.wrap .result4 {
+    background-image: url(../img/result1_h1.png);
+  }
+  .result_wrap div.wrap p {
+    text-align: center;
+    color: #5a7b8c;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+  }
+  .result_wrap div.wrap p span {
+    font-weight: bold;
+  }
+  .result_wrap div.wrap main {
+    margin-top: 100px;
+  }
+  .result_wrap div.wrap main p {
+    width: 45%;
+    margin: 30px auto;
+    color: #2d343c;
+  }
+  .result_wrap div.wrap .label {
+    width: 40%;
+    height: 50px;
+    background-color: #2d343c;
+    color: white;
+    line-height: 50px;
+    border-radius: 150px;
+    margin: 0px auto;
+  }
+}
