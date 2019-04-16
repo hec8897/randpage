@@ -159,6 +159,26 @@
     display: inline-block;
     margin-top: -10px;
   }
+  div.qa .qa_wrap .btnss .q10 {
+    display: inline-block;
+    margin: 10px;
+    margin-top: 0px;
+  }
+  div.qa .qa_wrap .btnss .q0 {
+    display: inline-block;
+  }
+  div.qa .qa_wrap .btnss .q20b {
+    background-image: url(../img/20b.png);
+  }
+  div.qa .qa_wrap .btnss .q30b {
+    background-image: url(../img/30b.png);
+  }
+  div.qa .qa_wrap .btnss .q40b {
+    background-image: url(../img/40b.png);
+  }
+  div.qa .qa_wrap .btnss .q50b {
+    background-image: url(../img/50b.png);
+  }
   div.qa .qa_wrap .btnss #qa1Yes,
   div.qa .qa_wrap .btnss #qa4Yes,
   div.qa .qa_wrap .btnss #qa5Yes,
@@ -355,9 +375,31 @@
     border: 0px;
     background: white;
     border-radius: 15px;
+    padding-left: 5px;
+    box-sizing: border-box;
   }
   .consult_wrap div.consult_inputs ul li input.name {
-    width: 40%;
+    width: 60%;
+  }
+  .consult_wrap div.consult_inputs ul li select {
+    width: 60%;
+    height: 100%;
+    margin-left: 2%;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding-left: 10px;
+    -webkit-appearance: none;
+    color: gray;
+    padding-left: 5px;
+  }
+  .consult_wrap div.consult_inputs ul li select option {
+    font-size: 1rem;
+    border-radius: 15px;
+  }
+  .consult_wrap div.consult_inputs ul li select::-ms-expand {
+    display: none;
   }
   .consult_wrap div.consult_inputs p {
     text-align: center;
@@ -574,6 +616,21 @@
     margin: 10px;
     margin-top: 0px;
   }
+  div.qa .qa_wrap .btnss .q0 {
+    display: inline-block;
+  }
+  div.qa .qa_wrap .btnss .q20b {
+    background-image: url(../img/20b.png);
+  }
+  div.qa .qa_wrap .btnss .q30b {
+    background-image: url(../img/30b.png);
+  }
+  div.qa .qa_wrap .btnss .q40b {
+    background-image: url(../img/40b.png);
+  }
+  div.qa .qa_wrap .btnss .q50b {
+    background-image: url(../img/50b.png);
+  }
   div.qa .qa_wrap .btnss #qa1Yes,
   div.qa .qa_wrap .btnss #qa4Yes,
   div.qa .qa_wrap .btnss #qa5Yes,
@@ -761,9 +818,29 @@
     border: 0px;
     background: white;
     border-radius: 15px;
+    padding-left: 10px;
+    box-sizing: border-box;
   }
   .consult_wrap div.consult_inputs ul li input.name {
     width: 40%;
+  }
+  .consult_wrap div.consult_inputs ul li select {
+    width: 35%;
+    height: 100%;
+    margin-left: 2%;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    -webkit-appearance: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  .consult_wrap div.consult_inputs ul li select option {
+    font-size: 1rem;
+    border-radius: 15px;
+  }
+  .consult_wrap div.consult_inputs ul li select::-ms-expand {
+    display: none;
   }
   .consult_wrap div.consult_inputs p {
     text-align: center;

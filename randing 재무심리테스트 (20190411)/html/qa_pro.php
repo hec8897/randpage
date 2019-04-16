@@ -9,6 +9,7 @@ mysqli_set_charset($conn,"utf8");
 
 $sexflag = $_POST['reqSexflag'];
 $url = $_POST['url'];
+$qa0 =$_POST['reqqa0'];
 $qa1 =$_POST['reqqa1'];
 $qa2 =$_POST['reqqa2'];
 $qa3 =$_POST['reqqa3'];
@@ -22,6 +23,8 @@ $qa10 =$_POST['reqqa10'];
 
 $reqName = $_POST['reqname'];
 $reqphone = $_POST['reqphone'];
+$reqArea = $_POST['reqArea'];
+
 
 
 $dir_reqName = $_POST['dir_reqname'];
@@ -38,21 +41,15 @@ $memo = "1번 $qa1 </br> 2번 $qa2 </br> 3번 $qa3 </br>
 if(isset($dir_reqName)){
     $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,Insertdate,connectflag) 
     VALUES('$site_code','$dir_reqName','$dir_reqphone','$time','$url')";
-
-
 }
 
 else{
-    $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqSexflag,reqMemo,Insertdate,connectflag) 
-    VALUES('$site_code','$reqName','$reqphone','$sexflag','$memo','$time','$url')";
+    $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqBirth,reqArea,reqSexflag,reqMemo,Insertdate,connectflag) 
+    VALUES('$site_code','$reqName','$reqphone','$qa0','$reqArea','$sexflag','$memo','$time','$url')";
 
 
 }
-
     mysqli_query($conn,$sql);
-    // echo $sql;
-
-
 ?>
 
 <!DOCTYPE html>
