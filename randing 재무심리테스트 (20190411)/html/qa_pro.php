@@ -41,15 +41,21 @@ $memo = "1번 $qa1 </br> 2번 $qa2 </br> 3번 $qa3 </br>
 if(isset($dir_reqName)){
     $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,Insertdate,connectflag) 
     VALUES('$site_code','$dir_reqName','$dir_reqphone','$time','$url')";
+    $sql2 ="INSERT INTO `tb_consult_backup` (site_code,reqName,reqPhone,Insertdate,connectflag) 
+    VALUES('$site_code','$dir_reqName','$dir_reqphone','$time','$url')";
 }
 
 else{
     $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqBirth,reqArea,reqSexflag,reqMemo,Insertdate,connectflag) 
     VALUES('$site_code','$reqName','$reqphone','$qa0','$reqArea','$sexflag','$memo','$time','$url')";
+     $sql2 ="INSERT INTO `tb_consult_backup` (site_code,reqName,reqPhone,reqBirth,reqArea,reqSexflag,reqMemo,Insertdate,connectflag) 
+     VALUES('$site_code','$reqName','$reqphone','$qa0','$reqArea','$sexflag','$memo','$time','$url')";
 
 
 }
     mysqli_query($conn,$sql);
+    mysqli_query($conn,$sql2);
+
 ?>
 
 <!DOCTYPE html>

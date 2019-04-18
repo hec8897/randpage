@@ -110,14 +110,18 @@ $qa10 =$_POST['reqqa10'];
 
             function frm(){
                 var names = document.getElementById("name").value;
-            var phones = document.getElementById("phone").value;
-            var checks = document.getElementById("check").checked;
+                var phones = document.getElementById("phone").value;
+                var area = document.getElementById("area").value;
+                var checks = document.getElementById("check").checked;
 
                 if(names == ""){
                     alert("이름을 입력해주세요")
                 }
                 else if(phones ==""){
                     alert("전화번호를 입력해주세요")
+                }
+                else if (area==""){
+                    alert("지역을 선택하세요")
                 }
                 else if(checks == false){
                     alert("개인정보 수집동의를 체크해주세요")
