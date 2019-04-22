@@ -2,13 +2,7 @@
   font-family: 'Nanum Gothic';
   font-style: normal;
   font-weight: 400;
-  src: local('NanumGothic'), url(https://fonts.gstatic.com/s/nanumgothic/v14/PN_3Rfi-oW3hYwmKDpxS7F_D89jb.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 700;
-  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(https://fonts.gstatic.com/s/nanumgothic/v14/PN_oRfi-oW3hYwmKDpxS7F_LQv3Lw1sj.ttf) format('truetype');
+  src: local('NanumGothic'), url(https://fonts.gstatic.com/s/nanumgothic/v16/PN_3Rfi-oW3hYwmKDpxS7F_D-djb.ttf) format('truetype');
 }
 * {
   margin: 0;

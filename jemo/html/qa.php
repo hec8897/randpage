@@ -4,10 +4,10 @@ $sexflag = $_GET['tran'];
 $url = $_GET['url'];
 
 if($sexflag == 'm'){
-    $reqsexflag = "남성";
+    $reqsexflag = "M";
 }
 else{
-    $reqsexflag = "여성";
+    $reqsexflag = "F";
 }
 
 ?>
@@ -101,6 +101,8 @@ else{
                     <h3>TEST없이 바로 신청하기</h3>
                     <div class="inputs">
                         <input type="text" name="dir_reqname" class="name" placeholder="이름" autocomplete="off">
+
+                      
                         <input type="text" name="dir_reqphone" class="phone" placeholder="전화번호" autocomplete="off">
 
 
