@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Noto Sans KR Light'), local('NotoSansKR-Light'), url(https://fonts.gstatic.com/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOelz45bIS.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(https://fonts.gstatic.com/s/notosanskr/v11/PbykFmXiEBPT4ITbgNA5CgmG237u.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIS.otf) format('opentype');
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100vh;
+  min-width: 1200px;
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+#main_wrap {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/Main_bg.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+#main_wrap section {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+#main_wrap section.left_section {
+  width: 50%;
+  height: 100%;
+}
+#main_wrap section.left_section .content_area {
+  width: 50%;
+  position: relative;
+  left: 37%;
+  top: 12%;
+}
+#main_wrap section.left_section .content_area h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #993333;
+}
+#main_wrap section.left_section .content_area h1 {
+  font-size: 5rem;
+  color: white;
+}
+#main_wrap section.left_section .content_area h1 span {
+  color: #ff9999;
+}
+#main_wrap section.left_section .content_area h1 span.color_1 {
+  color: #ff6666;
+}
+#main_wrap section.left_section .content_area h1 span:nth-child(3) {
+  color: #ff6666;
+}
+#main_wrap section.left_section .content_area p {
+  color: #663333;
+  font-size: 1.5rem;
+}
+#main_wrap section.left_section .content_area div.start_btn {
+  width: 220px;
+  height: 150px;
+  margin-left: 50px;
+  margin-top: 150px;
+  text-align: center;
+}
+#main_wrap section.left_section .content_area div.start_btn p {
+  font-size: 1.25rem;
+  color: black;
+}
+#main_wrap section.left_section .content_area div.start_btn div.start {
+  width: 100%;
+  height: 60%;
+  margin-top: 10px;
+  border-radius: 150px;
+  border: 5px solid white;
+  box-sizing: border-box;
+}
+#main_wrap section.left_section .content_area div.start_btn div.start div.bar_pill {
+  width: 50%;
+  height: 100%;
+  background: white;
+  border-radius: 150px 0px 0px 150px;
+  transition: 0.2s;
+}
+#main_wrap section.left_section .content_area div.start_btn div.start div.bar_pill:hover {
+  width: 100%;
+  border-radius: 150px 150px 150px 150px;
+  text-align: right;
+}
+#main_wrap section.left_section .content_area div.start_btn div.start div.bar_pill div.mouse_icon {
+  width: 60px;
+  height: 50%;
+  background: #ff9999;
+  display: inline-block;
+  border-radius: 150px;
+  margin-top: 20px;
+  margin-right: 15px;
+}

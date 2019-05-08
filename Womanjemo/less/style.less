@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&subset=korean');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    min-width: 1200px;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#main_wrap {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Main_bg.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+
+    section {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+
+    section.left_section {
+        width: 50%;
+        height: 100%;
+
+        .content_area {
+            width: 50%;
+            position: relative;
+            left: 37%;
+            ;
+            top: 12%;
+
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: #993333;
+            }
+
+            h1 {
+                font-size: 5rem;
+                color: white;
+
+                span {
+                    color: #ff9999;
+
+                }
+
+                span.color_1 {
+                    color: #ff6666;
+                }
+
+                span:nth-child(3) {
+                    color: #ff6666;
+                }
+
+            }
+
+            p {
+                color: #663333;
+                font-size: 1.5rem;
+            }
+
+            div.start_btn {
+                width: 220px;
+                height: 150px;
+                margin-left: 50px;
+                margin-top: 150px;
+                text-align: center;
+
+                p {
+                    font-size: 1.25rem;
+                    color: black;
+                }
+
+                div.start {
+                    width: 100%;
+                    height: 60%;
+                    margin-top: 10px;
+                    border-radius: 150px;
+                    border: 5px solid white;
+                    box-sizing: border-box;
+                    div.bar_pill{
+                        width: 50%;
+                        height: 100%;
+                        background: white;
+                        border-radius: 150px 0px 0px 150px;
+                        transition: .2s;
+                        &:hover{
+                            width: 100%;
+                            border-radius: 150px 150px 150px 150px;
+                            text-align: right;
+                        }
+                        div.mouse_icon{
+                            width: 60px;
+                            height: 50%;
+                            background: #ff9999;;
+                            display: inline-block;
+                            border-radius: 150px;
+                            margin-top: 20px;
+                            margin-right: 15px;
+
+                        }
+                      
+                    }                    
+
+                }
+               .bar_pill:hover{
+
+                }
+
+            }
+
+        }
+    }
+
+
+
+}
