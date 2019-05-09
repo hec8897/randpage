@@ -155,6 +155,11 @@ table {
   font-weight: 700;
   src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIS.otf) format('opentype');
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 html,
 body {
   font-size: 14px;
@@ -168,8 +173,17 @@ body {
 }
 #index_wrap section.top_banner {
   width: 100%;
-  height: 80px;
-  background: tomato;
+  height: 85px;
+  background-image: url(../img/top_banner.svg);
+  background-size: cover;
+  background-position: center;
+}
+#index_wrap section.top_banner div.close_icon {
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 5px;
+  background-image: url(../img/close_btn.png);
 }
 #index_wrap header {
   width: 100%;
@@ -190,24 +204,22 @@ body {
 }
 #index_wrap section.main_banner {
   width: 100%;
-  height: 490px;
   background: #e2e2e4;
 }
 #index_wrap section.main_banner div.banner {
   width: 100%;
-  height: 300px;
-  background-image: url(../img//main_banner.jpg);
+  height: 330px;
+  background-image: url(../img/main_banner.jpg);
   background-size: cover;
-  background-position: center;
-  padding-top: 40px;
+  background-position: top;
+  padding-top: 10px;
   box-sizing: border-box;
 }
 #index_wrap section.main_banner div.banner div.text_box {
   width: 250px;
   height: 120px;
-  background-color: rgba(255, 255, 255, 0.6);
   box-sizing: border-box;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-left: 24px;
 }
 #index_wrap section.main_banner div.banner div.text_box h2 {
@@ -347,12 +359,12 @@ body {
 }
 #index_wrap section.section2 div.section2_banner {
   width: 100%;
-  height: 70px;
+  height: 95px;
   background-image: url(../img//section2_banner.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 20px;
+  padding-top: 30px;
   margin-bottom: 20px;
   box-sizing: border-box;
 }
@@ -384,6 +396,7 @@ body {
   line-height: 33px;
   border-radius: 150px;
   cursor: pointer;
+  font-weight: bold;
 }
 #index_wrap section.section2 div.section2_main {
   width: 100%;
@@ -505,7 +518,8 @@ body {
   width: 100%;
   height: 20px;
   margin-bottom: 20px;
-  color: gray;
+  color: #3399CC;
+  font-weight: bold;
 }
 #index_wrap section.input_area ul li input {
   width: 100%;
@@ -528,13 +542,16 @@ body {
   width: 47%;
   height: 45%;
   display: inline-block;
-  background: #3399CC;
+  background: white;
+  border: 2px solid #3399CC;
+  box-sizing: border-box;
   overflow: hidden;
   text-align: center;
   line-height: 35px;
-  color: white;
   margin: 3px;
   cursor: pointer;
+  font-weight: normal;
+  color: black;
 }
 #index_wrap section.input_area p {
   text-align: center;

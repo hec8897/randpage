@@ -11,7 +11,9 @@
 
 <body>
     <div id="index_wrap">
-        <section class="top_banner">
+        <section class="top_banner" id="top_banner">
+            <div class="close_icon" id="close_btn">
+            </div>
 
         </section>
 
@@ -87,7 +89,7 @@
         <section class="section2">
             <div class='section2_banner'>
                 <h4><span class="span1">우리 아이의</span> <span class="span2">미래</span>를 위한건데 </br>아무거나 가입할 수 없잖아요!</h4>
-                <div class="consult_btn">빠른상담신청</div>
+                <div class="consult_btn" id="consult_btn">빠른상담신청</div>
             </div>
 
             <div class="section2_main">
@@ -147,29 +149,31 @@
         <section class="input_area">
 
             <h2>상담신청</h2>
-            <form action="">
+            <form action="result_pro.php"  method="POST" id="frm">
                 <ul>
                     <li>엄마 이름</li>
-                    <li><input type="text" placeholder="성함을 작성해주세요"></li>
+                    <li><input type="text" id="in_name" placeholder="성함을 작성해주세요" name="reqName" required autocomplete="off"></li>
                     <li>엄마 연락처</li>
-                    <li><input type="text" placeholder="ex) 01012341234"></li>
+                    <li><input type="number"id="in_phone" placeholder="ex) 01012341234" name="reqPhone" required autocomplete="off"></li>
                     <li>엄마 생년월일</li>
-                    <li><input type="text" placeholder="ex) 000000"></li>
+                    <li><input type="number"id="in_birth" placeholder="ex) 000000" name="reqBirth" required autocomplete="off"></li>
                 </ul>
 
                 <h4>상담 내용</h4>
                 <ul class="consult_btn">
-                    <li>태아보험 가입</li>
-                    <li>가입된 보험 보장분석</li>
-                    <li>태아/어린이 보험 설계</li>
-                    <li>우리가족 보험 리모델링</li>
+                    <li class="consult_btns btns1">태아보험 가입</li>
+                    <li class="consult_btns btns2">가입된 보험 보장분석</li>
+                    <li class="consult_btns btns3">태아/어린이 보험 설계</li>
+                    <li class="consult_btns btns4">우리가족 보험 리모델링</li>
                 </ul>
 
-                <p><input type="checkbox"> 개인정보 수집 및 이용동의 <a href="">보기</a></p>
+                <p><input type="checkbox" id="check"> 개인정보 수집 및 이용동의 <a href="agree.html">보기</a></p>
 
-                <div class="submit_btn">
+                <div class="submit_btn" onclick="submitFn()">
                     보험상담 신청하기
                 </div>
+
+                <input type="hidden" id="consult_name" name="reqMemo">
             </form>
 
 
@@ -179,6 +183,9 @@
 
 
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="js/event.js"></script>
 </body>
 
 </html>
