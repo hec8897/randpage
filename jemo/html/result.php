@@ -18,22 +18,23 @@ $id = $_GET['id'];
     <script>
         $(document).ready(function(){
             var get = $("#ids").val();
-            if(get == "현실"){
+            
+            if(get == "자기만족/유아형"){
                 console.log("유아형");
                 $(".wrap").load("result/result1.html");
 
             }
-            else if(get =="돈"){
+            else if(get =="돈/사냥꾼"){
                 console.log("사냥꾼");
                 $(".wrap").load("result/result2.html");
 
             }
-            else if(get == "편의"){
+            else if(get == "즐거움/베짱이"){
                 console.log("베짱이");
                 $(".wrap").load("result/result3.html");
 
             }
-            else if(get == "성공"){
+            else if(get == "성공/모험가"){
                 console.log("모험가");
                 $(".wrap").load("result/result4.html");
             }

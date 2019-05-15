@@ -4,10 +4,10 @@ $sexflag = $_GET['tran'];
 $url = $_GET['url'];
 
 if($sexflag == 'm'){
-    $reqsexflag = "M";
+    $reqsexflag = "남성";
 }
 else{
-    $reqsexflag = "F";
+    $reqsexflag = "여성";
 }
 
 ?>
@@ -267,25 +267,25 @@ else{
             //q10
 
             $(document).on('click', '#qa10a1', function() {
-                $("#qa10input").val("성공");
+                $("#qa10input").val("성공/모험가");
                 // location.href = "index.html"
                 frm.submit();
             })
 
             $(document).on('click', '#qa10a2', function() {
-                $("#qa10input").val("돈");
+                $("#qa10input").val("돈/사냥꾼");
                 // location.href = "index.html"
                 frm.submit();
 
             });
             $(document).on('click', '#qa10a3', function() {
-                $("#qa10input").val("즐거움");
+                $("#qa10input").val("즐거움/베짱이");
                 location.href = "inconsult.php"
                 frm.submit();
 
             });
             $(document).on('click', '#qa10a4', function() {
-                $("#qa10input").val("자기만족");
+                $("#qa10input").val("자기만족/유아형");
                 location.href = "inconsult.php"
                 frm.submit();
 
