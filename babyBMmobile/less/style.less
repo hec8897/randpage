@@ -1,0 +1,661 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*===========================================*/
+/*===========================================*/
+/*================RESET.CSS==================*/
+/*===========================================*/
+/*===========================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&subset=korean');
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+
+@MainColor: #3399CC;
+
+html,
+body {
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+
+#index_wrap {
+    max-width: 578px;
+    min-width: 370px;
+    margin: 0 auto;
+
+    section.top_banner {
+        width: 100%;
+        height: 85px;
+        background-image: url(../img/top_banner.svg);
+        background-size: cover;
+        background-position: center;
+        div.close_icon{
+            width: 20px;
+            height: 20px;;
+            float: right;
+            margin: 5px;
+            background-image: url(../img/close_btn.png);
+        }
+    }
+
+    header {
+        width: 100%;
+        height: 55px;
+        background: #3399CC;
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 1.65rem;
+            font-weight: bold;
+            height: 80%;
+            margin-bottom: 10px;
+
+            span {
+                font-size: 0.8rem;
+                font-weight: 200;
+            }
+        }
+    }
+
+    section.main_banner {
+        width: 100%;
+        background: #e2e2e4;
+
+        div.banner {
+            width: 100%;
+            height: 300px;
+            background-image: url(../img/main_banner.jpg);
+            background-size: cover;
+            background-position: 50% 20%;
+            padding-top: 10px;
+            box-sizing: border-box;
+
+            div.text_box {
+                width: 250px;
+                height: 120px;
+                box-sizing: border-box;
+                padding-top: 10px;
+                padding-left: 24px;
+
+                h2 {
+                    font-size: 1.9rem;
+                    font-weight: 500;
+                    color: @MainColor;
+                    margin-bottom: 15px;
+
+                    span {
+                        background: @MainColor;
+                        color: white;
+                    }
+                }
+
+                p {
+                    font-size: 0.9rem;
+                    letter-spacing: -1px;
+                    font-weight: 400;
+             
+
+                    img {
+                        margin-left: 3px;
+                    }
+                }
+            }
+        }
+
+        div.figure_area {
+            width: 100%;
+            height: 180px;
+            text-align: center;
+
+            figure {
+                width: 47%;
+                height: 90%;
+                background: white;
+                display: inline-block;
+                margin: 1%;
+                margin-top: 10px;
+                overflow: hidden;
+                padding: 18px;
+                box-sizing: border-box;
+
+                h3 {
+                    text-align: left;
+                    font-size: 1.0rem;
+                    font-weight: bold;
+                    line-height: 1.2rem;
+
+                }
+
+                div.figure_bottom {
+                    margin-top: 15px;
+
+                    p {
+                        text-align: left;
+                        font-size: 0.85rem;
+                        line-height: 1.1rem;
+                        span{
+                            color: @MainColor;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .img_area {
+                        width: 70px;
+                        height: 70px;
+                        float: right;
+                        background-image: url(../img/home_icon.svg);
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        margin-top: -40px;
+                    }
+
+                    .img2 {
+                        background-image: url(../img/cart_icon.svg);
+
+
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    section.section1 {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+
+        h3 {
+            width: 130px;
+            height: 85px;
+            margin: 0 auto;
+            background-image: url(../img/section1_tit.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-position-x: 30%;
+            background-size: contain;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font-size: 1.45rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h4.last_h4 {
+            margin-bottom: 15px;
+        }
+
+        h5 {
+            font-size: 0.9rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        div.icons_box {
+            width: 98%;
+            height: 280px;
+            background: #e2e2e4;
+            margin: 0 auto;
+            margin-top: 25px;
+
+            ul {
+                height: 100%;
+
+                li {
+                    display: inline-block;
+                    width: 48%;
+                    height: 47%;
+                    margin-top: 0.8%;
+                    overflow: hidden;
+                    padding-top: 10px;
+                    box-sizing: border-box;
+
+                    h5 {
+                        font-size: 0.95rem;
+                        letter-spacing: -1px;
+                        line-height: 1.2rem;
+                    }
+
+                    div.icon_box {
+                        width: 100%;
+                        height: 60%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    div.icon1 {
+                        background-image: url(../img/section2_icons1.svg);
+
+                    }
+
+                    div.icon2 {
+                        background-image: url(../img/section2_icons2.svg);
+
+                    }
+
+                    div.icon3 {
+                        background-image: url(../img/section2_icons3.svg);
+
+                    }
+
+                    div.icon4 {
+                        background-image: url(../img/section2_icons4.svg);
+
+                    }
+                }
+            }
+        }
+    }
+
+    section.section2 {
+        width: 100%;
+        margin-top: 20px;
+
+        div.section2_banner {
+            width: 100%;
+            height: 95px;
+            background-image: url(../img//section2_banner.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top: 30px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+
+            h4 {
+                width: 50%;
+                margin-left: 20%;
+                font-size: 1.0rem;
+                line-height: 1.4rem;
+                font-weight: 400;
+                color: white;
+                float: left;
+
+          
+
+                span.span1 {
+                    background: white;
+                    color: #ED8080;
+                }
+
+                span.span2 {
+                    background: #ED8080;
+                }
+            }
+
+            div.consult_btn {
+                width: 25%;
+                height: 33px;
+                background: gold;
+                float: right;
+                margin-right: 3%;
+                background: #ED8080;
+                color: white;
+                text-align: center;
+                line-height: 33px;
+                border-radius: 150px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+
+        div.section2_main {
+            width: 100%;
+            height: 870px;
+            background-image: url(../img/section2_bg.png);
+            background-position: top;
+            background-size: cover;
+            text-align: center;
+            padding-top: 20px;
+
+            h3.section_tit {
+                width: 130px;
+                height: 85px;
+                margin: 0 auto;
+                background-image: url(../img/section2_tit.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-position-x: 40%;
+                background-size: contain;
+                margin-bottom: 20px;
+            }
+
+            h4 {
+                font-size: 1.45rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            
+        h4.last_h4 {
+            margin-bottom:15px;
+        }
+
+            p {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+            }
+
+            div.figure_area{
+                margin-top: 70px;
+
+            figure {
+                width: 90%;
+                height: 160px;
+                margin: 0 auto;
+                margin-top: 50px;
+
+                div.img_area {
+                    width: 55%;
+                    height: 100%;
+                    float: left;
+                    background-size: cover;
+                    border: 1px solid lightgray;
+                    box-sizing: border-box;
+                }
+                .area1{
+                    background-image: url(../img/section2_figure1.jpg);
+                }
+                .area2{
+                    background-image: url(../img/section2_figure2.jpg);
+                }
+                .area3{
+                    background-image: url(../img/section2_figure3.jpg);
+                }
+
+                div.text_area {
+                    width: 42%;
+                    height: 100%;
+                    float: right;
+                    text-align: left;
+
+                    h3 {
+                        width: 30px;
+                        height: 30px;
+                        margin-bottom: 10px;
+                        background-size: contain;
+                        font-size: 1.0rem;
+                        text-align: center;
+                        line-height: 30px;
+                        color: white;
+                    }
+
+                    h3.no1 {
+                        background-image: url(../img/section2_no1.png);
+
+                    }
+
+                    h3.no2 {
+                        background-image: url(../img/section2_no2.png);
+
+
+                    }
+
+                    h3.no3 {
+                        background-image: url(../img/section2_no3.png);
+
+
+                    }
+
+                    h4 {
+                        font-size: 1rem;
+                        margin-bottom: 5px;
+                    }
+
+                    .last_h4 {
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+            .sec_figure {
+                .text_area {
+                    float: left;
+                }
+
+                .img_area {
+                    float: right;
+                }
+            }
+
+        }
+
+
+        }
+    }
+
+    section.input_area{
+        width: 100%;
+        background: #d4e7f5;
+        padding-top: 30px;
+        height: 600px;
+        h2{
+            width: 125px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: @MainColor;
+            font-weight: bold;
+            border-bottom: 4px solid @MainColor;
+            margin: 0px auto;
+            padding-bottom: 10px;
+        }
+        ul{
+            width: 80%;
+            margin: 0px auto;
+            margin-top: 50px;
+            li{
+                width: 100%;
+                height: 20px;
+                margin-bottom: 20px;
+                color: @MainColor;
+                font-weight: bold;
+                input{
+                    width: 100%;
+                    height: 100%;
+                    border: 0px;
+                    border-bottom: 1px solid lightgray;
+                    background-color: #d4e7f5;
+                }
+            }
+        }
+        h4{
+            width: 80%;
+            margin: 0 auto;
+            color: @MainColor;
+            font-weight: bold;
+        }
+        ul.consult_btn{
+            width: 80%;
+            height: 80px;
+            margin: 10px auto;
+
+            li{
+                width: 47%;
+                height: 45%;;
+                display: inline-block;
+                background: white;
+                border:  2px solid @MainColor;
+                box-sizing: border-box;
+                overflow: hidden;
+                text-align: center;
+                line-height: 30px;
+                margin: 3px;
+                cursor: pointer;
+                font-weight: normal;
+                color: black;
+
+            }
+        }
+        p{
+            margin-top: 30px;
+            text-align: center;
+            a{
+                color: black;
+            }
+        }
+        
+        div.submit_btn{
+            width: 50%;
+            height: 40px;
+            background: @MainColor;
+            margin: 30px auto;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 43px;
+            font-size: 1.2rem;
+            color: white;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    }
+}

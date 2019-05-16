@@ -10,7 +10,7 @@ $reqphone = $_POST['reqPhone'];
 $reqBirth = $_POST['reqBirth'];
 $memo = $_POST['reqMemo'];
 
-$site_code = "태아보험랜딩(모두네임)";
+$site_code = "태아보험랜딩BM";
 $time = date('Y-m-d H:i:s');
 
 $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqBirth,reqMemo,Insertdate) 
