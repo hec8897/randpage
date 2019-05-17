@@ -1,6 +1,7 @@
 <?php
 $sexflag = $_POST['reqSexflag'];
 $url = $_POST['url'];
+$Adget = $_POST['adget'];
 $qa0 =$_POST['reqqa0'];
 $qa1 =$_POST['reqqa1'];
 $qa2 =$_POST['reqqa2'];
@@ -34,7 +35,7 @@ $qa10 =$_POST['reqqa10'];
         <form action="qa_pro.php" method="POST" id="frms">
             <input type="hidden" id="reqSexflag" value="<?=$sexflag?>" name="reqSexflag">
             <input type="hidden" id="requrl" value="<?=$url?>" name="url">
-
+            <input type="hidden" name="adget" value="<?=$Adget?>">
             <input type="hidden" id="qa0input" value="<?=$qa0?>" name="reqqa0">
             <input type="hidden" id="qa1input" value="<?=$qa1?>" name="reqqa1">
             <input type="hidden" id="qa2input" value="<?=$qa2?>" name="reqqa2">

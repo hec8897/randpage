@@ -2,6 +2,8 @@
 
 $sexflag = $_GET['tran'];
 $url = $_GET['url'];
+$AdGet = $_GET['id'];
+
 
 if($sexflag == 'm'){
     $reqsexflag = "남성";
@@ -21,6 +23,7 @@ else{
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
     <!-- Facebook Pixel Code -->
     <script>
     ! function(f, b, e, v, n, t, s) {
@@ -47,6 +50,7 @@ else{
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=143615209554476&ev=PageView&noscript=1" /></noscript>
     <!-- End Facebook Pixel Code -->
+
     <title>RichTest Bm company</title>
 
 </head>
@@ -59,8 +63,10 @@ else{
 
                 <form action="inconsult.php" method="POST" id="frm">
                     <div class="inputs">
+
                         <input type="hidden" id="reqSexflag" value="<?=$reqsexflag?>" name="reqSexflag">
                         <input type="hidden" id="requrl" value="<?=$url?>" name="url">
+                        <input type="hidden" name="adget" value="<?=$AdGet?>">
 
                         <input type="hidden" id="qa0input" value="" name="reqqa0">
                         <input type="hidden" id="qa1input" value="" name="reqqa1">

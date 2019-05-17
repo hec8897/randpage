@@ -1,3 +1,6 @@
+<?php
+$AdGet = $_GET['id'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,7 +48,9 @@
         <div class="texts">
             <p>테스트를 모두 완료하고 본인 확인시</p>
             <p>빽다방 커피 쿠폰과 20만원 상당의 재무심리 분석자료를 보내드립니다.</p>
+            <input type="hidden" id="ad_get" value="<?=$AdGet?>">
         </div>
+
 
 
     </div>    
@@ -54,13 +59,14 @@
     <script>
 
         var refer = document.referrer;
+        var ad_get = $("#ad_get").val();
         console.log(refer);
 
         $(".btn_left").click(function(){
-            location.href= "qa.php?tran=m&url="+refer;
+            location.href= "qa.php?tran=m&url="+refer+"&id="+ad_get;
         })
         $(".btn_right").click(function(){
-            location.href= "qa.php?tran=w&url="+refer;
+            location.href= "qa.php?tran=w&url="+refer+"&id="+ad_get;
         })
 
         $(window).on("load",function(){

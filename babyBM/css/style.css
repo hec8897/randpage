@@ -209,7 +209,7 @@ div#wrap main div.input_top {
   height: 160px;
   background: #368ece;
   margin-top: -60px;
-  padding: 20px;
+  padding: 25px;
   box-sizing: border-box;
 }
 div#wrap main div.input_top div.input_top_wrap {
@@ -217,12 +217,13 @@ div#wrap main div.input_top div.input_top_wrap {
   margin: 0 auto;
   height: 100%;
   background: white;
-  padding: 20px;
+  padding: 10px;
+  padding-left: 0px;
   box-sizing: border-box;
 }
 div#wrap main div.input_top div.input_top_wrap h3 {
   font-size: 1.35rem;
-  height: 100%;
+  height: 90px;
   line-height: 80px;
   width: 15%;
   float: left;
@@ -235,7 +236,7 @@ div#wrap main div.input_top div.input_top_wrap ul {
 }
 div#wrap main div.input_top div.input_top_wrap ul li {
   width: 21%;
-  height: 80px;
+  height: 90px;
   float: left;
   border-right: 3px solid lightgray;
   box-sizing: border-box;
@@ -244,6 +245,7 @@ div#wrap main div.input_top div.input_top_wrap ul li {
 div#wrap main div.input_top div.input_top_wrap ul li:nth-last-child(1) {
   border: 0px;
   line-height: 80px;
+  padding-top: 15px;
 }
 div#wrap main div.input_top div.input_top_wrap ul li h4 {
   margin-bottom: 15px;
@@ -266,10 +268,11 @@ div#wrap main div.input_top div.input_top_wrap ul li .sub_btn {
   color: white;
   font-weight: bold;
   border-radius: 5px;
+  font-size: 1.4rem;
 }
 div#wrap main section.section1 div.section_wrap {
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 div#wrap main section.section1 div.section_wrap h2 {
   width: 200px;
@@ -283,25 +286,25 @@ div#wrap main section.section1 div.section_wrap h2 {
 }
 div#wrap main section.section1 div.section_wrap p {
   text-align: center;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   margin-bottom: 20px;
   font-weight: normal;
 }
 div#wrap main section.section1 div.section_wrap p span {
   color: #368ece;
-  font-size: 1.85rem;
+  font-size: 1.45rem;
   letter-spacing: 3px;
   font-weight: normal;
 }
 div#wrap main section.section1 div.section_wrap .bottom_text {
   width: 100%;
-  height: 160px;
+  height: 110px;
   box-sizing: border-box;
 }
 div#wrap main section.section1 div.section_wrap .bottom_text p {
   font-size: 1.2rem;
   margin: 0px;
-  margin-top: 20px;
+  margin-top: 30px;
   font-weight: 300;
 }
 div#wrap main section.section1 div.section_wrap div.icons h3 {
@@ -332,20 +335,20 @@ div#wrap main section.section1 div.section_wrap div.icons .icon_box ul li {
   margin-top: 0px;
   overflow: hidden;
   padding: 30px;
-  padding-top: 50px;
+  padding-top: 80px;
   box-sizing: border-box;
 }
 div#wrap main section.section1 div.section_wrap div.icons .icon_box ul li:nth-child(1) {
   background-color: #bbb5e0;
 }
 div#wrap main section.section1 div.section_wrap div.icons .icon_box ul li:nth-child(2) {
-  background-color: #4ec6aa;
+  background-color: bisque;
 }
 div#wrap main section.section1 div.section_wrap div.icons .icon_box ul li:nth-child(3) {
   background-color: #fba4ac;
 }
 div#wrap main section.section1 div.section_wrap div.icons .icon_box ul li:nth-child(4) {
-  background-color: #93e2f4;
+  background-color: rgba(147, 226, 244, 0.4);
 }
 div#wrap main section.section1 div.section_wrap div.icons .icon_box ul li div.inner_box {
   width: 100%;
@@ -375,7 +378,6 @@ div#wrap main section.section1 div.section_wrap div.icons .icon_box ul li div.in
 }
 div#wrap main section.section1 div.section_wrap div.icons .icon_box ul li div.inner_box div.text_div {
   width: 100%;
-  height: 100%;
   margin-top: 20px;
 }
 div#wrap main section.section1 div.section_wrap div.icons .icon_box ul li div.inner_box div.text_div p {
@@ -386,7 +388,7 @@ div#wrap main section.section1 div.section_wrap div.icons .icon_box ul li div.in
 }
 div#wrap main section.mid_banner {
   width: 100%;
-  height: 185px;
+  height: 150px;
   margin-top: 70px;
   background-image: url(../img/section2_banner.png);
   background-size: cover;
@@ -404,7 +406,7 @@ div#wrap main section.mid_banner div.banner_wrap h3 {
   height: 100%;
   font-size: 1.6rem;
   float: left;
-  line-height: 185px;
+  line-height: 150px;
   color: white;
 }
 div#wrap main section.mid_banner div.banner_wrap h3 span {
@@ -421,7 +423,7 @@ div#wrap main section.mid_banner div.banner_wrap div.consult_btn_area {
 }
 div#wrap main section.mid_banner div.banner_wrap div.consult_btn_area div.consult_btn {
   cursor: pointer;
-  margin-top: 65px;
+  margin-top: 50px;
   width: 100%;
   height: 55px;
   background-color: tomato;
@@ -436,9 +438,9 @@ div#wrap main section.section2 {
 }
 div#wrap main section.section2 div.section_wrap {
   max-width: 1200px;
-  margin: 50px auto;
+  margin: 40px auto;
   margin-top: 0px;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 div#wrap main section.section2 div.section_wrap h2 {
   width: 200px;
@@ -452,7 +454,7 @@ div#wrap main section.section2 div.section_wrap h2 {
 }
 div#wrap main section.section2 div.section_wrap p {
   text-align: center;
-  font-size: 1.65rem;
+  font-size: 1.45rem;
   margin-bottom: 30px;
 }
 div#wrap main section.section2 div.section_wrap p span {
@@ -467,12 +469,12 @@ div#wrap main section.section2 div.section_wrap div.line_div {
   margin: 40px auto;
 }
 div#wrap main section.section2 div.section_wrap ul.section2_thum {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 div#wrap main section.section2 div.section_wrap ul.section2_thum li {
   width: 100%;
   height: 370px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 div#wrap main section.section2 div.section_wrap ul.section2_thum li div.img_area {
   width: 50%;
@@ -529,16 +531,18 @@ div#wrap main section.section2 div.section_wrap ul.section2_thum li div.text_are
   line-height: 30px;
 }
 div#wrap main section.section2 div.section_wrap ul.section2_thum li div.text_area p {
-  width: 90%;
+  width: 65%;
   height: 150px;
   background-color: white;
   border: 2px dashed #67a9db;
-  line-height: 50px;
+  line-height: 35px;
   font-size: 1.3rem;
   font-weight: normal;
+  padding-top: 18px;
+  box-sizing: border-box;
 }
 div#wrap main section.section2 div.section_wrap ul.section2_thum li div.text_area .no_3_text {
-  padding: 25px;
+  padding: 33px;
   box-sizing: border-box;
   line-height: 40px;
 }
