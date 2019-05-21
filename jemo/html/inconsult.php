@@ -95,7 +95,7 @@ $qa10 =$_POST['reqqa10'];
                         </select>
                     </li>
                     <li>
-                        <div class="label">전화번호</div><input type="text" name="reqphone" id="phone" class="phone" placeholder="전화번호를 입력해주세요" autocomplete="off" required>
+                        <div class="label">전화번호</div><input type="number" name="reqphone" id="phone" class="phone" placeholder="전화번호를 입력해주세요" autocomplete="off" required>
                     </li>
  
                 </ul>

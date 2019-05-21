@@ -8,16 +8,25 @@ mysqli_set_charset($conn,"utf8");
 $reqName = $_POST['reqName'];
 $reqphone = $_POST['reqPhone'];
 $reqBirth = $_POST['reqBirth'];
-$memo = $_POST['reqMemo'];
+$memo1 = $_POST['reqMemo1'];
+$memo2 = $_POST['reqMemo2'];
+$memo3 = $_POST['reqMemo3'];
+$memo4 = $_POST['reqMemo4'];
 
-$site_code = "태아보험랜딩BM";
+$reqSexflag = $_POST['reqgender'];
+$adGet = $_POST['adget'];
+$site_code = "태아보험BM";
 $time = date('Y-m-d H:i:s');
 
-$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqBirth,reqMemo,Insertdate) 
-VALUES('$site_code','$reqName','$reqphone','$reqBirth','$memo','$time')";
 
-$sql2 ="INSERT INTO `tb_consult_backup` (site_code,reqName,reqPhone,reqBirth,reqMemo,Insertdate) 
-VALUES('$site_code','$reqName','$reqphone','$reqBirth','$memo','$time')";
+$memo = "$memo1/$memo2/$memo3/$memo4";
+
+
+$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqBirth,reqMemo,Insertdate,reqSexflag,reqAd) 
+VALUES('$site_code','$reqName','$reqphone','$reqBirth','$memo','$time','$reqSexflag','$adGet')";
+
+$sql2 ="INSERT INTO `tb_consult_backup` (site_code,reqName,reqPhone,reqBirth,reqMemo,Insertdate,reqSexflag) 
+VALUES('$site_code','$reqName','$reqphone','$reqBirth','$memo','$time','$reqSexflag')";
 
 mysqli_query($conn,$sql);
 mysqli_query($conn,$sql2);

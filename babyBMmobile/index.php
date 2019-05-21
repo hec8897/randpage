@@ -1,3 +1,7 @@
+<?php
+$AdGet = $_GET['id'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -147,12 +151,15 @@
             <h2>상담신청</h2>
             <form action="result_pro.php"  method="POST" id="frm">
                 <ul>
-                    <li>엄마 이름</li>
+                    <li>이름</li>
                     <li><input type="text" id="in_name" placeholder="성함을 작성해주세요" name="reqName" required autocomplete="off"></li>
-                    <li>엄마 연락처</li>
+                    <li>연락처</li>
                     <li><input type="number"id="in_phone" placeholder="ex) 01012341234" name="reqPhone" required autocomplete="off"></li>
-                    <li>엄마 생년월일</li>
+                    <li>생년월일</li>
                     <li><input type="number"id="in_birth" placeholder="ex) 000000" name="reqBirth" required autocomplete="off"></li>
+                    <li>신청자</li>
+                    <li><input type="button" class="btns btn_man" value="아빠" onclick="reqGender('남성')"><input type="button" class="btns btn_woman" value="엄마" onclick="reqGender('여성')"></li>
+
                 </ul>
 
                 <h4>상담 내용</h4>
@@ -169,7 +176,13 @@
                     보험상담 신청하기
                 </div>
 
-                <input type="hidden" id="consult_name" name="reqMemo">
+                <input type="hidden" id="consult1" name="reqMemo1">
+                <input type="hidden" id="consult2" name="reqMemo2">
+                <input type="hidden" id="consult3" name="reqMemo3">
+                <input type="hidden" id="consult4" name="reqMemo4">
+                <input type="hidden" name='adget' value='<?=$AdGet?>'>
+                <input type="hidden" id='reqsexflag' name='reqgender'>
+
             </form>
 
 
