@@ -1,0 +1,639 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Nanum Pen Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Nanum Pen'), local('NanumPen'), url(https://fonts.gstatic.com/s/nanumpenscript/v14/daaDSSYiLGqEal3MvdA_FOL_3FkN6zP0bA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Noto Sans KR Light'), local('NotoSansKR-Light'), url(https://fonts.gstatic.com/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOelz45bIS.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(https://fonts.gstatic.com/s/notosanskr/v11/PbykFmXiEBPT4ITbgNA5CgmG237u.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Noto Sans KR Medium'), local('NotoSansKR-Medium'), url(https://fonts.gstatic.com/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOIl345bIS.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIS.otf) format('opentype');
+}
+/*====================reset========================*/
+/*====================reset========================*/
+/*====================reset========================*/
+html,
+body {
+  background-color: #f6cacb;
+  min-width: 320px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+}
+#wrap {
+  margin: 0 auto;
+  max-width: 500px;
+}
+#wrap main {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+#wrap main div.logo_area p {
+  margin-left: 10px;
+}
+#wrap main div.logo_area .mention {
+  font-size: 0.85rem;
+  color: #8b3e3e;
+}
+#wrap main div.logo_area .coment {
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: #593434;
+}
+#wrap main div.logo_area h1 {
+  margin-left: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: white;
+}
+#wrap main div.logo_area h1 span:nth-child(1) {
+  color: #fb5b6d;
+}
+#wrap main div.logo_area h1 span:nth-child(2) {
+  color: #fd96a0;
+}
+#wrap main div.logo_area h1 span {
+  color: #fc7582;
+}
+#wrap main div.memo_img {
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/test.png);
+  background-size: cover;
+  background-position: center;
+  margin-top: 20px;
+}
+@media screen and (max-width: 320px) {
+  #wrap main div.memo_img {
+    height: 200px;
+    margin-top: 10px;
+  }
+}
+#wrap main div.start_btn {
+  width: 170px;
+  height: 90px;
+  background: white;
+  margin: 0 auto;
+  margin-top: -20px;
+}
+@media screen and (max-width: 320px) {
+  #wrap main div.start_btn {
+    width: 130px;
+    height: 70px;
+    margin-top: -15px;
+  }
+}
+#wrap main.index_main {
+  padding-top: 60px;
+  background-image: url(../img/main_bg.jpg);
+}
+#wrap main.qa_main {
+  background-image: url(../img/qa_bg.png);
+  background-size: cover;
+  background-position: top;
+  height: 100vh;
+}
+#wrap main.qa_main div.main_wrap {
+  max-width: 90%;
+  margin: 0 auto;
+}
+#wrap main.qa_main div.main_wrap div.logo_area h1 {
+  margin-left: 0px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.qa_main div.main_wrap div.logo_area h1 {
+    font-size: 1.5rem;
+  }
+}
+#wrap main.qa_main div.main_wrap ul.list_view {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#wrap main.qa_main div.main_wrap ul.list_view li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 100px;
+  margin: 5px;
+}
+#wrap main.qa_main div.main_wrap div.qa_box {
+  width: 100%;
+  height: 550px;
+  background: white;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.qa_main div.main_wrap div.qa_box {
+    height: 420px;
+  }
+}
+#wrap main.inconsult_main {
+  background-image: url(../img/qa_bg.png);
+  background-size: cover;
+  background-position: top;
+}
+#wrap main.inconsult_main .main_wrap {
+  max-width: 95%;
+  margin: 0 auto;
+}
+#wrap main.inconsult_main .main_wrap .logo_area h1 {
+  margin-left: 0px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.inconsult_main .main_wrap .logo_area h1 {
+    font-size: 1.5rem;
+  }
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box {
+  width: 95%;
+  height: 500px;
+  margin: 20px auto;
+  background-image: url(../img/inconsult.jpg);
+  background-size: cover;
+  -webkit-box-shadow: 7px 7px 1px 0px #ea707a;
+  -moz-box-shadow: 7px 7px 1px 0px #ea707a;
+  box-shadow: 7px 7px 1px 0px #ea707a;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.inconsult_main .main_wrap div.inconsult_box {
+    height: 400px;
+    margin: 10px auto;
+  }
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box h2 {
+  padding-top: 30px;
+  font-family: 'Nanum Pen Script', cursive;
+  text-align: center;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #8b3e3e;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.inconsult_main .main_wrap div.inconsult_box h2 {
+    font-size: 1.8rem;
+  }
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box h3 {
+  padding-top: 10px;
+  font-family: 'Nanum Pen Script', cursive;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0px;
+  color: #8b3e3e;
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box h3 span {
+  color: #fb5b6d;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.inconsult_main .main_wrap div.inconsult_box h3 {
+    font-size: 1.5rem;
+  }
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box div.mention_area {
+  width: 80%;
+  height: 90px;
+  margin: 10px auto;
+  border: 3px dashed #f8e2e2;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 0.75rem;
+  font-weight: 100;
+  line-height: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box div.mention_area span {
+  font-weight: 500;
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box div.mention_area span:nth-last-child(1) {
+  background-color: #fffbcf;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.inconsult_main .main_wrap div.inconsult_box div.mention_area {
+    font-size: 0.65rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs {
+  width: 65%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs {
+    margin-top: 15px;
+  }
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  border-radius: 150px;
+  border: 1px solid lightgray;
+  overflow: hidden;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li {
+    height: 30px;
+    margin-bottom: 10px;
+  }
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li div.label {
+  width: 30%;
+  height: 100%;
+  background: #fd96a0;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li div.label {
+    line-height: 30px;
+    font-size: 0.7rem;
+  }
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li div.input {
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li div.input input {
+  width: 80%;
+  height: 100%;
+  outline: none;
+  border: 0px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li div.input select {
+  width: 80%;
+  height: 100%;
+  outline: none;
+  border: 0px;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 0.8rem;
+  padding-left: 10px;
+  box-sizing: border-box;
+  background-color: white;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li div.input select {
+    font-size: 0.7rem;
+  }
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li div.input select option {
+  width: 100%;
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box p {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box p a {
+  color: black;
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box p input {
+  vertical-align: middle;
+}
+#wrap main.inconsult_main .main_wrap div.inconsult_box div.sub_btn {
+  width: 50%;
+  height: 30px;
+  background: #fd9fa7;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 100;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  border-radius: 150px;
+  letter-spacing: 3px;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.inconsult_main .main_wrap div.inconsult_box div.sub_btn {
+    width: 60%;
+    font-size: 0.8rem;
+  }
+}
+#wrap main.result_main {
+  background-image: url(../img/qa_bg.png);
+  background-size: cover;
+  background-position: top;
+}
+#wrap main.result_main .main_wrap {
+  max-width: 95%;
+  margin: 0 auto;
+}
+#wrap main.result_main .main_wrap .logo_area h1 {
+  margin-left: 0px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.result_main .main_wrap .logo_area h1 {
+    font-size: 1.5rem;
+  }
+}
+#wrap main.result_main .main_wrap .result_box {
+  width: 95%;
+  height: 550px;
+  margin: 20px auto;
+  background-size: cover;
+  background-image: url(../img/result_bg.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 10px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.result_main .main_wrap .result_box {
+    height: 450px;
+    margin: 10px auto;
+  }
+}
+#wrap main.result_main .main_wrap .result_box h2 {
+  width: 150px;
+  height: 70px;
+  margin: 0 auto;
+  background-image: url(../img/Atype.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.result_main .main_wrap .result_box h2 {
+    width: 120px;
+    height: 50px;
+  }
+}
+#wrap main.result_main .main_wrap .result_box h3 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-family: 'Nanum Pen Script', cursive;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.result_main .main_wrap .result_box h3 {
+    font-size: 1.5rem;
+  }
+}
+#wrap main.result_main .main_wrap .result_box p.text_area {
+  width: 90%;
+  margin: 20px auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+div.foot {
+  width: 100%;
+  height: 80px;
+  background: #fb5b6d;
+  position: absolute;
+  bottom: 0px;
+}
+@media screen and (max-width: 320px) {
+  div.foot {
+    height: 70px;
+  }
+}
+div.foot div.foot_wrap {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+div.foot div.foot_wrap p.foot_text {
+  width: 80%;
+  height: 100%;
+  font-size: 0.9rem;
+  padding-top: 20px;
+  box-sizing: border-box;
+  line-height: 15px;
+  color: white;
+  font-weight: 100;
+  letter-spacing: 1.1px;
+  float: left;
+}
+@media screen and (max-width: 320px) {
+  div.foot div.foot_wrap p.foot_text {
+    font-size: 0.75rem;
+    padding-top: 10px;
+  }
+}
+div.foot div.foot_wrap div.foot_img {
+  width: 20%;
+  height: 100%;
+  float: right;
+  background: white;
+}
+div.foot div.inconsult_foot {
+  padding: 5px;
+  box-sizing: border-box;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 320px) {
+  div.foot div.inconsult_foot {
+    width: 85%;
+  }
+}
+div.foot div.inconsult_foot h3 {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 1.5rem;
+  color: #fffbcf;
+}
+@media screen and (max-width: 320px) {
+  div.foot div.inconsult_foot h3 {
+    font-size: 1.3rem;
+  }
+}
+div.foot div.inconsult_foot p {
+  font-size: 0.9rem;
+  font-weight: 100;
+  line-height: 15px;
+  color: white;
+}
+@media screen and (max-width: 320px) {
+  div.foot div.inconsult_foot p {
+    font-size: 0.75rem;
+  }
+}
+div.foot div.inconsult_foot p span {
+  color: #424242;
+}
