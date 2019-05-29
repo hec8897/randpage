@@ -126,12 +126,25 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
 @font-face {
   font-family: 'Nanum Pen Script';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local('Nanum Pen'), local('NanumPen'), url(https://fonts.gstatic.com/s/nanumpenscript/v14/daaDSSYiLGqEal3MvdA_FOL_3FkN6zP0bA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Noto Sans KR Thin'), local('NotoSansKR-Thin'), url(https://fonts.gstatic.com/s/notosanskr/v11/Pby6FmXiEBPT4ITbgNA5CgmOsk7lyJQ.otf) format('opentype');
 }
 @font-face {
   font-family: 'Noto Sans KR';
@@ -185,21 +198,23 @@ body {
   margin-left: 10px;
 }
 #wrap main div.logo_area .mention {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: bold;
   color: #8b3e3e;
 }
 #wrap main div.logo_area .coment {
   font-size: 0.95rem;
   letter-spacing: 1px;
   color: #593434;
+  line-height: 15px;
 }
 #wrap main div.logo_area h1 {
   margin-left: 10px;
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 3px;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   color: white;
 }
 #wrap main div.logo_area h1 span:nth-child(1) {
@@ -214,29 +229,59 @@ body {
 #wrap main div.memo_img {
   width: 100%;
   height: 300px;
-  background-image: url(../img/test.png);
+  background-image: url(../img/main_memo.png);
   background-size: cover;
   background-position: center;
   margin-top: 20px;
 }
 @media screen and (max-width: 320px) {
   #wrap main div.memo_img {
-    height: 200px;
+    height: 160px;
     margin-top: 10px;
   }
 }
-#wrap main div.start_btn {
-  width: 170px;
-  height: 90px;
-  background: white;
-  margin: 0 auto;
+#wrap main .start_label {
+  text-align: center;
   margin-top: -20px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  letter-spacing: 3px;
+}
+@media screen and (max-width: 320px) {
+  #wrap main .start_label {
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+}
+#wrap main div.start_btn {
+  width: 35%;
+  height: 70px;
+  background: #f7a8a9;
+  margin: 0 auto;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  border-radius: 150px;
+  -webkit-box-shadow: 5px 5px 2px 0px #e75f5f;
+  -moz-box-shadow: 5px 5px 2px 0px #e75f5f;
+  box-shadow: 5px 5px 2px 0px #e75f5f;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 70px;
+  cursor: pointer;
+}
+#wrap main div.start_btn .start_animation {
+  width: 50%;
+  height: 100%;
+  background: white;
 }
 @media screen and (max-width: 320px) {
   #wrap main div.start_btn {
-    width: 130px;
-    height: 70px;
-    margin-top: -15px;
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.1rem;
   }
 }
 #wrap main.index_main {
@@ -250,11 +295,12 @@ body {
   height: 100vh;
 }
 #wrap main.qa_main div.main_wrap {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
 }
 #wrap main.qa_main div.main_wrap div.logo_area h1 {
-  margin-left: 0px;
+  width: 90%;
+  margin: 0 auto;
   font-size: 2rem;
   letter-spacing: 1px;
   margin-top: 3px;
@@ -284,12 +330,83 @@ body {
 #wrap main.qa_main div.main_wrap div.qa_box {
   width: 100%;
   height: 550px;
-  background: white;
+  background-image: url(../img/inqa_bg.jpg);
+  background-size: cover;
 }
 @media screen and (max-width: 320px) {
   #wrap main.qa_main div.main_wrap div.qa_box {
     height: 420px;
   }
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.quiz {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.quiz div.emty_box {
+  height: 45%;
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.quiz h4 {
+  height: 5%;
+  height: 10%;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 25px;
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.quiz h4 span {
+  background-color: #fc9699;
+  color: white;
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.answer {
+  width: 100%;
+  height: 50%;
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer li {
+  width: 35%;
+  height: 50px;
+  background: #f7a8a9;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 10%;
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  border-radius: 150px;
+  -webkit-box-shadow: 5px 5px 2px 0px #e75f5f;
+  -moz-box-shadow: 5px 5px 2px 0px #e75f5f;
+  box-shadow: 5px 5px 2px 0px #e75f5f;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer li {
+    width: 37%;
+    font-size: 1.1rem;
+  }
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer li:nth-child(1) {
+  margin-right: 10%;
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer li:nth-child(3) {
+  margin-right: 10%;
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer li:nth-child(2) {
+  margin-left: 10%;
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer li:nth-child(4) {
+  margin-left: 10%;
+}
+#wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer #an001,
+#wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer #an002,
+#wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer #an003,
+#wrap main.qa_main div.main_wrap div.qa_box div.answer ul.answer #an004 {
+  font-size: 0.8rem;
+  letter-spacing: -1px;
 }
 #wrap main.inconsult_main {
   background-image: url(../img/qa_bg.png);
@@ -341,6 +458,7 @@ body {
 @media screen and (max-width: 320px) {
   #wrap main.inconsult_main .main_wrap div.inconsult_box h2 {
     font-size: 1.8rem;
+    padding-top: 10px;
   }
 }
 #wrap main.inconsult_main .main_wrap div.inconsult_box h3 {
@@ -415,10 +533,11 @@ body {
   height: 100%;
   background: #fd96a0;
   float: left;
+  font-weight: bold;
+  color: white;
   text-align: center;
   line-height: 40px;
   font-size: 0.8rem;
-  font-weight: 100;
 }
 @media screen and (max-width: 320px) {
   #wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li div.label {
@@ -438,6 +557,7 @@ body {
   border: 0px;
   padding-left: 10px;
   box-sizing: border-box;
+  font-size: 0.7rem;
 }
 #wrap main.inconsult_main .main_wrap div.inconsult_box ul.inputs li div.input select {
   width: 80%;
@@ -446,7 +566,7 @@ body {
   border: 0px;
   -webkit-appearance: none;
   appearance: none;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   padding-left: 10px;
   box-sizing: border-box;
   background-color: white;
@@ -482,6 +602,8 @@ body {
   font-size: 0.9rem;
   border-radius: 150px;
   letter-spacing: 3px;
+  font-weight: bold;
+  color: white;
 }
 @media screen and (max-width: 320px) {
   #wrap main.inconsult_main .main_wrap div.inconsult_box div.sub_btn {
@@ -533,7 +655,6 @@ body {
   width: 150px;
   height: 70px;
   margin: 0 auto;
-  background-image: url(../img/Atype.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -542,6 +663,18 @@ body {
     width: 120px;
     height: 50px;
   }
+}
+#wrap main.result_main .main_wrap .result_box .result1 {
+  background-image: url(../img/Atype.png);
+}
+#wrap main.result_main .main_wrap .result_box .result2 {
+  background-image: url(../img/Btype.png);
+}
+#wrap main.result_main .main_wrap .result_box .result3 {
+  background-image: url(../img/Ctype.png);
+}
+#wrap main.result_main .main_wrap .result_box .result4 {
+  background-image: url(../img/Dtype.png);
 }
 #wrap main.result_main .main_wrap .result_box h3 {
   text-align: center;
@@ -555,16 +688,91 @@ body {
   }
 }
 #wrap main.result_main .main_wrap .result_box p.text_area {
+  margin: 15px auto;
+  text-align: center;
+  font-weight: 100;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin-right: 25px;
+  width: 85%;
+  margin-left: 20px;
+  line-height: 18px;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.result_main .main_wrap .result_box p.text_area {
+    line-height: 18px;
+    font-size: 0.9rem;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-right: 20px;
+    letter-spacing: -1px;
+  }
+}
+#wrap main.result_main .main_wrap .result_box .result_C p.area_one {
+  margin-top: 35px;
+}
+#wrap main.result_main .main_wrap .result_box p.area_one {
+  margin-top: 50px;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.result_main .main_wrap .result_box p.area_one {
+    margin-top: 50px;
+  }
+}
+#wrap main.result_main .main_wrap .result_box .line {
   width: 90%;
-  margin: 20px auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 60px;
+  text-align: center;
   padding: 10px;
   box-sizing: border-box;
+  line-height: 20px;
+  font-weight: 100;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.result_main .main_wrap .result_box .line {
+    height: 50px;
+    margin-top: 0px;
+    font-size: 0.8rem;
+    line-height: 15px;
+    padding: 12px;
+  }
+}
+#wrap main.result_main .main_wrap .result_box .line span {
+  color: white;
+  font-weight: bold;
+}
+#wrap main.result_main .main_wrap .result_box .lineC_text {
+  margin-top: 45px;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.result_main .main_wrap .result_box .lineC_text {
+    margin-top: 0px;
+  }
+}
+#wrap main.result_main .main_wrap .result_box .lineC_text span {
+  color: white;
+  font-weight: bold;
+}
+#wrap main.result_main .main_wrap .result_box .lineD_text {
+  margin-top: 65px;
+}
+@media screen and (max-width: 320px) {
+  #wrap main.result_main .main_wrap .result_box .lineD_text {
+    margin-top: 30px;
+  }
+}
+#wrap main.result_main .main_wrap .result_box .lineD_text span {
+  color: white;
+  font-weight: bold;
 }
 div.foot {
   width: 100%;
   height: 80px;
   background: #fb5b6d;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
 }
 @media screen and (max-width: 320px) {
@@ -578,12 +786,12 @@ div.foot div.foot_wrap {
   margin: 0 auto;
 }
 div.foot div.foot_wrap p.foot_text {
-  width: 80%;
+  width: 90%;
   height: 100%;
   font-size: 0.9rem;
-  padding-top: 20px;
+  padding-top: 15px;
   box-sizing: border-box;
-  line-height: 15px;
+  line-height: 18px;
   color: white;
   font-weight: 100;
   letter-spacing: 1.1px;
@@ -599,7 +807,6 @@ div.foot div.foot_wrap div.foot_img {
   width: 20%;
   height: 100%;
   float: right;
-  background: white;
 }
 div.foot div.inconsult_foot {
   padding: 5px;

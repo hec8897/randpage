@@ -46,7 +46,17 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Noto+Sans+KR:300,400,500,700&display=swap&subset=korean');
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Noto+Sans+KR:100,300,400,500,700&display=swap&subset=korean');
 /*====================reset========================*/
 /*====================reset========================*/
 /*====================reset========================*/
@@ -73,13 +83,15 @@ html,body{
                 margin-left: 10px;
             }
             .mention{
-                font-size: 0.85rem;
+                font-size: 0.90rem;
+                font-weight: bold;
                 color: #8b3e3e;
             }
             .coment{
                 font-size: 0.95rem;
                 letter-spacing: 1px;
                 color: #593434;
+                line-height: 15px;
     
     
             }
@@ -89,8 +101,8 @@ html,body{
                 font-size: 3rem;
                 font-weight: bold;
                 letter-spacing: 3px;
-                margin-top: 15px;
-                margin-bottom: 20px;
+                margin-top: 5px;
+                margin-bottom: 5px;
                 color: white;
                 span:nth-child(1){
                     color: #fb5b6d;
@@ -107,25 +119,60 @@ html,body{
         div.memo_img{
             width: 100%;
             height: 300px;
-            background-image: url(../img/test.png);
+            background-image: url(../img/main_memo.png);
             background-size: cover;
             background-position: center;
             margin-top: 20px;
             @media screen and (max-width:320px) {
-                height: 200px;
+                height: 160px;
                 margin-top: 10px;                
             }
         }
-        div.start_btn{
-            width: 170px;
-            height: 90px;
-            background: white;
-            margin: 0 auto;
-            margin-top: -20px;                
+        .start_label{
+            text-align: center;
+            margin-top: -20px;
+            margin-bottom: 10px;
+            font-size: 1.0em;
+            letter-spacing: 3px;
+       
             @media screen and (max-width:320px) {
-                width: 130px;
-                height: 70px;;
-                margin-top: -15px;                
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+
+            }
+
+        }
+        div.start_btn{
+            width: 35%;
+            height: 70px;
+            background: #f7a8a9;
+            margin: 0 auto;
+            line-height: 50px;
+            color: white;
+            font-weight: bold;
+            border-radius: 150px;
+            -webkit-box-shadow: 5px 5px 2px 0px rgba(231,95,95,1);
+            -moz-box-shadow: 5px 5px 2px 0px rgba(231,95,95,1);
+            box-shadow: 5px 5px 2px 0px rgba(231,95,95,1);
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 70px;
+            cursor: pointer;
+            .start_animation{
+                width: 50%;
+                height: 100%;
+                background: white;
+                
+            }
+            
+            @media screen and (max-width:320px) {
+                width: 140px;
+                height: 50px;;
+                line-height: 50px;
+                font-size: 1.1rem;
+
+
             }
         }
     }
@@ -141,12 +188,13 @@ html,body{
         height: 100vh;
 
         div.main_wrap{
-            max-width: 90%;
+            max-width: 100%;
             margin: 0 auto;
             div.logo_area{           
                 
                 h1{
-                    margin-left: 0px;
+                    width: 90%;
+                    margin: 0 auto;
                     font-size: 2rem;
                     letter-spacing: 1px;
                     margin-top: 3px;
@@ -176,10 +224,81 @@ html,body{
             div.qa_box{
                 width: 100%;
                 height: 550px;
-                background: white;
+                background-image: url(../img/inqa_bg.jpg);
+                background-size: cover;
                 @media screen and (max-width:320px) {
                     height: 420px;
                 }
+                div.quiz{
+                    width: 100%;
+                    height: 50%;
+                    text-align: center;
+                    div.emty_box{
+                        height: 45%;;
+                    }
+
+                    h4{
+                        height: 5%;;
+                        height: 10%;;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 25px;
+                        span{
+                            background-color: #fc9699;
+                            color: white;
+                        }
+                    }
+                }
+                div.answer{
+                    width: 100%;
+                    height: 50%;
+                    ul.answer{
+                        width: 80%;
+                        margin: 0 auto;
+                        text-align: center;
+                        li{
+                            width: 35%;
+                            height: 50px;
+                            background: #f7a8a9;
+                            display: inline-block;
+                            margin: 0 auto;
+                            margin-top: 10%;
+                            line-height: 50px;
+                            color: white;
+                            font-weight: bold;
+                            border-radius: 150px;
+                            -webkit-box-shadow: 5px 5px 2px 0px rgba(231,95,95,1);
+                            -moz-box-shadow: 5px 5px 2px 0px rgba(231,95,95,1);
+                            box-shadow: 5px 5px 2px 0px rgba(231,95,95,1);
+                            font-size: 1.2rem;
+                            @media screen and (max-width:320px) {
+                                width: 37%;
+                                font-size: 1.1rem;
+                            }
+                            cursor: pointer;
+
+                            &:nth-child(1){
+                                margin-right: 10%;
+                            }
+                            &:nth-child(3){
+                                margin-right: 10%;
+                            }
+                            &:nth-child(2){
+                                margin-left: 10%;
+                            }
+                            &:nth-child(4){
+                                margin-left: 10%;
+                            }
+                        }
+                        #an001,#an002,#an003,#an004{
+                            font-size: 0.8rem;
+                            letter-spacing: -1px;   
+
+                        }
+                    }
+
+                }
+               
             }
         }
     }
@@ -230,7 +349,7 @@ html,body{
                    
                     @media screen and (max-width:320px) {
                         font-size: 1.8rem;
-
+                        padding-top: 10px;  
                     }     
     
                 }
@@ -300,17 +419,18 @@ html,body{
                             height: 100%;
                             background: #fd96a0;
                             float: left;
+                            font-weight: bold;
+                            color: white;
                             text-align: center;
                             line-height: 40px;
                             font-size: 0.8rem;
-                            font-weight: 100;
                             @media screen and (max-width:320px) {
                                 line-height: 30px;
                                 font-size: 0.7rem;
-
                             }   
                         }
-                        div.input{
+
+                        div.input{ 
                             width: 70%;
                             height: 100%;
                             float: left;
@@ -321,6 +441,7 @@ html,body{
                                 border: 0px;
                                 padding-left: 10px;
                                 box-sizing: border-box;
+                                font-size: 0.7rem;
                             }
                             select{
                                 width: 80%;
@@ -329,7 +450,7 @@ html,body{
                                 border: 0px;
                                 -webkit-appearance: none;
                                 appearance: none;
-                                font-size: 0.8rem;
+                                font-size: 0.7rem;
                                 padding-left: 10px;
                                 box-sizing: border-box;
                                 background-color: white;
@@ -370,6 +491,8 @@ html,body{
                     font-size: 0.9rem;
                     border-radius: 150px;
                     letter-spacing: 3px;
+                    font-weight: bold;
+                    color: white;
                     @media screen and (max-width:320px) {
                         width: 60%;
                         font-size: 0.8rem;
@@ -422,7 +545,6 @@ html,body{
                     width: 150px;
                     height: 70px;
                     margin: 0 auto;
-                    background-image: url(../img/Atype.png);
                     background-size: contain;
                     background-repeat: no-repeat;
                     @media screen and (max-width:320px) {
@@ -430,6 +552,19 @@ html,body{
                         height: 50px;
                     }  
                 }
+                .result1{
+                    background-image: url(../img/Atype.png);
+                }
+                .result2{
+                    background-image: url(../img/Btype.png);
+                }
+                .result3{
+                    background-image: url(../img/Ctype.png);
+                }
+                .result4{
+                    background-image: url(../img/Dtype.png);
+                }
+
                 h3{
                     text-align: center;
                     margin-top: 20px;
@@ -437,30 +572,109 @@ html,body{
                     font-family: 'Nanum Pen Script', cursive;
                     @media screen and (max-width:320px) {
                         font-size: 1.5rem;
-
-
                     }  
                 }       
                 p.text_area{
-                    width: 90%;                    
-                    margin: 20px auto;
+                    margin: 15px auto;
+                    text-align: center;
+                    font-weight: 100;                      
+                    padding: 5px;
+                    box-sizing: border-box;
+                    font-size: 1.0rem;
+                    margin-right: 25px;
+                    width: 85%;
+                    margin-left: 20px;
+                    line-height: 18px;
+
+
+
+                    @media screen and (max-width:320px) {
+                        line-height: 18px;
+                        font-size: 0.90rem;
+                        margin-bottom: 0px;
+                        margin-top: 5px;
+                        margin-right: 20px;
+                        letter-spacing: -1px;
+
+                    }
+                }            
+                .result_C{
+                    p.area_one{
+                        margin-top: 35px;
+                    }
+                }
+                p.area_one{
+                    margin-top: 50px;
+                    @media screen and (max-width:320px) {
+                        margin-top: 50px;
+
+                    }  
+                }
+                .line{
+                    width: 90%;
+                    margin: 0 auto;
+                    margin-top: 50px;
+                    height: 60px;
+                    text-align: center;
                     padding: 10px;
                     box-sizing: border-box;
-                }            
+                    line-height: 20px;
+                    font-weight: 100;
+                    @media screen and (max-width:320px) {
+                        height: 50px;   
+                        margin-top: 0px;
+                        font-size: 0.8rem;
+                        line-height: 15px;
+                        padding: 12px;
 
+
+                    }  
+                    span{
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+
+                .lineC_text{
+                  
+                    margin-top: 45px;
+                
+                    @media screen and (max-width:320px) {
+                        margin-top: 0px;
+
+
+                    }  
+                    span{
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+
+                .lineD_text{
+                  
+                    margin-top: 65px;
+                
+                    @media screen and (max-width:320px) {
+                        margin-top: 30px;
+
+
+                    }  
+                    span{
+                        color: white;
+                        font-weight: bold;
+                    }
+                }
+                
             }
             }
-        }
-        
-    }
-
-  
+        }        
+    } 
    
     div.foot{
             width: 100%;
             height: 80px;
             background: #fb5b6d;
-            position: absolute;
+            position: fixed;
             bottom: 0px;
         @media screen and (max-width:320px) {
             height: 70px;
@@ -470,12 +684,12 @@ html,body{
             height: 100%;
             margin: 0 auto;
             p.foot_text{
-                width: 80%;
+                width: 90%;
                 height: 100%;
                 font-size: 0.90rem;
-                padding-top: 20px;
+                padding-top: 15px;
                 box-sizing: border-box;                
-                line-height: 15px;
+                line-height: 18px;
                 color: white;
                 font-weight: 100;
                 letter-spacing: 1.1px;
@@ -490,7 +704,6 @@ html,body{
                 width: 20%;
                 height: 100%;
                 float: right;
-                background: white;
             }
         }
         div.inconsult_foot{
