@@ -25,7 +25,7 @@ $adGet = $_POST['ad_get'];
 $site_code = "재무심리2";
 $time = date('Y-m-d H:i:s');
 
-$memo = "$an3</br>$an4</br>$an5</br>$an6</br>$an7</br>$an8</br>$an9</br>$an10";
+$memo = "$an3\n$an4\n$an5\n$an6\n$an7\n$an8\n$an9\n$an10";
 
 $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqBirth,reqArea,reqSexflag,reqMemo,Insertdate,connectflag,reqAd) 
 VALUES('$site_code','$reqName','$reqPhone','$reqBirth','$reqArea','$reqSexflag','$memo','$time','$url','$adGet')";

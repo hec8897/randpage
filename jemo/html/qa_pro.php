@@ -40,7 +40,7 @@ $site_code = "재무심리";
 $time = date('Y-m-d H:i:s');
 
 
-$memo = "1번 $qa1 </br> 2번 $qa2 </br> 3번 $qa3 </br> 4번 $qa4 </br> 5번 $qa5</br> 6번 $qa6 </br>7번 $qa7</br> 8번 $qa8</br>9번 $qa9</br>10번 $qa10</br>";
+$memo = "1.$qa1\n2.$qa2\n3.$qa3\n4.$qa4\n5.$qa5\n6.$qa6\n7.$qa7\n8.$qa8\n9.$qa9\n10.$qa10";
 
 if(isset($dir_reqName)){
     $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,Insertdate,connectflag,reqAd) 
