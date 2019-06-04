@@ -6,22 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
+
 </head>
 <body>
-    <div id="wrap">
-        <div class='main_wrap'>
-
-            <ul class="start_btns">
-
-                <li></li>
-                <li></li>
-            </ul>
-            <footer>
-                <div class='icons'></div>
-                <p>태아보험 상식 퀴즈대회에 도전하신 분께는 <span>태아보험 무료견적</br> 서비스</span>를 제공해 드립니다.</p>
-            </footer>
+    <div class='main_index' id='wrap'>
+        <h1></h1>
+        <div class='main_img'>
         </div>
-       
-    </div>   
+        <ul class="start_btn">
+            <li id='start_m' onclick="StartBtn('m')"></li>
+            <li id='start_w' onclick="StartBtn('w')"></li>
+        </ul>
+        <footer>
+            <div class="footer_icon"></div>
+            <p>태아보험 상식 퀴즈대회에 합격하는 분에게는 <span>스타벅스 커피 쿠폰</span>과
+            <span>태아보험 무료 비교견적 서비스</span>를 제공해 드립니다.</p>
+        </footer>
+    </div>
+
+    <script>
+        function StartBtn(a){
+            location.href="qa.php?gen="+a
+        }
+    
+    </script>
 </body>
 </html>
