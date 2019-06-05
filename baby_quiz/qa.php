@@ -1,6 +1,7 @@
 <?php
 
 $reqSexflag = $_GET['gen'];
+$adGet = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +11,7 @@ $reqSexflag = $_GET['gen'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>BM Baby_quiz</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/event.js"></script>
 </head>
@@ -22,6 +23,7 @@ $reqSexflag = $_GET['gen'];
                
                 </div>
             <form action="inconsult.php" id='frm' method="POST">
+                <input type="hidden" id='adget' name='adget' value='<?=$adGet?>'>
                 <input type="hidden" name='reqSexflag' id='qa0' value='<?=$reqSexflag?>'>
                 <input type="hidden" id='qa1' name='qa1'>
                 <input type="hidden" id='qa2' name='qa2'>
@@ -31,6 +33,7 @@ $reqSexflag = $_GET['gen'];
                 <input type="hidden" id='qa6' name='qa6'>
                 <input type="hidden" id='qa7' name='qa7'>
                 <input type="hidden" id='qa8' name='qa8'>
+
             </form>
         </div>
     </div>    

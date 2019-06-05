@@ -28,7 +28,7 @@ div.main_index {
 }
 div.main_index h1 {
   width: 100%;
-  height: 150px;
+  height: 190px;
   background-image: url(../img/main_tit.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -41,7 +41,7 @@ div.main_index h1 {
 }
 div.main_index div.main_img {
   width: 100%;
-  height: 300px;
+  height: 280px;
   margin-top: 20px;
   background-image: url(../img/main_il.gif);
   background-size: contain;
@@ -56,7 +56,7 @@ div.main_index div.main_img {
 }
 div.main_index ul.start_btn {
   width: 100%;
-  height: 130px;
+  height: 120px;
 }
 @media screen and (max-width: 320px) {
   div.main_index ul.start_btn {
@@ -140,9 +140,9 @@ div.qa_wrap h2 p {
   transform: skew(10deg);
 }
 div.qa_wrap div.qa_box {
-  width: 100%;
-  height: 300px;
-  margin-top: 50px;
+  width: 95%;
+  height: 280px;
+  margin: 50px auto;
   background-image: url(../img/qa_box.png);
   background-position: center;
   background-size: contain;
@@ -162,7 +162,7 @@ div.qa_wrap div.qa_box p {
 div.qa_wrap ul.anw_btns {
   margin-top: 50px;
   width: 100%;
-  height: 150px;
+  height: 130px;
 }
 @media screen and (max-width: 320px) {
   div.qa_wrap ul.anw_btns {
@@ -179,7 +179,7 @@ div.qa_wrap ul.anw_btns li {
   background-repeat: no-repeat;
   cursor: pointer;
   text-align: center;
-  line-height: 135px;
+  line-height: 115px;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -227,6 +227,10 @@ div.inconsult_wrap p.tit_coment {
   margin-top: 50px;
   font-size: 0.9rem;
   color: gray;
+  line-height: 1.5rem;
+}
+div.inconsult_wrap p.tit_coment span {
+  font-weight: bold;
 }
 @media screen and (max-width: 320px) {
   div.inconsult_wrap p.tit_coment {
@@ -235,7 +239,7 @@ div.inconsult_wrap p.tit_coment {
 }
 div.inconsult_wrap ul.inputs {
   width: 65%;
-  margin: 80px auto;
+  margin: 50px auto;
 }
 @media screen and (max-width: 320px) {
   div.inconsult_wrap ul.inputs {
