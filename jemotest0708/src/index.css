@@ -1,0 +1,9 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#wrap{
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #6bdafe;
+}

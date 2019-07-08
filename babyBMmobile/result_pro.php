@@ -1,7 +1,8 @@
 <?php
 
 //DB연결
-$conn = mysqli_connect('localhost', 'bmadmins', 'bm1004^^','bmadmins'); 
+include('../conn/conn.php');
+// $conn = mysqli_connect('localhost', 'bmadmins', 'bm1004^^','bmadmins'); 
 
 mysqli_set_charset($conn,"utf8");
 

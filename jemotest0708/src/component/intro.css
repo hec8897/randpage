@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap&subset=korean');
+.intro_wrap{
+    background: #00a6ff;
+    flex-direction: column;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+.upper{
+    height: 450px;
+    margin-bottom: 30px;
+}
+h1{
+    height: 45%;
+    background-color: #6bdafe;
+    background-image: url(img/h1_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.upper_img{
+    height: 55%;
+    background-image: url(img/intro_upper_img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h2{
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+div.cartoon-container{
+    width: 90%;
+    margin: 20px auto;
+}
+div.cartoon{
+    width: 100%;
+    height: 220px;;
+    margin-bottom: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cartoon1{
+    background-image: url(img/cartoon1.png);
+}
+.cartoon2{
+    background-image: url(img/cartoon2.png);
+}
+.cartoon3{
+    background-image: url(img/cartoon3.png);
+}
+.text-area{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+.text-area p:nth-child(2){
+    margin-bottom: 15px;
+}
+.text-area span{
+    font-weight: bold;
+}
+.start_btn{
+    width: 60%;
+    height: 50px;
+    margin: 20px auto;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    cursor: pointer;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcf299+1,ffff3a+42 */
+    background: #fcf299; /* Old browsers */
+    background: -moz-linear-gradient(top, #fcf299 1%, #ffff3a 42%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fcf299 1%,#ffff3a 42%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fcf299 1%,#ffff3a 42%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcf299', endColorstr='#ffff3a',GradientType=0 ); /* IE6-9 */
+    -webkit-box-shadow: -4px 4px 5px 0px rgba(110,110,110,1);
+    -moz-box-shadow: -4px 4px 5px 0px rgba(110,110,110,1);
+    box-shadow: -4px 4px 5px 0px rgba(110,110,110,1);
+    
+}
+
+footer{
+    width: 100%;
+    height: 140px;
+    background-image: url(img/footer.png);
+    background-size: cover;
+    background-position: center;
+
+}
+
+@media screen and (max-width:320px){
+    .upper{
+        height: 390px;
+        margin-bottom: -10px;
+    }
+    h1{
+        height: 40%;;
+    }
+    .upper_img{
+        height: 50%;
+    }
+    h2{
+        font-size: 20px;
+    }
+    div.cartoon{
+        height: 180px;
+        margin: 0px;
+    }
+    .text-area{
+        font-size: 11px;
+    }
+    .start_btn{
+        font-size: 15px;
+    }
+}

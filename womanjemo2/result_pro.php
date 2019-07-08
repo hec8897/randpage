@@ -1,6 +1,6 @@
 <?php
-
-$conn = mysqli_connect('localhost', 'bmadmins', 'bm1004^^','bmadmins'); 
+include('../conn/conn.php');
+// $conn = mysqli_connect('localhost', 'bmadmins', 'bm1004^^','bmadmins'); 
 mysqli_set_charset($conn,"utf8");
 
 
@@ -69,12 +69,9 @@ else if($an10 =='선물옵션,주식형/투자형'){
     </script>
     <?php
 }
-
 else{
     echo '없음';
 }
-
-
 ?>
 
 <!DOCTYPE html>

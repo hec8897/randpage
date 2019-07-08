@@ -1,7 +1,8 @@
 <?php
 
 //DB연결
-$conn = mysqli_connect('localhost', 'bmadmins', 'bm1004^^','bmadmins'); 
+include('../conn/conn.php');
+// $conn = mysqli_connect('localhost', 'bmadmins', 'bm1004^^','bmadmins'); 
 //실 서버
 // $conn = mysqli_connect('localhost', 'root', 'bm12#$','BmDb');
 //개발 서버
@@ -34,12 +35,8 @@ $dir_reqName = $_POST['dir_reqname'];
 $dir_reqphone = $_POST['dir_reqphone'];
 
 $dir_phone = "'".$dir_reqphone."'";
-
-
 $site_code = "재무심리";
 $time = date('Y-m-d H:i:s');
-
-
 $memo = "1.$qa1\n2.$qa2\n3.$qa3\n4.$qa4\n5.$qa5\n6.$qa6\n7.$qa7\n8.$qa8\n9.$qa9\n10.$qa10";
 
 if(isset($dir_reqName)){
@@ -48,14 +45,11 @@ if(isset($dir_reqName)){
     $sql2 ="INSERT INTO `tb_consult_backup` (site_code,reqName,reqPhone,Insertdate,connectflag) 
     VALUES('$site_code','$dir_reqName','$dir_phone','$time','$url')";
 }
-
 else{
     $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqBirth,reqArea,reqSexflag,reqMemo,Insertdate,connectflag,reqAd) 
     VALUES('$site_code','$reqName','$reqphone','$qa0','$reqArea','$sexflag','$memo','$time','$url','$adGet')";
      $sql2 ="INSERT INTO `tb_consult_backup` (site_code,reqName,reqPhone,reqBirth,reqArea,reqSexflag,reqMemo,Insertdate,connectflag) 
      VALUES('$site_code','$reqName','$reqphone','$qa0','$reqArea','$sexflag','$memo','$time','$url')";
-
-
 }
     mysqli_query($conn,$sql);
     mysqli_query($conn,$sql2);
