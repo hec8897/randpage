@@ -1,0 +1,334 @@
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(https://fonts.gstatic.com/s/notosanskr/v11/PbykFmXiEBPT4ITbgNA5CgmG237u.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Noto Sans KR Medium'), local('NotoSansKR-Medium'), url(https://fonts.gstatic.com/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOIl345bIS.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIS.otf) format('opentype');
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+html,
+body {
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  background: #00a6ff;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+#wrap .upper {
+  width: 100%;
+  height: 450px;
+  margin-bottom: 30px;
+}
+#wrap h1.intro_h1 {
+  width: 100%;
+  height: 45%;
+  background-color: #6bdafe;
+  background-image: url(../img/h1_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#wrap .upper_img {
+  height: 55%;
+  background-image: url(../img/intro_upper_img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#wrap h2 {
+  margin: 0 auto;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+#wrap div.cartoon-container {
+  width: 90%;
+  margin: 20px auto;
+}
+#wrap div.cartoon-container div.cartoon {
+  width: 100%;
+  height: 220px;
+  margin-bottom: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#wrap div.cartoon-container .cartoon1 {
+  background-image: url(../img/cartoon1.png);
+}
+#wrap div.cartoon-container .cartoon2 {
+  background-image: url(../img/cartoon2.png);
+}
+#wrap div.cartoon-container .cartoon3 {
+  background-image: url(../img/cartoon3.png);
+}
+#wrap .text-area {
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  letter-spacing: -1px;
+}
+#wrap .text-area .text-area p:nth-child(2) {
+  margin-bottom: 15px;
+}
+#wrap .text-area .text-area span {
+  font-weight: bold;
+}
+#wrap .start_btn {
+  width: 60%;
+  height: 50px;
+  margin: 20px auto;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  cursor: pointer;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcf299+1,ffff3a+42 */
+  background: #fcf299;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #fcf299 1%, #ffff3a 42%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #fcf299 1%, #ffff3a 42%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #fcf299 1%, #ffff3a 42%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcf299', endColorstr='#ffff3a', GradientType=0);
+  /* IE6-9 */
+  -webkit-box-shadow: -4px 4px 5px 0px #6e6e6e;
+  -moz-box-shadow: -4px 4px 5px 0px #6e6e6e;
+  box-shadow: -4px 4px 5px 0px #6e6e6e;
+}
+#wrap footer {
+  width: 100%;
+  height: 140px;
+  background-image: url(../img/footer.png);
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 320px) {
+  #wrap .upper {
+    margin-bottom: 0px;
+  }
+  #wrap h1.intro_h1 {
+    height: 35%;
+  }
+  #wrap .upper_img {
+    height: 55%;
+  }
+  #wrap h2 {
+    font-size: 20px;
+  }
+  #wrap div.cartoon {
+    height: 180px;
+    margin: 0px;
+  }
+  #wrap .text-area {
+    font-size: 11px;
+  }
+  #wrap .start_btn {
+    font-size: 15px;
+  }
+}
+#testpage_wrap {
+  position: relative;
+  min-height: 100%;
+}
+#testpage_wrap h1 {
+  width: 100%;
+  height: 140px;
+  background-image: url(../img/testh1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#testpage_wrap div.test-wrap h2 {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 150px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: normal;
+}
+#testpage_wrap div.test-wrap .total-point {
+  font-size: 40px;
+}
+#testpage_wrap div.test-wrap .noanswer {
+  width: 90%;
+  margin: 0 auto;
+  color: #424242;
+}
+#testpage_wrap div.test-wrap .noanswer span {
+  font-weight: bold;
+}
+#testpage_wrap div.test-wrap ul.qas {
+  text-align: center;
+  min-height: 400px;
+}
+#testpage_wrap div.test-wrap ul.qas li {
+  cursor: pointer;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+  line-height: 140px;
+  display: inline-block;
+  background-color: yellowgreen;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 150px;
+  box-shadow: -4px 4px 5px 0px #6e6e6e;
+  text-align: center;
+}
+#testpage_wrap div.test-wrap ul.qas li:nth-child(1) {
+  background-color: mediumaquamarine;
+}
+#testpage_wrap div.test-wrap ul.qas li:nth-child(2) {
+  background-color: powderblue;
+}
+#testpage_wrap div.test-wrap ul.qas li:nth-child(3) {
+  background-color: tomato;
+}
+#testpage_wrap div.test-wrap ul.qas li:nth-child(4) {
+  background-color: blanchedalmond;
+}
+#testpage_wrap div.test-wrap ul.qas .test-container li a {
+  color: black;
+  text-decoration: none;
+}
+@media screen and (max-width: 320px) {
+  #testpage_wrap div.test-wrap ul.qas li {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+  }
+}
+#testpage_wrap div.test-wrap ul.inputs {
+  width: 90%;
+  min-height: 230px;
+  margin: 30px auto;
+  border: 3px dashed white;
+}
+#testpage_wrap div.test-wrap ul.inputs h3 {
+  padding-top: 20px;
+  text-align: center;
+}
+#testpage_wrap div.test-wrap ul.inputs li {
+  width: 70%;
+  height: 25px;
+  margin: 10px auto;
+  list-style-type: none;
+}
+#testpage_wrap div.test-wrap ul.inputs li input {
+  width: 70%;
+  height: 100%;
+  margin-left: 10px;
+  border: 0px;
+  background-color: lightgray;
+  float: right;
+}
+#testpage_wrap div.test-wrap ul.inputs li select {
+  height: 100%;
+  width: 70%;
+  float: right;
+}
+#testpage_wrap div.test-wrap ul.inputs li.sub_btn {
+  width: 50%;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  cursor: pointer;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcf299+1,ffff3a+42 */
+  background: #fcf299;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #fcf299 1%, #ffff3a 42%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #fcf299 1%, #ffff3a 42%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #fcf299 1%, #ffff3a 42%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcf299', endColorstr='#ffff3a', GradientType=0);
+  /* IE6-9 */
+  -webkit-box-shadow: -4px 4px 3px 0px #6e6e6e;
+  -moz-box-shadow: -4px 4px 3px 0px #6e6e6e;
+  box-shadow: -4px 4px 3px 0px #6e6e6e;
+}
+#testpage_wrap div.test-wrap .front_ans {
+  text-align: center;
+}
+#testpage_wrap footer {
+  width: 100%;
+  height: 140px;
+  background-image: url(../img/footer.png);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  margin-top: 40px;
+}
+@media screen and (max-width: 320px) {
+  #testpage_wrap h1.testpage_h1 {
+    background-size: 130%;
+  }
+  #testpage_wrap .test-wrap .testpage-h2 {
+    font-size: 14px;
+  }
+  #testpage_wrap ul.qas {
+    min-height: 250px!important;
+  }
+  #testpage_wrap ul.qas li {
+    width: 100px!important;
+    line-height: 100px!important;
+    height: 100px!important;
+    font-size: 12px!important;
+  }
+  #testpage_wrap li {
+    font-size: 12px;
+    width: 90%;
+    height: 25px;
+    margin: 10px auto;
+    list-style-type: none;
+  }
+  #testpage_wrap li input {
+    width: 70%;
+    height: 100%;
+    margin-left: 10px;
+    border: 0px;
+    background-color: lightgray;
+    float: left;
+  }
+  #testpage_wrap li select {
+    height: 100%;
+    width: 70%;
+    float: right;
+  }
+}

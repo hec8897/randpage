@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="testpage_wrap">
+        <h1 class='testpage_h1'></h1>
+        <div class='test-wrap'>
+            <h2 class='testpage-h2'>[Data:문제제목]</h2>
+            <ul class='qas' >
+            </ul>
+            <div class='front_ans' onclick="frontFn()">
+            </div>
+        </div>
+        <footer></footer>
+
+    </div>
+    <script>
+        var state = {
+            questions:[
+                {id:0,point:0,qa:"당신의 직업군은?",an1:['개인사업/자영업',0],an2:['직장인 근로소득자',0],an3:['전문직',0],an4:['프리랜서',0],cateId:null,howAn:4},
+                {id:1,point:0,qa:"당신의 연간 총소득은 얼마인가요?",an1:['1천만원~3천만원',4],an2:['3천만원~6천만원',6],an3:['6천만원~9천만원',8],an4:['1억이상',10],cateId:null,howAn:4},
+                {id:2,point:0,qa:"당신의 한 달 생활비</br>(기본 의식주,경조사비,교통비등)는</br> 얼마인가요?",an1:['50만원 내외',10],an2:['100만원 내외',8],an3:['300만원 내외',6],an4:['500만원 이상',4],cateId:'지출관리',howAn:4},
+                {id:3,point:0,qa:"당신은 얼마 정도 대출을 받고 있나요?",an1:['1천만원 이하',10],an2:['3천만원 이하',8],an3:['5천만원 이하',6],an4:['1억이상',4],cateId:null,howAn:4},
+                {id:4,point:0,qa:"당신의 월 소득대비 저축률은</br> 어느 정도 되시나요?",an1:['10% 이하',4],an2:['30% 이하',6],an3:['50% 이하',8],an4:['70% 이상',10],cateId:'저축관리',howAn:4},
+                {id:5,point:0,qa:"비상시를 대비하여 통장에 </br>두 달 생활비 정도의 자금이 있나요?",an1:['네',10],an2:['아니요',4],an3:null,an4:null,cateId:null,howAn:2},
+                {id:6,point:0,qa:"대출을 했다면 당신은 계획대로 </br>모두 상환할 수 있나요?",an1:['네',10],an2:['아니요',4],an3:null,an4:null,cateId:'대출관리',howAn:2},
+                {id:7,point:0,qa:"당신은 갑작스러운 질병, 상해, 사고, 사망 등에 대비해 보장성보험에 가입하고 계신가요?",an1:['네',10],an2:['아니요',4],an3:null,an4:null,cateId:'보험관리',howAn:2},
+                {id:8,point:0,qa:"뜻하지 않게 300만원이 급히 필요하다면 </br>바로 마련하실 수 있나요?",an1:['네',10],an2:['아니요',4],an3:null,an4:null,cateId:'재무목표관리',howAn:2},
+                {id:9,point:0,qa:"당신은 평소 공과금이나 납부고지서를 </br>제때 납부하십니까?",an1:['네',10],an2:['아니요',4],an3:null,an4:null,cateId:null,howAn:2},
+                {id:10,point:0,qa:"매월 정기적으로 발생되는 생활비,</br> 이자, 보험료 등이 얼마인지 </br>어렵지 않게 말할 수 있나요?",an1:['네',10],an2:['아니요',4],an3:null,an4:null,cateId:null,howAn:2},
+                {id:11,point:0,qa:"당신은 어떤 방법으로 </br>재테크를 하고 계신가요?",an1:['예적금',0],an2:['주식 or 펀드',0],an3:['채권',0],an4:['선물 옵션',0],cateId:null,howAn:4}
+                ]
+        }
+
+        var qasArray = [];
+        let qaReturn = function(){
+            qas = state.questions;
+            var i = 0;
+            while(i<=state.questions.length){
+                qasArray.push(qas[i])
+                i=i+1;
+            }
+        }()
+        let lists = [];
+        let Ancode;
+        let noAnswer=[]; //특수 부족한 부분 
+        let result = []; //선택한 답 취합
+        let TotalPoint=0;
+        //anReturn(문제아이디,문제점수)
+        let anReturn = function(a,b,c){
+                Ancode = a;
+                thisPoint = b;
+                if(Ancode  == 12){
+                    document.querySelector('.test-wrap').innerHTML=
+                    `<h2 class='total-point'>총 ${TotalPoint}점</h2>
+                     <p class='noanswer'>당신은 <span>${noAnswer}</span> 항목에 취약합니다. 전문 상담사와 상담을 원하시면 상담을 신청해 주세요</p>
+                     <form>
+                     <ul class='inputs'>
+                     <h3>상담신청</h3>
+                     <li><span>성함</span><input></li>
+                     <li><span>전화번호</span><input></li>
+                     <li><span>지역</span><select><option>123</option></select></li>
+                     <li class='sub_btn'>신청하기</li>
+                     </ul>
+                     </form>`
+                    }
+                    //결과 페이지 랜더
+                else{
+                    document.querySelector('.testpage-h2').innerHTML=`${qas[a].qa}`
+                    //문제 제목 출력
+                    if(isNaN(b)==false){
+                        TotalPoint += b;
+                    }
+                    _listAn = Object.values(state.questions[a]);
+                    if(b<5 && b!=0 && _listAn[7]!=null){
+                        if(_listAn!=undefined){
+                            noAnswer.push(_listAn[7])
+                        }
+                    }
+                    if(c!=undefined){
+                        result.push(c)
+                    }
+                    //결과 배열 
+                    ansReturn()
+                }
+                if(Ancode>0){
+                    document.querySelector('.front_ans').innerHTML='이전문제';
+                    //이전문제 버튼
+                }
+                if(Ancode===0){
+                    document.querySelector('.front_ans').innerHTML=' '
+                    //이전문제 버튼
+                }
+                console.log(thisPoint)
+
+                return Ancode,TotalPoint,thisPoint;
+            }   
+
+            anReturn(0)//최초 랜딩시 실행
+
+            function frontFn(){
+                //이전문제 랜딩
+                result.splice(-1,1);//전체 결과 마지막 배열 삭제
+                if(_listAn[7] === noAnswer[noAnswer.length-1]){
+                    noAnswer.splice(-1,1);
+                    //특별 결과 마지막 배열 삭제
+                }
+                if(thisPoint!=undefined){
+                    TotalPoint -= thisPoint;
+                }
+                //포인트 이전 으로 돌리기
+                anReturn(Ancode-1);
+                //이전 문제 랜딩
+            }
+
+        function ansReturn(){
+                //디음 문제 랜딩
+                if(qas[Ancode].howAn === 4){
+                    // var test = String(_listAn[3][1])
+                    lists = `<li id='${_listAn[3][0]}' onclick='anReturn(${_listAn[0]+1},${_listAn[3][1]},this.id)'>${_listAn[3][0]}</li>
+                             <li id='${_listAn[4][0]}' onclick='anReturn(${_listAn[0]+1},${_listAn[4][1]},this.id)'>${_listAn[4][0]}</li>
+                             <li id='${_listAn[5][0]}' onclick='anReturn(${_listAn[0]+1},${_listAn[5][1]},this.id)'>${_listAn[5][0]}</li>
+                             <li id='${_listAn[6][0]}' onclick='anReturn(${_listAn[0]+1},${_listAn[6][1]},this.id)'>${_listAn[6][0]}</li>`;
+                            //답 4개
+                }
+                if(qas[Ancode].howAn === 2){
+                    lists = `<li id='${_listAn[3][0]}' onclick='anReturn(${_listAn[0]+1},${_listAn[3][1]},this.id)'>${_listAn[3][0]}</li>
+                            <li id='${_listAn[4][0]}' onclick='anReturn(${_listAn[0]+1},${_listAn[4][1]},this.id)'>${_listAn[4][0]}</li>`;
+                            //답 두개
+                }
+                    document.querySelector('.qas').innerHTML=`${lists}`;
+
+            }
+
+    
+    
+    </script>
+    
+</body>
+</html>
