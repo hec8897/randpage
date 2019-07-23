@@ -3,21 +3,21 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Do Hyeon Regular'), local('DoHyeon-Regular'), url(https://fonts.gstatic.com/s/dohyeon/v10/TwMN-I8CRRU2zM86HGE6bQI.ttf) format('truetype');
+  src: local('Do Hyeon Regular'), local('DoHyeon-Regular'), url(https://fonts.gstatic.com/s/dohyeon/v11/TwMN-I8CRRU2zM86HGE6bQI.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(https://fonts.gstatic.com/s/notosanskr/v11/PbykFmXiEBPT4ITbgNA5CgmG237u.otf) format('opentype');
+  src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(https://fonts.gstatic.com/s/notosanskr/v12/PbykFmXiEBPT4ITbgNA5CgmG237u.otf) format('opentype');
 }
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v11/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIS.otf) format('opentype');
+  src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v12/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIS.otf) format('opentype');
 }
 @font-face {
   font-family: 'HangeulNuri-Bold';
@@ -198,15 +198,25 @@ body {
   font-size: 40px;
 }
 #testpage_wrap div.test-wrap .noanswer {
-  width: 90%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 10px auto;
   color: #424242;
-  text-align: center;
+  text-align: left;
   font-size: 14px;
-  letter-spacing: -1px;
 }
 #testpage_wrap div.test-wrap .noanswer span {
   font-weight: bold;
+}
+#testpage_wrap div.test-wrap .noanswer1 {
+  margin-top: 0px;
+}
+#testpage_wrap div.test-wrap p.mention {
+  text-align: center;
+  font-size: 14px;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #424242;
 }
 #testpage_wrap div.test-wrap .inputs_page_wrap {
   height: 650px;
@@ -259,7 +269,7 @@ body {
   }
 }
 #testpage_wrap div.test-wrap ul.inputs {
-  width: 90%;
+  width: 80%;
   position: relative;
   margin: 30px auto;
   border: 3px dashed white;
@@ -270,6 +280,12 @@ body {
   text-align: center;
 }
 @media screen and (max-width: 375px) {
+  #testpage_wrap div.test-wrap ul.inputs ul.inputs {
+    width: 90%;
+  }
+  #testpage_wrap div.test-wrap ul.inputs .noanswer {
+    width: 90%!important;
+  }
   #testpage_wrap div.test-wrap ul.inputs h3 {
     padding-top: 10px;
   }
@@ -302,14 +318,6 @@ body {
 #testpage_wrap div.test-wrap ul.inputs li div.name-gender {
   width: 100%;
   height: 100%;
-}
-@media screen and (max-width: 375px) {
-  #testpage_wrap div.test-wrap ul.inputs ul.inputs {
-    min-width: 550px;
-  }
-  #testpage_wrap div.test-wrap ul.inputs li span {
-    font-size: 13px;
-  }
 }
 #testpage_wrap div.test-wrap ul.inputs li.sub_btn {
   width: 50%;
@@ -349,7 +357,13 @@ body {
 }
 @media screen and (max-width: 375px) {
   #testpage_wrap div.test-wrap ul.inputs {
+    width: 90%;
     height: 220px;
+  }
+  #testpage_wrap div.test-wrap ul.inputs p {
+    text-align: center;
+    font-size: 14px;
+    color: #424242;
   }
   #testpage_wrap div.test-wrap .front_ans {
     font-size: 16px;
