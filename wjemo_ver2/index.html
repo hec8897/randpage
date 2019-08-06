@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>BM Company</title>
+</head>
+
+<body>
+    <div id='wrap'>
+        <h1 class='main_tit'>
+            <img src="img/h1.png" alt="main_tit">
+        </h1>
+        <div class='content_box'>
+            <div class='content_tit'>부자 <span>VS</span> 가난</div>
+            <div class='content_tit'><span>재테크 성향</span>은 타고난다!</div>
+            <p class='tit_mentin'>열심히 일해도 <span>돈</span>이 잘 모이지 않는다면</p></br>
+            <p class='tit_mentin'>한번쯤 <span>점검</span>은 <span>필요</span>합니다.</p>
+            <div class='cartoons'>
+                <div class='cartoon1'></div>
+                <div class='cartoon2'></div>
+            </div>
+        </div>
+        <div class='section1'>
+            <h3>재테크 성향도 알아보고~</h3>
+            <h3><span>재무심리분석자료도 무료로 받고!</span></h3>
+            <p>추첨을 통해 스타벅스 커피쿠폰과</p>
+            <p>재무전문가의 개인 맞춤형 솔루션까지 드립니다.</p>
+            <img src="img/section2_img.png" alt="section2_infograpic">
+
+        </div>
+        <div class='section2'>
+            <div class='info_box'>
+                <h2></h2>
+                <p>성실하지만 '돈'이 잘 모이지 않는 분들~</p>
+                <p>지금까지의 재테크 방법을 점검받고 싶으신 분들!</p>
+                <div class='icons'></div>
+                <p class='mention'>그럼에도 돈은 모이지 않고 늘 제자리를 걷는 듯 하다면</p>
+                <p class='mention'>한번쯤 당신의 <span>재무구조를 점검</span>해봐야 합니다.</p>
+                <p class='mention'>당신에게 <span>최적화된 효율적인 재테크 방법</span>을 알려드립니다.</p>
+            </div>
+        </div>
+        <div class='infos'>
+            <ul>
+                <li>
+                    <div class='info_tit'>이벤트 기간</div>
+                    <div class='info'>2019.08.01-10.31까지</div>
+                </li>
+                <li>
+                    <div class='info_tit'>이벤트 대상</div>
+                    <div class='info'>재테크에 관심있는 누구나</div>
+                </li>
+                <li>
+                    <div class='info_tit'>상담문의</div>
+                    <div class='info'>대표전화 : 02-1670-5208</div>
+                </li>
+            </ul>
+            <div class="start_btn" onclick="locationTestPage()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let params;
+
+        let getQueryString = function () {
+            params = {};
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+            return params;
+        }()
+
+        function locationTestPage(){
+            // console.log(params.id)
+            location.href='testpage.html?id='+params.id
+
+        }
+    </script>
+
+</body>
+
+</html>
