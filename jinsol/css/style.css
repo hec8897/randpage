@@ -1,0 +1,553 @@
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(https://fonts.gstatic.com/s/notosanskr/v12/PbykFmXiEBPT4ITbgNA5CgmG237u.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v12/Pby7FmXiEBPT4ITbgNA5CgmOalv45bIS.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Nanum Pen Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Nanum Pen'), local('NanumPen'), url(https://fonts.gstatic.com/s/nanumpenscript/v15/daaDSSYiLGqEal3MvdA_FOL_3FkN6zP0bA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'yg-jalnan';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  background: #fec2c2;
+  font-size: 14px;
+}
+@media screen and (max-width: 375px) {
+  html,
+  body {
+    background: #fec2c2;
+    font-size: 12px;
+  }
+}
+#wrap {
+  max-width: 600px;
+  min-height: 500px;
+  background: #fec2c2;
+  margin: 0 auto;
+}
+#wrap .section1 {
+  width: 100%;
+  height: 480px;
+  background-image: url(../img/section1_bg.png);
+  text-align: center;
+  overflow: hidden;
+}
+#wrap .section1 header {
+  width: 100%;
+  height: 80px;
+  background-image: url(../img/header_pat.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#wrap .section1 h3 {
+  display: inline-block;
+  margin-top: 20px auto;
+  text-align: center;
+  font-size: 1.25rem;
+  background-color: #211917;
+  color: white;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 150px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+#wrap .section1 h2 {
+  font-family: 'Nanum Pen Script', cursive;
+  font-weight: normal;
+  color: #192646;
+  margin-top: 10px;
+  font-size: 1.6rem;
+}
+#wrap .section1 h1 {
+  font-family: 'yg-jalnan';
+  font-weight: 800;
+  font-size: 2.8rem;
+  letter-spacing: 3.5px;
+  color: #192646;
+}
+#wrap .section1 h1 span {
+  color: #574577;
+}
+#wrap .section1 ul {
+  margin-top: 0px;
+}
+#wrap .section1 ul li {
+  display: inline-block;
+  list-style-type: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin-left: 0px;
+  margin-right: 0px;
+  font-size: 0.9rem;
+  letter-spacing: -2;
+}
+#wrap .section1 img {
+  margin-top: 15px;
+  width: 100%;
+}
+.flower_imgs {
+  width: 100%;
+  height: 400px;
+  margin-top: -300px;
+}
+.flower_imgs div {
+  width: 30%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.flower_imgs .flower-left {
+  background-image: url(../img/section1_left_f.png);
+  float: left;
+}
+.flower_imgs .flower-right {
+  float: right;
+  background-image: url(../img/section1_right_f.png);
+}
+.section2 {
+  width: 100%;
+}
+.section2 h2 {
+  width: 45%;
+  height: 40px;
+  line-height: 45px;
+  margin: 0 auto;
+  text-align: center;
+  background: #20284f;
+  color: white;
+  transform: translateY(-120%);
+  border-radius: 150px;
+  box-sizing: border-box;
+  font-family: 'yg-jalnan';
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  font-weight: normal;
+  padding-right: 15px;
+}
+.section2 h2 div {
+  height: 30px;
+  border-radius: 150px;
+  background: white;
+  text-align: center;
+  width: 30px;
+  margin: 5px;
+  float: left;
+  line-height: 35px;
+  color: #20284f;
+}
+.section2 div.ev_lists {
+  margin-top: -10px;
+}
+.section2 div.ev_lists div.ev_list {
+  width: 98%;
+  height: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+.section2 div.ev_lists div.ev_list div.ev_text {
+  width: 34%;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.section2 div.ev_lists div.ev_list div.ev_text div.check_li_style {
+  width: 30px;
+  height: 30px;
+  border-radius: 150px;
+  text-align: left;
+  background-image: url(../img/check_circle.png);
+  background-size: cover;
+}
+.section2 div.ev_lists div.ev_list div.ev_text h3 {
+  text-align: left;
+  margin-top: 5px;
+  color: white;
+  font-size: 1.7rem;
+  text-shadow: 2px 2px 10px #808080;
+  font-weight: normal;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.section2 div.ev_lists div.ev_list div.ev_text h3 span {
+  font-weight: bold;
+}
+.section2 div.ev_lists div.ev_list div.ev_text p {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 0.95rem;
+  letter-spacing: -1px;
+  text-align: left;
+  float: left;
+  color: #20284f;
+  font-family: 'Noto Sans KR', sans-serif;
+  border-bottom: 1px solid #20284f;
+}
+.section2 div.ev_lists div.ev_list div.ev_imgs {
+  width: 64%;
+  height: 200px;
+  display: inline-block;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.section2 div.ev_lists div.ev_list div.ev_imgs div.img_box {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/s1_box1.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-top: 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-position: top;
+}
+.section2 div.ev_lists div.ev_list div.ev_imgs div.img_box h3 {
+  height: 10%;
+  font-size: 1.15rem;
+  color: #fec2c2;
+  font-family: 'yg-jalnan';
+  letter-spacing: -1px;
+  margin-top: 5px;
+}
+.section2 div.ev_lists div.ev_list div.ev_imgs div.img_box h3 span {
+  color: white;
+}
+.section2 div.ev_lists div.ev_list div.ev_imgs div.img_box p {
+  height: 10%;
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.section2 div.ev_lists div.ev_list div.ev_imgs div.img_box div.box1_img {
+  width: 70%;
+  height: 55%;
+  margin: 0 auto;
+  background-image: url(../img/section2_box1_img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 375px) {
+  .section2 div.ev_lists div.ev_list div.ev_imgs div.img_box div.box1_img {
+    background-size: 80%;
+  }
+}
+.section2 div.ev_lists div.ev_list div.ev_imgs div.img_box2 {
+  background-image: url(../img/s1_box2.png);
+}
+.section2 .s2_f {
+  width: 100%;
+  height: 130px;
+  background-image: url(../img/s1_foot.png);
+  background-size: cover;
+}
+.section3 {
+  width: 100%;
+  min-height: 400px;
+  background: #1f274c;
+}
+.section3 h2 {
+  width: 45%;
+  height: 40px;
+  line-height: 45px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fec2c2;
+  border-radius: 150px;
+  box-sizing: border-box;
+  font-family: 'yg-jalnan';
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  font-weight: normal;
+  padding-right: 15px;
+  color: #1f274c;
+}
+.section3 h2 div {
+  height: 30px;
+  border-radius: 150px;
+  background: white;
+  text-align: center;
+  width: 30px;
+  margin: 5px;
+  float: left;
+  line-height: 35px;
+  color: #1f274c;
+}
+.section3 div.model2 {
+  width: 30%;
+  height: 260px;
+  margin-top: -150px;
+  position: absolute;
+  background-image: url(../img/model2.png);
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  right: 0px;
+}
+.section3 .ev_box {
+  width: 90%;
+  height: 320px;
+  background: #fec2c2;
+  margin: 20px auto;
+  border-radius: 15px;
+  text-align: center;
+  overflow: hidden;
+}
+.section3 .ev_box h3 {
+  display: inline-block;
+  text-align: center;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1rem;
+  background-color: #1f274c;
+  color: white;
+  margin-top: 10px;
+  letter-spacing: -1px;
+  font-family: 'yg-jalnan';
+}
+.section3 .ev_box div.ev_photo {
+  width: 75%;
+  height: 150px;
+  background-image: url(../img/s3_photo.png);
+  background-position: center;
+  background-size: cover;
+  margin: 10px auto;
+}
+.section3 .ev_box div.ev_box_foot {
+  width: 100%;
+  height: 110px;
+  background-color: #eadbc8;
+  margin-top: 20px;
+}
+.section3 .ev_box div.ev_box_foot div.icons {
+  width: 70%;
+  height: 100%;
+  background-image: url(../img/s3_f.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section3 .s3_footer {
+  width: 100%;
+  height: 110px;
+  background-image: url(../img/s3_footer.png);
+  background-size: cover;
+}
+.section3 .s3_footer p {
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: -1.5px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.section4 h2 {
+  width: 45%;
+  height: 40px;
+  line-height: 45px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 150px;
+  box-sizing: border-box;
+  font-family: 'yg-jalnan';
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  font-weight: normal;
+  padding-right: 15px;
+  background: #1f274c;
+  color: white;
+}
+.section4 h2 div {
+  height: 30px;
+  border-radius: 150px;
+  background: white;
+  text-align: center;
+  width: 30px;
+  margin: 5px;
+  float: left;
+  line-height: 35px;
+  color: #1f274c;
+}
+.section4 ul.pack_list {
+  width: 95%;
+  height: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+.section4 ul.pack_list li {
+  width: 48%;
+  height: 50%;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-image: url(../img/pack_box.png);
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.section4 ul.pack_list li h3 {
+  font-size: 1.2rem;
+  text-align: left;
+  color: #f04c4b;
+}
+.section4 ul.pack_list li p.tit_p {
+  text-align: left;
+  font-size: 0.8rem;
+}
+.section4 ul.pack_list li p.price {
+  background: #fec749;
+  display: inline-block;
+  float: left;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  color: #f04c4b;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.section4 ul.pack_list li p.pack_tit {
+  margin-top: 55px;
+  text-align: right;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.section4 ul.pack_list li p.sal_price {
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.section4 ul.pack_list li p.sal_price span {
+  text-decoration: line-through;
+}
+.section5 {
+  width: 100%;
+  height: 450px;
+  background-color: #1f274c;
+  margin-top: 50px;
+  padding-top: 30px;
+}
+.section5 h3 {
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: -1px;
+  text-align: center;
+}
+.section5 h4 {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  letter-spacing: -1px;
+  color: #fec2c2;
+  text-align: center;
+}
+.section5 div.input_area {
+  width: 90%;
+  height: 360px;
+  background: white;
+  border-radius: 15px;
+  margin: 20px auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.section5 div.input_area h2 {
+  text-align: center;
+  font-family: 'yg-jalnan';
+  color: #1f274c;
+}
+.section5 div.input_area ul {
+  width: 90%;
+  margin: 0 auto;
+}
+.section5 div.input_area ul li {
+  width: 100%;
+  height: 30px;
+  list-style-type: none;
+  margin-bottom: 15px;
+  margin-top: 3px;
+}
+.section5 div.input_area ul li input {
+  width: 100%;
+  height: 100%;
+}
+.section5 div.input_area ul li select {
+  width: 48%;
+  height: 100%;
+  float: left;
+  background-color: white;
+}
+.section5 div.input_area ul li select:nth-child(2) {
+  float: right;
+}
+.section5 div.input_area ul div {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background: #fec2c2;
+  text-align: center;
+  line-height: 33px;
+  color: #1f274c;
+  font-family: 'yg-jalnan';
+}
+.section5 div.input_area .calls {
+  width: 50%;
+  float: left;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.section5 div.input_area .calls p {
+  width: 90%;
+  margin: 0 auto;
+  font-weight: bold;
+  font-family: 'yg-jalnan';
+  font-size: 1.1rem;
+}
+.section5 div.input_area .calls p a {
+  color: #1f274c;
+}
+.section5 div.input_area .calls ul li {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  margin-right: 2px;
+}
+.section5 div.input_area .calls ul li img {
+  width: 100%;
+}
+@media screen and (max-width: 375px) {
+  .section5 div.input_area .calls ul li {
+    width: 37px;
+    height: 37px;
+    display: inline-block;
+  }
+}
