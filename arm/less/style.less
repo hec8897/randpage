@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'MyLotteBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/MyLotteBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMDOHYEON';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+.nanumgothic * {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+@titFont: 'MyLotteBold';
+@subtitFont: 'BMDOHYEON';
+@penFont: 'Nanum Pen Script', cursive;
+
+* {
+    margin: 0px;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 14px;
+    background-color: #f3d7b2;
+
+}
+
+img {
+    width: 100%;
+}
+
+#wrap {
+    max-width: 410px;
+    min-width: 375px;
+    background-color: #f3d7b2;
+    margin: 0 auto;
+}
+
+header {
+    h3 {
+        padding-top: 50px;
+        height: 30px;
+        font-family: @subtitFont;
+        font-weight: normal;
+        border-bottom: 2px solid #383433;
+        font-size: 0.8rem;
+        letter-spacing: -1px;
+        color: #383433;
+        width: 95%;
+        margin: 0 auto;
+
+        p {
+            line-height: 30px;
+            width: 50%;
+            height: 100%;
+            float: left;
+            text-align: left;
+            padding-left: 10px;
+            box-sizing: border-box;
+
+        }
+
+        p:nth-child(2) {
+            text-align: right;
+            padding-right: 10px;
+        }
+    }
+
+    h1 {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 3px;
+        border-top: 4px solid #453221;
+        border-bottom: 2px solid #453221;
+        height: 200px;
+        ;
+
+        img {
+            margin-top: 20px;
+        }
+    }
+
+}
+
+main {
+    min-height: 500px;
+    border-top: 4px solid #383433;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 3px;
+
+    h3 {
+        height: 100%;
+        font-family: @subtitFont;
+        // font-weight: normal;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 30px;
+        color: #453221;
+        font-size: 1.4rem;
+
+        span {
+            color: #ee4f4c;
+        }
+    }
+
+    div.cartoon {
+        width: 100%;
+        padding-bottom: 30px;
+        // height: 500px;
+    }
+
+    div.line {
+        width: 90%;
+        height: 2px;
+        background: #383433;
+        margin: 0 auto;
+    }
+}
+
+section {
+    padding-top: 30px;
+
+    h3 {
+        width: 85%;
+        height: 60px;
+        background-image: url(../img/sub_tit.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        background-position: center;
+        margin-bottom: 30px;
+    }
+
+    p {
+        text-align: center;
+        font-family: @subtitFont;
+        font-size: 1.2rem;
+        color: #453221;
+
+        span {
+            color: #ee4f4c;
+        }
+
+        span.blue_tit {
+            color: #3d82a3;
+        }
+    }
+
+    ul.circle_list {
+        width: 100%;
+        height: 110px;
+        padding-top: 20px;
+        text-align: center;
+
+        li {
+            display: inline-block;
+            // width: 23%;
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 150px;
+            font-size: 0.8rem;
+            position: relative;
+            border: 1px solid #453221;
+
+            span {
+                display: inline-block;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                font-family: 'Nanum Gothic', sans-serif;
+                // font-family: @subtitFont;
+                font-weight: bold;
+                letter-spacing: -1px;
+                line-height: 15px;
+            }
+        }
+
+        li:nth-child(1) {
+            background-color: #fbc328;
+        }
+
+        li:nth-child(2) {
+            background-color: #dd5e17;
+        }
+
+        li:nth-child(3) {
+            background-color: #509c90;
+        }
+
+        li:nth-child(4) {
+            background-color: #86c1df;
+        }
+    }
+
+    div.sub_desc {
+        width: 100%;
+        height: 200px;
+        background-image: url(../img/sub_desc_box.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: 50px;
+
+        ol {
+            width: 70%;
+            margin: 0 auto;
+            font-family: @subtitFont;
+            color: #453221;
+            padding-left: 40px;
+
+            li {
+                margin-bottom: 5px;
+                font-size: 0.80rem;
+
+                span {
+                    color: #ee4f4c;
+                }
+            }
+
+            ul {
+                padding-top: 10px;
+                padding-left: 5px;
+                padding-bottom: 5px;
+                box-sizing: border-box;
+
+                li {
+                    list-style-type: none;
+                    font-size: 0.7rem;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}
+footer{
+    margin-top: 30px;
+    min-height: 500px;
+    p{
+        text-align: center;
+        font-family: @subtitFont;
+        font-size: 1.2rem;
+        color: #453221;
+        span{
+            color: #ee4f4c;
+        }
+        span.blue_tit{
+            color: #3d82a3;
+        }
+    }
+    ul{
+        width: 80%;
+        margin: 20px auto;
+        background: #ffffff;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        h2{
+            font-size: 1.5rem;
+            text-align: center;
+            font-family: @titFont;
+            color: #453221;
+        }
+        li{
+            width: 70%;
+            margin: 20px auto;
+            height: 40px;;
+            list-style-type: none;
+            div.label{
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            div{
+                input{
+                    box-sizing: border-box;
+                    height: 25px;
+                    width: 100%;
+                    border: 1px solid #453221;
+
+                }
+            }
+        }
+    }
+    div.sub_btn{
+        width: 150px;
+        height: 40px;
+        color: white;
+        background: #453221;
+        margin: 20px auto;
+    }
+
+}
