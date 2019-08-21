@@ -84,7 +84,7 @@ header {
         margin-top: 3px;
         border-top: 4px solid #453221;
         border-bottom: 2px solid #453221;
-        height: 200px;
+        height: 190px;
         ;
 
         img {
@@ -236,7 +236,7 @@ section {
             ul {
                 padding-top: 10px;
                 padding-left: 5px;
-                padding-bottom: 5px;
+                // padding-bottom: 5px;
                 box-sizing: border-box;
 
                 li {
@@ -250,7 +250,7 @@ section {
 }
 footer{
     margin-top: 30px;
-    min-height: 500px;
+    min-height: 400px;
     p{
         text-align: center;
         font-family: @subtitFont;
@@ -274,34 +274,57 @@ footer{
             font-size: 1.5rem;
             text-align: center;
             font-family: @titFont;
-            color: #453221;
+            color:#453221;
         }
         li{
             width: 70%;
-            margin: 20px auto;
+            margin: 10px auto;
             height: 40px;;
             list-style-type: none;
+            text-align: center;
             div.label{
                 margin-bottom: 5px;
+                font-size: 0.9rem;
+                text-align: left;
                 font-weight: bold;
+                color: #453221;
+            }
+            select{
+                width: 31.5%;
+                display: inline-block;
+                height: 25px;;
+                border: 1px solid gray;
+                margin-top: 10px;
+                background: white;
+                font-size: 0.8rem;
+            }
+            #checks{
+                margin-right: 10px;
             }
             div{
                 input{
                     box-sizing: border-box;
                     height: 25px;
                     width: 100%;
-                    border: 1px solid #453221;
+                    border: 1px solid gray;
 
                 }
             }
         }
+        li.selects{
+            margin: 0px auto;
+        }
+        div.sub_btn{
+            cursor: pointer;
+            width: 190px;
+            height: 40px;
+            color: white;
+            margin: 15px auto;
+            background-image: url(../img/sub_btn.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     }
-    div.sub_btn{
-        width: 150px;
-        height: 40px;
-        color: white;
-        background: #453221;
-        margin: 20px auto;
-    }
+   
 
 }

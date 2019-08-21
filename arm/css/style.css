@@ -64,7 +64,7 @@ header h1 {
   margin-top: 3px;
   border-top: 4px solid #453221;
   border-bottom: 2px solid #453221;
-  height: 200px;
+  height: 190px;
 }
 header h1 img {
   margin-top: 20px;
@@ -189,7 +189,6 @@ section div.sub_desc ol li span {
 section div.sub_desc ol ul {
   padding-top: 10px;
   padding-left: 5px;
-  padding-bottom: 5px;
   box-sizing: border-box;
 }
 section div.sub_desc ol ul li {
@@ -199,7 +198,7 @@ section div.sub_desc ol ul li {
 }
 footer {
   margin-top: 30px;
-  min-height: 500px;
+  min-height: 400px;
 }
 footer p {
   text-align: center;
@@ -229,24 +228,46 @@ footer ul h2 {
 }
 footer ul li {
   width: 70%;
-  margin: 20px auto;
+  margin: 10px auto;
   height: 40px;
   list-style-type: none;
+  text-align: center;
 }
 footer ul li div.label {
   margin-bottom: 5px;
+  font-size: 0.9rem;
+  text-align: left;
   font-weight: bold;
+  color: #453221;
+}
+footer ul li select {
+  width: 31.5%;
+  display: inline-block;
+  height: 25px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  background: white;
+  font-size: 0.8rem;
+}
+footer ul li #checks {
+  margin-right: 10px;
 }
 footer ul li div input {
   box-sizing: border-box;
   height: 25px;
   width: 100%;
-  border: 1px solid #453221;
+  border: 1px solid gray;
 }
-footer div.sub_btn {
-  width: 150px;
+footer ul li.selects {
+  margin: 0px auto;
+}
+footer ul div.sub_btn {
+  cursor: pointer;
+  width: 190px;
   height: 40px;
   color: white;
-  background: #453221;
-  margin: 20px auto;
+  margin: 15px auto;
+  background-image: url(../img/sub_btn.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
