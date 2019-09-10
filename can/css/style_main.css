@@ -1,0 +1,366 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  width: 100%;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(https://fonts.gstatic.com/s/notosanskr/v12/PbykFmXiEBPT4ITbgNA5CgmG0X7u.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v12/Pby7FmXiEBPT4ITbgNA5CgmOalv477IS.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Nanum Brush Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Nanum Brush Script'), local('NanumBrush'), url(https://fonts.gstatic.com/s/nanumbrushscript/v17/wXK2E2wfpokopxzthSqPbcR5_gVaxazCg6pv.ttf) format('truetype');
+}
+.backgroundOption {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html,
+body {
+  font-size: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  min-width: 1200px;
+  margin: 0 auto;
+}
+div#wrap header {
+  width: 100%;
+  height: 800px;
+  background-image: url(../pc-img/header-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div#wrap header div.header_wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 250px;
+  box-sizing: border-box;
+  text-align: center;
+}
+div#wrap header div.header_wrap h2 {
+  font-size: 3.125rem;
+  font-weight: bold;
+  color: #35eaff;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+div#wrap header div.header_wrap h1 {
+  width: 465px;
+  margin: 15px auto;
+}
+div#wrap header div.header_wrap ul.hexagon_anis {
+  width: 100%;
+  max-width: 620px;
+  height: 185px;
+  margin: 0 auto;
+}
+div#wrap header div.header_wrap ul.hexagon_anis li {
+  width: 70px;
+  height: 100%;
+  float: left;
+}
+div#wrap header div.header_wrap ul.hexagon_anis li:nth-child(1) {
+  width: 160px;
+  background-image: url(../pc-img/header-hexagon1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div#wrap header div.header_wrap ul.hexagon_anis li:nth-child(3) {
+  width: 160px;
+  background-image: url(../pc-img/header-hexagon2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div#wrap header div.header_wrap ul.hexagon_anis li:nth-child(5) {
+  width: 160px;
+  background-image: url(../pc-img/header-hexagon3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div#wrap header div.header_wrap ul.hexagon_anis li:nth-child(2),
+div#wrap header div.header_wrap ul.hexagon_anis li:nth-child(4) {
+  background-image: url(../pc-img/header-hexagon-plus.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+div#wrap header div.header_wrap div.arrow {
+  width: 75px;
+  height: 45px;
+  margin: 0 auto;
+  background-image: url(../pc-img/header-arrow.png);
+  margin-bottom: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+div#wrap header div.header_wrap p {
+  font-size: 2.5rem;
+  color: #fff841;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+div#wrap section.section1 {
+  width: 100%;
+  height: 480px;
+}
+div#wrap section.section1 div.section_wrap {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+div#wrap section.section1 div.section_wrap div.left_tab {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-image: url(../pc-img/section1-tab1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-position: left bottom;
+  z-index: -1;
+  position: relative;
+}
+div#wrap section.section1 div.section_wrap div.right_tab {
+  width: 50%;
+  height: 100%;
+  float: left;
+  background-image: url(../pc-img/section1-tab2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+  position: relative;
+}
+div#wrap section.section1 div.section_wrap div.right_tab div.tab_wrap {
+  width: 55%;
+  float: right;
+  padding-top: 170px;
+  box-sizing: border-box;
+  text-align: center;
+}
+div#wrap section.section1 div.section_wrap div.right_tab div.tab_wrap h3 {
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 2.5rem;
+  margin-right: 50px;
+  color: #e02012;
+  margin-bottom: 25px;
+}
+div#wrap section.section1 div.section_wrap div.right_tab div.tab_wrap h4 {
+  font-size: 1.563rem;
+  margin-right: 50px;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+div#wrap section.section1 div.section_wrap div.right_tab div.tab_wrap h2 {
+  font-size: 3.125rem;
+  margin-right: 40px;
+  font-weight: bold;
+  color: #e02012;
+  margin-top: 10px;
+}
+div#wrap section.section1 div.section_wrap div.center_arrow {
+  width: 580px;
+  height: 440px;
+  position: relative;
+  background-image: url(../pc-img/section1-arrow.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+}
+div#wrap section.section1 div.section_wrap div.center_arrow h3 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 170px);
+  font-size: 5.5rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: -3;
+}
+div#wrap section.section1 div.section_wrap div.center_arrow h3 span {
+  font-size: 7.5rem;
+}
+div#wrap section.banner-1 {
+  width: 100%;
+  height: 450px;
+  background-image: url(../pc-img/section2-banner_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div#wrap section.banner-1 div.section_wrap {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+div#wrap section.banner-1 div.section_wrap div.text_tab {
+  width: 50%;
+  height: 100%;
+  float: right;
+  padding-top: 140px;
+  box-sizing: border-box;
+}
+div#wrap section.banner-1 div.section_wrap div.text_tab h3 {
+  font-size: 2.05rem;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+}
+div#wrap section.banner-1 div.section_wrap div.text_tab h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #fff15a;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}

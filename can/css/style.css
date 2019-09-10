@@ -578,10 +578,6 @@ div#wrap div.slider {
   height: 470px;
   background-color: #2f8df5;
 }
-@media (min-width: 576px) and (max-width: 767px) {
-}
-@media (min-width: 768px) {
-}
 div#wrap .bx-wrapper {
   background-color: #2f8df5;
   border: 0px;
@@ -598,7 +594,7 @@ div#wrap .bx-wrapper div.slider-img {
 }
 div#wrap .bx-wrapper .bx-pager {
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
 }
 div#wrap .bx-wrapper .bx-pager div a {
   background-color: rgba(0, 0, 0, 0);
@@ -611,6 +607,7 @@ div#wrap .bx-wrapper .bx-pager .active {
 div#wrap .bx-wrapper div.slider-img1 {
   background-image: url(../img/main-slide1.png);
   background-size: 90%;
+  background-position-y: 35%;
 }
 @media (min-width: 576px) and (max-width: 767px) {
   div#wrap .bx-wrapper div.slider-img1 {
@@ -627,6 +624,7 @@ div#wrap .bx-wrapper div.slider-img1 {
 div#wrap .bx-wrapper div.slider-img2 {
   background-image: url(../img/main-slide2.png);
   background-size: 80%;
+  background-position-y: 35%;
 }
 @media (min-width: 576px) and (max-width: 767px) {
   div#wrap .bx-wrapper div.slider-img2 {
@@ -643,6 +641,7 @@ div#wrap .bx-wrapper div.slider-img2 {
 div#wrap .bx-wrapper div.slider-img3 {
   background-image: url(../img/main-slide3.png);
   background-size: 90%;
+  background-position-y: 35%;
 }
 @media (min-width: 576px) and (max-width: 767px) {
   div#wrap .bx-wrapper div.slider-img3 {
