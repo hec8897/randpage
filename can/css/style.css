@@ -257,14 +257,6 @@ div#wrap header .header_wrap ul.header_list li:nth-child(5) {
   background-image: url(../img/header-ul-li3.png);
   opacity: 0;
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 div#wrap header .header_wrap ul.header_list li.plus_img {
   width: 17px;
   height: 90px;
@@ -303,12 +295,13 @@ div#wrap main {
 }
 div#wrap main div.arrow_ani {
   width: 285px;
-  height: 275px;
+  height: 215px;
   margin: 0 auto;
   background-image: url(../img/main-arrow-img.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   position: relative;
   bottom: 300px;
   z-index: -1;
@@ -316,21 +309,22 @@ div#wrap main div.arrow_ani {
 @media (min-width: 768px) {
   div#wrap main div.arrow_ani {
     width: 430px;
-    height: 400px;
+    height: 320px;
     bottom: 400px;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   div#wrap main div.arrow_ani {
     width: 430px;
-    height: 400px;
+    height: 320px;
     bottom: 400px;
   }
 }
 div#wrap main div.arrow_ani h2 {
   text-align: center;
-  padding-top: 155px;
-  font-size: 3.286rem;
+  padding-top: 100px;
+  font-size: 3.086rem;
+  font-weight: bold;
   color: white;
 }
 div#wrap main div.arrow_ani h2 span {
@@ -351,14 +345,14 @@ div#wrap main div.arrow_ani h2 span {
 }
 @media (min-width: 768px) {
   div#wrap main div.arrow_ani h2 {
-    padding-top: 215px;
-    font-size: 5.6rem;
+    padding-top: 150px;
+    font-size: 4.286rem;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   div#wrap main div.arrow_ani h2 {
-    padding-top: 215px;
-    font-size: 5.6rem;
+    padding-top: 150px;
+    font-size: 4.286rem;
   }
 }
 div#wrap main div.ticket {
@@ -366,7 +360,7 @@ div#wrap main div.ticket {
   height: 152px;
   margin: 0 auto;
   position: relative;
-  bottom: 20px;
+  bottom: 35px;
   z-index: -2;
   background-image: url(../img/main-ticket-bg.png);
   text-align: center;
@@ -379,6 +373,7 @@ div#wrap main div.ticket {
   div#wrap main div.ticket {
     height: 242px;
     bottom: 40px;
+    background-size: contain;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -455,9 +450,127 @@ div#wrap main p {
 div#wrap main p span {
   font-weight: bold;
 }
+div#wrap section.banner-1 {
+  margin-top: 30px;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/banner-banner1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  div#wrap section.banner-1 {
+    background-image: url(../img/tablet-banner-banner1.png);
+  }
+}
+@media (min-width: 768px) {
+  div#wrap section.banner-1 {
+    background-image: url(../img/tablet-banner-banner1.png);
+  }
+}
+div#wrap section.banner-1 div.text_box {
+  width: 55%;
+  height: 100%;
+  float: right;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  div#wrap section.banner-1 div.text_box {
+    padding-top: 90px;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  div#wrap section.banner-1 div.text_box {
+    padding-top: 90px;
+    width: 50%;
+  }
+}
+div#wrap section.banner-1 div.text_box h2 {
+  display: inline-block;
+  font-size: 1.35rem;
+  z-index: 2;
+  display: none;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  div#wrap section.banner-1 div.text_box h2 {
+    font-size: 1.325rem;
+  }
+}
+@media (min-width: 768px) {
+  div#wrap section.banner-1 div.text_box h2 {
+    font-size: 1.325rem;
+  }
+}
+div#wrap section.banner-1 div.text_box div.under_line {
+  margin-bottom: 17px;
+}
+div#wrap section.banner-1 div.text_box h3 {
+  width: 500px;
+  font-size: 1.963rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: rgba(255, 241, 90, 0);
+  letter-spacing: -1px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+}
+div#wrap section.banner-1 div.text_box h3 div.tab_h3 {
+  display: none;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  div#wrap section.banner-1 div.text_box h3 div.tab_h3 {
+    display: inline;
+  }
+}
+@media (min-width: 768px) {
+  div#wrap section.banner-1 div.text_box h3 div.tab_h3 {
+    display: inline;
+  }
+}
+div#wrap section.banner-1 div.text_box h3.line_1 {
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+div#wrap section.banner-1 div.text_box h3.line_2 {
+  animation-duration: 0.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+}
+div#wrap section.banner-1 div.text_box h3.line_3 {
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  div#wrap section.banner-1 div.text_box h3.mob_h3 {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  div#wrap section.banner-1 div.text_box h3.mob_h3 {
+    display: none;
+  }
+}
+@keyframes identifier {
+  0% {
+    font-size: 5rem;
+    color: rgba(255, 241, 90, 0);
+  }
+  100% {
+    font-size: 1.933rem;
+    color: #fff15a;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+}
 div#wrap div.slider {
   width: 100%;
-  height: 450px;
+  height: 470px;
   background-color: #2f8df5;
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -467,12 +580,12 @@ div#wrap div.slider {
 div#wrap .bx-wrapper {
   background-color: #2f8df5;
   border: 0px;
-  margin-top: 50px;
+  margin-bottom: 0px;
 }
 div#wrap .bx-wrapper div.slider-img {
   width: 100%;
   height: 100%;
-  padding-top: 10px;
+  padding-top: 0px;
   box-sizing: border-box;
   background-size: cover;
   background-repeat: no-repeat;
@@ -480,7 +593,7 @@ div#wrap .bx-wrapper div.slider-img {
 }
 div#wrap .bx-wrapper .bx-pager {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
 }
 div#wrap .bx-wrapper .bx-pager div a {
   background-color: rgba(0, 0, 0, 0);
@@ -492,12 +605,12 @@ div#wrap .bx-wrapper .bx-pager .active {
 }
 div#wrap .bx-wrapper div.slider-img1 {
   background-image: url(../img/main-slide1.png);
-  background-size: 80%;
+  background-size: 90%;
 }
 @media (min-width: 576px) and (max-width: 767px) {
   div#wrap .bx-wrapper div.slider-img1 {
     background-image: url(../img//big-main-slide4.png);
-    background-size: 80%;
+    background-size: contain;
   }
 }
 @media (min-width: 768px) {
@@ -512,30 +625,30 @@ div#wrap .bx-wrapper div.slider-img2 {
 }
 @media (min-width: 576px) and (max-width: 767px) {
   div#wrap .bx-wrapper div.slider-img2 {
-    background-image: url(../img//big-main-slide2.png);
+    background-image: url(../img//big-main-slide3.png);
     background-size: contain;
   }
 }
 @media (min-width: 768px) {
   div#wrap .bx-wrapper div.slider-img2 {
-    background-image: url(../img//big-main-slide2.png);
+    background-image: url(../img//big-main-slide3.png);
     background-size: contain;
   }
 }
 div#wrap .bx-wrapper div.slider-img3 {
   background-image: url(../img/main-slide3.png);
-  background-size: 80%;
+  background-size: 90%;
 }
 @media (min-width: 576px) and (max-width: 767px) {
   div#wrap .bx-wrapper div.slider-img3 {
-    background-image: url(../img//big-main-slide3.png);
-    background-size: contain;
+    background-image: url(../img//big-main-slide2.png);
+    background-size: 55%;
   }
 }
 @media (min-width: 768px) {
   div#wrap .bx-wrapper div.slider-img3 {
-    background-image: url(../img//big-main-slide3.png);
-    background-size: contain;
+    background-image: url(../img//big-main-slide2.png);
+    background-size: 55%;
   }
 }
 div#wrap .bx-wrapper div.slider-img4 {
@@ -557,6 +670,35 @@ div#wrap .bx-wrapper div.slider-img4 {
 div#wrap .bx-wrapper .bx-next,
 div#wrap .bx-wrapper .bx-prev {
   display: none;
+}
+div#wrap section.banner-2 {
+  width: 100%;
+  height: 425px;
+  margin-bottom: 50px;
+  background-color: #f0f0f0;
+}
+div#wrap section.banner-2 div.section_wrap {
+  padding-top: 50px;
+}
+div#wrap section.banner-2 div.section_wrap h2 {
+  text-align: center;
+  font-size: 1.45rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+div#wrap section.banner-2 div.section_wrap h3 {
+  text-align: center;
+  color: #666666;
+  margin-bottom: 5px;
+}
+div#wrap section.banner-2 div.section_wrap div.graph_imgs {
+  width: 330px;
+  height: 250px;
+  background-image: url(../img/banner-banner2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px auto;
 }
 div#wrap section.forms div.form {
   width: 100%;

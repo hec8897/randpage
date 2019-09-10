@@ -1,26 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='description' contnet="유전자 검사, 건강검진, 암, 질병, 유전자 정보, 유전자 보험">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="css/style.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <title>BM Company 유전자검사</title>
-    <script>
-
-    </script>
 </head>
-
 <body>
     <div id="wrap">
-        <div class='insert_btn' id='insert_form'>
-        </div>
+        <div class='insert_btn' id='insert_form'></div>
+        <!-- 바로가기버튼 -->
         <header>
             <div class="header_wrap">
                 <h2>미래를 대비하라!</h2>
@@ -32,43 +26,48 @@
                     <li class='plus_img'></li>
                     <li class='head_img' id='head-ani3'></li>
                     <!-- 에니메이션 추가 하나씩 나타나게 -->
-                </ul>
+                </ul>   
                 <div class='header_arrow' id='head-arrow'></div>
                 <p class='header_ment' id='head-ment'>모두 한번에!</p>
             </div>
         </header>
 
-        <script>
-
-        </script>
         <main>
             <div class='arrow_ani' id='main-arrow-ani'>
-                <h2><span class='counter' data-count="70" id='main-percent-ani'>00</span> %</h2>
+                <h2><span class='counter' data-count="90" id='main-percent-ani'>00</span> %</h2>
             </div>
-
-
             <div class='ticket'>
                 <div class="ticket_ment">
-                    <h3>유전자검사 비용 70% 할인 이벤트</h3>
-                    <h2>10 만원</h2>
+                    <h3>추석 맞이 비용 90% 할인 이벤트</h3>
+                    <h2>5 만원</h2>
                 </div>
             </div>
-            <div class='main_memt'>
-                <p><span>상위 1%의 건강관리 비법이었던 유전자검사!</span></p>
-                <p>이제 누구나 <span>타액(침) 채취방법</span>으로 매우 <span>간단하게</span></p>
-                <p>당신의 질병을 예측하고 대비할 수 있습니다.</p>
-            </div>
         </main>
-        <!-- <section class='slider'> -->
-
+        <section class='banner banner-1'>
+            <div class='text_box'>
+                <h2 id='fade_in_h2'>암, 치매, 비만, 고혈압...</h2>
+                <div class="under_line"></div>
+                <h3 class='line_1'>무서운 질환</h3>
+                <h3 class='line_2'>나도 물려받았으면 <div class='tab_h3'>어쩌지?<div></h3>
+                <h3 class='mob_h3 line_3'>어쩌지?</h3>
+            </div>
+        </section>
         <div class="slider">
+            <!-- slider -->
             <div class="slider-img slider-img1"></div>
             <div class="slider-img slider-img2"></div>
             <div class="slider-img slider-img3"></div>
             <div class="slider-img slider-img4"></div>
         </div>
-        <!-- 슬라이더 -->
-        <!-- </section> -->
+        <section class='banner banner-2'>
+            <div class='section_wrap'>
+                <h2>높은 정확도의 유전자 검사 분석결과</h2>
+                <h3>채취한 타액으로 AI 알고리즘 검사를 통해</h3>
+                <h3>부모로부터 받은 생물학적 유전자를 검사합니다.</h3>
+                <div class='graph_imgs'>
+                </div>
+            </div>
+        </section>
         <section class='forms'>
             <div class='form'>
                 <h3>유전자검사 신청란</h3>
@@ -85,87 +84,6 @@
                 <div class='sub_btns' onclick="insertData()">유전자 검사 신청 및 상담문의</div>
                 </ul>
             </div>
-            <script>
-                $(document).ready(function () {
-                    $(".gender_btn").click(function () {
-                        $(".gender_btn").css({ "backgroundColor": "lightgray" })
-                        $(this).css({ "backgroundColor": '#f62d58' })
-                    })
-                })
-
-                var gender = ''
-                data = {
-                    name: '',
-                    birth: '',
-                    sexflag: '',
-                    number: ''
-                }
-                function genderSetting(a) {
-                    if (a == 'w') {
-                        gender = '여성'
-                    }
-                    else {
-                        gender = '남성'
-
-                    }
-                }
-                let params;
-
-                let getQueryString = function () {
-                    params = {};
-                    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
-                    return params;
-                }()
-
-                function insertData() {
-                    var reqName = document.getElementById('reqname').value;
-                    var reqBirth = document.getElementById('reqbirth').value;
-                    var reqNumber = document.getElementById('reqnumber').value;
-                    var Checked = document.getElementById('agree_check').checked;
-
-                    data = {
-                        insult:[reqName,reqBirth,reqNumber,gender],
-                        url:params.id
-                    }
-                    if(reqName ==''){
-                        alert('성함을 입력해주세요')
-                    }
-                    else if(reqBirth==''){
-                        alert('생년월일을 입력해주세요')
-                    }
-                    else if(reqNumber==''){
-                        alert('연락처를 입력해주세요')
-                    }
-                    else if(gender ==''){
-                        alert('성별을 선택해주세요')
-                    }
-                    else if(Checked==false){
-                        alert('개인정보 수집 및 이용 동의를 체크해주세요')
-                    }
-                    else{
-                        xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function(){
-                    if (this.readyState == 4 && this.status == 200) {
-                        var returnJson = JSON.parse(this.response);
-                        if(returnJson.result =='ok'){
-                            alert('상담신청이 완료되었습니다 :)')
-                            location.reload();
-                        }
-                        else{
-                            alert('no')
-                        }
-
-                        }
-                    }
-                    xhttp.open('POST','insert.php',true);
-                    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    xhttp.send("data="+JSON.stringify(data))
-                    }
-
-                }
-
-
-            </script>
         </section>
         <section class='click_menu'>
             <ul class='list_tit'>
@@ -194,70 +112,6 @@
                     <li id='list_icon4'></li>
                     <p id='line_actions2'></p>
                 </ul>
-
-                <script>
-                    $(document).ready(function () {
-                        $('.slider').bxSlider({auto:true});
-                        $("#insert_form").click(function () {
-                            $('html,body').animate({
-                                scrollTop: 1450
-                            }, 1000)
-                        })
-                        setTimeout(function () {
-                            $("#head-ani1").animate({ opacity: "1.0" }, 200);
-                            $("#head-ani2").delay(300).animate({ opacity: "1.0" }, 200);
-                            $("#head-ani3").delay(600).animate({ opacity: "1.0" }, 200);
-                            $("#head-arrow").delay(800).animate({
-                                bottom: "00px",
-                                opacity: "1.0"
-                            }, 500)
-                            $("#head-ment").delay(1000).animate({
-                                opacity: "1.0"
-                            })
-                            $('#main-arrow-ani').delay(1200).animate({ "bottom": "0px" }, 1000);
-                            $('.counter').each(function () {
-                                var $this = $(this),
-                                    countTo = $this.attr('data-count');
-                                $({ countNum: $this.text() }).animate({
-                                    countNum: countTo
-                                },
-                                    {
-                                        duration: 3000,
-                                        easing: 'swing',
-                                        step: function () {
-                                            $this.text(Math.floor(this.countNum));
-                                        },
-                                        complete: function () {
-                                            $this.text(this.countNum);
-                                            //alert('finished');
-                                        }
-                                    });
-                            });
-                        }, 800)
-
-                        $(window).scroll(function (event) {
-                            var offset = $(document).scrollTop();
-                            var offsets = $(document).scrollTop();
-
-                            if (offset >= 50 && offset <= 300) {
-
-                            }
-                            if (offsets >= 1650 && offsets <= 2050) {
-                                $('#line_actions1').delay(100).animate({ "left": "00%", "opacity": "1.0" }, 1000)
-                                $('#list_icon1').delay(300).animate({ "opacity": "1.0" }, 200)
-                                $('#list_icon2').delay(600).animate({ "opacity": "1.0" }, 200)
-                                $('#list_icon3').delay(800).animate({ "opacity": "1.0" }, 200)
-
-                                $('#line_actions2').delay(1500).animate({ "width": "75%", "opacity": "1.0" }, 1000)
-                                $('#list_icon4').delay(1300).animate({ "opacity": "1.0" }, 200)
-                                $('#list_icon5').delay(1600).animate({ "opacity": "1.0" }, 200)
-                                $('#list_icon6').delay(1800).animate({ "opacity": "1.0" }, 200)
-                            }
-                        });
-                    })
-
-
-                </script>
             </div>
             <div class='list_menu_section caption2' id='caption2'>
                 <ul>
@@ -271,7 +125,6 @@
                         <p>검사 대상자 고객님의 개인정보 및 유전자 분석 결과는 담당자 외에는 열람할 수 없습니다.</p>
                     </li>
                 </ul>
-
             </div>
             <div class='list_menu_section caption3' id='caption3'>
                 <ul>
@@ -291,43 +144,6 @@
                 </ul>
             </div>
         </section>
-        <script>
-            $(document).ready(function () {
-                $(".list_btn").click(function () {
-                    $(".list_btn").attr('class', 'beactive');
-                    $(".list_btn").addClass("list_btn");
-                    $(this).attr('class', 'active');
-                    $(this).addClass("list_btn");
-
-
-                })
-            })
-
-            function captionOn(a) {
-                if (a == 1) {
-                    $('#caption1').show()
-                    $('#caption2').hide()
-                    $('#caption3').hide()
-
-
-                }
-                if (a == 2) {
-                    $('#caption2').show()
-                    $('#caption1').hide()
-                    $('#caption3').hide()
-
-                }
-                if (a == 3) {
-                    $('#caption3').show()
-                    $('#caption1').hide()
-                    $('#caption2').hide()
-
-                }
-
-
-
-            }
-        </script>
         <section class='last_ment'>
             <div>
                 <p>유방절제 수술을 받고 유방암 걸릴 확률이</p>
@@ -348,12 +164,178 @@
             <img src="img/foot-ci.png" alt="비엠 CI / 로고">
             <div class='company_info'>
                 <p>대표 : 방진수 이메일:bm9351@naver.com 사업자등록번호 : 612-24-18240</p>
-                <p>전화 : 02-1670-5208 팩스 : 02-877-7815</p>
+                <p>전화 : 02-1670-5208 팩스 : 070-4369-1010</p>
                 <p>주소 : 서울시 구로구 디지털로 31길 38-21 이엔씨벤처드림타워3차 6층 606호</p>
                 <p>Copyright © 비엠컴퍼니 All rights reserved.</p>
             </div>
         </footer>
     </div>
+    <script>
+        //...........data Js
+        var gender = ''
+        data = {
+            name: '',
+            birth: '',
+            sexflag: '',
+            number: ''
+        }
+        function genderSetting(a) {
+            if (a == 'w') {
+                gender = '여성'
+            }
+            else {
+                gender = '남성'
+            }
+        }
+        let params;
+        let getQueryString = function () {
+            params = {};
+            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+            return params;
+        }()
+        function insertData() {
+            var reqName = document.getElementById('reqname').value;
+            var reqBirth = document.getElementById('reqbirth').value;
+            var reqNumber = document.getElementById('reqnumber').value;
+            var Checked = document.getElementById('agree_check').checked;
+            data = {
+                insult: [reqName, reqBirth, reqNumber, gender],
+                url: params.id
+            }
+            if (reqName == '') {
+                alert('성함을 입력해주세요')
+            }
+            else if (reqBirth == '') {
+                alert('생년월일을 입력해주세요')
+            }
+            else if (reqNumber == '') {
+                alert('연락처를 입력해주세요')
+            }
+            else if (gender == '') {
+                alert('성별을 선택해주세요')
+            }
+            else if (Checked == false) {
+                alert('개인정보 수집 및 이용 동의를 체크해주세요')
+            }
+            else {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        var returnJson = JSON.parse(this.response);
+                        if (returnJson.result == 'ok') {
+                            alert('상담신청이 완료되었습니다 :)')
+                            location.reload();
+                        }
+                        else {
+                            alert('no')
+                        }
+                    }
+                }
+                xhttp.open('POST', 'insert.php', true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send("data=" + JSON.stringify(data))
+            }
+        }
+
+        //animation jquery....
+        $(document).ready(function () {
+            $(".gender_btn").click(function () {
+                $(".gender_btn").css({ "backgroundColor": "lightgray" })
+                $(this).css({ "backgroundColor": '#f62d58' })
+            })//gedner_btn
+
+            $('.slider').bxSlider({ auto: true });//bxslider
+
+            $("#insert_form").click(function () {
+                $('html,body').animate({
+                    scrollTop: 2000
+                }, 1000)
+            })//insert moving btn
+            setTimeout(function () {//header_animation
+                $("#head-ani1").animate({ opacity: "1.0" }, 200);//hexagon1
+                $("#head-ani2").delay(300).animate({ opacity: "1.0" }, 200);//hexagon2
+                $("#head-ani3").delay(600).animate({ opacity: "1.0" }, 200);//hexagon3
+                $("#head-arrow").delay(800).animate({//head-arrow-img
+                    bottom: "00px",
+                    opacity: "1.0"
+                }, 500)
+                $("#head-ment").delay(1000).animate({//head-ment
+                    opacity: "1.0"
+                })
+                $('#main-arrow-ani').delay(1200).animate({ "bottom": "0px" }, 1000);//main-arrow
+                $('.counter').each(function () {//main-arrow-counter
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+                    $({ countNum: $this.text() }).animate({
+                        countNum: countTo
+                    },
+                        {
+                            duration: 3000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                                //alert('finished');
+                            }
+                        });
+                });
+            }, 800)
+
+            $(".list_btn").click(function () {//caption active fn
+                $(".list_btn").attr('class', 'beactive');
+                $(".list_btn").addClass("list_btn");
+                $(this).attr('class', 'active');
+                $(this).addClass("list_btn");
+            })
+            $(window).scroll(function (event) {//caption1
+                var offsets = $(document).scrollTop();
+                if (offsets >= 300 && offsets <= 1000) {
+                    $("#fade_in_h2").fadeIn(1000)
+                    $(".line_1").css({
+                        "animation-name": "identifier" 
+                    })
+                    $(".line_2").css({
+                        "animation-name": "identifier" 
+                    })
+                    $(".line_3").css({
+                        "animation-name": "identifier" 
+                    })
+                }
+
+                if (offsets >= 1650 && offsets <= 2050) {
+                    $('#line_actions1').delay(100).animate({ "left": "00%", "opacity": "1.0" }, 1000)
+                    $('#list_icon1').delay(300).animate({ "opacity": "1.0" }, 200)
+                    $('#list_icon2').delay(600).animate({ "opacity": "1.0" }, 200)
+                    $('#list_icon3').delay(800).animate({ "opacity": "1.0" }, 200)
+
+                    $('#line_actions2').delay(1500).animate({ "width": "75%", "opacity": "1.0" }, 1000)
+                    $('#list_icon4').delay(1300).animate({ "opacity": "1.0" }, 200)
+                    $('#list_icon5').delay(1600).animate({ "opacity": "1.0" }, 200)
+                    $('#list_icon6').delay(1800).animate({ "opacity": "1.0" }, 200)
+                }
+            });
+        })
+
+        function captionOn(a) {//caption show,hide fn
+            if (a == 1) {
+                $('#caption1').show()
+                $('#caption2').hide()
+                $('#caption3').hide()
+            }
+            if (a == 2) {
+                $('#caption2').show()
+                $('#caption1').hide()
+                $('#caption3').hide()
+            }
+            if (a == 3) {
+                $('#caption3').show()
+                $('#caption1').hide()
+                $('#caption2').hide()
+            }
+        }
+    </script>
 </body>
 
 </html>
