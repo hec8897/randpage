@@ -1,0 +1,324 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'), url(https://fonts.gstatic.com/s/notosanskr/v12/PbykFmXiEBPT4ITbgNA5CgmG0X7u.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v12/Pby7FmXiEBPT4ITbgNA5CgmOalv477IS.otf) format('opentype');
+}
+.backgroundOption {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+html,
+body {
+  font-size: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+#wrap {
+  max-width: 575px;
+  margin: 0 auto;
+}
+#wrap header {
+  width: 100%;
+  height: 340px;
+  background-image: url(../img/header-bg.jpg);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#wrap header h1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/header-h1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  z-index: 20;
+}
+#wrap header div.header_graphic {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-image: url(../img/header_graphic.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -100px;
+}
+#wrap header div.header_photo {
+  width: 170px;
+  height: 320px;
+  position: absolute;
+  background-image: url(../img/header_photo.png);
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 20px;
+  right: 0px;
+  top: 20px;
+}
+#wrap section.section1 {
+  height: 780px;
+  background-color: #ec7357;
+  overflow: hidden;
+}
+#wrap section.section1 div.section_wrap {
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+#wrap section.section1 div.section_wrap h3 {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#wrap section.section1 div.section_wrap h3 span {
+  color: #7d0000;
+}
+#wrap section.section1 div.section_wrap h2 {
+  width: 100%;
+  height: 50px;
+  background-image: url(../img/section1-h2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#wrap section.section1 div.section_wrap div.event1_tab {
+  width: 90%;
+  height: 620px;
+  background: white;
+  margin: 0 auto;
+  margin-top: 70px;
+  border-radius: 20px;
+  position: relative;
+}
+#wrap section.section1 div.section_wrap div.event1_tab h3 {
+  width: 45%;
+  height: 35px;
+  margin: 0 auto;
+  position: absolute;
+  top: -17.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 150px;
+  background-color: #ff635f;
+  background-image: url(../img/section1-h3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+#wrap section.section1 div.section_wrap div.event1_tab div.event1_img {
+  width: 100%;
+  height: 50%;
+  border-radius: 20px 20px 0px 0px;
+  background-image: url(../img/section1-event-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#wrap section.section1 div.section_wrap div.event1_tab h4 {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#wrap section.section1 div.section_wrap div.event1_tab h4 img {
+  width: 40%;
+}
+#wrap section.section1 div.section_wrap div.event1_tab h4.h4_2 img {
+  width: 80%;
+}
+#wrap section.section1 div.section_wrap div.event1_tab p {
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: -1.5px;
+  margin-bottom: 10px;
+}
+#wrap section.section1 div.section_wrap div.event1_tab p span {
+  font-weight: bold;
+}
+#wrap section.section2 {
+  background-color: #fbffb9;
+  height: 600px;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+#wrap section.section2 div.section2_tab {
+  width: 90%;
+  height: 475px;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 50px 0px 50px 0px;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+#wrap section.section2 div.section2_tab h3 {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #e74e49;
+  height: 35px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  color: white;
+  line-height: 35px;
+}
+#wrap section.section2 div.section2_tab h4 {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #dd5e17;
+  height: 35px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  color: white;
+  line-height: 35px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+#wrap section.section2 div.section2_tab h4 img {
+  width: 8%;
+}

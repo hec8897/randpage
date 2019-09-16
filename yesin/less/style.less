@@ -1,0 +1,336 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+// @mediaVericalMobile: ~"(max-width:575px)"; //basic setting
+// @mediaHorizontalMobile: ~"(min-width: 576px) and (max-width: 767px)"; //HorizontalMobile
+// @mediaTablet: ~"(min-width: 768px)"; //tablet    
+
+// .backgroundOption {
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+// }
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap');
+
+
+.backgroundOption {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+html,body{
+    // background-color: #ec7357;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+
+
+}
+#wrap{
+    max-width: 575px;
+    margin: 0 auto;
+    // min-width: 360px;
+    header{
+        width: 100%;
+        height: 340px;
+        background-image: url(../img/header-bg.jpg);
+        position: relative;
+        .backgroundOption;
+        h1{
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/header-h1.png);
+            .backgroundOption;
+            background-size: contain;
+            position: relative;
+            z-index: 20;
+
+        }
+        div.header_graphic{
+            width: 150px;
+            height: 150px;
+            position: relative;
+            background-image: url(../img/header_graphic.png);
+            .backgroundOption;
+            top: -100px;
+        }
+        div.header_photo{
+            width: 170px;
+            height: 320px;
+            position: absolute;
+            background-image: url(../img/header_photo.png);
+            z-index: 1;
+            // .backgroundOption;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-x: 20px;
+            right: 0px;
+            top: 20px;
+        }
+
+   
+
+    }
+    section.section1{
+        height: 780px;
+        background-color: #ec7357;
+        overflow: hidden;
+
+        div.section_wrap{
+        box-sizing: border-box;
+        padding-top: 50px;
+        box-sizing: border-box;
+        h3{
+            text-align: center;
+            font-size: 1rem;
+            color: white;
+            margin-bottom: 10px;
+            font-weight: bold;
+            span{
+                color: #7d0000;
+            }
+        }
+        h2{
+            width: 100%;
+            height: 50px;
+            background-image: url(../img/section1-h2.png);
+            .backgroundOption;
+            background-size: contain;
+        }
+        div.event1_tab{
+            width: 90%;
+            height: 620px;
+            background: white;
+            margin: 0 auto;
+            margin-top: 70px;
+            border-radius: 20px;
+            position: relative;
+            h3{
+                width: 45%;
+                height: 35px;
+                margin: 0 auto;
+                position: absolute;
+                top: -17.5px;
+                left: 50%;;
+                transform: translateX(-50%);
+                
+                border-radius: 150px;
+                background-color: #ff635f;
+                background-image: url(../img/section1-h3.png);
+                .backgroundOption;
+                background-size: 80%;
+            }
+            div.event1_img{
+                width: 100%;
+                height: 50%;
+                border-radius: 20px 20px 0px 0px;
+                background-image: url(../img/section1-event-img.jpg);
+                .backgroundOption;
+            }
+            h4{
+                margin-top: 20px;
+                text-align: center;
+                margin-bottom: 20px;
+                img{
+                    width: 40%;
+                }
+            }
+            h4.h4_2{
+                img{
+                    width: 80%;
+                }
+            }
+            p{
+                text-align: center;
+                font-size: 0.7rem;
+                letter-spacing: -1.5px;
+                margin-bottom: 10px;
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        }
+    }
+    section.section2{
+        background-color: #fbffb9;
+        height: 600px;
+        padding-top: 40px;
+        box-sizing: border-box;
+        div.section2_tab{
+            width: 90%;
+            height: 475px;
+            background-color: white;
+            margin: 0 auto;
+            border-radius: 50px 0px 50px 0px;
+            padding-top: 30px;
+            box-sizing: border-box;
+            h3{
+                width: 85%;
+                margin: 0 auto;
+                text-align: center;
+                background-color: #e74e49;
+                height: 35px;
+                font-weight: bold;
+                font-size: 0.8rem;
+                border-radius: 20px;
+                color: white;
+                line-height: 35px;
+            }
+            h4{
+                width: 70%;
+                margin: 0 auto;
+                text-align: center;
+                background-color: #dd5e17;
+                height: 35px;
+                font-weight: bold;
+                font-size: 0.8rem;
+                border-radius: 20px;
+                color: white;
+                line-height: 35px;
+                margin-top: 15px;
+                overflow: hidden;
+                img{
+                    width: 8%;
+                }
+            }
+        }
+
+    }
+}
