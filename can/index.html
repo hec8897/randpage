@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name='description' contnet="유전자 검사, 건강검진, 암, 질병, 유전자 정보, 유전자 보험">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
     <meta property="og:url" content="http://bmcompany.kr">
     <meta property="og:type" content="website">
     <meta property="og:title" content="BM Company">
-    <meta property="og:image" content="http://bmcompany.kr/test3/pc-img/og_img.jpg">  
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" href="css/style_main.css">
+    <meta property="og:image" content="http://bmcompany.kr/test3/pc-img/og_img.jpg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="dist/jquery.paroller.js"></script>
+    <script>
+    
+        $(document).ready(function () {
+        //initialize paroller.js
+        $('[data-paroller-factor]').paroller();
+        //initialize paroller.js and set options for elements with .paroller class
+        $('.paroller-example').paroller({
+            factorXs: 0.1,
+            factorSm: 0.1,
+            factorMd: -0.4,
+            factorLg: -0.5,
+            factorXl: -0.6,
+            factor: -0.4,
+            type: 'foreground',
+            direction: 'vertical',
+            transition: 'transform .3s ease-out'
+        });
+    });
+    
+    </script>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
+    <link rel="stylesheet" href="css/style_main.css">
+
     <title>BM Company 유전자검사</title>
 </head>
+
 <body>
     <div id="wrap">
         <header>
             <div class='header_wrap'>
                 <h2>미래를 대비해라!</h2>
-                <h1><img src="/pc-img/header-tit.png" alt=""></h1>
+                <h1><img src="pc-img/header-tit.png" alt=""></h1>
                 <ul class='hexagon_anis'>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <li class='hexagons' id='hexagon1'></li>
+                    <li></li>
+                    <li class='hexagons' id='hexagon2'></li>
+                    <li></li>
+                    <li class='hexagons' id='hexagon3'></li>
                 </ul>
                 <div class='arrow'></div>
                 <p>모두 한번에!</p>
@@ -35,33 +59,142 @@
         </header>
         <section class='section1'>
             <div class="section_wrap">
-                
+
                 <div class='left_tab'></div>
-                               <div class='right_tab'>
+                <div class='right_tab'>
 
                     <div class='tab_wrap'>
-                        <h3>추석한정 특별 이벤트!</h3>
+                        <h3>9월 한정 이벤트!</h3>
                         <h4>10만원</h4>
                         <h2>5만원!</h2>
                     </div>
                 </div>
 
                 <div class='center_arrow'>
-                        <h3><span>70</span>%</h3>
-                    </div>
+                    <h3><span>70</span>%</h3>
+                </div>
             </div>
         </section>
         <section class='banner banner-1'>
             <div class='section_wrap'>
                 <div class='text_tab'>
-                    <h3>암, 치매, 비만,물 고혈압...</h3>
+                    <h3>암, 치매, 비만, 고혈압...</h3>
                     <h2>무서운 질환</h2>
                     <h2>나도 물려받았으면 어쩌지?</h2>
                 </div>
 
             </div>
         </section>
-        </div>
+        <section class='sliders'>
+        </section>
+        <section class='section2'>
+            <div class='section_wrap'>
+               
+                <h2>높은 정확도의 유전자검사 분석결과</h2>
+                <h3>채취한 타액으로 AI 알고리즘 검사를 통해</h3>
+                <h3>부모로부터 받은 생물학적 유전자를 검사합니다.</h3>
+                <div class='section2-img'>
+                </div>
+                <div class='section2-img_fly' data-paroller-factor="0.3" data-paroller-type="foreground" data-paroller-direction="vertical">
+                <img src="pc-img/section2-fly.png" alt="">
+
+            </div>
+            </div>
+        </section>
+        
+        <section class='forms_area'>
+            <div class="section_wrap">
+                <h2>유전자검사 신청란</h2>
+                <div class='forms'>
+                    <div class='inputs_wrap'>
+                    <div class='left_form inputs'>
+                        <ul>
+                            <li>
+                                <input type="text" placeholder="이름">
+                            </li>
+                            <li><input type="text" placeholder="생년월일"></li>
+                        </ul>
+                    </div>
+                    <div class='right_form inputs'>
+                        <ul>
+                            <li>
+                                <div class='gender_btn'>
+                                    남자
+                                </div>
+                                <div class='gender_btn'>
+                                    여자
+                                </div>
+                            </li>
+                            <li><input type="text" placeholder="생년월일"></li>
+                        </ul>
+                    </div>
+                    </div>
+                    
+                    <p>
+                        <label for='agree_check' class='container'><input id='agree_check' type="checkbox">
+                            개인정보 수집 및 이용 동의 합니다. <span class="checkmark"></span>
+                        </label>
+                    </p>
+
+                    <div class='sub_btn'>유전자검사 신청 및 상담문의</div>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <div class='section_wrap'>
+                <h2>진행과정</h2>
+                <ul class='circle_anis'>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <p class='line'></p>
+                <div class='text_tabs left_tab'>
+                    <div class='tab_wrap'>
+                        <h3>주의사항</h3>
+                        <ul class='precautions'>
+                            <li><span>01</span><b>본 이벤트는 높은 할인 혜택을 일시적으로 제공하며 신청자에 </br>한해 순차적으로 진행합니다.</b></li>
+                            <li><span>02</span><b>고객님들께서는 예약 일정을 정확하게 지켜주시길 바랍니다.</b></li>
+                            <li><span>03</span><b>검사 대상자 고객님의 개인정보 및 유전자 분석 결과는 담당자 </br>외에는 열람할 수 없습니다.</b></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class='text_tabs right_tab'>
+                    <div class='tab_wrap'>
+                        <h3>자주하는 질문</h3>
+                        <ul class='precautions qna'>
+                                <li class="qustion"><span>Q</span><b>저는 지금 건강한데 결과가 왜 나쁜건가요?</b></li>
+                                <li><span>A</span><b>유전자검사는 현재의 건강상태가 아닌 유전적 체질, 미래의 </br>질병발생을  예측하는 검사입니다.</b></li>
+                                <li class="qustion"><span>Q</span><b>저는 지금 건강이 좋지 않는데 결과는 왜 좋은가요?</b></li>
+                                <li><span>A</span><b>유전자 검사는 유전자 요인을 나타납니다. 그러나 살면서 다양한 </br>환경적 요인으로 건강이 나빠질 가능상도 있습니다.</b></li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='footer_ment'>
+            <p><span class='coma1'><img src="pc-img/pc-coma1.png" alt=""></span>유방 절제 수술을 받고 유방암에 걸릴 확률이 <span>87%에서 5% 이하</span>로 줄어들었다.</p>
+            <p>그러나 일반인들은 이런 비싼 유전자 검사를 할 수 없을 것이다.<span class='coma2'><img src="pc-img/pc-coma2.png" alt=""></span></p>
+            <h3>안젤리나 졸리, New York Times 인터뷰 중에서</h3>
+            <div class='ment_box'></div>
+        </section>
+        <footer>
+            <img src="pc-img/Bm_ci.png" alt="">
+            <p>대표:방진수 이메일:bm9351@naver.com 사업자등록번호:612-24-18240 전화:02-1670-5208 팩스:070-4369-1010</p>
+            <p>주소:서울시 구로구 디지털로 31길 38-21 이엔씨벤처드림타워3차 6층 606호</p>
+            <p>Copyright © 비엠컴퍼니 All rights reserved.</p>
+
+
+        </footer>
+    </div>
 </body>
 
 </html>
+
+<!-- 패럴랙스있었음... -->
+<!-- 패럴랙스있었음... -->
+<!-- 연휴 후 화요일 중 마무리 패럴랙스있었음... -->
