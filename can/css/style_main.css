@@ -144,11 +144,11 @@ img {
   src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v12/Pby7FmXiEBPT4ITbgNA5CgmOalv477IS.otf) format('opentype');
 }
 @font-face {
-  font-family: 'Nanum Brush Script';
+  font-family: 'Nanum Pen Script';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Nanum Brush Script'), local('NanumBrush'), url(https://fonts.gstatic.com/s/nanumbrushscript/v17/wXK2E2wfpokopxzthSqPbcR5_gVaxazCg6pv.ttf) format('truetype');
+  src: local('Nanum Pen'), local('NanumPen'), url(https://fonts.gstatic.com/s/nanumpenscript/v15/daaDSSYiLGqEal3MvdA_FOL_3FkN6zP0bA.ttf) format('truetype');
 }
 .backgroundOption {
   background-size: cover;
@@ -161,6 +161,30 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   min-width: 1200px;
   margin: 0 auto;
+}
+div#wrap {
+  min-width: 1200px;
+  overflow: hidden;
+}
+div#wrap div.insert_btn {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: white;
+  border-radius: 150px;
+  text-align: center;
+  background-image: url(../img/fixed_menu.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  z-index: 999;
+  -webkit-box-shadow: 0px 0px 5px 0px #575757;
+  -moz-box-shadow: 0px 0px 5px 0px #575757;
+  box-shadow: 0px 0px 5px 0px #575757;
 }
 div#wrap header {
   width: 100%;
@@ -201,6 +225,7 @@ div#wrap header div.header_wrap ul.hexagon_anis li {
 }
 div#wrap header div.header_wrap ul.hexagon_anis li:nth-child(1) {
   width: 160px;
+  opacity: 0;
   background-image: url(../pc-img/header-hexagon1.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -208,6 +233,7 @@ div#wrap header div.header_wrap ul.hexagon_anis li:nth-child(1) {
 }
 div#wrap header div.header_wrap ul.hexagon_anis li:nth-child(3) {
   width: 160px;
+  opacity: 0;
   background-image: url(../pc-img/header-hexagon2.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -215,6 +241,7 @@ div#wrap header div.header_wrap ul.hexagon_anis li:nth-child(3) {
 }
 div#wrap header div.header_wrap ul.hexagon_anis li:nth-child(5) {
   width: 160px;
+  opacity: 0;
   background-image: url(../pc-img/header-hexagon3.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -238,12 +265,16 @@ div#wrap header div.header_wrap div.arrow {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  opacity: 0;
+  position: relative;
+  bottom: 30px;
 }
 div#wrap header div.header_wrap p {
   font-size: 2.5rem;
   color: #fff841;
   font-weight: bold;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  opacity: 0;
 }
 div#wrap section.section1 {
   width: 100%;
@@ -287,11 +318,11 @@ div#wrap section.section1 div.section_wrap div.right_tab div.tab_wrap {
   text-align: center;
 }
 div#wrap section.section1 div.section_wrap div.right_tab div.tab_wrap h3 {
-  font-family: 'Nanum Brush Script', cursive;
   font-size: 2.5rem;
   margin-right: 50px;
   color: #e02012;
   margin-bottom: 25px;
+  font-family: 'Nanum Pen Script', cursive;
 }
 div#wrap section.section1 div.section_wrap div.right_tab div.tab_wrap h4 {
   font-size: 1.563rem;
@@ -309,13 +340,14 @@ div#wrap section.section1 div.section_wrap div.right_tab div.tab_wrap h2 {
 div#wrap section.section1 div.section_wrap div.center_arrow {
   width: 580px;
   height: 440px;
-  position: relative;
   background-image: url(../pc-img/section1-arrow.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   left: 50%;
+  position: relative;
+  bottom: 440px;
   transform: translate(-50%);
   z-index: -1;
 }
@@ -352,22 +384,106 @@ div#wrap section.banner-1 div.section_wrap div.text_tab {
   box-sizing: border-box;
 }
 div#wrap section.banner-1 div.section_wrap div.text_tab h3 {
+  display: none;
   font-size: 2.05rem;
   color: white;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
 }
 div#wrap section.banner-1 div.section_wrap div.text_tab h2 {
+  width: 800px;
   font-size: 2.4rem;
   font-weight: bold;
-  color: #fff15a;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 241, 90, 0);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
   margin-bottom: 10px;
+}
+div#wrap section.banner-1 div.section_wrap div.text_tab h2.line_1 {
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+div#wrap section.banner-1 div.section_wrap div.text_tab h2.line_2 {
+  animation-duration: 0.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes identifier {
+  0% {
+    font-size: 5rem;
+    color: rgba(255, 241, 90, 0);
+  }
+  100% {
+    font-size: 2.4rem;
+    color: #fff15a;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
 }
 div#wrap section.sliders {
   width: 100%;
   height: 800px;
   background: #2f8df5;
+}
+div#wrap section.sliders div.slider {
+  margin: 0 auto;
+}
+div#wrap section.sliders .bx-wrapper {
+  max-width: 1200px;
+  height: 100%;
+  background-color: #2f8df5;
+  border: 0px;
+  margin-bottom: 0px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+div#wrap section.sliders .bx-wrapper div.slider-img {
+  height: 800px;
+  padding-top: 0px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div#wrap section.sliders .bx-wrapper .bx-pager {
+  position: absolute;
+  bottom: 50px;
+}
+div#wrap section.sliders .bx-wrapper .bx-pager div a {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+div#wrap section.sliders .bx-wrapper .bx-pager .active {
+  background-color: white;
+}
+div#wrap section.sliders .bx-wrapper div.slider-img1 {
+  background-image: url(../pc-img/slider_img_1.png);
+}
+div#wrap section.sliders .bx-wrapper div.slider-img2 {
+  background-image: url(../pc-img/slider_img_2.png);
+}
+div#wrap section.sliders .bx-wrapper div.slider-img3 {
+  background-image: url(../pc-img/slider_img_3.png);
+}
+div#wrap section.sliders .bx-wrapper div.slider-img4 {
+  background-image: url(../pc-img/slider_img_4.png);
+}
+div#wrap section.sliders .bx-wrapper .bx-next {
+  height: 77px;
+  right: 8%;
+  background: url(../pc-img/slider_next.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+div#wrap section.sliders .bx-wrapper .bx-prev {
+  height: 77px;
+  left: 8%;
+  background: url(../pc-img/slider_prev.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 div#wrap section.section2 {
   width: 100%;
@@ -468,10 +584,24 @@ div#wrap section.forms_area div.section_wrap div.forms .inputs ul li input {
   padding-left: 15px;
   font-size: 1.25rem;
 }
+div#wrap section.forms_area div.section_wrap div.forms .inputs ul li input[type=text]:focus {
+  outline: none;
+  border: 1px solid #f62d58;
+}
+div#wrap section.forms_area div.section_wrap div.forms .inputs ul li input[type=number]:focus {
+  outline: none;
+  border: 1px solid #f62d58;
+}
+div#wrap section.forms_area div.section_wrap div.forms .inputs ul li input[type="number"]::-webkit-outer-spin-button,
+div#wrap section.forms_area div.section_wrap div.forms .inputs ul li input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 div#wrap section.forms_area div.section_wrap div.forms .inputs ul li div {
+  cursor: pointer;
   width: 49.5%;
   height: 100%;
-  background-color: #f62d58;
+  background-color: lightgray;
   float: left;
   margin-right: 1%;
   text-align: center;
@@ -485,11 +615,12 @@ div#wrap section.forms_area div.section_wrap div.forms .inputs ul li div:nth-chi
 div#wrap section.forms_area div.section_wrap div.forms p {
   margin-top: 20px;
   font-weight: bold;
-  color: #f62d58;
+  color: lightgrey;
 }
 div#wrap section.forms_area div.section_wrap div.forms div.sub_btn {
   width: 300px;
   height: 60px;
+  font-size: 1.15rem;
   margin: 35px auto;
   background-color: #f62d58;
   border-radius: 150px;
@@ -520,6 +651,7 @@ div#wrap section.section3 div.section_wrap ul.circle_anis {
   text-align: center;
 }
 div#wrap section.section3 div.section_wrap ul.circle_anis li {
+  opacity: 0;
   width: 180px;
   height: 180px;
   display: inline-block;
@@ -555,13 +687,14 @@ div#wrap section.section3 div.section_wrap ul.circle_anis li:nth-child(6) {
   background-image: url(../pc-img/section-click-icon6.png);
 }
 div#wrap section.section3 div.section_wrap p {
-  width: 80%;
+  opacity: 0;
+  width: 0%;
   height: 3px;
   background: #5b5b5b;
-  margin: 0 auto;
   transform: translateY(-90px);
   position: relative;
   z-index: 1;
+  margin-left: 100px;
 }
 div#wrap section.section3 div.section_wrap div.text_tabs {
   width: 48%;
@@ -691,6 +824,7 @@ div#wrap footer p {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: gray;
 }
 /* Hide the browser's default checkbox */
 .container #agree_check {
@@ -710,7 +844,10 @@ div#wrap footer p {
 /* On mouse-over, add a grey background color */
 /* When the checkbox is checked, add a blue background */
 .container #agree_check ~ .checkmark {
-  background-color: #f62d58;
+  border: 2px solid lightgrey;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: white;
 }
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
@@ -724,8 +861,8 @@ div#wrap footer p {
 }
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 6px;
+  top: 3px;
   width: 5px;
   height: 10px;
   border: solid white;

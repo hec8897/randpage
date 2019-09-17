@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>예신 울산 북구점</title>
 </head>
+
 <body>
     <div id='wrap'>
         <header>
@@ -35,8 +37,92 @@
                 <h3>단 1회 관리 만으로도 확실한 효과</h3>
                 <h4>체온은 올리고! 체중은 내리고!</h4>
                 <p>체온이 1도 올라가면 기초대사량은 13% 증가한다는 사실!</p>
+                <p><span>1회 관리의 체온UP 효과와 체중 변화를 체험하세요!</span></p>
+                <div class='main_img'>
+
+                </div>
+
+            </div>
+            <p>* 개인의 체형과 체질에 따라 상이한 효과가 나타날 수도 있습니다.</p>
+        </section>
+        <section class='section3'>
+            <div class='section3_tab'>
+                <h3></h3>
+                <div class='section3_img'></div>
+                <p><span>1:1 맞춤 바디 컨설팅</span>으로 몸의 균형과 건강까지 챙겨드립니다.</p>
+                <p>심신의 가벼움을 직접 느껴보세요~!</p>
             </div>
         </section>
+        <section class='section4'>
+            <h2></h2>
+            <div class='section4_img'></div>
+            <div class='section4_text'></div>
+        </section>
+        <section class="section5">
+            <div class='section5_tab'>
+                <h3></h3>
+                <h2 class='first_h2'>부분관리 체험권</h2>
+                <h2 class='second_h2'>50% 할인이벤트</h2>
+                <p>등&middot;복부&middot;팔뚝&middot;허벅지&middot;종아리 중 택1</p>
+                <p><span class='through'>80,000원</span> → <span>40,000원</span></p>
+                <p><span>1회 관리의 효과</span>를 누려보세요!!</p>
+                <b>예신 울산북구점 : 울산광역시 북구 신답로 35 5층</b>
+            </div>
+            <div class='section5_model'></div>
+            <div class='section5_text_box'>
+                <p>예신 울산북구점 | 다이어트 상담서비스</p>
+                <p><span>할인이벤트 신청을 하신 분들에 한해</br> 예신 부분관리 50% 할인 체험권이 제공됩니다.</span></p>
+            </div>
+        </section>
+        <footer>
+            <div class='forms'>
+                <h3></h3>
+                <ul class='inputs'>
+                    <form action="update_pro.php" method="POST" id='frm'>
+                        <label for="">이름</label>
+                        <li><input type="text" name='reqname' id='reqname' placeholder="성함" autocomplete="off"></li>
+                        <label for="">연락처</label>
+                        <li><input type="number" name='reqphone' id='reqphone' placeholder="전화번호" autocomplete="off">
+                        </li>
+                        <input type="hidden" id='reqad' name='reqad'>
+                        <div class='sub_btn' onclick="submitFn()">신청 하기</div>
+                    </form>
+                </ul>
+                <div class='calls'>
+                    <p>SNS</p>
+                    <ul>
+                        <li><a href='https://www.facebook.com/UlsanYesin/'><img src="img/facebook.png" alt="페이스북"></a></li>
+                        <li><a href='https://blog.naver.com/lovehunt0711'><img src="img/blog.png" alt="블로그 링크"></a></li>
+                        <li><a href=' https://www.instagram.com/yesinbuggu/'><img src="img/instar.png" alt="인스타 링크"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </footer>
+        <script>
+            let getQueryString = function () {
+                params = {};
+                window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+                return params;
+            }()
+            function submitFn() {
+                var reqName = document.getElementById('reqname');
+                var reqPhone = document.getElementById('reqphone');
+                var reqAd = document.getElementById('reqad');
+
+                if(reqName.value==''){
+                    alert('성함을 입력해주세요')
+                }
+                else if(reqPhone.value==''){
+                    alert('전화 번호를 입력해주세요');
+                }
+                else{
+                reqAd.value = params.id;
+                frm.submit();
+                }
+            }
+        </script>
     </div>
 </body>
+
 </html>

@@ -143,6 +143,13 @@ img {
   font-display: swap;
   src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'), url(https://fonts.gstatic.com/s/notosanskr/v12/Pby7FmXiEBPT4ITbgNA5CgmOalv477IS.otf) format('opentype');
 }
+@font-face {
+  font-family: 'Nanum Brush Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Nanum Brush Script'), local('NanumBrush'), url(https://fonts.gstatic.com/s/nanumbrushscript/v17/wXK2E2wfpokopxzthSqPbcR5_gVaxazCg6pv.ttf) format('truetype');
+}
 .backgroundOption {
   background-size: cover;
   background-repeat: no-repeat;
