@@ -16,88 +16,118 @@
     <script src="dist/jquery.paroller.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <link rel="stylesheet" href="css/style_main.css">
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '143615209554476');
+        fbq('track', 'PageView');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148718314-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148718314-1');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=143615209554476&ev=PageView&noscript=1" /></noscript>
+    <!-- End Facebook Pixel Code -->
     <title>BM Company 유전자검사</title>
 </head>
-<script> 
-        var gender = ''
-        data = {
-            name: '',
-            birth: '',
-            sexflag: '',
-            number: ''
+<script>
+    var gender = ''
+    data = {
+        name: '',
+        birth: '',
+        sexflag: '',
+        number: ''
+    }
+    function genderSetting(a) {
+        if (a == 'w') {
+            gender = '여성'
         }
-        function genderSetting(a) {
-            if (a == 'w') {
-                gender = '여성'
-            }
-            else {
-                gender = '남성'
-            }
+        else {
+            gender = '남성'
         }
-        let params;
-        let getQueryString = function () {
-            params = {};
-            window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
-            return params;
-        }()
-        var uAgent = navigator.userAgent.toLowerCase();  
-        var mobilePhones = new Array('iphone', 'ipod', 'ipad', 'android', 'blackberry', 'windows ce','nokia', 'webos', 'opera mini', 'sonyericsson', 'opera mobi', 'iemobile');
-        for (var i = 0; i < mobilePhones.length; i++){
-            if (uAgent.indexOf(mobilePhones[i]) != -1){
-               document.location = "mobile_index.html?id="+params.id;
-            }
+    }
+    let params;
+    let getQueryString = function () {
+        params = {};
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) { params[key] = value; });
+        return params;
+    }()
+    var uAgent = navigator.userAgent.toLowerCase();
+    var mobilePhones = new Array('iphone', 'ipod', 'ipad', 'android', 'blackberry', 'windows ce', 'nokia', 'webos', 'opera mini', 'sonyericsson', 'opera mobi', 'iemobile');
+    for (var i = 0; i < mobilePhones.length; i++) {
+        if (uAgent.indexOf(mobilePhones[i]) != -1) {
+            document.location = "mobile_index.html?id=" + params.id;
         }
+    }
 
-        function insertData() {
-            var reqName = document.getElementById('reqname').value;
-            var reqBirth = document.getElementById('reqbirth').value;
-            var reqNumber = document.getElementById('reqnumber').value;
-            var Checked = document.getElementById('agree_check').checked;
-            data = {
-                insult: [reqName, reqBirth, reqNumber, gender],
-                url: params.id
-            }
-            if (reqName == '') {
-                alert('성함을 입력해주세요')
-            }
-            else if (reqBirth == '') {
-                alert('생년월일을 입력해주세요')
-            }
-            else if (reqNumber == '') {
-                alert('연락처를 입력해주세요')
-            }
-            else if (gender == '') {
-                alert('성별을 선택해주세요')
-            }
-            else if (Checked == false) {
-                alert('개인정보 수집 및 이용 동의를 체크해주세요')
-            }
-            else {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                        var returnJson = JSON.parse(this.response);
-                        if (returnJson.result == 'ok') {
-                            alert('상담신청이 완료되었습니다 :)')
-                            location.reload();
-                        }
-                        else {
-                            alert('no')
-                        }
+    function insertData() {
+        var reqName = document.getElementById('reqname').value;
+        var reqBirth = document.getElementById('reqbirth').value;
+        var reqNumber = document.getElementById('reqnumber').value;
+        var Checked = document.getElementById('agree_check').checked;
+        data = {
+            insult: [reqName, reqBirth, reqNumber, gender],
+            url: params.id
+        }
+        if (reqName == '') {
+            alert('성함을 입력해주세요')
+        }
+        else if (reqBirth == '') {
+            alert('생년월일을 입력해주세요')
+        }
+        else if (reqNumber == '') {
+            alert('연락처를 입력해주세요')
+        }
+        else if (gender == '') {
+            alert('성별을 선택해주세요')
+        }
+        else if (Checked == false) {
+            alert('개인정보 수집 및 이용 동의를 체크해주세요')
+        }
+        else {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var returnJson = JSON.parse(this.response);
+                    if (returnJson.result == 'ok') {
+                        console.log(xhttp)
+                        alert('상담신청이 완료되었습니다 :)')
+                        // location.reload();
+                    }
+                    else {
+                        alert('no')
                     }
                 }
-                xhttp.open('POST', 'insert.php', true);
-                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xhttp.send("data=" + JSON.stringify(data))
             }
+            xhttp.open('POST', 'insert.php', true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("data=" + JSON.stringify(data))
         }
-    </script> 
+    }
+</script>
+
 <body>
     <div id="wrap">
         <div class='insert_btn' id='insert_form'></div>
         <header>
             <div class='header_wrap'>
-                <h2>미래를 대비해라!</h2>
+                <h2>미래를 대비하라!</h2>
                 <h1><img src="pc-img/header-tit.png" alt=""></h1>
                 <ul class='hexagon_anis'>
                     <li class='hexagons' id='head-ani1'></li>
@@ -107,10 +137,10 @@
                     <li class='hexagons' id='head-ani3'></li>
                 </ul>
                 <div class='arrow' id='head-arrow'></div>
-                <p id='head-ment'>모두 한번에!</p>
+                <!-- <p id='head-ment'>모두 한번에!</p> -->
             </div>
         </header>
-        <section class='section1'>
+        <!-- <section class='section1'>
             <div class="section_wrap">
 
                 <div class='left_tab'></div>
@@ -124,10 +154,10 @@
                 </div>
 
                 <div class='center_arrow' id='main-arrow-ani'>
-                    <h3><span class='counter' data-count="70" id='main-percent-ani'>00</span>%</h3>
+                    <h3><span class='counter' data-count="100" id='main-percent-ani'>00</span>%</h3>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class='banner banner-1'>
             <div class='section_wrap'>
                 <div class='text_tab'>
@@ -144,6 +174,27 @@
                 <div class="slider-img slider-img3"></div>
                 <div class="slider-img slider-img4"></div>
             </div>
+        </section>
+        <section class='section4'>
+            <div class='wrap'>
+                <h2 id='section4_h2'>20초 가글이면 충분합니다!</h2>
+                <p id='section4_p'>당신 몸속의 각종 질병을 일으킬 유전자를 정확하게 분석하는 유전자검사 키트!</p>
+                <div class='section4_imgs'>
+                    <div id='s4_img1'></div>
+                    <div id='s4_img2'></div>
+                    <div id='s4_img3'></div>
+                    <div id='s4_img4'></div>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+
+
+
+                })
+
+            </script>
         </section>
         <section class='section2'>
             <div class='section_wrap'>
@@ -166,7 +217,7 @@
                         <div class='left_form inputs'>
                             <ul>
                                 <li>
-                                    <input type="text" placeholder="이름"  id='reqname' autocomplete="off">
+                                    <input type="text" placeholder="이름" id='reqname' autocomplete="off">
                                 </li>
                                 <li><input type="number" placeholder="생년월일" id='reqbirth' autocomplete="off"></li>
                             </ul>
@@ -174,10 +225,10 @@
                         <div class='right_form inputs'>
                             <ul>
                                 <li>
-                                    <div class='gender_btn'  onclick="genderSetting('m')">
+                                    <div class='gender_btn' onclick="genderSetting('m')">
                                         남자
                                     </div>
-                                    <div class='gender_btn'  onclick="genderSetting('w')">
+                                    <div class='gender_btn' onclick="genderSetting('w')">
                                         여자
                                     </div>
                                 </li>
@@ -195,6 +246,13 @@
 
                     <div class='sub_btn' onclick="insertData()">유전자검사 신청 및 상담문의</div>
                 </div>
+            </div>
+        </section>
+        <section class='section5'>
+            <div class="wrap">
+                <h2>유전자검사자들의 만족도는</h2>
+                <h2>매우 높습니다!</h2>
+                <p>정확한 검사 결과로 미래를 설계할 수 있도록 도와드리겠습니다.</p>
             </div>
         </section>
         <section class="section3">
@@ -234,6 +292,21 @@
                 </div>
             </div>
         </section>
+        <section class='section6'>
+            <div class="wrap">
+                <h2>이런 분들께 추천합니다!</h2>
+                <div class='bottom_hexagons'>
+                    <div id='bottom_hexagon1'></div>
+                    <div id='bottom_hexagon2'></div>
+                    <div id='bottom_hexagon3'></div>
+                    <div id='bottom_hexagon4'></div>
+                    <div id='bottom_hexagon5'></div>
+
+                </div>
+
+            </div>
+
+        </section>
         <section class='footer_ment'>
             <p><span class='coma1'><img src="pc-img/pc-coma1.png" alt=""></span>유방 절제 수술을 받고 유방암에 걸릴 확률이 <span>87%에서 5%
                     이하</span>로 줄어들었다.</p>
@@ -253,22 +326,22 @@
     </div>
 
     <script>
-            $(document).ready(function () {
-                //initialize paroller.js
-                $('[data-paroller-factor]').paroller();
-                //initialize paroller.js and set options for elements with .paroller class
-                $('.paroller-example').paroller({
-                    factorXs: 0.1,
-                    factorSm: 0.1,
-                    factorMd: -0.4,
-                    factorLg: -0.5,
-                    factorXl: -0.6,
-                    factor: -0.4,
-                    type: 'foreground',
-                    direction: 'vertical',
-                    transition: 'transform .3s ease-out'
-                });
+        $(document).ready(function () {
+            //initialize paroller.js
+            $('[data-paroller-factor]').paroller();
+            //initialize paroller.js and set options for elements with .paroller class
+            $('.paroller-example').paroller({
+                factorXs: 0.1,
+                factorSm: 0.1,
+                factorMd: -0.4,
+                factorLg: -0.5,
+                factorXl: -0.6,
+                factor: -0.4,
+                type: 'foreground',
+                direction: 'vertical',
+                transition: 'transform .3s ease-out'
             });
+        });
 
         $(document).ready(function () {
             $(".gender_btn").click(function () {
@@ -287,7 +360,7 @@
                 $("#head-ani2").delay(300).animate({ opacity: "1.0" }, 200);//hexagon2
                 $("#head-ani3").delay(600).animate({ opacity: "1.0" }, 200);//hexagon3
                 $("#head-arrow").delay(800).animate({//head-arrow-img
-                    bottom: "10px",
+                    bottom: "62px",
                     opacity: "1.0"
                 }, 500)
                 $("#head-ment").delay(1000).animate({//head-ment
@@ -333,7 +406,17 @@
                         "animation-name": "identifier"
                     })
                 }
-                if (offsets >= 3500 && offsets <= 4000) {
+                if (offsets >= 1800 && offsets <= 2200) {
+
+                    $('#section4_h2').animate({ "opacity": "1.0" }, 1000)
+                    $('#section4_p').delay(300).animate({ "opacity": "1.0" }, 800)
+                    $('#s4_img1').delay(500).animate({ "opacity": "1.0" }, 800)
+                    $('#s4_img2').delay(700).animate({ "opacity": "1.0" }, 800)
+                    $('#s4_img3').delay(900).animate({ "opacity": "1.0" }, 800)
+                    $('#s4_img4').delay(1100).animate({ "opacity": "1.0" }, 800)
+                }
+
+                if (offsets >= 4000 && offsets <= 4500) {
                     $('#line_actions').delay(800).animate({ "width": "75%", "opacity": "1.0" }, 1000)
                     $('#list_icon1').delay(300).animate({ "opacity": "1.0" }, 800)
                     $('#list_icon2').delay(600).animate({ "opacity": "1.0" }, 800)
@@ -343,6 +426,15 @@
                     $('#list_icon5').delay(1200).animate({ "opacity": "1.0" }, 800)
                     $('#list_icon6').delay(1400).animate({ "opacity": "1.0" }, 800)
                 }
+                if (offsets >= 5200 && offsets <= 5500) {
+                    $('#bottom_hexagon1').animate({ "opacity": "1.0" }, 800)
+                    $('#bottom_hexagon2').delay(200).animate({ "opacity": "1.0" }, 800)
+                    $('#bottom_hexagon3').delay(400).animate({ "opacity": "1.0" }, 800)
+                    $('#bottom_hexagon4').delay(600).animate({ "opacity": "1.0" }, 800)
+                    $('#bottom_hexagon5').delay(800).animate({ "opacity": "1.0" }, 800)
+
+                }
+
             });
         })
         function checkBoxEvent() {
@@ -355,11 +447,11 @@
             if (checkedbox.checked == true) {
                 checkLabel.style.color = '#f62d58'
                 checkBox.style.backgroundColor = '#f62d58'
-                checkBox.style.borderColor='#f62d58';
+                checkBox.style.borderColor = '#f62d58';
             }
             else {
                 checkLabel.style.color = 'gray'
-                checkBox.style.borderColor='gray';
+                checkBox.style.borderColor = 'gray';
                 checkBox.style.backgroundColor = 'white'
             }
         }
@@ -367,4 +459,3 @@
 </body>
 
 </html>
-

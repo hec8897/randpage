@@ -28,19 +28,19 @@
                     <!-- 에니메이션 추가 하나씩 나타나게 -->
                 </ul>   
                 <div class='header_arrow' id='head-arrow'></div>
-                <p class='header_ment' id='head-ment'>모두 한번에!</p>
+                <!-- <p class='header_ment' id='head-ment'>모두 한번에!</p> -->
             </div>
         </header>
         <main>
-            <div class='arrow_ani' id='main-arrow-ani'>
+            <!-- <div class='arrow_ani' id='main-arrow-ani'>
                 <h2><span class='counter' data-count="70" id='main-percent-ani'>00</span> %</h2>
-            </div>
-            <div class='ticket'>
+            </div> -->
+            <!-- <div class='ticket'>
                 <div class="ticket_ment">
                     <h3>9월 한정 특별 이벤트!</h3>
                     <h2><span>10만원</span>5만원</h2>
                 </div>
-            </div>
+            </div> -->
         </main>
         <section class='banner banner-1'>
             <div class='text_box'>
@@ -58,6 +58,20 @@
             <div class="slider-img slider-img3"></div>
             <div class="slider-img slider-img4"></div>
         </div>
+        <section class="section4">
+            <div class="wrap">
+                <h2 id='section4_h2'>20초 가글이면 충분합니다!</h2>
+                <p id='section4_p1'>당신의 몸속의 각종 질병을 일으킬 유전자를 </p>
+                <p id='section4_p2'>정확하게 분석하는 유전자검사 키트!</p>
+                <div class='section4_imgs'>
+                    <div id='s4_img1'></div>
+                    <div id='s4_img2'></div>
+                    <div id='s4_img3'></div>
+                    <div id='s4_img4'></div>
+                </div>
+            </div>
+        </section>
+        
         <section class='banner banner-2'>
             <div class='section_wrap'>
                 <h2>높은 정확도의 유전자 검사 분석결과</h2>
@@ -82,6 +96,15 @@
                 </div>
                 <div class='sub_btns' onclick="insertData()">유전자 검사 신청 및 상담문의</div>
                 </ul>
+            </div>
+        </section>
+        <section class="section5">
+            <div class="wrap">
+                <h2>유전자검사들의 만족도는</h2>
+                <h2>매우 높습니다!</h2>
+                <p>정확한 검사 결과로 미래를</p>
+                <p>설계할 수 있도록 도와드리겠습니다.</p>
+
             </div>
         </section>
         <section class='click_menu'>
@@ -141,6 +164,30 @@
                     </li>
                 </ul>
             </div>
+        </section>
+        <section class="section6">
+            <div class="wrap">
+                <h2>이런 분들께 추천합니다!</h2>
+                <div class='bottom_hexagons'>
+                        <div class='bottom_hexagon1s'></div>
+                        <div class='bottom_hexagon2s'></div>
+                        <div class='bottom_hexagon3s'></div>
+                        <div class='bottom_hexagon4s'></div>
+                        <div class='bottom_hexagon5s'></div>
+                    </div>
+                <div class="hexagon_top">
+                        <div class='bottom_hexagon1'></div>
+                        <div class='bottom_hexagon2'></div>
+                        <div class='bottom_hexagon3'></div>
+                    
+                </div>
+                <div class="hexagon_bottom">
+                        <div class='bottom_hexagon4'></div>
+                        <div class='bottom_hexagon5'></div>
+                </div>
+
+            </div>
+
         </section>
         <section class='last_ment'>
             <div>
@@ -254,7 +301,7 @@
                 $("#head-ani2").delay(300).animate({ opacity: "1.0" }, 200);//hexagon2
                 $("#head-ani3").delay(600).animate({ opacity: "1.0" }, 200);//hexagon3
                 $("#head-arrow").delay(800).animate({//head-arrow-img
-                    bottom: "00px",
+                    bottom: "60px",
                     opacity: "1.0"
                 }, 500)
                 $("#head-ment").delay(1000).animate({//head-ment
@@ -289,6 +336,7 @@
             })
             $(window).scroll(function (event) {//caption1
                 var offsets = $(document).scrollTop();
+
                 if (offsets >= 300 && offsets <= 1000) {
                     $("#fade_in_h2").fadeIn(1000)
                     $(".line_1").css({
@@ -301,8 +349,19 @@
                         "animation-name": "identifier" 
                     })
                 }
+                if (offsets >= 1100 && offsets <= 1500) {
+                    $('#section4_h2').animate({"opacity":"1.0"},1000)
+                    $('#section4_p1').delay(300).animate({"opacity":"1.0"},800)
+                    $('#section4_p2').delay(300).animate({"opacity":"1.0"},800)
 
-                if (offsets >= 1650 && offsets <= 2050) {
+                    $('#s4_img1').delay(500).animate({"opacity":"1.0"},800)
+                    $('#s4_img2').delay(700).animate({"opacity":"1.0"},800)
+                    $('#s4_img3').delay(900).animate({"opacity":"1.0"},800)
+                    $('#s4_img4').delay(1100).animate({"opacity":"1.0"},800)
+                }
+
+
+                if (offsets >= 2500 && offsets <= 3000) {
                     $('#line_actions1').delay(100).animate({ "left": "00%", "opacity": "1.0" }, 1000)
                     $('#list_icon1').delay(300).animate({ "opacity": "1.0" }, 200)
                     $('#list_icon2').delay(600).animate({ "opacity": "1.0" }, 200)
@@ -313,6 +372,21 @@
                     $('#list_icon5').delay(1600).animate({ "opacity": "1.0" }, 200)
                     $('#list_icon6').delay(1800).animate({ "opacity": "1.0" }, 200)
                 }
+                if (offsets >= 2700 && offsets <= 3500) {
+                    $('.bottom_hexagon1').animate({"opacity":"1.0"},800)
+                    $('.bottom_hexagon2').delay(200).animate({"opacity":"1.0"},800)
+                    $('.bottom_hexagon3').delay(400).animate({"opacity":"1.0"},800)
+                    $('.bottom_hexagon4').delay(600).animate({"opacity":"1.0"},800)
+                    $('.bottom_hexagon5').delay(800).animate({"opacity":"1.0"},800)
+
+                    $('.bottom_hexagon1s').animate({"opacity":"1.0"},800)
+
+                    $('.bottom_hexagon2s').delay(200).animate({"opacity":"1.0"},800)
+                    $('.bottom_hexagon3s').delay(400).animate({"opacity":"1.0"},800)
+                    $('.bottom_hexagon4s').delay(600).animate({"opacity":"1.0"},800)
+                    $('.bottom_hexagon5s').delay(800).animate({"opacity":"1.0"},800)
+                }
+
             });
         })
 
