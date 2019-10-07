@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="http://bmcompany.kr">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투게더인스">
+    <meta property="og:title" content="투게더인스">
+    <meta property="og:image" content="http://tinsu.co.kr/og.jpg">
+    <link rel="shortcut icon" href="http://tinsu.co.kr/favicon.ico">
+    <link rel="icon" href="http://tinsu.co.kr/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=40a68a4f3604ed69654956f572b9ac0a"></script>
+    <!-- <script src="js/layout.js"></script> -->
+    <script src="js/layout.min.js"></script>
+
+    <title>투게더 인스</title>
+</head>
+
+<body>
+    <div id='wrap' class="main_page">
+        <div class="hide_menu" id='hide_menu'>
+            <p class="line"></p>
+            <ul class="nav">
+                <li>
+                    <h2><a href='main.html?page=00&con=1'>회사소개</a></h2>
+                    <p><a href='main.html?page=00&con=1'>CEO 인사말</a></p>
+                    <p><a href='main.html?page=00&con=2'>미션</a></p>
+                    <p><a href='main.html?page=00&con=3'>비전</a></p>
+                    <p><a href='main.html?page=00&con=4'>CI</a></p>
+                    <p><a href='main.html?page=00&con=5'>오시는길</a></p>
+
+                </li>
+                <li>
+                    <h2><a href='main.html?page=01&con=1'>보험종류</a></h2>
+                    <p><a href='main.html?page=01&con=1'>보험종류</a></p>
+                    <p><a href='main.html?page=01&con=2'>보험 가입가이드</a></p>
+                    <p><a href='main.html?page=01&con=3'>자동차 사고처리 절차</a></p>
+                    <p class="list0">&nbsp;</p>
+                    <p class="list0">&nbsp;</p>
+                </li>
+                <li class="list0">
+                    <h2><a href='main.html?page=02'>FAQ</a></h2>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                </li>
+                <li class="list0">
+                    <h2><a href='main.html?page=03'>인재채용</a></h2>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                </li>
+            </ul>
+        </div>
+        <header>
+        </header>
+        <div class="head" id='head'></div>
+        <nav class="lnb" id='lnb_render'>
+        </nav>
+        <div class="right-bg"></div>
+
+        <main id='con_render'>
+
+        </main>
+
+
+        <footer>
+            <div class="left-bg"></div>
+
+            <div class="wrap">
+                <h2><img src="img/footer-BI.png" alt="footer BI"></h2>
+                <div class="com_info">
+                    <p>투게더인스 대표:김남호 주소 : 서충남 예산군 예산읍 벚꽃로 90번길 2층</p>
+                    <p>Copyright © 투게더인스 All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script>
+        layoutRender.headerHtml();
+        var conKey = Number(params.con)
+        var pageKey = Number(params.page)
+        layoutRender.lnbHtml();
+        layoutRender.conRender(pageKey, params.con)
+        layoutRender.con2Render(pageKey, params.con)
+        // layoutRender.con3Render(pageKey,params.con)
+        layoutRender.con4Render(pageKey)
+    </script>
+
+    <script>
+        var smMedia = window.matchMedia('( max-width: 575px )');
+        var mdMedia = window.matchMedia('(min-width: 768px) and (max-width: 1024px)');
+        document.querySelector("#nav-toggle")
+            .addEventListener("click", function () {
+                this.classList.toggle("active");
+            });
+        $(document).ready(function () {
+            $('#nav-toggle').click(function () {
+                $('.hide_menu').fadeToggle()
+                if (smMedia.matches == false && mdMedia.matches == false) {
+                    $(".gnb").toggle()
+                }
+                // $(' header').toggle(function(){
+
+                // })
+            })
+
+
+        })
+
+    </script>
+
+</html>

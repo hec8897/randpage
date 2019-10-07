@@ -249,7 +249,7 @@
 				},800)
 						
 				if(smMedia.matches == false && mdMedia.matches == false){
-					backGroundEv('.section1')
+					// backGroundEv('.section1')
 				}
 
 			}
@@ -284,14 +284,14 @@
 				},800)
 		
 				if(smMedia.matches == false && mdMedia.matches == false){
-					backGroundEv('.section3')
+					// backGroundEv('.section3')
 				}
 
 
 			}
 			if(_thisCurrent ==3){
 				$('#main_mouse_ani').hide();
-				section2BgAni(_thisCurrent);
+				// section2BgAni(_thisCurrent);
 			}
 			// function titAnis(a){
 			// 	$('#s2_ani').animate({

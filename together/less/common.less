@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700|Roboto:400,700&display=swap&subset=korean');
+
+@mediaVericalMobile: ~"(max-width:767px)"; //basic setting
+@mediaIpone: ~"(min-width: 361px) and (max-width: 375px)"; //HorizontalMobile
+@mediaTablet: ~"(min-width: 768px) and (max-width: 1024px)"; //tablet   
+
+html,
+body {
+    font-family: 'Noto Sans KR', 'Roboto', sans-serif;
+    min-width: 1200px;
+    max-width: 1920px;
+    font-size: 16px;
+
+    @media@mediaTablet {
+        max-width: 1024px;
+        min-width: 768px;
+    }
+
+    @media@mediaVericalMobile {
+        max-width: 767px;
+        min-width: 360px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.wraps {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.backgroundOption {
+    background-size: contain;
+    // background-size:150%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+div#wrap{
+    header {
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        position: absolute;
+        z-index: 950;
+        top: 0;
+
+        @media@mediaVericalMobile {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        div.wrap {
+            .wraps;
+            position: relative;
+
+            h1 {
+                width: 150px;
+                height: 100%;
+                float: left;
+                margin-right: 2px;
+                position: relative;
+
+                @media@mediaTablet {
+                    padding-left: 10px;
+                }
+
+                @media@mediaVericalMobile {
+                    padding-left: 10px;
+                }
+
+                img {
+                    @media@mediaVericalMobile {
+                        width: 75%;
+                    }
+
+                }
+            }
+
+            ul.gnb {
+                width: 60%;
+                margin: 0 auto;
+                text-align: center;
+
+                @media@mediaTablet {
+                    display: none;
+                }
+
+                @media@mediaVericalMobile {
+                    display: none;
+                }
+
+                li {
+                    display: inline;
+                    margin-right: 50px;
+                    font-size: 1.438rem;
+
+                    a {
+                        color: white;
+                    }
+                }
+
+                li:nth-last-child(1) {
+                    margin: 0px;
+                }
+            }
+
+            .xbox {
+                width: 30px;
+                height: 30px;
+                margin-top: 35px;
+                float: right;
+                cursor: pointer;
+                display: none;
+
+                @media@mediaTablet {
+                    padding-right: 10px;
+                }
+
+                @media@mediaVericalMobile {
+                    margin-top: 10px;
+                    padding-right: 10px;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                div {
+                    width: 100%;
+                    height: 3px;
+                    background: white;
+                    margin-bottom: 8px;
+                    position: relative;
+
+                    @media@mediaVericalMobile {
+                        margin-bottom: 5px;
+                        height: 2px;
+                        ;
+                    }
+
+                }
+
+                div:nth-last-child(1) {
+                    width: 0%;
+                    float: right;
+                }
+
+                div:nth-child(1) {
+                    transform: rotate(45deg);
+                    top: 11px;
+
+                    @media@mediaVericalMobile {
+                        top: 7px;
+                    }
+
+                }
+
+                div:nth-child(2) {
+                    transform: rotate(-45deg);
+                }
+
+
+                // position: absolute;
+                // right: 0;
+            }
+
+            #nav-toggle {
+                float: right;
+                margin-top: 35px;
+                @media@mediaTablet {
+                    margin-right: 10px;
+
+                }
+
+                @media@mediaVericalMobile {
+                    margin-top: 10px;
+                    // padding-right: 10px;
+                    margin-right: 10px;
+
+                    // width: 20px;
+                    // height: 20px;
+                }
+            }
+
+            #nav-toggle {
+                cursor: pointer;
+                padding: 10px 35px 16px 0px;
+            }
+
+            #nav-toggle span,
+            #nav-toggle span:before,
+            #nav-toggle span:after {
+                cursor: pointer;
+                border-radius: 1px;
+                height: 3px;
+                width: 35px;
+                background: white;
+                position: absolute;
+                z-index: 999;
+                display: block;
+                content: '';
+            }
+
+            #nav-toggle span:before {
+                top: -10px;
+            }
+
+            #nav-toggle span:after {
+                bottom: -10px;
+            }
+
+            #nav-toggle span,
+            #nav-toggle span:before,
+            #nav-toggle span:after {
+                transition: all 500ms ease-in-out;
+                position: absolute;
+                z-index: 999;
+            }
+
+            #nav-toggle.active span {
+                background-color: transparent;
+            }
+
+            #nav-toggle.active span:before,
+            #nav-toggle.active span:after {
+                top: 5px;
+            }
+
+            #nav-toggle.active span:before {
+                transform: rotate(45deg);
+            }
+
+            #nav-toggle.active span:after {
+                transform: rotate(-45deg);
+            }
+        }
+
+    }
+
+}
+
+div.hide_menu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px;
+    z-index: 900;
+    background: #091b2c;
+    display: none;
+    overflow: hidden;
+    p.line{
+        width: 100%;
+        height: 1px;
+        background: #223242; 
+        position: absolute;
+        top:290px;
+        @media@mediaTablet {
+        top:210px;
+
+        }
+
+        @media@mediaVericalMobile {
+            display: none;
+        }
+    }
+    ul.nav {
+        max-width: 720px;
+        // height: 500px;
+        margin: 240px auto;
+        color: white;
+        text-align: center;
+        overflow: hidden;
+      
+
+        @media@mediaTablet {
+            margin-top: 150px;
+        }
+
+        @media@mediaVericalMobile {
+            margin-top: 15%;
+        }
+
+        li {
+            width: 150px;
+            display: inline-block;
+            margin-right: 15px;
+
+            @media@mediaVericalMobile {
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-weight: normal;
+                margin-bottom: 50px;
+                @media@mediaVericalMobile {
+                    border-bottom: 1px solid #223242;
+                    padding-bottom: 15px;
+                margin-bottom: 15px;
+                font-size: 1.1rem;
+                    
+                    }
+            }
+
+            p {
+                margin-top: 10px;
+                overflow: hidden;
+                font-size: 0.85rem;
+            }
+            p:nth-last-child(1){
+                @media@mediaVericalMobile {
+                    border-bottom: 1px solid #223242;
+                    padding-bottom: 15px;
+
+                }
+
+
+            }
+            a {
+                color: #fff;
+            }
+
+            // margin-right: 50px;
+        }
+
+    }
+
+    @media@mediaVericalMobile {
+        .list0 {
+            display: none;
+
+            p {
+                display: none;
+            }
+        }
+    }
+
+
+    // display: none;
+}
