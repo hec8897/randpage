@@ -12,12 +12,12 @@
     <link rel="shortcut icon" href="http://tinsu.co.kr/favicon.ico">
     <link rel="icon" href="http://tinsu.co.kr/favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=40a68a4f3604ed69654956f572b9ac0a"></script>
-    <!-- <script src="js/layout.js"></script> -->
-    <script src="js/layout.min.js"></script>
+    <script src="js/layout.js"></script>
+
+    <!-- <script src="js/layout.min.js"></script> -->
 
     <title>투게더 인스</title>
 </head>
@@ -45,7 +45,7 @@
                     <p class="list0">&nbsp;</p>
                 </li>
                 <li class="list0">
-                    <h2><a href='main.html?page=02'>FAQ</a></h2>
+                    <h2 class="hide_top_line"><a href='main.html?page=02'>FAQ</a></h2>
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
@@ -68,24 +68,19 @@
         <nav class="lnb" id='lnb_render'>
         </nav>
         <div class="right-bg"></div>
-
         <main id='con_render'>
-
         </main>
-
-
         <footer>
             <div class="left-bg"></div>
 
             <div class="wrap">
                 <h2><img src="img/footer-BI.png" alt="footer BI"></h2>
                 <div class="com_info">
-                    <p>투게더인스 대표:김남호 주소 : 서충남 예산군 예산읍 벚꽃로 90번길 2층</p>
+                    <p>투게더인스 대표:김남호<span>주소 : 서충남 예산군 예산읍 벚꽃로 90번길 2층</span></p>
                     <p>Copyright © 투게더인스 All rights reserved.</p>
                 </div>
             </div>
         </footer>
-
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -98,6 +93,8 @@
         layoutRender.lnbHtml();
         layoutRender.conRender(pageKey, params.con)
         layoutRender.con2Render(pageKey, params.con)
+        layoutRender.con3Render(pageKey, params.con)
+
         // layoutRender.con3Render(pageKey,params.con)
         layoutRender.con4Render(pageKey)
     </script>
@@ -115,12 +112,19 @@
                 if (smMedia.matches == false && mdMedia.matches == false) {
                     $(".gnb").toggle()
                 }
-                // $(' header').toggle(function(){
-
-                // })
+                if($('#nav-toggle').attr('class')=='active'){
+                    $('html, body').css({'overflow-y': 'hidden'});
+                    $('.hide_menu').on('scroll touchmove mousewheel', function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    return false;
+                });
+                 
+                }
+                else{
+                    $('html, body').css({'overflow-y': 'auto'});
+                }
             })
-
-
         })
 
     </script>

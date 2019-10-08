@@ -280,6 +280,7 @@ div.hide_menu {
         color: white;
         text-align: center;
         overflow: hidden;
+
       
 
         @media@mediaTablet {
@@ -288,6 +289,8 @@ div.hide_menu {
 
         @media@mediaVericalMobile {
             margin-top: 15%;
+            position: relative;
+            z-index: 999;
         }
 
         li {
@@ -308,10 +311,17 @@ div.hide_menu {
                 @media@mediaVericalMobile {
                     border-bottom: 1px solid #223242;
                     padding-bottom: 15px;
-                margin-bottom: 15px;
-                font-size: 1.1rem;
+                    margin-bottom: 15px;
+                    font-size: 1.1rem;
                     
                     }
+            }
+            .hide_top_line{
+                @media@mediaVericalMobile {
+                border-top: 1px solid #223242;
+                padding-top: 15px;
+                }
+
             }
 
             p {

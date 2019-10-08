@@ -301,6 +301,11 @@ div#main .section2 div.wrap div.bg_ani_left {
   -webkit-animation-fill-mode: forwards;
   opacity: 0;
 }
+@media (max-width:767px) {
+  div#main .section2 div.wrap div.bg_ani_left {
+    display: none;
+  }
+}
 div#main .section2 div.wrap div.bg_ani_right {
   width: 1400px;
   height: 600px;
@@ -316,6 +321,11 @@ div#main .section2 div.wrap div.bg_ani_right {
   animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   opacity: 0;
+}
+@media (max-width:767px) {
+  div#main .section2 div.wrap div.bg_ani_right {
+    display: none;
+  }
 }
 @keyframes s2_leftAni1 {
   100% {

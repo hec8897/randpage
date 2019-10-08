@@ -283,6 +283,8 @@ div.hide_menu ul.nav {
 @media (max-width:767px) {
   div.hide_menu ul.nav {
     margin-top: 15%;
+    position: relative;
+    z-index: 999;
   }
 }
 div.hide_menu ul.nav li {
@@ -308,6 +310,12 @@ div.hide_menu ul.nav li h2 {
     padding-bottom: 15px;
     margin-bottom: 15px;
     font-size: 1.1rem;
+  }
+}
+@media (max-width:767px) {
+  div.hide_menu ul.nav li .hide_top_line {
+    border-top: 1px solid #223242;
+    padding-top: 15px;
   }
 }
 div.hide_menu ul.nav li p {
