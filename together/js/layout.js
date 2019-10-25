@@ -1,5 +1,9 @@
 var params;
 
+String.prototype.replaceAll = function (org, dest) {
+    return this.split(org).join(dest);
+}
+
 function getQueryString() {
     params = {};
     window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) {
@@ -8,10 +12,11 @@ function getQueryString() {
     return params;
 }
 var layoutRender = {
+ 
     headerHtml: function () {
         var data = [{
                 h3: "도전을 두려워 하지 않고 <span>오직 고객만족을 위한</span>",
-                h2: "변화를 선도하는 <span>투게더 인스가 되겠습니다.</span>"
+                h2: "변화를 선도하는 <span>투게더인스가 되겠습니다.</span>"
             },
             {
                 h3: "보험에 관한 다양한 <span>정보를 제공하며</span>",
@@ -42,53 +47,70 @@ var layoutRender = {
                                 <li><a href='main.html?page=02'>FAQ</a></li>
                                 <li><a href='main.html?page=03'>인재채용</a></li>
                             </ul>
-                            <!-- <div class='top_section'>
-                            <h3>${data[key].h3}</h3>
-                            <h2>${data[key].h2}</h2>
-                            </div> -->
                     </div>`
         headImg.innerHTML = `  <h3>${data[key].h3}</h3>
         <h2>${data[key].h2}</h2>`
     },
     lnbHtml: function () {
         var Nav = document.getElementById('lnb_render');
+      
+
+        var navNth = Number(params.con);
+        console.log(navNth)
         if (params.page == "00") {
             Nav.innerHTML = ` <ul class="list-colum-5">
-                                <li onclick='layoutRender.conRender(0,1)'>CEO 인사말</li>
-                                <li onclick='layoutRender.conRender(0,2)'>미션</li>
-                                <li onclick='layoutRender.conRender(0,3)'>비전</li>
-                                <li onclick='layoutRender.conRender(0,4)'>CI</li>
-                                <li onclick='layoutRender.conRender(0,5)'>오시는 길</li>
+                                <li id='lnb_li1' class='lnb_li' onclick='layoutRender.conRender(0,1)'>
+                                    <img src="img/main/nav_arrow.png" alt="nav_arrow" id='arrow'>CEO 인사말</li>
+                                <li id='lnb_li2' class='lnb_li' onclick='layoutRender.conRender(0,2)'>
+                                    <img src="img/main/nav_arrow.png" alt="nav_arrow" id='arrow'>미션</li>
+                                <li id='lnb_li3' class='lnb_li' onclick='layoutRender.conRender(0,3)'>
+                                    <img src="img/main/nav_arrow.png" alt="nav_arrow" id='arrow'>비전</li>
+                                <li id='lnb_li4' class='lnb_li' onclick='layoutRender.conRender(0,4)'>
+                                    <img src="img/main/nav_arrow.png" alt="nav_arrow" id='arrow'>CI</li>
+                                <li id='lnb_li5' class='lnb_li' onclick='layoutRender.conRender(0,5)'>
+                                    <img src="img/main/nav_arrow.png" alt="nav_arrow" id='arrow'>오시는 길</li>
                             </ul>`
         } else if (params.page == "01") {
             Nav.innerHTML = ` <ul class="list-colum-3">
-                                <li onclick='layoutRender.con2Render(1,1)'>보험 종류</li>
-                                <li onclick='layoutRender.con2Render(1,2)'>보험 가입가이드</li>
-                                <li onclick='layoutRender.con2Render(1,3)'>자동차 사고처리 절차</li>
+                                <li class='lnb_li' id='lnb_li1' onclick='layoutRender.con2Render(1,1)'>
+                                    <img src="img/main/nav_arrow.png" alt="nav_arrow" id='arrow'>보험 종류</li>
+                                <li class='lnb_li' id='lnb_li2' onclick='layoutRender.con2Render(1,2)'>
+                                    <img src="img/main/nav_arrow.png" alt="nav_arrow" id='arrow'>보험 가입가이드</li>
+                                <li class='lnb_li' id='lnb_li3' onclick='layoutRender.con2Render(1,3)'>
+                                    <img src="img/main/nav_arrow.png" alt="nav_arrow" id='arrow'>자동차 사고처리 절차</li>
                             </ul>`
         } else {
             Nav.style.height = "0px"
         }
 
+  
+
     },
     conRender: function (pagekey, conkey) {
         var MainRedner = document.getElementById('con_render');
+        var lnbList = document.querySelectorAll('.lnb_li');
         if (pagekey == 0) {
+        for(var i = 0; i<lnbList.length; i++){
+            lnbList[i].className = 'lnb_li'
+        }
+        var NavList = document.getElementById('lnb_li'+conkey);
+        NavList.className = 'lnb_li active'
+
             if (conkey == 1) {
                 MainRedner.innerHTML = `
                                     <div class='m0-con${conkey}'>
                                         <h2>CEO 인사말</h2>
                                         <div class='banner banner-con-0'>
                                             <h3>최상의 서비스와 경쟁력 향상을 <span>위해 더욱 노력하는 기업</span></h3>
-                                            <h4>투게더 인스</h4>
+                                            <h4>투게더인스</h4>
                                         </div>
                                         <div class='intro_text'>
                                             <p>안녕하세요</p>
                                             <p class='margin_point'>투게더인스 대표 김남호입니다.</p>
-                                            <p>투게더 인스는 재무 및 보험 분야의 다양한 서비스와 전문적인 컨설팅을 제공하며 최상의 고객만족도를 유지하고 있습니다.</p>
+                                            <p>투게더인스는 재무 및 보험 분야의 다양한 서비스와 전문적인 컨설팅을 제공하며 최상의 고객만족도를 유지하고 있습니다.</p>
                                             <p>지금의 성장에 안주하지 않고, 최상의 고객 맞춤 서비스와 기업의 경쟁력 향상을 위해 더욱 노력하는 기업이 되겠습니다.</p>
                                             <p>또한 고객님의 보다 나은 미래 설계에 지속적으로 기여할 수 있도록 글로벌 금융 파트로서의 모든 노력을 기울이겠습니다.</p>
-                                            <p class='margin_point'>투게더인스가 ‘당신의 진정한 조력자’, ‘기업의 동반자’가로서 끊임 없이 변화하고 혁신해 나가며 고객의 삶을 더욱 가치 있게 하는데 일익을 담당할 수 있도록 아낌없는 성원을 부탁드립니다.</p>
+                                            <p class='margin_point'>투게더인스가 '당신의 진정한 조력자', '기업의 동반자' 로서 끊임없이 변화하고 혁신해 나가며 고객의 삶을 더욱 가치 있게 하는데 일익을 담당할 수 있도록 아낌없는 성원을 부탁드립니다.</p>
                                             <p>감사합니다.</p>
                                         </div>
                                   </div>`
@@ -97,7 +119,7 @@ var layoutRender = {
                                     <div class='m0-con${conkey}'>
                                         <h2>미션</h2>
                                         <h3>고객의 현재 그리고 <b>미래를 함께하는 <span>투게더인스</span></b></h3>
-                                        <p class='margin_point'>투게더 인스는 언제나 고객과 함께 성장하며 <span>새로운 가치창출을 위해 한발짝 앞서나가겠습니다.</span></p>
+                                        <p class='margin_point'>투게더인스는 언제나 고객과 함께 성장하며 <span>새로운 가치창출을 위해 한발짝 앞서나가겠습니다.</span></p>
                                         <p>제자리걸음이 아닌 언제나 새로운 변화와 혁신을 꿈꾸며</p>
                                         <p>기업성장에 다음과 같은 역할을 할 것을 다짐합니다.</p>
                                         <div class='banner'>
@@ -125,7 +147,7 @@ var layoutRender = {
                 MainRedner.innerHTML = `
                                     <div class='m0-con${conkey}'>
                                         <h2>비전</h2>
-                                        <h3>WE ARE THE ONLY PARTNER<span>FOR YOUR BETTER LIFE.</span></h3>
+                                        <h3>WE ARE THE ONLY PARTNER <span>FOR YOUR BETTER LIFE.</span></h3>
                                         <p>고객의 올바른 금융과 보험 LIFE에 대한 가치를 넘어</p>
                                         <p>보다 나은 고객의 삶과 미래를 위한 영원한 동반자 <span>투게더인스가 되겠습니다.</span></p>
                                         <div class='banner'>
@@ -146,7 +168,7 @@ var layoutRender = {
                                                     <p>이어갈 수 있도록 돕는 기업</p>
                                                 </div>
                                                 <div class='circle2 circles'>
-                                                    <img src="img/main/main0-con3-bi.png" alt="투게더 인스 BI">
+                                                    <img src="img/main/main0-con3-bi.png" alt="투게더인스 BI">
                                                     <p>고객의 삶과 미래를 위한</p>
                                                     <p>영원한 동반자</p>
                                                     <p>투게더인스</p>
@@ -185,7 +207,7 @@ var layoutRender = {
                                                 <p>이어가는 기업</p>
                                             </div>
                                             <div class='circle4 circles'>
-                                            <img src="img/main/main0-con3-bi.png" alt="투게더 인스 BI">
+                                            <img src="img/main/main0-con3-bi.png" alt="투게더인스 BI">
                                                     <p>고객의 삶과 미래를 위한</p>
                                                     <p>영원한 동반자</p>
                                                     <p>투게더인스</p>
@@ -199,8 +221,8 @@ var layoutRender = {
                                     <div class='m0-con${conkey}'>
                                         <h2>CI</h2>
                                         <div class='banner'></div>
-                                        <p>'TogetherIns'는 ‘Together'와 ’insurance'의 순 영어의 조합어로 탄생했습니다.</p>
-                                        <p>'함께‘ ’더불어‘라는 의미와 ’보험‘의 의미가 더해져 고객의 만족도를 최우선으로 두고</p>
+                                        <p>"TogetherIns"는 "Together"와 "Insurance"의 순 영어의 조합어로 탄생했습니다.</p>
+                                        <p>"함께" "더불어"라는 의미와 "보험"의 의미가 더해져 고객의 만족도를 최우선으로 두고</p>
                                         <p>최고의 보험 및 금융 서비스를 헌신적으로 제공하겠다는 의미를 담고 있습니다.</p>
                                     </div>`
             } else if (conkey == 5) {
@@ -233,8 +255,19 @@ var layoutRender = {
     },
     con2Render: function (pagekey, conkey) {
         var MainRedner = document.getElementById('con_render');
+        var lnbList = document.querySelectorAll('.lnb_li');
+        console.log(lnbList)
+
         if (pagekey == 1) {
+            for(var i = 0; i<lnbList.length; i++){
+                lnbList[i].className = 'lnb_li'
+            }
+            var NavList = document.getElementById('lnb_li'+conkey);
+            NavList.className = 'lnb_li active'
             if (conkey == 1) {
+               
+             
+
                 MainRedner.innerHTML = `
                                         <div class='m1-cons m1-con${conkey}'>
                                         <h2>보험종류</h2>
@@ -273,17 +306,17 @@ var layoutRender = {
                 <h3>보험계약자의 권리&middot;의무 확인 및 자필서명</h3>
                 <p>보험계약을 청약할 때는 약관상 계약자의 권리와 의무를 확인하고 다음 사항에 유의하시기 바랍니다. </p>
                 <p>청약서는 계약자 본인이 작성하고 자필서명을 하여야 합니다. </p>
-                <p>보험계약 청약시 청약서 작성내용(현재 및 과거의 건강상태, 신체의 장 해, 위험직종 여부등)에 대해 모집인등에게 구두로 행한 경우에는 보험금을 지급받지 못하는 등 불이익을 </p>
+                <p>보험계약 청약시 청약서 작성내용(현재 및 과거의 건강상태, 신체의 장해, 위험직종 여부 등)에 대해 모집인등에게 구두로 행한 경우에는 보험금을 지급받지 못하는 등 불이익을 </p>
                 <p>받을 수도 있으므로 청약서는 계약자 본인이 직접 작성하시고 서명란에도 계약자 본인 및 피보험자가 자필로 서명하여야 합니다. </p>
                 <p>자필서명을 하지 않은 경우 계약이 무효로 처리될 수 도 있습니다. 품질보증제도를 활용할 수 있습니다. </p>
                 <p>계약자가 보험가입시 약관과 청약서부본을 전달받지 못했을 경우, 청약서 자필서명을 하지 않았을 경우, 약관의 주요 내용을 설명받지 못했을 경우에는 이를 이유로 청약일로부터 </p>
-                <p>3개월내에 계약의 해지를 요구할 수 있는 품질보증제도를 운영하고 있습니다. 이 경우에는(그 정당성 이 인정될 경우) 회사는 이미 납입한 보험료와 보험료를 받은 기간에 대해 </p>
-                <p>약관대출이율로 계산한 금액을 더하여 드립니다. 주소변경시는 회사에 지체없이 알려야 합니다.계약자는 주소 또는 연락처가 변경된 경우 이를 지체없이 회사에 알려야 합니다. </p>
+                <p>3개월내에 계약의 해지를 요구할 수 있는 품질보증제도를 운영하고 있습니다. 이 경우에는(그 정당성이 인정될 경우) 회사는 이미 납입한 보험료와 보험료를 받은 기간에 대해 </p>
+                <p>약관대출이율로 계산한 금액을 더하여 드립니다. 주소변경 시는 회사에 지체없이 알려야 합니다. 계약자는 주소 또는 연락처가 변경된 경우 이를 지체없이 회사에 알려야 합니다. </p>
                 <p>만일 알리지 않은 경우 회사가 알고있는 최종의 주소로 알린 사항은 계약자에게 도달한 것으로 봅니다.</p>
 
                 <div class='line'></div>
                 <h3>보험계약내용</h3>
-                <p>청약서부본에 명시되어 있는 내용중 보험계약관계자, 보험료, 보험료 납입기간, 납입방법, 보험기간, 보험가입금액등에 대해 확인하시고 나중에 보험증 권이 발급되었을 경우</p>
+                <p>청약서부본에 명시되어 있는 내용 중 보험계약관계자, 보험료, 보험료 납입기간, 납입방법, 보험기간, 보험가입금액등에 대해 확인하시고 나중에 보험증 권이 발급되었을 경우</p>
                 <p>이 청약서부본과 비교하여 그 내용이 정확히 일치하는 지를 확인하시기 바랍니다.</p>
 
                 <div class='line'></div>
@@ -301,7 +334,7 @@ var layoutRender = {
                                         <ul class='info'>
                                             <li><span>1</span>사고가나면 피해자부터 신속히 구조<b>(지혈, 인공호흡 등 응급처치 시행)</b></li>
                                             <li><span>2</span>사고현장 보존<b>(스프레이 또는 사진기를 이용/목격자 연락처 확보)</b></li>
-                                            <li><span>3</span>경찰관(서)에 교통사고 발생 신고<b>(사고 장소,사상자 수, 피해 정도를 신고)</b></li>
+                                            <li><span>3</span>경찰관(서)에 교통사고 발생 신고<b>(사고 장소, 사상자 수, 피해 정도를 신고)</b></li>
                                             <li><span>4</span>보험회사에 사고 통보</li>
                                         </ul>
                                         <div class='tip_box'>
@@ -375,203 +408,59 @@ var layoutRender = {
     },
     con3Render: function (pagekey, conkey) {
         var MainRedner = document.getElementById('con_render');
+        var FaqDataArr = [];
         if (pagekey == 2) {
-            MainRedner.innerHTML = ` <div class='m2-cons m2-con'>
-                                        <h2>FAQ</h2>
-                                        <div class='faq_box'>
-                                            <div class='qa1 qa'>
-                                            <div class='wrap'>
-                                                    <span class='q_span'>Q</span>
-                                                    <p>순수보장성 상품이란 무엇인가요?</p>
-                                                    <img src="img/main/down_arrow.png" alt="">
-                                                </div>
-                                            </div>
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                FaqData = JSON.parse(this.response);
 
-                                            <div class='an1 an'>
-                                            <div class='wrap'>
-                                                    <span>A</span>
-                                                    <p>
-                                                    순수보장성 상품이란 저축보험료 부분을 빼고 위험보험료를 중심으로 구성이 이루어진 상품으로 만기환급금이 아예 없거나 거의 없는 보험을 말합니다.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class='qa2 qa'>
-                                            <div class='wrap'>
-                                                    <span class='q_span'>Q</span>
-                                                    <p>
-                                                    성인 주요질환 중, 1형 2형 3형은 어떤 질병인가요?
-                                                    </p>
-                                                    <img src="img/main/down_arrow.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class='an2 an'>
-                                            <div class='wrap'>
-                                                    <span>A</span>
-                                                    <p>
-                                                    대표적으로 1형은 뇌출혈, 심근경색, 2형은 갑상선결절, 만성신부전, 3형은 당뇨, 고혈압 등을 포함하여 대략적으로 분류되고 있습니다. 남성과 여성 보장이 상이하므로 약관 등을 자세하게 참조하세요.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class='qa3 qa'>
-                                            <div class='wrap'>
-                                                    <span class='q_span'>Q</span>
-                                                    <p>
-                                                    무배당 보험상품의 특징은 무엇인가요?
-                                                    </p>
-                                                    <img src="img/main/down_arrow.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class='an3 an'>
-                                            <div class='wrap'>
-                                                    <span>A</span>
-                                                    <p>
-                                                    무배당 상품은 배당금을 지급하지 않는 상품을 말합니다. 무배당 보험상품은 생명보험약관에서 보험료 산출기초가 되는 예정이율 및 예정사망률 등이 실적치와 차가 생겨도 보험특약자에게 그 차액을 배당하지 않는 보험을 말합니다. 대신 상대적으로 유배당 상품보다는 보험료가 낮게 책정이 됩니다.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class='qa4 qa'>
-                                            <div class='wrap'>
-                                                    <span class='q_span'>Q</span>
-                                                    <p>
-                                                    실비보험 면책기간은 어떻게 되나요?
-                                                    </p>
-                                                    <img src="img/main/down_arrow.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class='an4 an'>
-                                            <div class='wrap'>
-                                                    <span>A</span>
-                                                    <p>
-                                                    의료실비의 경우 90일의 면책기간이 있습니다. 
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class='qa5 qa'>
-                                            <div class='wrap'>
-                                                    <span class='q_span'>Q</span>
-                                                    <p>
-                                                    보험가입을 위해 병원에서 받은 진단서를 꼭 제출해야 하나요?
-                                                    </p>
-                                                    <img src="img/main/down_arrow.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class='an5 an'>
-                                            <div class='wrap'>
-                                                    <span>A</span>
-                                                    <p>
-                                                    가입 원하시는 상품과 고지하는 질병에 따라서 진단서 첨부가 요청되는 경우가 있고 또는, 고지만으로 가입 가능 하실 수도 있습니다. 또한, 진단서를 첨부하셨을 때 그 내용에 따라 가입이 가능 하실 수도, 가입이 불가능 하실 수도 있습니다.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-
-                                            <div class='qa6 qa'>
-                                            <div class='wrap'>
-                                                    <span class='q_span'>Q</span>
-                                                    <p>
-                                                    이혼 후 배우자도 그대로 보장가능 한가요?
-                                                    </p>
-                                                    <img src="img/main/down_arrow.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class='an6 an'>
-                                            <div class='wrap'>
-                                                    <span>A</span>
-                                                    <p>
-                                                    보험수익자는 보험금 지급사유가 발생한 때에 보험금을 청구하여 받을 수 있는 사람을 말합니다. 이혼 후에도 배우자가 보험금의 수익자로 지정되어 있는 경우에는 보험금 보장이 가능합니다.
-
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class='qa7 qa'>
-                                            <div class='wrap'>
-                                                    <span class='q_span'>Q</span>
-                                                    <p>
-                                                    보험의 일부 특약을 해지하려는데, 가능한가요?
-                                                    </p>
-                                                    <img src="img/main/down_arrow.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class='an7 an'>
-                                            <div class='wrap'>
-                                                    <span>A</span>
-                                                    <p>
-                                                    특약 해지는 의무부가 특약의 경우만 제외하고 해지 가능합니다.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class='qa8 qa'>
-                                            <div class='wrap'>
-                                                    <span class='q_span'>Q</span>
-                                                    <p>
-                                                    갱신 시 보험료 산정 기준은 어떻게 되나요?
-                                                    </p>
-                                                    <img src="img/main/down_arrow.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class='an8 an'>
-                                            <div class='wrap'>
-                                                    <span>A</span>
-                                                    <p>
-                                                    갱신 시의 연령 및 갱신 시의 보험회사 경험 위험율 표에 의한 위험율에 따른 책정이 되며, 보험료 산정 기준은 변동될 수 있습니다.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class='qa9 qa'>
-                                            <div class='wrap'>
-                                                    <span class='q_span'>Q</span>
-                                                    <p>
-                                                    기존 가입자가 10년 후 자동 갱신시 개정된 상품으로 변경 가능한가요?
-                                                    </p>
-                                                    <img src="img/main/down_arrow.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class='an9 an'>
-                                            <div class='wrap'>
-                                                    <span>A</span>
-                                                    <p>
-                                                    면책기간과 감액기간을 제외하면 가입했던 상품과 동일한 보장내용으로 갱신됩니다.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class='qa10 qa'>
-                                            <div class='wrap'>
-                                                    <span class='q_span'>Q</span>
-                                                    <p>
-                                                    갱신 시에도 면책기간, 감액 조건이 적용 되나요?
-                                                    </p>
-                                                    <img src="img/main/down_arrow.png" alt="">
-                                                </div>
-                                            </div>
-
-                                            <div class='an10 an'>
-                                            <div class='wrap'>
-                                                    <span>A</span>
-                                                    <p>
-                                                    갱신 후에는 면책기간, 감액기간이 적용되지 않습니다.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                      
-                                        </div>
-                         
-                                    </div>`
+                    }
+            }
+            setTimeout(function(){
+                var FaqHtml = FaqDataArr.toString();
+                var replaceAll1 = FaqHtml.replaceAll(',', ''); // ',' destroy
+                var replaceAll2 = replaceAll1.replaceAll('|', ','); // 'null' change '-'
+                MainRedner.innerHTML = `
+                             <div class='m2-cons m2-con'>
+                             <h2>FAQ</h2>
+                             <div class='faq_box'>
+                            ${replaceAll2}
+                            </div>
+                            </div>`;
+            },300)
+            xhttp.open('POST', 'data/faq_data.json', true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("data=0")
+            setTimeout(() => {
+                for(var i=0; i<FaqData.length; i++){
+                    FaqDataArr.push(
+                        `<div class='qa q${i+1}' id='qa${i+1}' onclick='animationJs.FaqView("an${i+1}"|"q${i+1}"|${i+1})'>
+                                     <div class='wrap'>
+                                     <div class='icon_box'>
+                                     <span class='qa_mark${i+1} qa_mark'>Q</span>
+                                     </div>
+                                         <p class='an_p' id='an${i+1}_p'>
+                                         <span>
+                                         ${FaqData[i].Qn}
+                                         </span>
+                                         </p>
+                                         <img src="img/main/down_arrow.png" alt="arrow_qna" id='qa_img${i+1}'class='qa_img'>
+                                     </div>
+                                 </div>
+                                 <div class='an a${i+1}' id='an${i+1}'>
+                                 <div class='wrap'>
+                                     <div class='icon_box'>
+                                        <img src="img/main/a_icon.png" alt="a_box">
+                                     </div>
+                                         <p>
+                                             ${FaqData[i].A}
+                                         </p>
+                                 </div>
+                         </div>` 
+                    )
+                }
+            }, 100);
         }
 
     },
@@ -580,8 +469,8 @@ var layoutRender = {
         if (pagekey == 3) {
             MainRedner.innerHTML = `
                                     <div class='m4-con'>
-                                        <h2>인재 채용</h2>
-                                        <h3>투게더 인스에서 긍정적이고 <b>진취적인 <span>우수한 인재를</b> 상시 모집하고 있습니다.</span></h3>
+                                        <h2>인재채용</h2>
+                                        <h3>투게더인스에서 긍정적이고 <b>진취적인 <span>우수한 인재를</b> 상시 모집하고 있습니다.</span></h3>
                                         <h4>서로를 존중하며 신뢰하는 조직문화를 지향하는 <b>투게더인스와 함께  <span>미래를 함께 하실 전문인재의</b> 많은 지원과 관심 바랍니다.</span></h4>
                                         <div class='join_box1'>
                                             <h3>모집분야</h3>
@@ -643,3 +532,4 @@ var layoutRender = {
         }
     }
 }
+

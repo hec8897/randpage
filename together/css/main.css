@@ -223,8 +223,28 @@ div.main_page nav ul li {
   color: #666666;
   cursor: pointer;
 }
-div.main_page nav ul li:nth-child(1) {
-  border-left: 0px;
+div.main_page nav ul li img {
+  opacity: 0;
+  transition: 0.3s ease;
+}
+div.main_page nav ul li.active {
+  color: #222;
+}
+div.main_page nav ul li.active img {
+  opacity: 1;
+  margin-right: 5px;
+}
+div.main_page nav ul li:hover {
+  color: #222;
+}
+div.main_page nav ul li:hover img {
+  opacity: 1;
+  margin-right: 5px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.main_page nav ul li:nth-child(1) {
+    border-left: 0px;
+  }
 }
 div.main_page nav ul li:nth-last-child(1) {
   border-right: 1px solid #d0d0d0;
@@ -1249,7 +1269,7 @@ div.main_page main div.m1-con3 div.tip_box {
 }
 @media (max-width:767px) {
   div.main_page main div.m1-con3 div.tip_box {
-    height: 190px;
+    height: 170px;
     padding-left: 70px;
   }
 }
@@ -1349,45 +1369,122 @@ div.main_page main div.m2-con div.faq_box {
   margin: 0 auto;
   border-top: 2px solid #444;
 }
-div.main_page main div.m2-con div.faq_box div.wrap {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid gray;
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.main_page main div.m2-con div.faq_box {
+    max-width: 740px;
+  }
 }
-div.main_page main div.m2-con div.faq_box div.wrap span {
+@media (max-width:767px) {
+  div.main_page main div.m2-con div.faq_box {
+    width: 95%;
+  }
+}
+div.main_page main div.m2-con div.faq_box div.qa {
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #999;
+}
+div.main_page main div.m2-con div.faq_box div.qa div.icon_box {
+  width: 5%;
+  height: 60px;
+  float: left;
+  background-size: 30px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 15px;
+}
+@media (max-width:767px) {
+  div.main_page main div.m2-con div.faq_box div.qa div.icon_box {
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+}
+div.main_page main div.m2-con div.faq_box div.qa div.icon_box span {
   width: 30px;
   height: 30px;
+  display: inline-block;
+  background: gray;
   border-radius: 100%;
-  background: #20a6f2;
   color: white;
-  box-sizing: border-box;
-  display: block;
+  font-weight: bold;
+}
+@media (max-width:767px) {
+  div.main_page main div.m2-con div.faq_box div.qa div.icon_box span {
+    width: 20px;
+    height: 20px;
+    font-size: 0.675rem;
+  }
+}
+div.main_page main div.m2-con div.faq_box div.qa p {
+  display: inline-block;
+  width: 80%;
+  height: 60px;
   float: left;
-  margin-left: 20px;
-  text-align: center;
+  padding-left: 10px;
+  line-height: 60px;
+  word-break: keep-all;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.main_page main div.m2-con div.faq_box div.qa p {
+    padding-left: 30px;
+  }
+}
+@media (max-width:767px) {
+  div.main_page main div.m2-con div.faq_box div.qa p {
+    width: 66%;
+    padding-left: 30px;
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+}
+@media (max-width:767px) {
+  div.main_page main div.m2-con div.faq_box div.qa p span {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+div.main_page main div.m2-con div.faq_box div.qa img {
+  display: inline-block;
+  margin-top: 25px;
+  float: right;
   margin-right: 20px;
 }
-div.main_page main div.m2-con div.faq_box div.wrap .q_span {
-  background: #999;
-}
-div.main_page main div.m2-con div.faq_box div.wrap p {
-  width: 80%;
-  display: inline-block;
-  letter-spacing: -1px;
-}
-div.main_page main div.m2-con div.faq_box div.wrap img {
-  float: right;
-  margin-right: 15px;
+@media (max-width:767px) {
+  div.main_page main div.m2-con div.faq_box div.qa img {
+    width: 15px;
+  }
 }
 div.main_page main div.m2-con div.faq_box div.an {
-  background: lightgrey;
+  width: 100%;
+  border-bottom: 1px solid #666;
+  background-color: #f9f9f9;
+  display: none;
 }
-div.main_page main div.m2-con div.faq_box div.an .wrap {
-  padding-top: 40px;
-  padding-bottom: 40px;
+div.main_page main div.m2-con div.faq_box div.an .wrap div.icon_box {
+  width: 5%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 20px;
 }
-div.main_page main div.m2-con div.faq_box div.an span {
-  margin-left: 50px;
+@media (max-width:767px) {
+  div.main_page main div.m2-con div.faq_box div.an .wrap div.icon_box img {
+    width: 20px;
+  }
+}
+div.main_page main div.m2-con div.faq_box div.an .wrap p {
+  display: inline-block;
+  width: 75%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  word-break: keep-all;
+  vertical-align: middle;
+  padding-left: 20px;
 }
 div.main_page main div.m4-con {
   max-width: 1200px;

@@ -140,6 +140,45 @@
                 <!-- <p id='head-ment'>모두 한번에!</p> -->
             </div>
         </header>
+        <section class='forms_area'>
+            <div class="section_wrap">
+                <h2>유전자검사 신청란</h2>
+                <div class='forms'>
+                    <div class='inputs_wrap'>
+                        <div class='left_form inputs'>
+                            <ul>
+                                <li>
+                                    <input type="text" placeholder="이름" id='reqname' autocomplete="off">
+                                </li>
+                                <li><input type="number" placeholder="생년월일" id='reqbirth' autocomplete="off"></li>
+                            </ul>
+                        </div>
+                        <div class='right_form inputs'>
+                            <ul>
+                                <li>
+                                    <div class='gender_btn' onclick="genderSetting('m')">
+                                        남자
+                                    </div>
+                                    <div class='gender_btn' onclick="genderSetting('w')">
+                                        여자
+                                    </div>
+                                </li>
+                                <li><input type="number" autocomplete="off" placeholder="전화번호 입력" id='reqnumber'></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>
+                        <label for='agree_check' id='check_label' class='container' onclick="checkBoxEvent()"><input
+                                id='agree_check' type="checkbox">
+                            개인정보 수집 및 이용 동의 합니다. <span class="checkmark" id='check_box'></span>
+                        </label>
+
+                    </p>
+
+                    <div class='sub_btn' onclick="insertData()">유전자검사 신청 및 상담문의</div>
+                </div>
+            </div>
+        </section>
         <!-- <section class='section1'>
             <div class="section_wrap">
 
@@ -209,45 +248,7 @@
                 </div>
             </div>
         </section>
-        <section class='forms_area'>
-            <div class="section_wrap">
-                <h2>유전자검사 신청란</h2>
-                <div class='forms'>
-                    <div class='inputs_wrap'>
-                        <div class='left_form inputs'>
-                            <ul>
-                                <li>
-                                    <input type="text" placeholder="이름" id='reqname' autocomplete="off">
-                                </li>
-                                <li><input type="number" placeholder="생년월일" id='reqbirth' autocomplete="off"></li>
-                            </ul>
-                        </div>
-                        <div class='right_form inputs'>
-                            <ul>
-                                <li>
-                                    <div class='gender_btn' onclick="genderSetting('m')">
-                                        남자
-                                    </div>
-                                    <div class='gender_btn' onclick="genderSetting('w')">
-                                        여자
-                                    </div>
-                                </li>
-                                <li><input type="number" autocomplete="off" placeholder="전화번호 입력" id='reqnumber'></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p>
-                        <label for='agree_check' id='check_label' class='container' onclick="checkBoxEvent()"><input
-                                id='agree_check' type="checkbox">
-                            개인정보 수집 및 이용 동의 합니다. <span class="checkmark" id='check_box'></span>
-                        </label>
-
-                    </p>
-
-                    <div class='sub_btn' onclick="insertData()">유전자검사 신청 및 상담문의</div>
-                </div>
-            </div>
-        </section>
+        
         <section class='section5'>
             <div class="wrap">
                 <h2>유전자검사자들의 만족도는</h2>
@@ -352,7 +353,7 @@
 
             $("#insert_form").click(function () {
                 $('html,body').animate({
-                    scrollTop: 3300
+                    scrollTop: 800
                 }, 1000)
             })//insert moving btn
             setTimeout(function () {//header_animation

@@ -14,14 +14,12 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=40a68a4f3604ed69654956f572b9ac0a"></script>
-    <script src="js/layout.js"></script>
-
-    <!-- <script src="js/layout.min.js"></script> -->
-
-    <title>투게더 인스</title>
+    <script src="js/animation.js"></script>
+    <script src="js/layout.min.js"></script>
+    <title>투게더인스</title>  
 </head>
-
 <body>
     <div id='wrap' class="main_page">
         <div class="hide_menu" id='hide_menu'>
@@ -34,7 +32,6 @@
                     <p><a href='main.html?page=00&con=3'>비전</a></p>
                     <p><a href='main.html?page=00&con=4'>CI</a></p>
                     <p><a href='main.html?page=00&con=5'>오시는길</a></p>
-
                 </li>
                 <li>
                     <h2><a href='main.html?page=01&con=1'>보험종류</a></h2>
@@ -43,6 +40,7 @@
                     <p><a href='main.html?page=01&con=3'>자동차 사고처리 절차</a></p>
                     <p class="list0">&nbsp;</p>
                     <p class="list0">&nbsp;</p>
+                    
                 </li>
                 <li class="list0">
                     <h2 class="hide_top_line"><a href='main.html?page=02'>FAQ</a></h2>
@@ -76,8 +74,10 @@
             <div class="wrap">
                 <h2><img src="img/footer-BI.png" alt="footer BI"></h2>
                 <div class="com_info">
-                    <p>투게더인스 대표:김남호<span>주소 : 서충남 예산군 예산읍 벚꽃로 90번길 2층</span></p>
-                    <p>Copyright © 투게더인스 All rights reserved.</p>
+                        <p>투게더인스 대표:김남호 | 이메일:toins1004@naver.com </p>
+						<p>사업자등록번호:612-42-18240 | 전화:1800-9838 | 팩스:070-4009-1203</p>
+						<p>주소: 서충남 예산군 예산읍 벛꽃로 90번길 2층</p>
+						<p>Copyright © 투게더인스 All rights reserved.</p>
                 </div>
             </div>
         </footer>
@@ -94,12 +94,9 @@
         layoutRender.conRender(pageKey, params.con)
         layoutRender.con2Render(pageKey, params.con)
         layoutRender.con3Render(pageKey, params.con)
-
-        // layoutRender.con3Render(pageKey,params.con)
         layoutRender.con4Render(pageKey)
-    </script>
-
-    <script>
+        // layoutRender.HideMenuHtml()
+  
         var smMedia = window.matchMedia('( max-width: 575px )');
         var mdMedia = window.matchMedia('(min-width: 768px) and (max-width: 1024px)');
         document.querySelector("#nav-toggle")
@@ -119,7 +116,6 @@
                     event.stopPropagation();
                     return false;
                 });
-                 
                 }
                 else{
                     $('html, body').css({'overflow-y': 'auto'});

@@ -183,11 +183,34 @@ div.main_page{
                 box-sizing: border-box;
                 border-left: 1px solid #d0d0d0;
                 color: #666666;
-
                 cursor: pointer;
+                img{
+                    opacity: 0.0;
+                    transition: .3s ease;
+                }
+            }
+            li.active{
+                color: #222;
+
+                img{
+                    opacity: 1.0;
+                    margin-right: 5px;;
+
+                }
+            }
+            li:hover{
+                color: #222;
+            }
+            li:hover img{
+                opacity: 1.0;
+                margin-right: 5px;;
+
             }
             li:nth-child(1){
+                @media@mediaTablet {
                 border-left: 0px;
+
+                }
             }
 
             li:nth-last-child(1){
@@ -1131,7 +1154,7 @@ div.main_page{
                     padding-left: 80px;
                 }
                 @media@mediaVericalMobile {
-                    height: 190px;
+                    height: 170px;
                     padding-left: 70px
                 }
 
@@ -1231,59 +1254,195 @@ div.main_page{
                 max-width: 1200px;
                 margin: 0 auto;
                 border-top: 2px solid #444;
-                div.wrap{
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid gray;
-                    // position: relative;
+                @media@mediaTablet {
+                    max-width: 740px;
+                }
+                @media@mediaVericalMobile {
+                    width: 95%;
+                }
 
-              
-                    span{
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 100%;
-                        background: #20a6f2;
-                        color: white;
-                        box-sizing: border-box;;
-                        display: block;
+
+                div.qa{
+                    cursor: pointer;
+                    width: 100%;
+                    height: 60px;;;
+                    border-bottom: 1px solid #999;
+                    div.icon_box{
+                        width: 5%;
+                        height: 60px;
                         float: left;
-                        margin-left: 20px;
-                        text-align: center;
-                        margin-right: 20px;
-                        // position: relative;
-                        // top: 50%;;
-                        // top: 50%;
-                        // transform: translateY(-50%);
+                        background-size: 30px;
+                        padding-left: 20px;;
+                        box-sizing: border-box;;
+                        text-align: center;;
+                        padding-top: 15px;
+                        @media@mediaVericalMobile {
+                            padding-top: 20px;
+                            padding-left: 10px;
+                        }
+
+                        span{
+                            width: 30px;
+                            height: 30px;;
+                            display: inline-block;
+                            background: gray;;
+                            border-radius: 100%;
+                            color: white;
+                            font-weight: bold;;;
+                            @media@mediaVericalMobile {
+                                width: 20px;
+                                height: 20px;;
+                                font-size: 0.675rem;
+                            }
+                                             
+                        }
                     }
-                    .q_span{
-                        background: #999;
-                    }
+         
                     p{
-                        width: 80%;
                         display: inline-block;
-                        letter-spacing: -1px;
-                        // float: right;
+                        width: 80%;;
+                        height: 60px;
+                        float: left;
+                        padding-left:10px;;
+                        line-height: 60px;
+                        word-break:keep-all;
+                            @media@mediaTablet {
+                                padding-left:30px;;
+                            }
+                            @media@mediaVericalMobile {
+                                width: 66%;
+                                padding-left:30px;;
+                                font-size: 0.875rem;
+                                line-height: 1rem;;
+
+                            }
+                       
+                            span{
+                                @media@mediaVericalMobile {
+                                    display: inline-block;
+                                    position: relative;
+                                    top: 50%;
+                                    transform: translateY(-50%);;
+
+                                }
+                            }
+
+
 
                     }
                     img{
+                        display: inline-block;
+                        margin-top: 25px;;
                         float: right;
-                        margin-right: 15px;
+                        margin-right: 20px;;
+                        @media@mediaVericalMobile {
+                            width: 15px;
+                        }
+
                     }
                 }
                 div.an{
-                    // display: none;
-                    background: lightgrey;
+                    width: 100%;
+                    border-bottom: 1px solid #666;;
+                    background-color: rgb(249,249,249);;
+                    display: none;;
                     .wrap{
-                        padding-top: 40px;
-                        padding-bottom: 40px;
+                        div.icon_box{
+                            width: 5%;;
+                            height: 100%;
+                            display: inline-block;
+                            text-align: center;
+                            vertical-align: middle;
+                            padding-left: 20px;;
+                            @media@mediaVericalMobile {
+                                img{
+                                    width: 20px;;
+                                }
+                            }
+                        }
+                        p{
+                            display: inline-block;
+                            width: 75%;;
+                            padding-top: 50px;;
+                            padding-bottom: 50px;;
+                            word-break: keep-all;
+                            vertical-align: middle;
+                            padding-left: 20px;;
 
 
+                        }
 
-                    }
-                    span{
-                        margin-left: 50px;
                     }
                 }
+                // div.an{
+                //     width: 100%;
+                //     height: 100%;
+                //     background: lightgrey;;
+                //     display: none;
+                //     padding-top: 50px;;
+                //     padding-bottom: 100px;;
+
+                //     box-sizing: inherit;;
+
+
+                //     @media@mediaTablet {
+                //         height: 130px;
+                //     }
+                //     @media@mediaVericalMobile {
+                //         height: 180px;
+                //     }
+
+                //     div.icon_box{
+                //         width: 8%;
+                //         height: 30px;
+                //         float: left;
+                //         background-image: url(../img/main/a_icon.png);;
+                //         .backgroundOption;
+                //         background-size: 30px;
+                //         background-position: right;;
+                //         @media@mediaTablet {
+                //             height: 130px;
+                //         }
+                //         @media@mediaVericalMobile {
+                //             width: 12%;
+
+                //             background-size: 20px;
+                //             height: 180px;
+                //         }
+
+
+                //     }
+                //     p{
+                //         height: 100%;
+                //         width: 75%;;
+                //         float: left;
+                //         padding-left: 30px;;
+                //         vertical-align: middle;;
+                //         color: #444;
+                //         word-break:keep-all;
+
+                //         @media@mediaTablet {
+                //             height: 130px;
+                //         }
+                //         @media@mediaVericalMobile {
+                //             width: 75%;;
+                //             padding-left: 10px;
+
+                //             height: 180px;
+                //         }
+                //         span{
+                //             display: inline-block;
+                //             @media@mediaVericalMobile {
+                //                 font-size: 0.875rem;;
+                //             }
+
+                //         }
+                        
+                //     }
+                  
+                // }
+           
+
                
             }
           

@@ -838,6 +838,8 @@ div#wrap section.forms div.form {
   width: 100%;
   max-width: 335px;
   text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin: 0 auto;
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -1109,7 +1111,7 @@ div#wrap section.section6 div.wrap div.bottom_hexagons {
   }
 }
 div#wrap section.section6 div.wrap div.bottom_hexagons div {
-  opacity: 0;
+  opacity: 1;
   width: 19%;
   height: 100%;
   display: inline-block;
