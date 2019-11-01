@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/control.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id='wrap'>
+            <h2>BM 개인 랜딩 페이지 컨트롤러
+                <span>추후 수정 탭에서 업데이트 가능</span>
+            </h2>
+            
+            <div class="controller" id='controller'>
+
+            <form action="php/uploadfile.php" method="post" enctype="multipart/form-data">
+                <h2>사진등록<span>원본 사진일수록 깨끗한 이미지가 적용됩니다</span></h2>
+                <h4 id='nametag'></h4>
+
+                <div class="filebox"> 
+                    <input type="hidden" id="upload_reqKey" name='reqkey'>
+                    <input class="upload-name" value="파일선택" disabled="disabled"> 
+                    <label for="ex_filename">파일찾기</label> 
+                    <input type="file" id="ex_filename" class="upload-hidden" name="fileToUpload">
+                 </div>
+
+                <div><input type="submit" value="이미지 업로드" name="submit"  class='btn'></div>
+                </form>
+            </div>
+
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/controller.js"></script>
+
+<script>
+
+
+uploadHtml()
+$(document).ready(function(){
+                    var fileTarget = $('.filebox .upload-hidden');
+                    fileTarget.on('change', function(){
+                        if(window.FileReader){
+                            var filename = $(this)[0].files[0].name;
+                        } else {
+                            var filename = $(this).val().split('/').pop().split('\\').pop();
+                        }
+                        $(this).siblings('.upload-name').val(filename);
+                    });
+                }); 
+</script>
+</html>
+
+<!-- 파일명 세션에있는 id값 + 파일이름 // 파일경로 DB저장// -->

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BM 개인 랜딩 페이지 컨트롤러</title>
+    <link rel="stylesheet" href="css/control.css">
+</head>
+<body>
+    <div id='wrap'>
+        <h2>BM 개인 랜딩 페이지 신청서</h2>
+        <p class="sample"><a href='http://bmcompany.kr/sample/index.html?key=sample'>샘플 페이지</a></p>
+        <div class="table">
+            <div class='navs'>
+                <!-- <div class='nav'>신규</div> -->
+                <!-- <div class="nav">수정/삭제</div> -->
+            </div>
+            <div class="controller" id='controller'>
+                <ul>
+                    <li>
+                        <div class="label">이름*</div><input placeholder="사이트에 표시될 이름" id='reqname' >
+                    </li>
+
+                    <li>
+                        <div class="label">Key* </div><input   placeholder="사이트를 불러올 URL에 삽입될 개인 ID 입니다" id='reqkey' onblur="checkId()" onfocus="inputId()">
+                        <label class='checks' id='id_check'></label>
+                    </li>
+
+                    <li>
+                        <div class="label">패스워드*</div><input    placeholder="수정에 필요한 패스워드 입니다" id='reqpassword'>
+                    </li>
+
+                    <li>
+                        <div class="label">연락처</div><input    placeholder="개인 연락처" id='reqphone'>
+                    </li>
+
+                    <li>
+                        <div class="label">직위</div><input    placeholder="사이트에 표시될 직위입니다" id='reqspot'>
+                    </li>
+
+                        <div class="label">원하는 탭</div>
+                        <input type="checkbox" id='check-gene'><label for="check1">유전자</label>
+                        <input type="checkbox" id='check-cancer'><label for="check2">암</label>
+                        <input type="checkbox" id='check-baby'><label for="check3">태아</label>
+                        <input type="checkbox" id='check-disease'><label for="check4">2대질병</label>
+                        <input type="checkbox" id='check-dementia'><label for="check5">치매</label>
+                        <input type="checkbox" id='check-car'><label for="check6">자동차</label>
+
+                    </li>
+
+                    <h3>개인 이력<span> 최대 5개의 항목(항목당 30자 이내)</span></h3>
+                    <li class='resums'>
+                        <div class="label">코멘트</div>
+                        <input type="text" placeholder="사이트에 표시될 멘트입니다" id='coment'>
+                    </li>
+                    <li class="resums">
+                        <div class="label">이력1</div>
+                        <select class="resum_select select-year" id='resum1-year'>
+                            <option value="">0000년</option>
+                            <option value="2010">2010년</option>
+                            <option value="2011">2011년</option>
+                            <option value="2012">2012년</option>
+                            <option value="2013">2013년</option>
+                            <option value="2014">2014년</option>
+                            <option value="2015">2015년</option>
+                            <option value="2016">2016년</option>
+                            <option value="2017">2017년</option>
+                            <option value="2018">2018년</option>
+                            <option value="2019">2019년</option>
+                        </select>
+                        <select class="resum_select select-month" id='resum1-month'>
+                            <option value="">0월</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <input  type="text" class='resum_input resum1_input' placeholder="개인이력" id='resum1-text'>
+                    </li>
+                    <li class="resums">
+                        <div class="label">이력2</div>
+                        <select class="resum_select select-year" id='resum2-year'>
+                            <option value="">0000년</option>
+                            <option value="2010">2010년</option>
+                            <option value="2011">2011년</option>
+                            <option value="2012">2012년</option>
+                            <option value="2013">2013년</option>
+                            <option value="2014">2014년</option>
+                            <option value="2015">2015년</option>
+                            <option value="2016">2016년</option>
+                            <option value="2017">2017년</option>
+                            <option value="2018">2018년</option>
+                            <option value="2019">2019년</option>
+                        </select>
+                        <select class="resum_select select-month"  id='resum2-month'>
+                            <option value="">0월</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <input type="text" class='resum_input resum1_input' placeholder="개인이력" id='resum2-text'>
+                    </li>
+                    <li class="resums">
+                        <div class="label">이력3</div>
+                        <select class="resum_select select-year" id='resum3-year'>
+                            <option value="">0000년</option>
+                            <option value="2010">2010년</option>
+                            <option value="2011">2011년</option>
+                            <option value="2012">2012년</option>
+                            <option value="2013">2013년</option>
+                            <option value="2014">2014년</option>
+                            <option value="2015">2015년</option>
+                            <option value="2016">2016년</option>
+                            <option value="2017">2017년</option>
+                            <option value="2018">2018년</option>
+                            <option value="2019">2019년</option>
+                        </select>
+                        <select class="resum_select select-month"  id='resum3-month'>
+                            <option value="">0월</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <input type="text" class='resum_input resum1_input' placeholder="개인이력" id='resum3-text'>
+                    </li>
+                    <li class="resums">
+                        <div class="label">이력4</div>
+                        <select class="resum_select select-year" id='resum4-year'>
+                            <option value="">0000년</option>
+                            <option value="2010">2010년</option>
+                            <option value="2011">2011년</option>
+                            <option value="2012">2012년</option>
+                            <option value="2013">2013년</option>
+                            <option value="2014">2014년</option>
+                            <option value="2015">2015년</option>
+                            <option value="2016">2016년</option>
+                            <option value="2017">2017년</option>
+                            <option value="2018">2018년</option>
+                            <option value="2019">2019년</option>
+                        </select>
+                        <select class="resum_select select-month"  id='resum4-month'>
+                            <option value="">0월</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <input type="text" class='resum_input resum1_input' placeholder="개인이력" id='resum4-text'>
+                    </li>
+                    <li class="resums">
+                        <div class="label">이력5</div>
+                        <select class="resum_select select-year" id='resum5-year'>
+                            <option value="">0000년</option>
+                            <option value="2010">2010년</option>
+                            <option value="2011">2011년</option>
+                            <option value="2012">2012년</option>
+                            <option value="2013">2013년</option>
+                            <option value="2014">2014년</option>
+                            <option value="2015">2015년</option>
+                            <option value="2016">2016년</option>
+                            <option value="2017">2017년</option>
+                            <option value="2018">2018년</option>
+                            <option value="2019">2019년</option>
+                        </select>
+                        <select class="resum_select select-month"  id='resum5-month'>
+                            <option value="">0월</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <input type="text" class='resum_input resum1_input' placeholder="개인이력" id='resum5-text'>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class='submit_btn' id='submit_btn' onclick="submitFn('new')">등록신청</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/controller.js"></script>
+    <script>
+        function uploadChange(file) {
+            var el = file.parentNode.parentNode.getElementsByTagName("*");
+            for (var i = 0; i < el.length; i++) {
+                var node = el[i];
+                if (node.className == "file-text") {
+                    node.innerHTML = file.value;
+                    break;
+                }
+            }
+        }
+        function inputId() {
+                var inputId = document.getElementById('id_check');
+                inputId.innerHTML = ''
+            }
+        function checkId() {
+                //ID 유효성 검사(8자리 이상,중복) 
+                var checkId = document.getElementById('reqkey').value;
+                var inputId = document.getElementById('id_check');
+
+                if (checkId.length < 7) {
+                    inputId.style.color = 'red'
+                    inputId.innerHTML = '아이디를 7글자 이상 입력해주세요'
+                }
+                else {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            var returnJson = JSON.parse(this.response);
+                            if (returnJson.datas == 'nagative') {
+                                inputId.style.color = 'red'
+                                inputId.innerHTML = '중복된 아이디 입니다.'
+                                signUpId = null;
+                            }
+                            else {
+                                inputId.style.color = 'blue'
+                                signUpId = checkId
+                                inputId.innerHTML = '사용가능한 아이디 입니다'
+                            }
+                        }
+                    }
+                    xhttp.open('POST', 'php/id_check.php', true);
+                    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    data = {
+                        checkId: checkId
+                    }
+                    xhttp.send("data=" + JSON.stringify(data))
+                }
+            }
+
+    </script>
+</body>
+
+</html>
