@@ -490,7 +490,7 @@ div#wrap section.sliders .bx-wrapper .bx-prev {
   background-repeat: no-repeat;
 }
 div#wrap section.section4 {
-  height: 520px;
+  height: 600px;
 }
 div#wrap section.section4 div.wrap {
   max-width: 1200px;
@@ -499,17 +499,41 @@ div#wrap section.section4 div.wrap {
   padding-top: 100px;
 }
 div#wrap section.section4 div.wrap h2 {
+  text-align: center;
+  color: #222;
   font-size: 2.5rem;
   font-weight: bold;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  opacity: 0;
+}
+@media (max-width:575px) {
+  div#wrap section.section4 div.wrap h2 {
+    font-size: 1.875rem;
+  }
+}
+div#wrap section.section4 div.wrap div.h2_label {
+  width: 600px;
+  height: 50px;
+  margin: 25px auto;
+  background: #e42f20;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+div#wrap section.section4 div.wrap div.h2_label span {
+  display: none;
+  color: white;
+}
+div#wrap section.section4 div.wrap div.h2_label b {
+  color: white;
 }
 div#wrap section.section4 div.wrap p {
+  text-align: center;
   font-size: 1.5rem;
-  letter-spacing: -2px;
-  color: #666666;
-  opacity: 0;
+  margin-bottom: 5px;
+}
+div#wrap section.section4 div.wrap p span {
+  color: #e42f20;
+  font-weight: bold;
 }
 div#wrap section.section4 div.wrap div.section4_imgs {
   width: 100%;

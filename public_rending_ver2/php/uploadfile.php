@@ -2,10 +2,11 @@
 
 include('../../conn/conn.php');
 mysqli_set_charset($conn,"utf8");
-$target_dir = "../uploads/";
+$target_dir = "../../bminsu/uploads/";
 $reqKey = $_POST['reqkey'];
 $target_file = $target_dir . $reqKey.'-'.basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
+
 
 // 파일 확장자 저장
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -43,12 +44,12 @@ location.href='../upload.html';
 <?php
 }
 // 특정 파일 포맷만 허용
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+if($imageFileType != "jpg"  && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
 $uploadOk = 0;
 ?>
 <script>
-alert('실패 파일형식 지원없음');
+alert('jpg 파일형만 지원 지원없음');
 location.href='../upload.html';
 </script>
 <?php
@@ -59,7 +60,7 @@ echo "Sorry, your file was not uploaded.";
 // 모든 것이 괜찮다면 파일 업로드 시도
 } else {
 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    $sql = "UPDATE `public_rending_data` SET `newImg`='$target_file' WHERE `idx`='$reqKey'";
+    $sql = "UPDATE `public_rending_data` SET `newImg`='$target_file.".".$imageFileType' WHERE `idx`='$reqKey'";
     $conn = mysqli_query($conn,$sql);
 ?>
 

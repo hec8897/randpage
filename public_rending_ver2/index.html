@@ -10,9 +10,9 @@
     <meta property="og:type" content="website">
     <meta property="og:description" content="당신만을 위한 라이프 뉴케어">
     <meta property="og:title" content="BM Company">
-    <meta property="og:image" content="http://bmcompany.kr/ins/og.jpg">
-    <link rel="shortcut icon" href="http://bmcompany.kr/ins/favicon.ico">
-    <link rel="icon" href="http://bmcompany.kr/ins/favicon.ico">
+    <meta property="og:image" content="http://bmcompany.kr/bminsu/og.jpg">
+    <link rel="shortcut icon" href="http://bmcompany.kr/bminsu/favicon.ico">
+    <link rel="icon" href="http://bmcompany.kr/bminsu/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -25,22 +25,24 @@
     </script>
 </head>
 <body>
-    
     <div id='wrap'>
         <div class="side_nav">
             <div class='mo_nav'>
                 <h2><img src="img/common/bm_bi.png" alt="bm bi"></h2>
                 <div class='nametag'>
-                    <span id='mo_nav_nametag'>홍길동 지점장의 라이프 뉴 케어</span>
+                    <span id='mo_nav_nametag'>라이프 뉴 케어</span>
                     <div class='nav_btn'>무료 상담 신청하기</div>
                 </div>
                 <ul class='mo_nav_list' id='mo_nav_list'>
                 </ul>
             </div>
-            <div class='close_btn'>
-                <div class='close1'></div>
-                <div class="close2"></div>
+            <div class='side_nav_out'>
+                <div class='close_btn'>
+                    <div class='close1'></div>
+                    <div class="close2"></div>
+                </div>
             </div>
+
 
         </div>
         <div class='scroll_widget' id='floatMenu'>
@@ -58,30 +60,37 @@
         <header id='header_img_render'>
             <div class="head">
                 <div class="hamberger">
-                        <a id="nav-toggle" href="#"><span></span></a>
+                    <!-- <a id="nav-toggle" href="#"><span></span></a> -->
+                    <div id="nav-toggle">
+                        <span class='nav_toggle_line'></span>
+                        <span class='nav_toggle_line'></span>
+                        <span class='nav_toggle_line'></span>
+                    </div>
                 </div>
-
             </div>
         </header>
-        <nav><ul class='nav' id='navs'></ul></nav>
-        <p class="mo_ment">걸릴 확률이 제로인 보장내역까지</p>
-        <p class="mo_ment">보험료를 꼬박꼬박 내고 계신</p>
-        <p class="mo_ment">당신을 위한 라이프 뉴 케어를 시작합니다!</p>
 
-        <section class="section1" id='section1'>
-        </section>
-        <section class='panel-1' id='panel-1'>
-        </section>
+        <nav>
+            <ul class='nav' id='navs'></ul>
+        </nav>
+        <!-- JS innerHtml  -->
 
-        <section class="section5 home-section2" id='section2'>
-         
-        </section>
+    
 
-        <section class='panel-2' id='panel-2'>
-        </section>
+        <section class="section1" id='section1'></section>
+        <!-- JS innerHtml  -->
 
-        <section class="section6 home-section3" id='section3'>
-        </section>
+        <section class='panel-1' id='panel-1'></section>
+        <!-- JS innerHtml  -->
+
+        <section class="section5 home-section2" id='section2'></section>
+        <!-- JS innerHtml  -->
+
+        <section class='panel-2' id='panel-2'></section>
+        <!-- JS innerHtml  -->
+
+        <section class="section6 home-section3" id='section3'></section>
+        <!-- JS innerHtml  -->
 
         <section class='banner-2' id='section4'>
             <div class='wrap'>
@@ -97,75 +106,18 @@
 
             </div>
         </section>
-
-
-        <section class='introduce_consult' id='section5'>
-            <div class="wrap">
-                <div class="tit_box">
-                    <h2>LIFE NEW CARE PLANNER</h2>
-                    <h3 id='name_spot'>조은호 지점장</h3>
-                </div>
-                <div class="profils">
-                    <div class='photo' id='photo'>
-                    </div>
-                    <div class="profil_box">
-                        <h3 id='coment_render'>
-                            13년간 보험 전문가로 활동 하면서 쌓은 노하우로 당신의 미래를 더욱 든든하게 </br>지켜드리겠습니다.
-                        </h3>
-                        <div class="resume">
-                            <ul id='resume'>
-                                <li id='resume1'>
-                                </li>
-                                <li id='resume2'>
-                                </li>
-                                <li id='resume3'>
-                                </li>
-                                <li id='resume4'>
-                                </li>
-                                <li id='resume5'>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section class='introduce_consult' id='section5'></section>
 
         <section class="forms" id='section6'>
-            <div class="wrap">
-                <h2>미래가 걱정되시나요?</h2>
-                <h3><span>유전자 검사로 해답을 얻으세요!</span></h3>
-                <p>유전자 검사 및 보장분석과 관련하여 <span>궁금하신점은 언제나 편하게 문의주세요!</span></p>
-                <div class="inputs">
-                    <div class="input_box"><input type="text" id="reqname" placeholder="이름" autocomplete="off"></div>
-                    <div class="input_box">
-                        <select name="" id="gender">
-                            <option value="">성별</option>
-                            <option value="남성">남성</option>
-                            <option value="여성">여성</option>
-                        </select><select class='area' name="" id="reqArea">
-                            <option value="">지역</option>
-                            <option value="남성">남성</option>
-                            <option value="여성">여성</option>
-                        </select></div>
-                    <div class="input_box"><input type="number" id="reqbirth" placeholder="생년월일" autocomplete="off">
-                    </div>
-                    <div class="input_box"><input type="number" id="reqnumber" placeholder="전화번호" autocomplete="off">
-                    </div>
-
-                    <p class='agree_tab'><label class="container" id='check_label' onclick="checkBoxEvent()">개인정보 수집 및
-                            이용 동의 합니다.
-                            <input type="checkbox" id='agree_check'>
-                            <span class="checkmark" id='check_box'></span>
-                        </label></p>
-                </div>
-                <div class="btn" onclick="insertData()">무료 상담 신청</div>
-            </div>
-
         </section>
-        <div class='mo_banner' id='mo_banner'></div>
 
+        <section class="off-class" id='section7'>
+        </section>
+        
+        <section class="forms" id='section8'>
+        </section>
+
+        <div class='mo_banner' id='mo_banner'></div>
         <footer>
             <div class="wrap">
                 <h2><img src="img/bm_bi.png" alt="bm_bi"></h2>
@@ -180,18 +132,15 @@
                     <li><a href=''><img src='img/common/header-sns-icon-cafe.png'>카페</a></li>
                     <li><a href=''><img src='img/common/header-sns-icon-blog.png'>블로그</a></li>
                     <li><a href=''><img src='img/common/header-sns-icon-admin.png'>관리자</a></li>
-
                 </ul>
-
-
             </div>
         </footer>
     </div>
     <!-- <script src="js/data.js"></script> -->
-    <script src="js/data.min.js"></script>  
+    <script src="js/data.min.js"></script>
     <script src="js/animation.js"></script>
     <script>
-    dataRender.HomeRendingFn();
+        dataRender.HomeRendingFn();
     </script>
 
 </body>

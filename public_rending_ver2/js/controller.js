@@ -27,11 +27,11 @@ function submitFn(Classification){
     var Resum4Year = Doc.getElementById('resum4-year');
     var Resum5Year = Doc.getElementById('resum5-year');
 
-    var Resum1Month = Doc.getElementById('resum1-month');
-    var Resum2Month = Doc.getElementById('resum2-month');
-    var Resum3Month = Doc.getElementById('resum3-month');
-    var Resum4Month = Doc.getElementById('resum4-month');
-    var Resum5Month = Doc.getElementById('resum5-month');
+    // var Resum1Month = Doc.getElementById('resum1-month');
+    // var Resum2Month = Doc.getElementById('resum2-month');
+    // var Resum3Month = Doc.getElementById('resum3-month');
+    // var Resum4Month = Doc.getElementById('resum4-month');
+    // var Resum5Month = Doc.getElementById('resum5-month');
 
     var Resum1Text = Doc.getElementById('resum1-text');
     var Resum2Text = Doc.getElementById('resum2-text');
@@ -93,11 +93,11 @@ function submitFn(Classification){
                 "tab5":checkDementia,
                 "tab6":checkCar,
                 "coment":Coment.value,
-                "resum1":"["+Resum1Year.value+"."+Resum1Month.value+","+Resum1Text.value+"]",
-                "resum2":"["+Resum2Year.value+"."+Resum2Month.value+","+Resum2Text.value+"]",
-                "resum3":"["+Resum3Year.value+"."+Resum3Month.value+","+Resum3Text.value+"]",
-                "resum4":"["+Resum4Year.value+"."+Resum4Month.value+","+Resum4Text.value+"]",
-                "resum5":"["+Resum5Year.value+"."+Resum5Month.value+","+Resum5Text.value+"]"
+                "resum1Y":`[<p>${Resum1Year.value}</p>,<p>${Resum1Text.value}</p>]`,
+                "resum2":`[<p>${Resum2Year.value}</p>,<p>${Resum2Text.value}</p>]`,
+                "resum3":`[<p>${Resum3Year.value}</p>,<p>${Resum3Text.value}</p>]`,
+                "resum4":`[<p>${Resum4Year.value}</p>,<p>${Resum4Text.value}</p>]`,
+                "resum5":`[<p>${Resum5Year.value}</p>,<p>${Resum5Text.value}</p>]`,
             })
             sessionStorage.setItem("idx", EnrollmentArray[0].idx);
             sessionStorage.setItem("name", EnrollmentArray[0].name);
@@ -125,7 +125,6 @@ function InsertDates() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             DBreturnJson = JSON.parse(this.responseText)
-            console.log(DBreturnJson)
             if(DBreturnJson.phpresult == 'ok'){
                 alert('사용 등록 신청되었습니다.')
                 location.href='upload.html?id='+EnrollmentArray[0].idx
@@ -142,7 +141,6 @@ function InsertDates() {
 }
 
 function uploadHtml(){
-    console.log(sessionStorage.idx)
     keyTag = document.getElementById('upload_reqKey');
     keyTag.value=sessionStorage.idx
     NameTag = document.getElementById('nametag')
