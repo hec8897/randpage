@@ -184,7 +184,7 @@ input,select,label{display:inline-block}
 .privacy{width:1200px; margin:0 auto}
 .privacy>label{float:left}
 .privacy>div{display:inline-block; width:75%}
-.privacy .p_box{width:100%; height:150px; border:1px solid #d9d9d9; background:#f9f9f9; padding:20px; box-sizing:border-box; overflow:hidden; overflow-y:scroll}
+.privacy .p_box{width:100%; height:150px; border:1px solid #d9d9d9; background:#f9f9f9; padding:20px; box-sizing:border-box; overflow:hidden; overflow-y:scroll; display:none}
 .privacy p{font-size:14px; margin-bottom:20px}
 .privacy ol{list-style:decimal; margin-left:10px; margin-bottom:30px}
 .privacy li{font-size:13px; color:#666; line-height:20px; margin-bottom:10px}
@@ -198,24 +198,18 @@ input,select,label{display:inline-block}
 }
 .btn span:hover{top:1px; box-shadow:0 3px 3px rgba(0,0,0,0.4);
 }
-
-
 /* 
     elements ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
-
 /* Typo Elements*/
 .tred{color:#d02816 !important}
-
-
 h1,h2,h3,h4,h5,h6{font-style:normal; font-weight:400; letter-spacing:-2px; padding:0; margin:0}
 h1{font-size:40px}
 h2{font-size:30px}
 h3{font-size:24px}
 h4{font-size:18px}
 h5{font-size:16px}
-h
-6{font-size:14px}
+h6{font-size:14px}
 .tal{text-align:left}
 .tar{text-align:right}
 .tac{text-align:center}
@@ -258,6 +252,12 @@ textarea:focus{border:1px solid #666; background:#f9f9f9}
 .checkbox input:checked + label:after {content: url(../images/icon_chk.png); position:absolute}
 .checkbox input:checked + label:before {background: #d02816}
 .checkbox input:checked + label{color:#d02816}
+.checkbox b{
+    cursor: pointer;
+    color: #222;
+    text-decoration: none;
+    margin-left: 30px;
+}
 
 .radio{position:relative}
 .radio input{display:none}

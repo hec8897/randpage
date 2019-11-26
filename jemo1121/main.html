@@ -19,7 +19,6 @@
 	<link href="css/default.css" rel="stylesheet" />
     <!-- <link href="css/responsive.min.css" rel="stylesheet" /> -->
 	<link href="css/responsive.css" rel="stylesheet" />
-    
 	<!--  END BASE CSS  -->
 	<!--  BASE JS  -->
 	<script src="js/jquery-1.9.1.min.js"></script>
@@ -312,7 +311,7 @@
                     <div>
                         <div class="checkbox">
                             <input type="checkbox" id="checkbox_1" value="" />
-                            <label for="checkbox_1">개인정보수집 및 이용에 동의합니다.</label>
+                            <label for="checkbox_1">개인정보수집 및 이용에 동의합니다.</label> <b class='p_box_view'>개인정보 처리 방침 보기</b>
                         </div>
                         <div class="p_box">
                             <p>
@@ -402,6 +401,14 @@
     setTimeout(function(){
         QArendingFn.QaNAnRender(0)
     },500)
+
+    $(document).ready(function(){
+        $(".p_box_view").click(function(){
+            $(".p_box").show()
+            $(this).hide()
+
+        })
+    })
 </script>
 </body>
 </html>

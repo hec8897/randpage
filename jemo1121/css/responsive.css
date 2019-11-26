@@ -5,51 +5,38 @@
     .gold{height:600px}
     .bi{top:10px; left:10px; margin-left:auto}
     .con ul{width:100%; margin-top:30px}
-    
     .con1 li img{width:100%}
     .con2 li>div{padding:15px}
-    
     .con3 li p{font-size:18px; margin-bottom:10px}
     .con3 li span{font-size:14px}
     .con4 .bg_illust{width:90%}
-    
     .con5{padding:0 10px 50px 10px; box-sizing:border-box}
     .panel{width:100%; padding-bottom:70px}
-    
     .con6{padding:0 10px; box-sizing:border-box}
     .con6 .form_a{width:100%}
-    
 }
 @media (max-width: 800px) {
     .gold .gold_1 img{width:110%}
     .gold .gold_2 img{width:90%}
-    
     .gold_s .gold_3{display:none}
     .gold_s .gold_4{margin-left:330px}
     .gold_s .gold_5{margin-left:100px}
     .gold_s .gold_6{margin-left:-260px}
-    
     .con2 li>div{min-height:350px}
-    
     .con3 li{width:55%; margin-bottom:10px}
     .con3 li:nth-child(2n){width:45%}
     .con3 li.step_2>div img{display:none}
-    
     .panel button{width:160px; height:160px}
 }
 
 @media (max-width: 767px) {
     .con .tits{font-size:30px; line-height:35px; margin-top:70px}
     .con .tits span{font-size:30px; line-height:35px}
-        
     .con2 li p{font-size:14px}
     .con2 .num4{top:85px; font-size:100px}
-    
     .obj{display:none}
-    
     .con6 .form_a .phone select{width:20%; margin-right:5px}
     .con6 .form_a .phone input{width:40%}
-    
     .panel button{width:150px; height:150px}
 }
 
@@ -57,57 +44,44 @@
     #header{height:500px}
     .gold{height:500px}
     .bi{width:60px}
-    
     .title_b{top:70px}
     .title_b img{width:50%}
     .title_b img.sp_show{display:none}
     .title_b img.sm_show{display:inline-block}
-    
     .con3{padding-bottom:70px}
-    
     .con6 .form_a>div{padding:10px 0; border:0; box-sizing:border-box}
     .con6 .form_a>div>label{display:none}
-    
     .con6 .form_a input[type=text]{width:100%}
     .con6 .form_a input[type=number]{width:100%}
-
     .con6 .form_a select{width:100%}
     .con6 .form_a .gender{display:block}
     .con6 .form_a .radio{margin:20px 30px 0 0}
     .con6 .form_a .phone select{width:30%; margin-right:5px}
     .con6 .form_a .phone input{width:100%}
     .privacy>div{width:100%}
-    
     .con4 li>div{min-height:250px}
     .con4 li .i_con img{width:30%; margin:20px 0}
     .con4 li h3{font-size:18px; line-height:20px; padding:15px 0}
     .con4 li span{font-size:18px}
     .con4 li p{font-size:14px; padding:0 10px}
-    
     .con5 .tits p{font-size:18px}
     .con6 .tits p{font-size:18px}
-    
 }
 
 @media (max-width: 480px) {
     .gold{display:none}
     .gold_s{display:none}
-    
     .title_b img{width:70%}
     .con .tits{font-size:18px; line-height:20px; margin-top:50px; padding:0 10px; box-sizing:border-box}
     .con .tits span{font-size:18px; line-height:20px}
-    
     .con1 li{float:none; width:100%; padding:5px 10px}
     .con1 li>div{min-height:auto}
     .con1 li img{width:50%; margin-bottom:15px}
-    
     .con2{padding-bottom:50px}
     .con2 li{width:50%; padding:5px}
     .con2 .num4{top:60px; font-size:70px}
     .con2 .blank{display:inline-block; width:60px}
-    
     .con3 .tits p{font-size:14px}
-    
     .panel h3{font-size:18px; margin:30px 0; padding:0 10px; box-sizing:border-box}
 
     .panel div.return_btn{
