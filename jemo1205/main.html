@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Life level up</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="title" content="Life level up" />
+	<meta name="author" content="Life level up" />
+	<meta name="keywords" content="Life level up" />
+    <meta name="description" content="Life level up" />
+    <meta property="og:type" content="website" />
+	<meta property="og:image" content="http://bmcompany.kr/lifeup/images/opengraph.jpg" />
+	<meta property="og:title" content="Life level up" />
+	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:description" content="Life level up" />
+	<meta property="og:url" content="http://bmcompany.kr/lifeup/" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <!--  BASE CSS  -->
+	<link href="css/default.css" rel="stylesheet" />
+    <!-- <link href="css/responsive.min.css" rel="stylesheet" /> -->
+	<link href="css/responsive.css" rel="stylesheet" />
+	<!--  END BASE CSS  -->
+	<!--  BASE JS  -->
+	<script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/scrollMonitor.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/apps.min.js"></script>
+    <!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	    <![endif]-->
+    <!--  END BASE JS  -->
+    <script>
+        $(document).ready(function() {
+            App.init();
+        });
+    </script>
+</head>
+<body>
+<div id="page-container" class="wrap">
+    <!--// Header -->
+    <header id="header">
+        <!--// gold animated -->
+        <h1><img src="images/title_pc.png" class='pc_tit'alt="title"><img class='mo_tit'src="images/title_mo.png" alt="title"></h1>
+        <div class='cartoon_image'>
+
+        </div>
+     
+    </header>
+    <!-- END Header //-->
+    
+    <!--// contents -->
+    <section id="section">
+           
+         
+        <!--// con 1 -->
+        <div class="con con1">
+            <div class="wrap">
+                <h2><img src="images/con1_tit.png" alt=""></h2>
+                <h3>질문으로 알아보는 돈관리 능력 자가 테스트!</h3>
+                <p>아래 질문 중 2개 이상 해당된다면 무료재무상담으로 <b>건강한 돈관리 비법을 전수 받으세요!</b></p>
+                <div class='test_area'>
+                    <div class='test_box'>
+                        <div class='qa_fig'>
+                            <img src="images/pc_test_top_fig.png" alt="">
+                        </div>
+                        <div class="qa_area" id='qa'></div>
+                        <div class='an_box'>
+                            <div class='qa_yes'></div>
+                            <div class='qa_char'></div>
+                            <div class='qa_nos'></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                $('.qa_nos').mouseenter(function(){
+                    $('.qa_char').css({
+                        "background-image":"url(../images/no_illust.png)"
+                    })
+                })
+                $('.qa_nos').mouseleave(function(){
+                    $('.qa_char').css({
+                        "background-image":"url(../images/w_illust.png)"
+                    })
+                })
+
+                $('.qa_yes').mouseenter(function(){
+                    $('.qa_char').css({
+                        "background-image":"url(../images/yes_illust.png)"
+                    })
+                })
+                $('.qa_yes').mouseleave(function(){
+                    $('.qa_char').css({
+                        "background-image":"url(../images/w_illust.png)"
+                    })
+                })
+            })
+        
+        </script>
+        <!-- END con 1 //-->
+        
+        <!--// con 2 -->
+        <div class="con con2">
+            <div class="tits">
+                <p>재테크 계획 / 재무 목표 수립 / 저출 방법까지!</p>
+                <h3>줄줄새는 당신의 돈, 알뜰하게 잡아주는 개인 맞춤 재무설계</h3>
+                <h2>4단계 핵심 포인트</h2>
+            </div>
+            <ul data-scrollview="true">
+                <li>
+                    <div class="animated delay_4" data-animation="true" data-animation-type="fadeInUp">
+                        <h3>소득관리</h3>
+                        <img src="images/icon_4.png" alt="icon">
+                        <p>현재의 소득과 앞으로 예상되는 소득을 반영하여 차이률 5% 내외의 재무계획을 설립합니다.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="animated delay_6" data-animation="true" data-animation-type="fadeInUp">
+                        <h3>지출관리</h3>
+                        <img src="images/icon_5.png" alt="icon">
+                        <p>돈을 많이 벌어도 모으지 못하는 이유는 잘못된 소비습관에 있습니다. 올바른 지출관리로 불필요한 지출을 잡아줍니다.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="animated delay_8" data-animation="true" data-animation-type="fadeInUp">
+                        <h3>부채관리</h3>
+                        <img src="images/icon_6.png" alt="icon">
+                        <p>신용등급 하락, 점점 악화되는 재무상태를 야기하는 잘못된 부채관리, 올바른 방법으로 바로잡아 드립니다.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="animated delay_0" data-animation="true" data-animation-type="fadeInUp">
+                        <h3>자산관리</h3>
+
+                        <img src="images/icon_7.png" alt="icon">
+                        <p>은행적금? 주식투자? 목표없이 막연한 재테크는 위험함니다. 당신의 상황에 맞는 금융상품을 추천해 드립니다.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- END con 2 //-->
+        
+        <!--// con 3 -->
+        <div class="con con3">
+            <div class="tits">
+                <span>당신의 재무상태는 어떤가요?</span>
+                <p>라이프 싸이클에 따른 올바른 재무 목표 설립을 도와드립니다.</p>
+            </div>
+            <ul data-scrollview="true">
+                <li class="step_1">
+                    <div class="animated delay_4" data-animation="true" data-animation-type="fadeInLeft">
+                        <p>사회 초년기(20~30대)</p>
+                        <span>결혼자금, 내집마련<br>자금을 위한 재무계획</span>
+                        <img src="images/panel_bg1.gif" alt="background img">
+                    </div>
+                </li>
+                <li class="step_2">
+                    <div class="animated delay_6" data-animation="true" data-animation-type="fadeInLeft">
+                        <p>가족 형성기(30~40대)</p>
+                        <span>주거안정을 위한 자금마련<br>꾸준한 저축과 투자계획</span>
+                        <img src="images/panel_bg2.gif" alt="background img">
+                    </div>
+                </li>
+                <li class="step_3">
+                    <div class="animated delay_8" data-animation="true" data-animation-type="fadeInLeft">
+                        <p>자녀 성장기(40~60대)</p>
+                        <span>자녀의 교육비, 결혼자금<br>준비와 노후 대비 계획</span>
+                        <img src="images/panel_bg3.gif" alt="background img">
+                    </div>
+                </li>
+                <li class="step_4">
+                    <div class="animated delay_0" data-animation="true" data-animation-type="fadeInLeft">
+                        <p>노후 안정기(60~80대)</p>
+                        <span>100세 시대! 안정적인 투자로<br>든든한 생활자금 마련!</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- END con 3 //-->
+        
+        <!--// con 4 -->
+        <div class="con con4">
+            <div class="tits">
+                <span><b>제테크친구들의</b> 맞춤 솔루션 PROCESS</span>
+                <p>매일경제/아시아경제/팍스경제TV 등 다수의 경제방송 출연, 검증된 재무상담사의 솔루션은 다릅니다!</p>
+            </div>
+            <ul data-scrollview="true">
+                <li>
+                    <div class="animated delay_4" data-animation="true" data-animation-type="fadeInLeft">
+                        <h3>채무 상태 분석<span>(전문가 배정)</span></h3>
+                        <i class="i_con"><img src="images/icon_8.png" alt="icon"></i>
+                        <p>소비와 지출, 현금 유동성, 부동산, 금융자산 파악</p>
+                    </div>
+                    <i class="i_arrow animated delay_0" data-animation="true" data-animation-type="fadeInLeft"><img src="images/icon_arrow.png" alt="arrow"></i>
+                </li>
+                <li>
+                    <div class="animated delay_6" data-animation="true" data-animation-type="fadeInLeft">
+                        <h3>재무 목표 수립<span>(자료 제공)</span></h3>
+                        <i class="i_con"><img src="images/icon_9.png" alt="icon"></i>
+                        <p>라이프 싸이클에 맞는 재무 목표 수립</p>
+                    </div>
+                    <i class="i_arrow animated delay_0" data-animation="true" data-animation-type="fadeInLeft"><img src="images/icon_arrow.png" alt="arrow"></i>
+                </li>
+                <li>
+                    <div class="animated delay_8" data-animation="true" data-animation-type="fadeInLeft">
+                        <h3>재무 목표 실행<span>(대면 상담)</span></h3>
+                        <i class="i_con"><img src="images/icon_10.png" alt="icon"></i>
+                        <p>소득과 지출을 바탕으로 실행 가능한 계획 실행</p>
+                    </div>
+                </li>
+            </ul>
+
+            
+        </div>
+        <div class='con bottom_btnarea'>
+            <div class="wrap">
+                <h3>10년 후의 통장 잔금이 달라지는</h3>
+                <h2>제테크친구들의 금융솔루션</h2>
+                
+                <div class="btn" onclick="dataInserter.dataInsert()">
+                        <span>재무상담 신청하기</span>
+                    </div>
+                    <div class="bg_illust"><img src="images/bg_illust.png" alt="illust"></div>
+                </div>
+
+            
+        </div>
+
+        <!-- END con 4 //-->
+        
+        <!--// con 5 재무진단 테스트 -->
+    
+        <!-- END con 5 재무진단 테스트 //-->
+        
+        <!--// con 6 form -->
+    
+        <!-- END con 6 form //-->
+        
+  
+    </section>
+    
+    <!--END contents //
+    
+    <!--// footer -->
+    <footer id="footer">
+        
+    </footer>
+    <!--END footer //-->
+</div>
+<script src="js/data.min.js"></script>
+<script>
+    setTimeout(function(){
+        QArendingFn.QaNAnRender(0)
+    },500)
+
+    $(document).ready(function(){
+        $(".p_box_view").click(function(){
+            $(".p_box").show()
+            $(this).hide()
+
+        })
+    })
+</script>
+</body>
+</html>
