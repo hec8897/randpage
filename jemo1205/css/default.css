@@ -35,8 +35,36 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
     .tits{font-size:40px; font-weight:300; line-height:50px; letter-spacing:-2px; text-align:center; margin-top:100px}
     .tits span{display:block; font-size:40px; font-weight:700; letter-spacing:-2px;}
 
-
-
+#popup{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+    display: none;
+}
+.x_btn{
+    cursor: pointer;
+    width: 25px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+div.popup_box{
+    width: 1100px;
+    height: 800px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#popup .btn{
+    width: 250px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 0px    ;
+}
 
 .con ul{width:1200px; margin:0 auto; margin-top:30px}
 .con1{padding-top: 100px; padding-bottom: 100px;}
@@ -44,7 +72,6 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
     max-width: 1200px;
     margin: 0 auto;
     height: auto;
-
 }
 .con1 h2{width:500px; margin:0 auto;font-weight: bold; text-align: center;}
 .con1 h2 img{width: 100%;}
@@ -52,94 +79,83 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
 .con1 h3{font-weight: bold; text-align: center;}
 .con1 p{text-align: center;}
 .con1 p b{font-weight: normal;}
-
-.con1 div.test_area{width: 1200px; min-height: 635px; margin: 0 auto; 
-    /* background-image: url(../images/con1_bg_png.png);  */
-    background-size: cover; background-position: center; background-repeat: no-repeat; 
-}
-div.test_box{
-    position: relative;
-    width: 100%;
-    height:450px;
-    float: left;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-image: url(../images/con1_bg_png.png);
-
-}
-div.qa_fig{
-    width: 240px;
-    height: 230px;
+.con1{position: relative;}
+.con1 div.qa_bg{position: relative;  margin: 0 auto; margin-top: -150px;}
+.con1 .test_area{
+    width: 60%;
+    height: 70%;
     position: absolute;
-    right: 0;
-    top: -40%;
+    bottom: 7px;
+    right: 5%;
 }
-div.an_box{
-    width: 45%;
-    height: 100%;
-    position: absolute;
-    right: 100px;
-    bottom: 13px;
-}
-.qa_yes{
+div.btns{
     cursor: pointer;
-    width: 130px;
-    height: 110px;
+    display: inline-block;
     position: absolute;
-    background-image: url(../images/qa_yes.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+    width: 30%;
+    bottom: 45px;
+}
+.btn1{
+    left: 0%;
+}
+
+.btn2{
+    left: 32%;;
+}
+
+.con1 .qa_bg img.mo_bg{display: none;}
+.con1 ul{text-align: center;}
+.con1 ul li{display: inline-block; width: 35px; height: 35px; 
+    text-align: center; background: white; padding: 0;
+    border-radius: 100px; border: 1.5px solid #222; 
+    text-align: center; line-height: 35px; font-weight: bold; color: #222;
+    font-size: 16px; vertical-align: middle; margin: 5px;}
+.con1 ul li.active{background: #ffab3d; border-color: #4b2514; color: #4b2514;}
+div.char_fig{width: auto;  max-width:300px; position:  absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+background-size: contain; background-repeat: no-repeat; background-position: center;}
+div.char_fig img{vertical-align: bottom;}
+div.qa_btn{
+    width: 120px;
+    position: absolute;
     top: 40%;
-    left: 30px;
 }
-.qa_yes:hover{
-    transform: scale(1.1);
- }
-
-
-.qa_nos{
-    cursor: pointer;
-    width: 130px;
-    height: 110px;
-    position: absolute;
-    background-image: url(../images/qa_no.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 40%;
-    right: 50px;
-}
-.qa_nos:hover{
-    transform: scale(1.1);
-}
-
-.qa_char{
-    width: 300px;
-    height: 250px;
-    position: absolute;
-    background-image: url(../images/w_illust.png);
-    background-position: center;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-repeat: no-repeat;
+img.mo_qa_box{
+    display: none;
 }
 div.qa_area{
-    width: 70%;
-    height: 160px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    width: 1000px;
     position: absolute;
-    background-image: url(../images/pc_qa_box.png);
+    z-index: 90;
     left: 50%;
     transform: translateX(-50%);
-    top: 0px;
+    top: 25%;
 }
 
+div.qa_area span{
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    color: #222;
+}
 
+div.yes_btn{
+    left: 18%;
+}
+div.no_btn{
+    right: 20%;
+}
+div.qa_btn:hover{
+    transform: scale(1.1);
+}
+/* .ill_ani{ */
+    /* display: none; */
+/* } */
 
-
-
+#yes_img{display: none;}
+#w_img{display: block;}
+#no_img{display: none;}
 
 
 .con2{clear:both; background:#ccc0b9;  padding-bottom:100px; overflow:hidden}
@@ -295,11 +311,17 @@ div.bottom_btnarea .bg_illust img{
 .obj .obj_4{top:-160px; margin-left:480px; width:389px}
 
 .con6{clear:both; overflow:hidden}
-.con6 .tits p{font-size:30px; font-weight:300}
+.con6 .tits p{font-size:24px; font-weight:300;}
+
+.con6 .tits span{font-size: 30px;}
+.con6 .tits{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 
 input,select,label{display:inline-block}
 
-.con6 .form_a{width:1200px; margin:0 auto; margin-top:50px; border-top:2px solid #444; border-bottom:1px solid #444}
+.con6 .form_a{width:1000px; margin:0 auto;  border-top:2px solid #444; border-bottom:1px solid #444}
 .con6 .form_a>div{display:block; width:100%; padding:10px 0; border-bottom:1px solid #f0f0f0}
 .con6 .form_a>div:last-child{border-bottom:0}
 .con6 .form_a .gender{display:inline-block}
@@ -316,7 +338,7 @@ input,select,label{display:inline-block}
 .privacy{width:1200px; margin:0 auto}
 .privacy>label{float:left}
 .privacy>div{display:inline-block; width:75%}
-.privacy .p_box{width:100%; height:150px; border:1px solid #d9d9d9; background:#f9f9f9; padding:20px; box-sizing:border-box; overflow:hidden; overflow-y:scroll; display:none}
+.privacy .p_box{width:100%; height:150px; border:1px solid #d9d9d9; background:#f9f9f9; padding:20px; box-sizing:border-box; overflow:hidden; overflow-y:scroll;}
 .privacy p{font-size:14px; margin-bottom:20px}
 .privacy ol{list-style:decimal; margin-left:10px; margin-bottom:30px}
 .privacy li{font-size:13px; color:#666; line-height:20px; margin-bottom:10px}
@@ -654,3 +676,5 @@ textarea:focus{border:1px solid #666; background:#f9f9f9}
     }
     100%{opacity:0}
 }
+
+

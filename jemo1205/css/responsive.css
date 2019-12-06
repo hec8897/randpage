@@ -3,10 +3,24 @@
     #header h1{width: 70%;}
     #header .cartoon_image{width: 98%;}
     
-    .con1 div.test_area{width: 98%; min-height: 550px;  background-size: contain;}
     .bi{top:10px; left:10px; margin-left:auto}
     .con ul{width:98%; margin-top:30px}
     .con1 li img{width:100%}
+    .con1 div.qa_bg{width: 98%; margin-top: -120px;}
+    div.yes_btn{
+        left: 15%;
+    }
+    div.no_btn{
+        right: 18%;
+    }
+    div.char_fig{width: auto; max-width: 250px;}
+    div.qa_area{
+        width:90%;
+    }
+    div.qa_area span{
+        font-size: 16px;
+    }
+
     .con2 li>div{padding:15px}
     .con2 .tits h2{font-size: 40px;}
     .con3 li p{font-size:18px; margin-bottom:10px}
@@ -21,17 +35,42 @@
 }
 @media (max-width: 1000px) {
     #header{height: 950px;}
-    .con1{padding-top: 0px; padding-bottom: 50px;}
+    div.qa_btn{width: 95px;}
+    div.char_fig{width: auto; max-width: 220px;}
+    .con1 div.qa_bg{width: 98%; margin-top: -100px;}
+    .con1 ul li{width: 30px; height: 30px; line-height: 28px;}
+    div.qa_btn:hover{
+        transform: scale(1.0);
+    }
     
 }
 
 @media (max-width: 850px) {
-    #header{height: 950px;}
+    #header{height: 900px;}
     #header .cartoon_image{width: 98%;}
-    .con1{padding-top: 0px; padding-bottom: 0px;}
-    .con1 div.test_area{width: 98%; min-height: 550px;}
     .con1 h2{width: 40%; margin: 0 auto;}
     .con2 li>div{min-height:270px; padding: 10px; padding-top: 20px;}
+    .con1 div.qa_bg{width: 98%; margin-top: -80px;}
+
+
+    div.qa_btn{width: 95px;}
+    div.char_fig{width: auto; max-width: 200px;}
+    div.yes_btn{
+        left: 15%;
+    
+    }
+    div.no_btn{
+        right: 18%;
+    }
+
+    div.qa_area{
+        width:90%;
+        
+    }
+    div.qa_area span{
+        font-size: 16px;
+    }
+
     .con2 li>div h3{font-size: 18px;}
     .con2 li>div p{font-size: 13px; padding:0;}
     .con3 span{font-size: 30px;}
@@ -56,12 +95,30 @@
 }
 
 @media (max-width: 767px) {
-    #header{height: 850px;}
+    #header{height: 700px;}
     #header h1{width: 80%;}
     #header .cartoon_image{background-position: top; height: 250px;}
     .con1{padding-bottom: 0px;}
-    .con1 div.test_area{width: 98%; margin-top: -100px;}
     .con1 p b{display: block;}
+    div.qa_area{
+        width:90%;
+    }
+    div.qa_area span{
+        font-size: 14px;
+    }
+
+    div.qa_btn{width: 75px; top: 30%;}
+    div.char_fig{width: auto; max-width: 180px;}
+    div.yes_btn{
+        left: 13%;
+    }
+    div.no_btn{
+        right: 16%;
+    }
+    div.btns{
+        bottom: 20px;
+    }
+    
     .con .tits{font-size:30px; line-height:35px; margin-top:70px}
     .con .tits span{font-size:30px; line-height:35px}
     .con2 li p{font-size:14px}
@@ -89,11 +146,27 @@
 }
 
 @media (max-width: 640px) {
-    #header{height: 720px;}
+    #header{height: 650px;}
     #header h1{width: 90%;}
 
     .bi{width:60px}
-    .con1 h2{width: 60%;}
+    .con1{padding-top: 50px; padding-bottom: 50px;}
+    .con1 h2{width: 50%;}
+    .con1 h3{font-size: 20px;}
+    .con1 div.qa_bg{width: 98%; margin-top: -50px;}
+    div.qa_btn{width: 70px; top: 30%;}
+    div.char_fig{width: auto; max-width: 180px;}
+    div.qa_area span{
+        font-size: 12px;
+    }
+
+    div.yes_btn{
+        left: 7%;
+    
+    }
+    div.no_btn{
+        right: 10%;
+    }
     .con2 .tits p{font-size: 18px;}
     .con2 .tits h3{font-size: 18px;}
     .con2 .tits h2{font-size: 32px;}
@@ -126,7 +199,7 @@
 }
 
 @media (max-width: 480px) {
-    #header{height: 1200px; padding-top: 20px; background-position-x: 50%; background-position-y: -50%; background-size: 1500px; background-repeat: no-repeat;}
+    #header{height: 1100px; padding-top: 20px; background-position-x: 50%; background-position-y: -50%; background-size: 1500px; background-repeat: no-repeat;}
     #header .cartoon_image{
         width: 100%;
         height: 530px;
@@ -135,17 +208,66 @@
     #header h1{width: 100%;}
     #header h1 img.pc_tit{display: none;}
     #header h1 img.mo_tit{display: block; width: 100%; margin-bottom: 50px; }
+    div.qa_area{
+        width:90%;
+        top: 16%;
+    }
+    div.qa_area span{
+        font-size: 16px;
+        text-align: center;
+    }
+    img.pc_qa_box{
+        display: none;
+    }
+
+    img.mo_qa_box{
+        display: block;
+    }
+    div.yes_btn{
+        left: 13%;
+    }
+    div.no_btn{
+        right: 16%;
+    }
+    div.btns{
+        width: 45%;
+        bottom: -90px;
+    }
+    .btn1{
+        left: 5%;
+    }
+    
+    .btn2{
+        left:50%;
+    }
 
 
     .con .tits{font-size:18px; line-height:20px; margin-top:50px; padding:0 10px; box-sizing:border-box}
     .con .tits span{font-size:18px; line-height:20px}
-    .con1{margin-top: 50px;}
-    .con1 div.test_area{height: 650px; background-image:url(../images/con1__mo_bg.png); margin-top: 0px;}
+    .con1{margin-top: 0px; padding-bottom: 100px;}
     .con1 li{float:none; width:100%; padding:5px 10px}
     .con1 li>div{min-height:auto}
     .con1 li img{width:50%; margin-bottom:15px}
     .con1 h3{font-size: 18px;}
+    .con1 h2{width: 70%;}
+    .con1 ul{margin-top: 10px;}
+    .con1 ul li{width: 20px; height: 20px; line-height: 18px; margin: 3px; font-size: 13px;}
+
     .con2{padding-bottom:50px}
+    .con1 div.qa_bg{margin-top: 15px;}
+    .qa_bg img.pc_bg{display: none;}
+    .con1 .qa_bg img.mo_bg{display: block;}
+    .con1 .test_area{width: 100%; height: 40%; right: 0; bottom: 6px;}
+    div.qa_btn{width: 100px; top: 20%;}
+    div.char_fig{width: auto; max-width: 210px;}
+
+    div.yes_btn{
+        left: 8%;
+    
+    }
+    div.no_btn{
+        right: 11%;
+    }
 
 
     .con2 li{width:50%; padding:5px}
@@ -187,6 +309,18 @@
         height: 450px;
         background-image: url(../images/con1_cartoon_mo.png);
     }
+    div.qa_btn{width: 90px; top: 20%;}
+    div.char_fig{width: auto; max-width: 180px;}
+    div.qa_area span{
+        font-size: 14px;
+    }
+    div.yes_btn{
+        left: 10%;
+    
+    }
+    div.no_btn{
+        right: 13%;
+    }
     
     .title_b img{width:80%}
     .panel h3{font-size:16px}
@@ -206,8 +340,21 @@
 @media (max-width: 360px) {
     .title_b img{width:90%}
     .panel button{width:140px; height:140px}
+   
+    div.qa_btn{width: 80px; top: 20%;}
+    div.char_fig{width: auto; max-width: 160px;}
+
+    div.yes_btn{
+        left: 10%;
+    
+    }
+    div.no_btn{
+        right: 13%;
+    }
 }
 
 @media (max-width: 320px) {
     .panel button{width:130px; height:130px}
+    div.char_fig{width: auto; max-width: 150px;}
+
 }
