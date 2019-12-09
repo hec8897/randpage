@@ -46,7 +46,7 @@ String.prototype.replaceAll = function (org, dest) {
 }
 let QArendingFn = {
     resultArray: [],
-    indexNumber: 0,
+    indexNumber: 1,
     ResultCount: 0,
     QaNAnRender: function (no) {
         const QaRender = document.getElementById('qa_render')
@@ -75,12 +75,12 @@ let QArendingFn = {
             YesBtn.innerHTML = `<img src="images/qa_yes.png" alt="yes_btn" onclick="QArendingFn.AnClickData(${this.indexNumber},'yes')">`
             NoBtn.innerHTML = `<img src="images/qa_no.png" alt="no_btn" onclick="QArendingFn.AnClickData(${this.indexNumber},'no')">`
         } else {
-            if (this.ResultCount >= 3) {
-                NumberUl.style.display = 'none'
-                this.resultRender("B")
-            } else {
+            if (this.ResultCount < 4) {
                 NumberUl.style.display = 'none'
                 this.resultRender("A")
+            } else {
+                NumberUl.style.display = 'none'
+                this.resultRender("B")
             }
         }
 
