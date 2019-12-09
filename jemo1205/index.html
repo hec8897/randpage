@@ -45,7 +45,7 @@
         <div id="popup">
             <div class='popup_box'>
                 <div class="con con6" id='form'>
-                    <img src="images/x_btn.png"  class='x_btn' alt="">
+                    <img src="images/x_btn.png" class='x_btn' onclick='popUpClose()' alt="">
                     <div class="tits">
                         <p>지금도 줄줄 새고 있는 당신의 돈! 재테크친구들에서 잡아드리겠습니다.</p>
                         <span>간단한 신청으로 무료 재무설계 서비스를 받아 보세요!</span>
@@ -195,24 +195,11 @@
                     </div>
                     <!-- END input area //-->
                 </div>
-                <div class="btn" onclick="">
+                <div class="btn" onclick="dataInserter.dataInsert()">
                     <span>재무상담 신청하기</span>
                 </div>
             </div>
         </div>
-
-        <script>
-            $('#popup').on('scroll touchmove mousewheel', function (event) {
-                event.preventDefault();
-                event.stopPropagation();
-                return false;
-            });
-            $('#p_box').on('scroll touchmove mousewheel', function (event) {
-                event.preventDefault();
-                event.stopPropagation();
-                return true;
-            });
-        </script>
         <!--// Header -->
         <header id="header">
             <!--// gold animated -->
@@ -246,10 +233,10 @@
                                 <img src="images/yes_illust.png" alt="yes" id="yes_img" class='ill_ani'>
                             </div>
                             <div class="qa_btn yes_btn" id='yes_btn'>
-                                <img src="images/qa_yes.png" alt="yes_btn" onclick="QArendingFn.AnClickData(1,'yes')">
+                                <img src="images/qa_yes.png" alt="yes_btn" onclick="QArendingFn.AnClickData(0,'yes')">
                             </div>
                             <div class="qa_btn no_btn" id='no_btn'>
-                                <img src="images/qa_no.png" alt="no_btn" onclick="QArendingFn.AnClickData(1,'no')">
+                                <img src="images/qa_no.png" alt="no_btn" onclick="QArendingFn.AnClickData(0,'no')">
                             </div>
                         </div>
                     </div>
@@ -417,24 +404,12 @@
                     <h3>10년 후의 통장 잔금이 달라지는</h3>
                     <h2>재테크친구들의 금융솔루션</h2>
 
-                    <div class="btn" onclick="dataInserter.dataInsert()">
+                    <div class="btn" onclick="popUpOpen()">
                         <span>재무상담 신청하기</span>
                     </div>
                     <div class="bg_illust"><img src="images/bg_illust.png" alt="illust"></div>
                 </div>
             </div>
-
-            <!-- END con 4 //-->
-
-            <!--// con 5 재무진단 테스트 -->
-
-            <!-- END con 5 재무진단 테스트 //-->
-
-            <!--// con 6 form -->
-
-            <!-- END con 6 form //-->
-
-
         </section>
 
         <!--END contents //
@@ -448,14 +423,13 @@
     <script src="js/data.min.js"></script>
     <script>
         QArendingFn.QaNAnRender(0)
-
         $(document).ready(function () {
             $(".p_box_view").click(function () {
                 $(".p_box").show()
                 $(this).hide()
-
             })
         })
+
     </script>
 </body>
 

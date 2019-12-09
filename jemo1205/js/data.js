@@ -44,9 +44,9 @@ String.prototype.replaceAll = function (org, dest) {
     //array fillter prototype
     return this.split(org).join(dest);
 }
-var QArendingFn = {
+let QArendingFn = {
     resultArray: [],
-    indexNumber: 1,
+    indexNumber: 0,
     ResultCount: 0,
     QaNAnRender: function (no) {
         const QaRender = document.getElementById('qa_render')
@@ -57,15 +57,19 @@ var QArendingFn = {
         const NoBtn = document.getElementById('no_btn')
         const NumberUl = document.getElementById('num');
         const Numbers = document.querySelectorAll('.an_number');
-        if (this.indexNumber < 10) {
+        if (this.indexNumber <= 9) {
             this.indexNumber += 1;
             if (result == "yes") {
                 this.ResultCount += 1
-                this.resultArray.push(no)
+                this.resultArray.push(1)
+            }
+            else{
+                this.resultArray.push(0)
             }
             this.QaNAnRender(no)
             for (var i = 0; i < Numbers.length; i++) {
                 Numbers[i].className = 'an_number'
+
             }
             Numbers[no].className = 'an_number active'
             YesBtn.innerHTML = `<img src="images/qa_yes.png" alt="yes_btn" onclick="QArendingFn.AnClickData(${this.indexNumber},'yes')">`
@@ -94,10 +98,10 @@ var QArendingFn = {
                                   <img src="images/con1_resultA_mo_bg.png" class='mo_bg' alt="">
                                     <div class='test_area'>
                                         <div class='btn1 btns'>
-                                            <img src="images/consult_btn1.png" alt="">
+                                            <img src="images/consult_btn1.png" alt="신청버튼1" onclick='popUpOpen("resultA","btn1")'>
                                         </div>
                                         <div class='btn2 btns'>
-                                            <img src="images/consult_btn2.png" alt="">
+                                            <img src="images/consult_btn2.png" alt="신청 버튼2" onclick='popUpOpen("resultA","btn1")'> 
                                         </div>
                                     </div>
                                   `
@@ -108,16 +112,36 @@ var QArendingFn = {
                                       <img src="images/con1_resultB_mo_bg.png" class='mo_bg' alt="">
                                       <div class='test_area'>
                                         <div class='btn1 btns'>
-                                            <img src="images/consult_btn1.png" alt="">
+                                            <img src="images/consult_btn1.png" alt="신청버튼1" onclick='popUpOpen("resultB","btn1")'>
                                         </div>
                                         <div class='btn2 btns'>
-                                            <img src="images/consult_btn2.png" alt="">
+                                            <img src="images/consult_btn2.png" alt="신청버튼2" onclick='popUpOpen("resultB","btn1")'>
                                         </div>
                                     </div>`
             }
         }
 
     }
+}
+
+function popUpOpen(result,mode) {
+    const SelectBox = document.getElementById('reqmemo');
+    var Popup = document.getElementById('popup');
+    $('html, body').css({ 'overflow': 'hidden', 'height': '150%' }); // 모달팝업 중 html,body의 scroll을 hidden시킴 
+    $('#Popup').on('scroll touchmove mousewheel', function(event) { 
+    event.preventDefault();     
+    event.stopPropagation();     
+    return false;
+     });
+
+
+    Popup.style.display = 'block'
+}
+function popUpClose() {
+    var Popup = document.getElementById('popup');
+    Popup.style.display = 'none'
+    $('html, body').css({'overflow': 'auto', 'height': '100%'}); 
+    $('#Popup').off('scroll touchmove mousewheel'); 
 }
 
 function gotoInsert() {
@@ -175,7 +199,8 @@ var dataInserter = {
 
             if (insert == true) {
                 data = [{
-                        TestAnsewer: QArendingFn.resultArray
+                        TestAnsewer: QArendingFn.resultArray,
+                        result: QArendingFn.resultPoint
                     },
                     {
                         reqName: reqName,
@@ -187,14 +212,17 @@ var dataInserter = {
                         adget: params.id
                     }
                 ]
+
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
                     if (this.readyState == 4 && this.status == 200) {
                         var returnInsert = JSON.parse(this.responseText)
                         if (returnInsert.phpresult == 'ok') {
                             alert('상담신청이 완료되었습니다:)')
+                            location.reload()
                         } else {
                             alert('상담신청 실패 관리자에게 문의해주세요')
+
                         }
                     }
                 }
