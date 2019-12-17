@@ -137,7 +137,7 @@ div.qa_area span{
     top: 38%;
     transform: translate(-50%,-50%);
     font-size: 20px;
-    color: #222;
+    color: red;
 }
 
 div.yes_btn{

@@ -9,6 +9,38 @@ $reqPhone = $data->insult[2];
 $reqBirth = $data->insult[1];
 $reqSexflag = $data->insult[3];
 $reqArea = $data->insult[4];
+$reqMemo = $data->insult[5];
+
+switch($reqMemo){
+    case "home" :
+                $reqMemo = "홈 유입";
+                break;
+    case "gender" :
+                $reqMemo = "유전자";
+                break;
+
+    case "baby" :
+                $reqMemo = "어린이 보험";
+                break;
+
+    case "cancer" :
+                $reqMemo = "암 보험";
+                break;
+
+    case "disease" :
+                $reqMemo = "2대 질병";
+                break;
+
+    case "dementia" :
+                $reqMemo = "치매";
+                break;
+
+    case "car" :
+                $reqMemo = "자동차";
+                break;
+
+}
+
 $site_code = "상담사-".$cflag;
 $time = date('Y-m-d H:i:s');
 $result = 'no';
@@ -19,14 +51,14 @@ $GetTeam = mysqli_fetch_assoc($GetTeamQuery);
 $classcode =  $GetTeam['classcode'];
 $cflag =  $GetTeam['name'];
 
-$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqSexflag,reqArea,reqPhone,reqBirth,Insertdate,classcode,cflag) 
-VALUES('$site_code','$reqName','$reqSexflag','$reqArea','$reqPhone','$reqBirth','$time','$classcode','$cflag')";
+$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqSexflag,reqArea,reqPhone,reqBirth,Insertdate,classcode,cflag,reqMemo) 
+VALUES('$site_code','$reqName','$reqSexflag','$reqArea','$reqPhone','$reqBirth','$time','$classcode','$cflag','$reqMemo')";
 $query = mysqli_query($conn,$sql);
 if(isset($query)){
     $result='ok';
 }
 $json = json_encode(
-    array("datas" => $data,"test"=>$sql,"result"=>$result)
+    array("datas" => $data,"test"=>$sql,"result"=>$result,"reqMemo"=>$reqMemo)
 );
 echo urldecode($json);
 header('Content-Type: application/json');

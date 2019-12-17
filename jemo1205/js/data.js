@@ -72,8 +72,8 @@ let QArendingFn = {
 
             }
             Numbers[no].className = 'an_number active'
-            YesBtn.innerHTML = `<img src="images/qa_yes.png" alt="yes_btn" onclick="QArendingFn.AnClickData(${this.indexNumber},'yes')">`
-            NoBtn.innerHTML = `<img src="images/qa_no.png" alt="no_btn" onclick="QArendingFn.AnClickData(${this.indexNumber},'no')">`
+            YesBtn.innerHTML = `<img src="images/qa_yes.gif" alt="yes_btn" onclick="QArendingFn.AnClickData(${this.indexNumber},'yes')">`
+            NoBtn.innerHTML = `<img src="images/qa_no.gif" alt="no_btn" onclick="QArendingFn.AnClickData(${this.indexNumber},'no')">`
         } else {
             if (this.ResultCount < 4) {
                 NumberUl.style.display = 'none'

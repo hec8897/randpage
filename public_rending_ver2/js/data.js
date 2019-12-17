@@ -48,20 +48,20 @@ var dataRender = {
         var NavRending = document.getElementById('navs')
         var MoNavRending = document.getElementById('mo_nav_list')
 
-        var MenuName = ['<li class="nav_list nav1" onclick="dataRender.GeneRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(1)"><div class="nav_img nav1_img"></div>유전자검사</li>',
-            '<li class="nav_list nav2" onclick="dataRender.babyRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(2)"><div class="nav_img nav2_img"></div>어린이 보험</li>',
-            '<li class="nav_list nav3" onclick="dataRender.cancerRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(3)"><div class="nav_img nav3_img"></div>암보험</li>',
-            '<li class="nav_list nav4" onclick="dataRender.diseaseRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(4)"><div class="nav_img nav4_img"></div>2대중대질병</li>',
-            '<li class="nav_list nav5" onclick="dataRender.dementRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(5)"><div class="nav_img nav5_img"></div>치매보험</li>',
-            '<li class="nav_list nav6" onclick="dataRender.carRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(6)"><div class="nav_img nav6_img"></div>자동차보험</li>'
+        var MenuName = ['<li class="nav_list nav1" onclick="dataRender.GeneRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(1) | formRootInsert(1)"><div class="nav_img nav1_img"></div>유전자검사</li>',
+            '<li class="nav_list nav2" onclick="dataRender.babyRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(2) |formRootInsert(2)"><div class="nav_img nav2_img"></div>어린이 보험</li>',
+            '<li class="nav_list nav3" onclick="dataRender.cancerRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(3) |formRootInsert(3)"><div class="nav_img nav3_img"></div>암보험</li>',
+            '<li class="nav_list nav4" onclick="dataRender.diseaseRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(4) |formRootInsert(4)"><div class="nav_img nav4_img"></div>2대중대질병</li>',
+            '<li class="nav_list nav5" onclick="dataRender.dementRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(5) |formRootInsert(5)"><div class="nav_img nav5_img"></div>치매보험</li>',
+            '<li class="nav_list nav6" onclick="dataRender.carRendingFn()|dataRender.NavActivation(this)|dataRender.MoListActivation(6) |formRootInsert(6)"><div class="nav_img nav6_img"></div>자동차보험</li>'
         ];
 
-        var MoMenuName = ['<li class="mo_list nav1" onclick="dataRender.GeneRendingFn()|dataRender.MoListActivation(1)"><img src="img/common/nav-gene.png" alt="">유전자검사<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>',
-            '<li class="mo_list nav2" onclick="dataRender.babyRendingFn()|dataRender.MoListActivation(2)"><img src="img/common/nav-baby.png" alt="">어린이 보험<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>',
-            '<li class="mo_list nav3" onclick="dataRender.cancerRendingFn()|dataRender.MoListActivation(3)"><img src="img/common/nav-cancer.png" alt="">암보험<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>',
-            '<li class="mo_list nav4" onclick="dataRender.diseaseRendingFn()|dataRender.MoListActivation(4)"><img src="img/common/nav-disease.png" alt="">2대중대질병<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>',
-            '<li class="mo_list nav5" onclick="dataRender.dementRendingFn()|dataRender.MoListActivation(5)"><img src="img/common/nav-deamentia.png" alt="">치매보험<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>',
-            '<li class="mo_list nav6" onclick="dataRender.carRendingFn()|dataRender.MoListActivation(6)"><img src="img/common/nav-car.png" alt="">자동차보험<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>'
+        var MoMenuName = ['<li class="mo_list nav1" onclick="dataRender.GeneRendingFn()|dataRender.MoListActivation(1)|formRootInsert(1)"><img src="img/common/nav-gene.png" alt="">유전자검사<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>',
+            '<li class="mo_list nav2" onclick="dataRender.babyRendingFn()|dataRender.MoListActivation(2)|formRootInsert(2)"><img src="img/common/nav-baby.png" alt="">어린이 보험<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>',
+            '<li class="mo_list nav3" onclick="dataRender.cancerRendingFn()|dataRender.MoListActivation(3)|formRootInsert(3)"><img src="img/common/nav-cancer.png" alt="">암보험<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>',
+            '<li class="mo_list nav4" onclick="dataRender.diseaseRendingFn()|dataRender.MoListActivation(4)|formRootInsert(4)"><img src="img/common/nav-disease.png" alt="">2대중대질병<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>',
+            '<li class="mo_list nav5" onclick="dataRender.dementRendingFn()|dataRender.MoListActivation(5)|formRootInsert(5)"><img src="img/common/nav-deamentia.png" alt="">치매보험<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>',
+            '<li class="mo_list nav6" onclick="dataRender.carRendingFn()|dataRender.MoListActivation(6)|formRootInsert(6)"><img src="img/common/nav-car.png" alt="">자동차보험<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>'
         ];
 
         var resultTab1 = result[0].tab1
@@ -78,10 +78,10 @@ var dataRender = {
         var MoResultActivation = []
 
 
-        TabResultActivation.push('<li class="nav_list nav0" onclick="dataRender.HomeRendingFn() | dataRender.NavActivation(this)|dataRender.MoListActivation(0)"></li>')
+        TabResultActivation.push('<li class="nav_list nav0" onclick="dataRender.HomeRendingFn() | dataRender.NavActivation(this)|dataRender.MoListActivation(0) |formRootInsert(0)""></li>')
 
 
-        MoResultActivation.push('<li class="mo_list nav0" onclick="dataRender.HomeRendingFn() | dataRender.MoListActivation(0)"><img src="img/common/nav-home.png" alt="">홈<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>')
+        MoResultActivation.push('<li class="mo_list nav0" onclick="dataRender.HomeRendingFn() | dataRender.MoListActivation(0) |formRootInsert(0)""><img src="img/common/nav-home.png" alt="">홈<img class="arrow" src="img/common/mo-arrow.png" alt="arrow"></li>')
 
         function MenuActive(Nokey) {
             if (TabActivation[Nokey] == 1) {
@@ -208,6 +208,7 @@ var dataRender = {
             }
         })
     },
+    
     NavActivation: function (thistag) {
         var NavClass = document.querySelectorAll('.nav_list')
         for (var i = 0; i < NavClass.length; i++) {
@@ -1259,9 +1260,12 @@ var dataRender = {
         }
     }
 }
-
-setTimeout(() => {}, 100);
-
+let ThisFormData;
+formRootInsert = (Root) => {
+    let FormRoot = ["home","gender","baby","cancer","disease","dementia","car"]
+    ThisFormData = FormRoot[Root]
+    return ThisFormData;
+}
 function insertData() {
     var reqName = document.getElementById('reqname').value;
     var reqBirth = document.getElementById('reqbirth').value;
@@ -1270,7 +1274,7 @@ function insertData() {
     var reqSexflag = document.getElementById('gender').value;
     var Checked = document.getElementById('agree_check').checked;
     data = {
-        insult: [reqName, reqBirth, reqNumber, reqSexflag,reqArea],
+        insult: [reqName, reqBirth, reqNumber, reqSexflag,reqArea,ThisFormData],
         key:params.key,
         cflag: CflagName
     }
@@ -1295,6 +1299,7 @@ function insertData() {
                 if (InputreturnJson.result == 'ok') {
                     alert('상담신청이 완료되었습니다 :)')
                     // location.reload();
+                    console.log(InputreturnJson)
                 } else {
                     alert('no')
                 }
