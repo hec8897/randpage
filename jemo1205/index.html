@@ -26,6 +26,35 @@
     <script src="js/scrollMonitor.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/apps.min.js"></script>
+
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ?
+                        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '143615209554476');
+            fbq('track', 'PageView');
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148718314-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+    
+            gtag('config', 'UA-148718314-1');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+                src="https://www.facebook.com/tr?id=143615209554476&ev=PageView&noscript=1" /></noscript>
+        <!-- End Facebook Pixel Code -->
     <!--[if lt IE 9]>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/respond.min.js"></script>
@@ -45,10 +74,12 @@
         <div id="popup">
             <div class='popup_box'>
                 <div class="con con6" id='form'>
-                    <img src="images/x_btn.png" class='x_btn' onclick='popUpClose()' alt="">
+                    <!-- <img src="images/x_btn.png" class='x_btn' onclick='popUpClose()' alt=""> -->
                     <div class="tits">
-                        <p>지금도 줄줄 새고 있는 당신의 돈! 재테크친구들에서 잡아드리겠습니다.</p>
+                        <!-- <p>지금도 줄줄 새고 있는 당신의 돈! 재테크친구들에서 잡아드리겠습니다.</p> -->
                         <span>간단한 신청으로 무료 재무설계 서비스를 받아 보세요!</span>
+                        <p>상담신청을 완료하시면 테스트 결과와 함께 무료 재무 상담을 받으실 수 있습니다.</p>
+
                     </div>
                     <!--// input area -->
                     <div class="form_a">
@@ -404,7 +435,7 @@
                     <h3>10년 후의 통장 잔금이 달라지는</h3>
                     <h2>재테크친구들의 금융솔루션</h2>
 
-                    <div class="btn" onclick="popUpOpen()">
+                    <div class="btn" onclick="popUpOpen()" style="opacity: 0.0;">
                         <span>재무상담 신청하기</span>
                     </div>
                     <div class="bg_illust"><img src="images/bg_illust.png" alt="illust"></div>

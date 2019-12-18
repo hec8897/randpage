@@ -1,0 +1,221 @@
+@mainColor: #ec6647;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html,
+body {
+    font-size: 16px;
+    font-family: 'Roboto', '맑은고딕', sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+
+* {
+    color: #222;
+}
+
+div#wrap {
+    h2 {
+        text-align: center;
+        padding-top: 50px;
+        span{
+            display: block;;
+            font-size: 0.875rem;
+        }
+       
+    }
+    p.sample{
+        text-align: center;
+
+    }
+    h4{
+        text-align: center;;
+    }
+
+    form {
+        width: 400px;
+        height: 300px;
+        margin: 50px auto;
+        ;
+        background: #d0d0d0;
+      
+
+        .filebox input[type="file"] {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .filebox label {
+            display: inline-block;
+            padding: .5em .75em;
+            color: white;
+            font-size: inherit;
+            line-height: normal;
+            vertical-align: middle;
+            background-color: @mainColor;
+            cursor: pointer;
+            border-radius: .25em;
+        }
+        input.upload-name{
+            height: 30px;
+            vertical-align: middle;
+        }
+      
+        div {
+            text-align: center;
+
+            input.btn {
+                display: block;
+                box-shadow: none;
+                outline: 0px;
+                border: 0px;
+                cursor: pointer;
+                width: 180px;
+                height: 40px;
+                background: @mainColor;
+                margin: 20px auto;
+                ;
+                text-align: center;
+                ;
+                line-height: 40px;
+                color: white;
+                border-radius: 50px;
+                font-weight: bold;
+                ;
+            }
+        }
+
+    }
+
+    div.table {
+        width: 1000px;
+        min-height: 100px;
+        margin: 0 auto;
+        ;
+
+        div.navs {
+            width: 100%;
+            text-align: center;
+
+            div.nav {
+                cursor: pointer;
+                width: 200px;
+                height: 40px;
+                display: inline-block;
+                background: chocolate;
+                line-height: 40px;
+                margin-right: 20px;
+                margin-left: 20px;
+                color: white;
+            }
+        }
+
+        div.controller {
+            width: 60%;
+            margin: 0 auto;
+            ;
+
+            ul {
+                h3 {
+                    margin-top: 50px;
+
+                    span {
+                        font-weight: normal;
+                        font-size: 0.875rem;
+                    }
+                }
+
+                li {
+                    width: 100%;
+                    list-style-type: none;
+                    ;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+
+                    div.label {
+                        font-weight: bold;
+                        ;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 40px;
+                        border: 1px solid #d0d0d0;
+                        background: #d0d0d0;
+                        padding-left: 10px;
+                        box-sizing: border-box;
+                    }
+
+                    input[type='checkbox'] {
+                        width: 15px;
+                        height: 15px;
+                        vertical-align: middle;
+                    }
+
+
+                    label {
+                        cursor: pointer;
+                    }
+
+                    select {
+                        width: 100%;
+                        height: 40px;
+                        ;
+                        border: 1px solid #d0d0d0;
+                        background: #d0d0d0;
+                        padding-left: 10px;
+                        box-sizing: border-box;
+                        ;
+                    }
+
+                    select.resum_select {
+                        height: 40px;
+                        width: 20%;
+                    }
+
+                    input.resum_input {
+                        float: right;
+                        width: 78%;
+                        vertical-align: top;
+                        ;
+
+                    }
+                }
+
+                li.resums {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+    }
+
+    div.submit_btn {
+        display: block;
+        box-shadow: none;
+        outline: 0px;
+        border: 0px;
+        cursor: pointer;
+        width: 250px;
+        height: 50px;
+        background: @mainColor;
+        margin: 50px auto;
+        ;
+        text-align: center;
+        ;
+        line-height: 50px;
+        color: white;
+        border-radius: 50px;
+        font-weight: bold;
+        ;
+
+    }
+
+
+}

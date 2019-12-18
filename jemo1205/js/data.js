@@ -77,15 +77,21 @@ let QArendingFn = {
         } else {
             if (this.ResultCount < 4) {
                 NumberUl.style.display = 'none'
-                this.resultRender("A")
+                popUpOpen("A")
+                this.ResultCode = "A";
+                // this.resultRender("A")
             } else {
                 NumberUl.style.display = 'none'
-                this.resultRender("B")
+                popUpOpen("B")
+                this.ResultCode = "B";
+
+                // this.resultRender("B")
             }
         }
 
 
     },
+    ResultCode:"",
     resultArrayPush: function (no, i) {},
     resultPoint: 0,
     pointResult: function (no, point) {
@@ -97,12 +103,7 @@ let QArendingFn = {
             ResultRender.innerHTML = `<img src="images/con1_resultA_pc.png" class='pc_bg' alt="">
                                   <img src="images/con1_resultA_mo_bg.png" class='mo_bg' alt="">
                                     <div class='test_area'>
-                                        <div class='btn1 btns'>
-                                            <img src="images/consult_btn1.png" alt="신청버튼1" onclick='popUpOpen("resultA","btn1")'>
-                                        </div>
-                                        <div class='btn2 btns'>
-                                            <img src="images/consult_btn2.png" alt="신청 버튼2" onclick='popUpOpen("resultA","btn1")'> 
-                                        </div>
+                                      
                                     </div>
                                   `
         } else {
@@ -111,12 +112,7 @@ let QArendingFn = {
                 ResultRender.innerHTML = `<img src="images/con1_resultB_pc.png" class='pc_bg' alt="">
                                       <img src="images/con1_resultB_mo_bg.png" class='mo_bg' alt="">
                                       <div class='test_area'>
-                                        <div class='btn1 btns'>
-                                            <img src="images/consult_btn1.png" alt="신청버튼1" onclick='popUpOpen("resultB","btn1")'>
-                                        </div>
-                                        <div class='btn2 btns'>
-                                            <img src="images/consult_btn2.png" alt="신청버튼2" onclick='popUpOpen("resultB","btn1")'>
-                                        </div>
+                                   
                                     </div>`
             }
         }
@@ -219,10 +215,13 @@ var dataInserter = {
                         var returnInsert = JSON.parse(this.responseText)
                         if (returnInsert.phpresult == 'ok') {
                             alert('상담신청이 완료되었습니다:)')
-                            location.reload()
+                                QArendingFn.resultRender(QArendingFn.ResultCode)
+                                popUpClose() 
+                            // location.reload()
                         } else {
                             alert('상담신청 실패 관리자에게 문의해주세요')
-
+                            QArendingFn.resultRender(QArendingFn.ResultCode)
+                            popUpClose() 
                         }
                     }
                 }

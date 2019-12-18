@@ -1034,6 +1034,7 @@ div#wrap section.gene_section2 div.wrap div.top_banner {
   background-repeat: no-repeat;
   background-position: center;
   background-position: bottom;
+  background-size: cover;
 }
 @media (max-width:576px) {
   div#wrap section.gene_section2 div.wrap div.top_banner {
