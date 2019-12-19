@@ -115,8 +115,8 @@ var dataRender = {
 
         var NavListClass = document.querySelectorAll('.nav_list')
         var PCMedia = window.matchMedia('( min-width: 1200px )');
-        var smMedia = window.matchMedia('( max-width: 767px )');
-        var mdMedia = window.matchMedia('(min-width: 768px) and (max-width: 1024px)');
+        var smMedia = window.matchMedia('(max-width:576px)');
+        var mdMedia = window.matchMedia('(min-width: 577px) and (max-width: 1024px)');
         var documentWrap = document.getElementById('wrap').offsetWidth
 
         if (PCMedia.matches == true) {
@@ -301,9 +301,9 @@ var dataRender = {
         var Panel2 = document.getElementById('panel-2');
 
         Section2.className = 'section5 home-section2';
-        Section3.className = 'section6 home-section3';
+        Section3.className = '';
         Section4.className = 'banner-2';
-        Section5.className = 'introduce_consult';
+        Section5.className = 'section5 home-section5';
         Section6.className = 'forms';
         Section7.className = 'off-class';
         Section7.innerHTML=``
@@ -352,62 +352,70 @@ var dataRender = {
 
         Section2.innerHTML = `<div class="wrap">
                                 <h2>맞춤 보험 설계</h2>
-                                <p>오직 당신만을 위한<span>맞춤 보험 설계!</span></p>
+                                <p>오직 당신만을 위한<span> 맞춤 보험 설계!</span></p>
                                 <p>발병확률높은 질병에 대한 보장은 든든하게 채우고!<b> 불필요한 보장은 줄이고!</b></p>
                                 <div class="ilust"></div>
                             </div>`
         Panel2.innerHTML = `<div class="panel_bg"></div>`
+        section3.innerHTML=``;
 
-        Section3.innerHTML = `<div class="wrap">
-                                <h4>100세 시대! 더욱 똑똑하게 대비하는 방법!</h4>
-                                <h3><img src="img/section6_tit.png" alt="section6_tit"></h3>
-                                <h2>이런 분들께 추천합니다!</h2>
-                                <div class='panel_hexagons'>
-                                    <div class='hexagon_group hexagon_group_1'>
-                                        <div class="hexagon hexagon1"></div>
-                                        <div class="hexagon hexagon2"></div>
-                                    </div>
-                                    <div class='hexagon_group hexagon_group_2'>
-                                        <div class="hexagon hexagon3"></div>
-                                        <div class="hexagon hexagon4"></div>
-                                    </div>
-                                    <div class='hexagon_group hexagon_group_3'>
-                                        <div class="hexagon hexagon5"></div>
-                                        <div class="hexagon hexagon6"></div>
-                                    </div>
-                                </div>
-                            </div>`
-        Section4.style.display = 'block';
-        // Section5.innerHTML = `<div class="wrap">
-        //                         <div class="tit_box">
-        //                             <h2>LIFE NEW CARE PLANNER</h2>
-        //                             <h3 id='name_spot'></h3>
-        //                         </div>
-        //                         <div class="profils">
-        //                             <div class='photo' id='photo'>
+        // Section3.innerHTML = `<div class="wrap">
+        //                         <h4>100세 시대! 더욱 똑똑하게 대비하는 방법!</h4>
+        //                         <h3><img src="img/section6_tit.png" alt="section6_tit"></h3>
+        //                         <h2>이런 분들께 추천합니다!</h2>
+        //                         <div class='panel_hexagons'>
+        //                             <div class='hexagon_group hexagon_group_1'>
+        //                                 <div class="hexagon hexagon1"></div>
+        //                                 <div class="hexagon hexagon2"></div>
         //                             </div>
-        //                             <div class="profil_box">
-        //                                 <h3 id='coment_render'>
-        //                                     13년간 보험 전문가로 활동 하면서 쌓은 노하우로 당신의 미래를 더욱 든든하게 </br>지켜드리겠습니다.
-        //                                 </h3>
-        //                                 <div class="resume">
-        //                                     <ul id='resume'>
-        //                                         <li id='resume1'></li>
-        //                                         <li id='resume2'></li>
-        //                                         <li id='resume3'></li>
-        //                                         <li id='resume4'></li>
-        //                                         <li id='resume5'></li>
-        //                                     </ul>
-        //                                 </div>
+        //                             <div class='hexagon_group hexagon_group_2'>
+        //                                 <div class="hexagon hexagon3"></div>
+        //                                 <div class="hexagon hexagon4"></div>
+        //                             </div>
+        //                             <div class='hexagon_group hexagon_group_3'>
+        //                                 <div class="hexagon hexagon5"></div>
+        //                                 <div class="hexagon hexagon6"></div>
         //                             </div>
         //                         </div>
         //                     </div>`
+        Section4.style.display = 'block';
+        Section5.innerHTML = `<div class="wrap">
+                                <div class="tit_box">
+                                    <h2>이런 분들은 무료 보장분석서비스를</h2>
+                                    <h3>반드시! 꼭! 받으셔야 합니다</h3>
+                                </div>
+                                <div class='info_boxs'>
+                                    <div class='info_box info1'>
+                                        <h3>01</h3>
+                                        <p>메이저급 보험사 상품이라</p>
+                                        <p>묻고 따지지도 않고</p>
+                                        <p>가입하신 분</p>
+                                    </div>
+                                    <div class='info_box info2'>
+                                    <h3>02</h3>
+                                        <p>지인을 통해 어쩔 수 없이</p>
+                                        <p>가입하신 분</p>
+                                    </div>
+                                    <div class='info_box info3'>
+                                    <h3>03</h3>
+                                        <p>가입한 지 10년 이상</p>
+                                        <p>지났는데 한 번도</p>
+                                        <p>점검받지 않으신 분</p>
+                                    </div>
+                                    <div class='info_box info4'>
+                                    <h3>04</h3>
+                                        <p>너무 여러 개를 가입하여</p>
+                                        <p>보장내역 중복이</p>
+                                        <p>의심스러우신 분</p>
+                                    </div>
+                                </div>
+                            
+                            </div>`
         Section6.className = 'forms'
         Section6.innerHTML = `
                             <div class="wrap">
-                            <h2>미래가 걱정되시나요?</h2>
-                            <h3 class='main_span'><span>유전자 검사로 <b>해답을 얻으세요!</b></span></h3>
-                            <p>유전자 검사 및 보장분석과 관련하여 <span>궁금하신점은 언제나 편하게 문의주세요!</span></p>
+                            <h2>보험료 줄이고 싶으신가요?</h2>
+                            <p>보장분석과 관련하여<span> 궁금하신 점은 언제나 편하게 문의주세요!</span></p>
                             ${this.formTag}`
 
         setTimeout(function(){
@@ -439,7 +447,7 @@ var dataRender = {
         Section8.className = 'forms';
         Section8.innerHTML = `
                              <div class="wrap">
-                             <h3><span>유전자 검사</span></h3>
+                             <h3><span>무료 유전자 검사</span></h3>
                              <p>유전자 검사 및 보장분석과 관련하여 <span>궁금하신점은 언제나 편하게 문의주세요!</span></p>
                              ${this.formTag}`;
         Section2.className = 'section2 gene_section2';
@@ -454,8 +462,9 @@ var dataRender = {
                             </div>
                             <div class='tab_bottoms right_bottom_img'>
                             <img src='img/gene/section3_top_right.png'>
-                            <p>가족력 있는 분들은 발병확률을 미리 확인하고</p>
-                            <p><b>철저한 대비를 세울 수 있습니다.</b></p>
+                            <p>가족력 있는 분들은 발병 확률 높은</p>
+                            <p>질병에 대한 보장은 든든하게 채우고</p>
+                            <p><b>불필요한 보장은 줄일 수 있습니다.</b></p>
                             </div>
                             </div>
 
@@ -1351,7 +1360,7 @@ function insertData() {
     data = {
         insult: [reqName, reqBirth, reqNumber, reqSexflag,reqArea,ThisFormData],
         key:params.key,
-        cflag: CflagName
+        // cflag: CflagName
     }
     if (reqName == '') {
         alert('성함을 입력해주세요')

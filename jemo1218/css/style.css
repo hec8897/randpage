@@ -147,23 +147,23 @@ html,
 body {
   font-size: 16px;
   font-family: 'Roboto', '맑은고딕', sans-serif;
-  /* min-width: 1200px; */
+  min-width: 1200px;
   overflow-x: hidden;
-  /* max-width: 1920px; */
+  max-width: 1920px;
   margin: 0 auto;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   html,
   body {
-    /* max-width: 1024px; */
-    /* min-width: 768px; */
+    max-width: 1024px;
+    min-width: 577px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   html,
   body {
-    /* max-width: 575px; */
-    /* min-width: 360px; */
+    max-width: 576px;
+    min-width: 360px;
   }
 }
 .wraps {
@@ -173,12 +173,12 @@ body {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   .wraps {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   .wraps {
     padding-top: 50px;
   }
@@ -203,7 +203,7 @@ div#wrap div.side_nav .mo_nav {
   position: absolute;
   left: -50%;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap div.side_nav .mo_nav {
     width: 60%;
   }
@@ -224,7 +224,7 @@ div#wrap div.side_nav .mo_nav div.nametag {
   text-align: center;
   letter-spacing: -1px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap div.side_nav .mo_nav div.nametag {
     font-size: 0.875rem;
   }
@@ -248,7 +248,7 @@ div#wrap div.side_nav .mo_nav ul.mo_nav_list li {
   padding-left: 10px;
   line-height: 45px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap div.side_nav .mo_nav ul.mo_nav_list li {
     font-size: 0.875rem;
   }
@@ -270,7 +270,7 @@ div#wrap div.side_nav .side_nav_out {
   height: 100vh;
   float: right;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap div.side_nav .side_nav_out {
     width: 40%;
   }
@@ -304,31 +304,55 @@ div#wrap header {
   background-size: cover;
   overflow-x: hidden;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap header {
     background-position: bottom;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap header {
     background-position: bottom;
   }
 }
 div#wrap header div.head {
-  width: 100%;
+  max-width: 1200px;
   height: 80px;
-  display: none;
-  position: fixed;
   z-index: 990;
+  margin: 0 auto;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap header div.head {
     display: block;
+    width: 100%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap header div.head {
     display: block;
+    width: 100%;
+  }
+}
+div#wrap header div.head h1 {
+  width: 150px;
+  float: left;
+  padding-top: 30px;
+  padding-left: 10px;
+}
+div#wrap header div.head h1 img {
+  width: 100%;
+}
+@media (min-width: 577px) and (max-width: 1200px) {
+  div#wrap header div.head h1 {
+    width: 120px;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+}
+@media (max-width:576px) {
+  div#wrap header div.head h1 {
+    width: 120px;
+    padding-top: 20px;
+    padding-left: 10px;
   }
 }
 div#wrap header div#nav-toggle {
@@ -337,6 +361,22 @@ div#wrap header div#nav-toggle {
   float: right;
   margin-right: 10px;
   margin-top: 10px;
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+@media (min-width: 577px) and (max-width: 1200px) {
+  div#wrap header div#nav-toggle {
+    display: block;
+    padding-top: 20px;
+  }
+}
+@media (max-width:576px) {
+  div#wrap header div#nav-toggle {
+    display: block;
+    padding-top: 15px;
+  }
 }
 div#wrap header div#nav-toggle span {
   width: 100%;
@@ -349,13 +389,13 @@ div#wrap header div#nav-toggle span:nth-child(3) {
   width: 50%;
   float: right;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap header {
     background-size: cover;
     height: 630px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap header {
     background-size: cover;
   }
@@ -366,7 +406,7 @@ div#wrap nav {
   border-bottom: 1px solid #d0d0d0;
   box-sizing: border-box;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap nav {
     height: 120px;
     border: 0px;
@@ -381,22 +421,22 @@ div#wrap nav ul {
   box-sizing: border-box;
   padding: 0px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap nav ul {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap nav ul {
     padding-top: 50px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap nav ul {
     padding: 0px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap nav ul {
     padding: 0px;
   }
@@ -412,14 +452,14 @@ div#wrap nav ul li.nav_list {
   border-right: 1px solid #d0d0d0;
   width: calc(100%/6);
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap nav ul li.nav_list {
     width: 50px;
     height: 60px;
     font-size: 0.875rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap nav ul li.nav_list {
     width: 50px;
     height: 60px;
@@ -435,12 +475,12 @@ div#wrap nav ul li.nav_list div.nav_img {
   margin-right: 5px;
   margin-left: -10px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap nav ul li.nav_list div.nav_img {
     display: none;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap nav ul li.nav_list div.nav_img {
     display: none;
   }
@@ -510,13 +550,13 @@ div#wrap nav ul li:nth-child(1) {
   border-left: 1px solid #d0d0d0;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap nav ul li:nth-child(1) {
     display: none;
     border-left: 0px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap nav ul li:nth-child(1) {
     display: none;
   }
@@ -525,7 +565,7 @@ div#wrap nav ul li:nth-child(1) img {
   display: inline;
   margin: 0px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap nav ul li:nth-last-child(1) {
     border: 0px;
   }
@@ -566,7 +606,7 @@ div#wrap p.mo_ment {
   display: none;
   text-align: center;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap p.mo_ment {
     display: block;
     font-size: 1.2rem;
@@ -581,12 +621,12 @@ div#wrap section.section1 {
   width: 100%;
   height: 580px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 {
     height: 950px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 {
     height: 760px;
   }
@@ -599,17 +639,17 @@ div#wrap section.section1 div.wrap {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap {
     padding: 0px;
   }
@@ -621,12 +661,12 @@ div#wrap section.section1 div.wrap h3 {
   margin-bottom: 10px;
   letter-spacing: -1px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap h3 {
     font-size: 1.125rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap h3 {
     font-size: 1.688rem;
   }
@@ -637,12 +677,12 @@ div#wrap section.section1 div.wrap h2 {
   font-weight: bold;
   letter-spacing: -3px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap h2 {
     font-size: 2.5rem;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap h2 {
     font-size: 2.5rem;
   }
@@ -652,12 +692,12 @@ div#wrap section.section1 div.wrap ul {
   height: 260px;
   margin-top: 30px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul {
     height: 680px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap ul {
     width: 70%;
     margin: 30px auto;
@@ -673,7 +713,7 @@ div#wrap section.section1 div.wrap ul li {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li {
     width: 100%;
     height: 170px;
@@ -687,7 +727,7 @@ div#wrap section.section1 div.wrap ul li div.li_wrap {
   background-size: contain;
   position: relative;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li div.li_wrap div.sm-arrow {
     width: 50px;
     height: 30px;
@@ -700,19 +740,19 @@ div#wrap section.section1 div.wrap ul li div.li_wrap {
     background-position: center;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li div.li_wrap {
     height: 100%;
     width: 100%;
     margin-top: 20px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li {
     margin-top: 20px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap ul li {
     width: 48%;
     margin-bottom: 30px;
@@ -742,7 +782,7 @@ div#wrap section.section1 div.wrap ul li p {
 div#wrap section.section1 div.wrap ul li:nth-child(1) {
   background-image: url(../img/section1-list1-bg.png);
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li:nth-child(1) {
     background-image: none;
     width: 90%;
@@ -766,7 +806,7 @@ div#wrap section.section1 div.wrap ul li:nth-child(1) {
 div#wrap section.section1 div.wrap ul li:nth-child(1) div.li_wrap {
   background-image: url(../img/section1-list1-text.png);
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li:nth-child(1) div.li_wrap {
     background-image: none;
   }
@@ -774,7 +814,7 @@ div#wrap section.section1 div.wrap ul li:nth-child(1) div.li_wrap {
 div#wrap section.section1 div.wrap ul li:nth-child(2) {
   background-image: url(../img/section1-list2-bg.png);
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li:nth-child(2) {
     background-image: none;
     width: 90%;
@@ -795,7 +835,7 @@ div#wrap section.section1 div.wrap ul li:nth-child(2) {
     background-image: url(../img/section1-list2-arrow.png);
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap ul li:nth-child(2) {
     transform: rotate(90deg);
   }
@@ -803,12 +843,12 @@ div#wrap section.section1 div.wrap ul li:nth-child(2) {
 div#wrap section.section1 div.wrap ul li:nth-child(2) div.li_wrap {
   background-image: url(../img/section1-list2-text.png);
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li:nth-child(2) div.li_wrap {
     background-image: none;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap ul li:nth-child(2) div.li_wrap {
     transform: rotate(-90deg);
     box-sizing: border-box;
@@ -819,7 +859,7 @@ div#wrap section.section1 div.wrap ul li:nth-child(2) div.li_wrap {
 div#wrap section.section1 div.wrap ul li:nth-child(3) {
   background-image: url(../img/section1-list3-bg.png);
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li:nth-child(3) {
     background-image: none;
     width: 90%;
@@ -840,7 +880,7 @@ div#wrap section.section1 div.wrap ul li:nth-child(3) {
     background-image: url(../img/section1-list3-arrow.png);
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap ul li:nth-child(3) {
     background-image: url(../img/section1-list4-bg.png);
   }
@@ -848,12 +888,12 @@ div#wrap section.section1 div.wrap ul li:nth-child(3) {
 div#wrap section.section1 div.wrap ul li:nth-child(3) div.li_wrap {
   background-image: url(../img/section1-list3-text.png);
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap ul li:nth-child(3) div.li_wrap {
     background-image: url(../img/section1-list4-text.png);
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li:nth-child(3) div.li_wrap {
     background-image: none;
   }
@@ -865,7 +905,7 @@ div#wrap section.section1 div.wrap ul li:nth-child(3) div.li_wrap img {
 div#wrap section.section1 div.wrap ul li:nth-child(4) {
   background-image: url(../img/section1-list4-bg.png);
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li:nth-child(4) {
     background-image: none;
     width: 90%;
@@ -887,7 +927,7 @@ div#wrap section.section1 div.wrap ul li:nth-child(4) {
 div#wrap section.section1 div.wrap ul li:nth-child(4) div.li_wrap {
   background-image: url(../img/section1-list4-text.png);
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap ul li:nth-child(4) div.li_wrap {
     padding-top: 40px;
     box-sizing: border-box;
@@ -898,12 +938,12 @@ div#wrap section.section1 div.wrap ul li:nth-child(4) div.li_wrap {
     transform: rotate(-180deg);
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap ul li:nth-child(4) div.li_wrap {
     background-image: none;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap ul li:nth-child(4) {
     background-image: url(../img/section1-list3-bg.png);
     transform: rotate(-180deg);
@@ -928,13 +968,13 @@ div#wrap section.section1 div.wrap div.sticker {
   animation-iteration-count: infinite;
   -webkit-animation-fill-mode: forwards;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section1 div.wrap div.sticker {
     left: 0px;
     top: 650px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section1 div.wrap div.sticker {
     top: 410px;
     left: 70px;
@@ -960,14 +1000,14 @@ div#wrap section.panel-1 div.panel-img {
   background-position: center;
   background-size: cover;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.panel-1 div.panel-img {
     margin-top: 20px;
     background-size: cover;
     background-image: url(../img/panel-1-md_bg.jpg);
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.panel-1 div.panel-img {
     background-image: url(../img/panel-1-sm_bg.jpg);
     background-size: cover;
@@ -984,7 +1024,7 @@ div#wrap section.gene_section2 {
   padding-bottom: 100px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section2 {
     margin-top: 0px;
     height: 600px;
@@ -992,13 +1032,12 @@ div#wrap section.gene_section2 {
     padding: 0px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section2 {
     height: 860px;
     padding: 0px;
     margin-top: 0px;
     margin-bottom: 50px;
-    background-image: none;
   }
 }
 div#wrap section.gene_section2 div.wrap {
@@ -1010,17 +1049,17 @@ div#wrap section.gene_section2 div.wrap {
   height: 680px;
   padding: 0px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section2 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section2 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section2 div.wrap {
     height: 840px;
     padding: 0px;
@@ -1036,15 +1075,17 @@ div#wrap section.gene_section2 div.wrap div.top_banner {
   background-position: bottom;
   background-size: cover;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section2 div.wrap div.top_banner {
+    width: 100%;
+    margin: 0 auto;
     height: 500px;
     background-image: url(../img/gene/top_bottom_sm.jpg);
-    background-size: cover;
-    background-position: bottom;
+    background-size: contain;
+    background-position: 50% 55%;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section2 div.wrap div.top_banner {
     width: 95%;
     margin: 0 auto;
@@ -1059,18 +1100,18 @@ div#wrap section.gene_section2 div.wrap div.bottom_banner {
   height: 50%;
   background: white;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section2 div.wrap div.bottom_banner {
     width: 95%;
     margin: 0 auto;
     height: 230px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section2 div.wrap div.bottom_banner {
-    width: 90%;
+    width: 100%;
     height: 370px;
-    margin: 20px auto;
+    margin: 0 auto;
   }
 }
 div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms {
@@ -1083,12 +1124,12 @@ div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms {
   float: left;
   border-bottom: 1px solid #d0d0d0;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms {
     padding-top: 35px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms {
     width: 100%;
     height: 50%;
@@ -1099,12 +1140,12 @@ div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms {
 div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms img {
   margin-bottom: 30px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms img {
     height: 60px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms img {
     height: 45px;
   }
@@ -1115,12 +1156,12 @@ div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms p {
   margin-bottom: 5px;
   color: #444;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms p {
     font-size: 1.125rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms p {
     font-size: 0.95rem;
     letter-spacing: -1px;
@@ -1134,7 +1175,7 @@ div#wrap section.gene_section2 div.wrap div.bottom_banner div.tab_bottoms p span
   font-weight: bold;
   color: #e42f20;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section2 div.wrap div.bottom_banner div.right_bottom_img {
     border: 0px;
   }
@@ -1147,13 +1188,13 @@ div#wrap section.baby_section2 {
   background-size: cover;
   height: 550px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section2 {
     height: 500px;
     background: #f0f0f0;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 {
     background: #f0f0f0;
     height: 680px;
@@ -1166,12 +1207,12 @@ div#wrap section.baby_section2 div.wrap {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section2 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 div.wrap {
     padding-top: 50px;
   }
@@ -1180,7 +1221,7 @@ div#wrap section.baby_section2 .left_tab {
   width: 30%;
   float: left;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section2 .left_tab {
     width: 100%;
     text-align: center;
@@ -1189,7 +1230,7 @@ div#wrap section.baby_section2 .left_tab {
     display: inline;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 .left_tab {
     width: 100%;
     text-align: center;
@@ -1202,7 +1243,7 @@ div#wrap section.baby_section2 .left_tab h2 {
   color: #222222;
   margin-bottom: 30px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 .left_tab h2 {
     font-size: 1.563rem;
   }
@@ -1212,7 +1253,7 @@ div#wrap section.baby_section2 .left_tab p {
   margin-bottom: 5px;
   color: #444444;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 .left_tab p {
     font-size: 1rem;
   }
@@ -1220,7 +1261,7 @@ div#wrap section.baby_section2 .left_tab p {
 div#wrap section.baby_section2 .right_tab {
   float: right;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section2 .right_tab {
     width: 100%;
   }
@@ -1229,12 +1270,12 @@ div#wrap section.baby_section2 .right_tab .page1-section1-ani {
   padding-top: 70px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section2 .right_tab .page1-section1-ani {
     padding-top: 30px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 .right_tab .page1-section1-ani {
     padding-top: 20px;
   }
@@ -1253,7 +1294,7 @@ div#wrap section.baby_section2 .right_tab .page1-section1-ani ul {
   position: relative;
   z-index: 10;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 .right_tab .page1-section1-ani ul {
     height: 450px;
   }
@@ -1267,7 +1308,7 @@ div#wrap section.baby_section2 .right_tab .page1-section1-ani ul li {
   margin-right: 10px;
   overflow: hidden;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 .right_tab .page1-section1-ani ul li {
     height: 50%;
     margin-left: 10px;
@@ -1294,7 +1335,7 @@ div#wrap section.baby_section2 .right_tab .page1-section1-ani ul li p {
   margin-bottom: 5px;
   color: #666666;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 .right_tab .page1-section1-ani ul li p {
     width: 100%;
     position: absolute;
@@ -1312,7 +1353,7 @@ div#wrap section.baby_section2 .right_tab .page1-section1-ani ul li p.line3 {
 div#wrap section.baby_section2 .right_tab .page1-section1-ani ul li:nth-child(1) {
   margin-left: 0px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 .right_tab .page1-section1-ani ul li:nth-child(1) {
     margin-left: 10px;
   }
@@ -1329,7 +1370,7 @@ div#wrap section.baby_section2 .right_tab .page1-section1-ani ul li:nth-child(3)
 div#wrap section.baby_section2 .right_tab .page1-section1-ani ul li:nth-last-child(1) {
   margin-right: 0px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 .right_tab .page1-section1-ani ul li:nth-last-child(1) {
     margin-right: 10px;
   }
@@ -1345,7 +1386,7 @@ div#wrap section.baby_section2 .right_tab .page1-section1-ani p.ani_line {
   top: -150px;
   z-index: 1;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section2 .right_tab .page1-section1-ani p.ani_line {
     display: none;
   }
@@ -1360,14 +1401,14 @@ div#wrap section.cancer_section2 {
   background-position: bottom;
   background-size: cover;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section2 {
     height: 600px;
     padding-top: 30px;
     background: #f0f0f0;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section2 {
     width: 100%;
     height: 600px;
@@ -1381,12 +1422,12 @@ div#wrap section.cancer_section2 div.wrap {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section2 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section2 div.wrap {
     padding-top: 50px;
   }
@@ -1395,7 +1436,7 @@ div#wrap section.cancer_section2 .left_tab {
   width: 40%;
   float: left;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section2 .left_tab {
     width: 100%;
     text-align: center;
@@ -1404,7 +1445,7 @@ div#wrap section.cancer_section2 .left_tab {
     display: inline;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section2 .left_tab {
     width: 100%;
     text-align: center;
@@ -1417,7 +1458,7 @@ div#wrap section.cancer_section2 .left_tab h2 {
   color: #222222;
   margin-bottom: 30px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section2 .left_tab h2 {
     font-size: 1.563rem;
   }
@@ -1427,7 +1468,7 @@ div#wrap section.cancer_section2 .left_tab p {
   margin-bottom: 5px;
   color: #444444;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section2 .left_tab p {
     font-size: 1rem;
     letter-spacing: -1px;
@@ -1436,12 +1477,12 @@ div#wrap section.cancer_section2 .left_tab p {
 div#wrap section.cancer_section2 .right_tab {
   float: right;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section2 .right_tab {
     width: 100%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section2 .right_tab {
     width: 100%;
   }
@@ -1449,12 +1490,12 @@ div#wrap section.cancer_section2 .right_tab {
 div#wrap section.cancer_section2 .right_tab .ani_section {
   width: 700px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section2 .right_tab .ani_section {
     width: 100%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section2 .right_tab .ani_section {
     width: 100%;
   }
@@ -1462,7 +1503,7 @@ div#wrap section.cancer_section2 .right_tab .ani_section {
 div#wrap section.cancer_section2 .right_tab .page2-section1-ani {
   text-align: center;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section2 .right_tab .page2-section1-ani {
     width: 100%;
   }
@@ -1475,7 +1516,7 @@ div#wrap section.cancer_section2 .right_tab .page2-section1-ani h2 {
   letter-spacing: -1px;
   font-weight: bold;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section2 .right_tab .page2-section1-ani h2 {
     padding-top: 30px;
   }
@@ -1483,7 +1524,7 @@ div#wrap section.cancer_section2 .right_tab .page2-section1-ani h2 {
 div#wrap section.cancer_section2 .right_tab .page2-section1-ani h2 span {
   color: #e04134;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section2 .right_tab .page2-section1-ani h2 span {
     display: block;
   }
@@ -1567,12 +1608,12 @@ div#wrap section.disease_section2 {
   height: 600px;
   background-color: #f0f0f0;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 {
     height: 800px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 {
     height: 800px;
   }
@@ -1585,12 +1626,12 @@ div#wrap section.disease_section2 div.wrap {
   padding-top: 50px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 div.wrap {
     padding-top: 50px;
   }
@@ -1602,13 +1643,13 @@ div#wrap section.disease_section2 h2 {
   color: #222222;
   margin-bottom: 30px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 h2 {
     text-align: center;
     font-size: 1.875rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 h2 {
     font-size: 1.563rem;
     text-align: center;
@@ -1623,13 +1664,13 @@ div#wrap section.disease_section2 p {
   font-size: 1.125rem;
   letter-spacing: -1px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 p {
     text-align: center;
     font-size: 1rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 p {
     text-align: center;
   }
@@ -1639,7 +1680,7 @@ div#wrap section.disease_section2 .page3-section1-ani {
   width: 100%;
   height: 280px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 .page3-section1-ani {
     height: 400px;
   }
@@ -1653,7 +1694,7 @@ div#wrap section.disease_section2 .page3-section1-ani .tabs {
   padding: 30px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 .page3-section1-ani .tabs {
     width: 95%;
     height: 280px;
@@ -1663,7 +1704,7 @@ div#wrap section.disease_section2 .page3-section1-ani .tabs {
     float: inherit;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 .page3-section1-ani .tabs {
     width: 95%;
     height: 280px;
@@ -1679,13 +1720,13 @@ div#wrap section.disease_section2 .page3-section1-ani .tabs h3 {
   font-weight: bold;
   line-height: 1.3rem;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 .page3-section1-ani .tabs h3 {
     width: 80%;
     margin: 0 auto;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 .page3-section1-ani .tabs h3 {
     padding-top: 20px;
   }
@@ -1699,14 +1740,14 @@ div#wrap section.disease_section2 .page3-section1-ani .tabs p {
 div#wrap section.disease_section2 .page3-section1-ani .tabs p span {
   color: #777777;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 .page3-section1-ani .tabs p {
     width: 80%;
     text-align: left;
     margin: 0 auto;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 .page3-section1-ani .tabs p {
     text-align: left;
   }
@@ -1720,12 +1761,12 @@ div#wrap section.disease_section2 .page3-section1-ani .tabs div.graph_tab {
   margin: 25px auto;
   position: relative;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 .page3-section1-ani .tabs div.graph_tab {
     width: 80%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 .page3-section1-ani .tabs div.graph_tab {
     width: 100%;
   }
@@ -1749,7 +1790,7 @@ div#wrap section.disease_section2 .page3-section1-ani .tabs div.graph_tab ul {
   border-bottom: 1px solid #d0d0d0;
   margin: 0 auto;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 .page3-section1-ani .tabs div.graph_tab ul {
     height: 80%;
   }
@@ -1776,7 +1817,7 @@ div#wrap section.disease_section2 .page3-section1-ani .tabs div.graph_tab ul li 
   color: #222222;
   opacity: 0;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 .page3-section1-ani .tabs div.graph_tab ul li div.graph_wrap p {
     font-size: 0.773rem;
     white-space: nowrap;
@@ -1841,12 +1882,12 @@ div#wrap section.disease_section2 .page3-section1-ani .tabs div.graph_tab ul.r_c
 div#wrap section.disease_section2 .page3-section1-ani .right_tab {
   float: right;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 .page3-section1-ani .right_tab {
     float: inherit;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 .page3-section1-ani .right_tab {
     float: inherit;
   }
@@ -1858,13 +1899,13 @@ div#wrap section.disease_section2 .page3-section1-ani .right_tab p.gender_tab {
   font-size: 0.775rem;
   color: #777777;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section2 .page3-section1-ani .right_tab p.gender_tab {
     left: 10px;
     top: -15px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 .page3-section1-ani .right_tab p.gender_tab {
     left: 5px;
   }
@@ -1896,7 +1937,7 @@ div#wrap section.disease_section2 .page3-section1-ani .right_tab ul.graph_tab li
   margin: 0 auto;
   position: relative;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section2 .page3-section1-ani .right_tab ul.graph_tab li div.stick_wrap {
     width: 65%;
   }
@@ -1951,12 +1992,12 @@ div#wrap section.dement_section2 {
   height: 600px;
   background-color: #f0f0f0;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 {
     height: 850px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 {
     height: 930px;
   }
@@ -1969,22 +2010,22 @@ div#wrap section.dement_section2 div.wrap {
   padding-top: 50px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 div.wrap {
     padding-top: 50px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 div.wrap {
     padding-top: 30px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 div.wrap {
     padding-top: 30px;
   }
@@ -1996,7 +2037,7 @@ div#wrap section.dement_section2 h2 {
   color: #222222;
   margin-bottom: 30px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 h2 {
     text-align: center;
   }
@@ -2004,7 +2045,7 @@ div#wrap section.dement_section2 h2 {
     display: block;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 h2 {
     font-size: 1.536rem;
     text-align: center;
@@ -2018,12 +2059,12 @@ div#wrap section.dement_section2 p {
   font-size: 1.125rem;
   letter-spacing: -1px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 p {
     text-align: center;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 p {
     font-size: 1rem;
     text-align: center;
@@ -2048,7 +2089,7 @@ div#wrap section.dement_section2 .page4-section1-ani .tabs {
   padding: 30px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 .page4-section1-ani .tabs {
     display: block;
     width: 90%;
@@ -2056,7 +2097,7 @@ div#wrap section.dement_section2 .page4-section1-ani .tabs {
     float: inherit;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .tabs {
     display: block;
     width: 95%;
@@ -2070,14 +2111,14 @@ div#wrap section.dement_section2 .page4-section1-ani .tabs h3 {
   font-weight: bold;
   line-height: 1.3rem;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 .page4-section1-ani .tabs h3 {
     width: 80%;
     margin: 0 auto;
     text-align: left;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .tabs h3 {
     letter-spacing: -1px;
   }
@@ -2088,14 +2129,14 @@ div#wrap section.dement_section2 .page4-section1-ani .tabs p {
   color: #777777;
   line-height: 1.2rem;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 .page4-section1-ani .tabs p {
     width: 80%;
     margin: 0 auto;
     text-align: left;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .tabs p {
     text-align: left;
   }
@@ -2106,12 +2147,12 @@ div#wrap section.dement_section2 .page4-section1-ani .tabs div.graph_tab {
   margin: 25px auto;
   position: relative;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 .page4-section1-ani .tabs div.graph_tab {
     width: 80%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .tabs div.graph_tab {
     width: 100%;
   }
@@ -2157,7 +2198,7 @@ div#wrap section.dement_section2 .page4-section1-ani .tabs div.graph_tab ul li d
   color: #222222;
   opacity: 0;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .tabs div.graph_tab ul li div.graph_wrap p {
     font-size: 0.563rem;
     text-align: center;
@@ -2222,12 +2263,12 @@ div#wrap section.dement_section2 .page4-section1-ani .tabs div.graph_tab ul.r_co
 div#wrap section.dement_section2 .page4-section1-ani .right_tab {
   float: right;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab {
     float: inherit;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab {
     float: inherit;
     height: 400px;
@@ -2237,12 +2278,12 @@ div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_left {
   width: 40%;
   float: left;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_left {
     margin-left: 10%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_left {
     width: 100%;
     height: 100px;
@@ -2271,7 +2312,7 @@ div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_left p.coun
 div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_left p.count_sticker b:nth-child(2) span {
   background: #999999;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_left p.count_sticker {
     margin-top: 35px;
   }
@@ -2282,7 +2323,7 @@ div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_right {
   float: right;
   position: relative;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_right {
     position: absolute;
     width: 50%;
@@ -2292,7 +2333,7 @@ div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_right {
     text-align: center;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_right {
     width: 100%;
     height: 250px;
@@ -2316,12 +2357,12 @@ div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_right div.l
   background-position: right;
   text-align: right;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_right div.line {
     right: 100px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_right div.line {
     right: 30px;
     top: 90px;
@@ -2333,13 +2374,13 @@ div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_right p.lin
   transform: translateY(-18px);
   opacity: 0;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_right p.line_text {
     text-align: right;
     right: 100px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section2 .page4-section1-ani .right_tab .tab_right p.line_text {
     right: 30px;
     top: 75px;
@@ -2456,7 +2497,7 @@ div#wrap section.car_section2 {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section2 {
     background-image: url(../img/car/section2_sm_bg.jpg);
     background-position-x: 55%;
@@ -2472,12 +2513,12 @@ div#wrap section.car_section2 div.text_box {
   text-align: center;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.car_section2 div.text_box {
     width: 95%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section2 div.text_box {
     width: 95%;
   }
@@ -2488,7 +2529,7 @@ div#wrap section.car_section2 div.text_box h3 {
   font-weight: bold;
   letter-spacing: -1px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section2 div.text_box h3 {
     font-size: 1.5rem;
   }
@@ -2503,7 +2544,7 @@ div#wrap section.car_section2 div.text_box h4 {
 div#wrap section.car_section2 div.text_box h4 span {
   color: #f7db1e;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section2 div.text_box h4 {
     font-size: 1.5rem;
   }
@@ -2521,7 +2562,7 @@ div#wrap section.car_section2 div.text_box p {
 div#wrap section.car_section2 div.text_box p span {
   color: white;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section2 div.text_box p {
     font-size: 1.125rem;
     margin-top: 15px;
@@ -2535,12 +2576,12 @@ div#wrap section.car_section2 div.text_box p span {
 div#wrap section.gene_section3 {
   height: 1200px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 {
     height: 900px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 {
     height: 1750px;
   }
@@ -2552,12 +2593,12 @@ div#wrap section.gene_section3 div.wrap {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 div.wrap {
     padding-top: 50px;
   }
@@ -2568,7 +2609,7 @@ div#wrap section.gene_section3 div.wrap h2 {
   font-size: 2.5rem;
   font-weight: bold;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 div.wrap h2 {
     font-size: 1.875rem;
   }
@@ -2590,7 +2631,7 @@ div#wrap section.gene_section3 div.wrap div.h2_label span {
 div#wrap section.gene_section3 div.wrap div.h2_label b {
   color: white;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 div.wrap div.h2_label {
     width: 90%;
     height: 60px;
@@ -2609,12 +2650,12 @@ div#wrap section.gene_section3 div.wrap p {
   font-size: 1.5rem;
   margin-bottom: 5px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap p {
     font-size: 1.125rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 div.wrap p {
     font-size: 1rem;
   }
@@ -2632,12 +2673,12 @@ div#wrap section.gene_section3 div.wrap div.photo_box {
   height: 300px;
   margin: 20px auto;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 div.wrap div.photo_box {
     height: 360px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap div.photo_box {
     height: 200px;
     margin-top: 30px;
@@ -2651,12 +2692,12 @@ div#wrap section.gene_section3 div.wrap div.photo_box div.photos {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap div.photo_box div.photos {
     background-size: cover;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 div.wrap div.photo_box div.photos {
     width: 50%;
     height: 50%;
@@ -2684,7 +2725,7 @@ div#wrap section.gene_section3 div.wrap h3 span {
   color: #e42f20;
   font-weight: bold;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 div.wrap h3 {
     font-size: 1.25rem;
   }
@@ -2703,7 +2744,7 @@ div#wrap section.gene_section3 div.wrap div.circle_box div.circles {
   overflow: hidden;
   border-radius: 100%;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.circles {
     width: 260px;
     height: 260px;
@@ -2717,7 +2758,7 @@ div#wrap section.gene_section3 div.wrap div.circle_box div.circles h3 {
   font-weight: bold;
   margin-top: 80px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.circles h3 {
     margin-top: 50px;
   }
@@ -2728,7 +2769,7 @@ div#wrap section.gene_section3 div.wrap div.circle_box div.circles div.line {
   background: white;
   margin: 30px auto;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.circles div.line {
     margin: 15px auto;
   }
@@ -2738,7 +2779,7 @@ div#wrap section.gene_section3 div.wrap div.circle_box div.circles p {
   font-size: 1rem;
   letter-spacing: -1px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.circles p {
     font-size: 0.875rem;
   }
@@ -2746,7 +2787,7 @@ div#wrap section.gene_section3 div.wrap div.circle_box div.circles p {
 div#wrap section.gene_section3 div.wrap div.circle_box div.circle1 {
   background: #7aab2c;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.circle1 {
     left: 1%;
   }
@@ -2754,13 +2795,13 @@ div#wrap section.gene_section3 div.wrap div.circle_box div.circle1 {
 div#wrap section.gene_section3 div.wrap div.circle_box div.circle2 {
   background: #e9992a;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.circle2 {
     left: 50%;
     transform: translateX(-50%);
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.circle2 {
     transform: translateY(-10%);
   }
@@ -2768,12 +2809,12 @@ div#wrap section.gene_section3 div.wrap div.circle_box div.circle2 {
 div#wrap section.gene_section3 div.wrap div.circle_box div.circle3 {
   background: #e04134;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.circle3 {
     right: 1%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.circle3 {
     transform: translateY(-20%);
   }
@@ -2785,12 +2826,12 @@ div#wrap section.gene_section3 div.wrap div.circle_box div.plus_img {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.plus_img {
     display: none;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section3 div.wrap div.circle_box div.plus_img {
     display: none;
   }
@@ -2804,14 +2845,14 @@ div#wrap section.baby_section3 {
   background-size: cover;
   background-position: bottom;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section3 {
     height: 580px;
     background-position-x: 20%;
     padding-top: 30px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 {
     height: 530px;
     background-position-x: 23%;
@@ -2825,17 +2866,17 @@ div#wrap section.baby_section3 div.wrap {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section3 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 div.wrap {
     padding-top: 50px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section3 div.wrap {
     padding-top: 20px;
   }
@@ -2845,7 +2886,7 @@ div#wrap section.baby_section3 div.wrap div.left_tab {
   height: 100%;
   float: left;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section3 div.wrap div.left_tab {
     width: 100%;
     height: 20%;
@@ -2853,7 +2894,7 @@ div#wrap section.baby_section3 div.wrap div.left_tab {
     float: inherit;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 div.wrap div.left_tab {
     width: 100%;
     height: 20%;
@@ -2866,12 +2907,12 @@ div#wrap section.baby_section3 div.wrap div.left_tab h2 {
   color: #222222;
   letter-spacing: -1.5px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section3 div.wrap div.left_tab h2 {
     font-size: 1.875rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 div.wrap div.left_tab h2 {
     font-size: 1.563rem;
   }
@@ -2889,12 +2930,12 @@ div#wrap section.baby_section3 div.wrap div.left_tab p {
   line-height: 1.5rem;
   letter-spacing: -1.5px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section3 div.wrap div.left_tab p {
     margin-top: 20px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 div.wrap div.left_tab p {
     font-size: 1rem;
     margin-top: 20px;
@@ -2905,7 +2946,7 @@ div#wrap section.baby_section3 div.wrap div.right_tab {
   height: 100%;
   float: left;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section3 div.wrap div.right_tab {
     width: 600px;
     height: 40%;
@@ -2913,7 +2954,7 @@ div#wrap section.baby_section3 div.wrap div.right_tab {
     margin: 0 auto;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 div.wrap div.right_tab {
     width: 340px;
     float: inherit;
@@ -2927,13 +2968,13 @@ div#wrap section.baby_section3 div.wrap div.right_tab div.animation_tab_page1 {
   left: -10%;
   top: 70px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section3 div.wrap div.right_tab div.animation_tab_page1 {
     left: 0px;
     top: 30px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 div.wrap div.right_tab div.animation_tab_page1 {
     left: 0%;
     top: 20px;
@@ -2957,7 +2998,7 @@ div#wrap section.baby_section3 div.wrap div.right_tab div.animation_tab_page1 di
   box-sizing: border-box;
   overflow: hidden;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 div.wrap div.right_tab div.animation_tab_page1 div.animation_area {
     height: 130px;
   }
@@ -3011,7 +3052,7 @@ div#wrap section.baby_section3 div.wrap div.right_tab div.animation_tab_page1 di
   font-size: 0.875rem;
   margin-left: 65px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 div.wrap div.right_tab div.animation_tab_page1 div.animation_area div.text_area span.text-box {
     margin-left: 10px;
   }
@@ -3021,12 +3062,12 @@ div#wrap section.baby_section3 div.wrap div.right_tab div.animation_tab_page1 di
   margin-left: 70px;
   margin-right: 10px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 div.wrap div.right_tab div.animation_tab_page1 div.animation_area div.text_area span.text-ani-2 {
     margin-left: 80px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section3 div.wrap div.right_tab div.animation_tab_page1 div.animation_area div.text_area span.text-ani-3 {
     font-size: 0.875rem;
     letter-spacing: -1px;
@@ -3043,14 +3084,14 @@ div#wrap section.cancer_section3 {
   background-size: cover;
   background-position: bottom;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section3 {
     height: 600px;
     padding-top: 50px;
     background: white;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 {
     height: 600px;
     background: white;
@@ -3063,17 +3104,17 @@ div#wrap section.cancer_section3 div.wrap {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section3 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 div.wrap {
     padding-top: 50px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section3 div.wrap {
     padding-top: 20px;
   }
@@ -3083,7 +3124,7 @@ div#wrap section.cancer_section3 div.wrap div.left_tab {
   height: 100%;
   float: left;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section3 div.wrap div.left_tab {
     width: 100%;
     height: 20%;
@@ -3091,7 +3132,7 @@ div#wrap section.cancer_section3 div.wrap div.left_tab {
     float: inherit;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 div.wrap div.left_tab {
     width: 100%;
     height: 20%;
@@ -3104,12 +3145,12 @@ div#wrap section.cancer_section3 div.wrap div.left_tab h2 {
   color: #222222;
   letter-spacing: -1.5px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section3 div.wrap div.left_tab h2 {
     font-size: 1.875rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 div.wrap div.left_tab h2 {
     font-size: 1.563rem;
   }
@@ -3126,7 +3167,7 @@ div#wrap section.cancer_section3 div.wrap div.left_tab h3 {
   margin-top: 10px;
   margin-bottom: 30px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 div.wrap div.left_tab h3 {
     font-size: 1.125rem;
   }
@@ -3137,13 +3178,13 @@ div#wrap section.cancer_section3 div.wrap div.left_tab p {
   color: #444444;
   letter-spacing: -1.5px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section3 div.wrap div.left_tab p {
     margin-top: 20px;
     display: inline;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 div.wrap div.left_tab p {
     font-size: 1rem;
     margin-top: 5px;
@@ -3154,12 +3195,12 @@ div#wrap section.cancer_section3 div.wrap div.right_tab {
   height: 100%;
   float: right;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section3 div.wrap div.right_tab {
     width: 100%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 div.wrap div.right_tab {
     width: 100%;
   }
@@ -3168,13 +3209,13 @@ div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 
   padding-top: 60px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 {
     width: 85%;
     margin: 0 auto;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 {
     width: 100%;
   }
@@ -3189,12 +3230,12 @@ div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 div.tit_box {
     margin: 0 auto;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 div.tit_box {
     width: 95%;
     margin: 0 auto;
@@ -3208,7 +3249,7 @@ div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 
   font-weight: bold;
   margin-bottom: 7px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 div.tit_box h3 {
     font-size: 0.875rem;
   }
@@ -3220,14 +3261,14 @@ div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 
   box-sizing: border-box;
   border-left: 1px solid #999;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 div.graph_box {
     max-width: 600px;
     margin-left: 10px;
     margin: 0 auto;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section3 div.wrap div.right_tab div.animation_tab_page2 div.graph_box {
     width: 95%;
     margin: 0 auto;
@@ -3319,7 +3360,7 @@ div#wrap section.disease_section3 {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 {
     height: 700px;
     padding-top: 50px;
@@ -3333,7 +3374,7 @@ div#wrap section.disease_section3 h2 {
   font-weight: bold;
   margin-bottom: 30px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 h2 {
     font-size: 1.563rem;
   }
@@ -3347,7 +3388,7 @@ div#wrap section.disease_section3 p {
   margin-bottom: 5px;
   letter-spacing: -1px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 p span {
     display: block;
     margin-top: 5px;
@@ -3358,13 +3399,13 @@ div#wrap section.disease_section3 .page3-animation-tab {
   height: 400px;
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section3 .page3-animation-tab {
     max-width: 768px;
     margin: 0 auto;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 .page3-animation-tab {
     max-width: 360px;
     margin: 0 auto;
@@ -3381,14 +3422,14 @@ div#wrap section.disease_section3 .page3-animation-tab div.page3-circle {
   overflow: hidden;
   opacity: 0;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section3 .page3-animation-tab div.page3-circle {
     width: 190px;
     height: 190px;
     float: left;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 .page3-animation-tab div.page3-circle {
     width: 180px;
     height: 180px;
@@ -3409,14 +3450,14 @@ div#wrap section.disease_section3 .page3-animation-tab div.page3-circle div.inne
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section3 .page3-animation-tab div.page3-circle div.inner_circle {
     width: 150px;
     height: 150px;
     margin: 20px auto;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 .page3-animation-tab div.page3-circle div.inner_circle {
     width: 140px;
     height: 140px;
@@ -3431,12 +3472,12 @@ div#wrap section.disease_section3 .page3-animation-tab div.page3-circle div.inne
   padding-top: 75px;
   letter-spacing: -1px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.disease_section3 .page3-animation-tab div.page3-circle div.inner_circle p.text_area {
     padding-top: 30px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 .page3-animation-tab div.page3-circle div.inner_circle p.text_area {
     padding-top: 30px;
     font-size: 1rem;
@@ -3450,7 +3491,7 @@ div#wrap section.disease_section3 .page3-animation-tab div.page3-ani1 {
 div#wrap section.disease_section3 .page3-animation-tab div.page3-ani1 div.inner_circle {
   background-image: url(../img/disease/page3-section2-icon.png);
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 .page3-animation-tab div.page3-ani1 {
     transform: translateX(5%);
     left: 0;
@@ -3464,7 +3505,7 @@ div#wrap section.disease_section3 .page3-animation-tab div.page3-ani2 {
 div#wrap section.disease_section3 .page3-animation-tab div.page3-ani2 div.inner_circle {
   background-image: url(../img/disease/page3-section2-icon2.png);
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 .page3-animation-tab div.page3-ani2 {
     transform: translateX(-5%);
     right: 0;
@@ -3478,7 +3519,7 @@ div#wrap section.disease_section3 .page3-animation-tab div.page3-ani3 {
 div#wrap section.disease_section3 .page3-animation-tab div.page3-ani3 div.inner_circle {
   background-image: url(../img/disease/page3-section2-icon3.png);
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 .page3-animation-tab div.page3-ani3 {
     left: 0;
     top: 160px;
@@ -3493,7 +3534,7 @@ div#wrap section.disease_section3 .page3-animation-tab div.page3-ani4 {
 div#wrap section.disease_section3 .page3-animation-tab div.page3-ani4 div.inner_circle {
   background-image: url(../img/disease/page3-section2-icon4.png);
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.disease_section3 .page3-animation-tab div.page3-ani4 {
     transform: translateX(-5%);
     right: 0;
@@ -3503,12 +3544,12 @@ div#wrap section.disease_section3 .page3-animation-tab div.page3-ani4 div.inner_
 div#wrap section.dement_section3 {
   height: 440px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section3 {
     height: 530px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 {
     height: 520px;
   }
@@ -3520,12 +3561,12 @@ div#wrap section.dement_section3 div.wrap {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section3 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.wrap {
     padding-top: 50px;
   }
@@ -3534,7 +3575,7 @@ div#wrap section.dement_section3 div.left_tab {
   width: 50%;
   float: left;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section3 div.left_tab {
     width: 90%;
     float: inherit;
@@ -3542,7 +3583,7 @@ div#wrap section.dement_section3 div.left_tab {
     text-align: center;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.left_tab {
     width: 100%;
   }
@@ -3554,12 +3595,12 @@ div#wrap section.dement_section3 div.left_tab h4 {
   margin-bottom: 10px;
   color: #222222;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section3 div.left_tab h4 {
     font-size: 1.563rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.left_tab h4 {
     font-size: 1.125rem;
     text-align: center;
@@ -3572,13 +3613,13 @@ div#wrap section.dement_section3 div.left_tab h3 {
   line-height: 2.8rem;
   color: #222222;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section3 div.left_tab h3 {
     font-size: 1.875rem;
     margin-bottom: 30px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.left_tab h3 {
     font-size: 1.563rem;
     margin-bottom: 15px;
@@ -3589,7 +3630,7 @@ div#wrap section.dement_section3 div.left_tab h3 {
 div#wrap section.dement_section3 div.left_tab h3 span {
   color: #e04134;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.left_tab p {
     text-align: center;
   }
@@ -3602,14 +3643,14 @@ div#wrap section.dement_section3 div.right_tab {
   width: 50%;
   float: left;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.dement_section3 div.right_tab {
     width: 90%;
     float: inherit;
     margin: 30px auto;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.right_tab {
     width: 100%;
     margin-top: 30px;
@@ -3626,7 +3667,7 @@ div#wrap section.dement_section3 div.right_tab div.top_line {
   position: relative;
   color: #777;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.right_tab div.top_line {
     width: 95%;
   }
@@ -3641,7 +3682,7 @@ div#wrap section.dement_section3 div.right_tab div.ani_section {
   padding-left: 30px;
   box-sizing: border-box;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.right_tab div.ani_section {
     width: 95%;
     padding: 0;
@@ -3656,7 +3697,7 @@ div#wrap section.dement_section3 div.right_tab div.ani_section div.page4_s2_grap
   overflow: hidden;
   position: relative;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.right_tab div.ani_section div.page4_s2_graph {
     text-align: center;
     width: 120px;
@@ -3692,7 +3733,7 @@ div#wrap section.dement_section3 div.right_tab div.ani_section div.page4_s2_grap
 div#wrap section.dement_section3 div.right_tab div.ani_section div.page4_s2_graph_1 {
   margin-right: 30px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.right_tab div.ani_section div.page4_s2_graph_1 {
     margin-right: 10px;
   }
@@ -3723,7 +3764,7 @@ div#wrap section.dement_section3 div.right_tab p {
   letter-spacing: -1px;
   color: #666;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.dement_section3 div.right_tab p {
     width: 97%;
   }
@@ -3731,12 +3772,12 @@ div#wrap section.dement_section3 div.right_tab p {
 div#wrap section.car_section3 {
   height: 800px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.car_section3 {
     height: 650px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section3 {
     height: 1300px;
   }
@@ -3749,17 +3790,17 @@ div#wrap section.car_section3 div.wrap {
   box-sizing: border-box;
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.car_section3 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section3 div.wrap {
     padding-top: 50px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.car_section3 div.wrap {
     padding-top: 50px;
   }
@@ -3768,7 +3809,7 @@ div#wrap section.car_section3 div.wrap h2 {
   font-weight: bold;
   font-size: 2.5rem;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section3 div.wrap h2 {
     font-size: 1.5rem;
   }
@@ -3779,7 +3820,7 @@ div#wrap section.car_section3 div.wrap h3 {
   color: #e04134;
   margin-top: 10px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section3 div.wrap h3 {
     font-size: 1.125rem;
   }
@@ -3790,12 +3831,12 @@ div#wrap section.car_section3 div.wrap div.figure_box {
   margin: 45px auto;
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.car_section3 div.wrap div.figure_box {
     width: 95%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section3 div.wrap div.figure_box {
     width: 95%;
     height: 350px;
@@ -3811,13 +3852,13 @@ div#wrap section.car_section3 div.wrap div.figure_box div.figure_boxs {
   padding: 30px;
   overflow: hidden;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.car_section3 div.wrap div.figure_box div.figure_boxs {
     height: 360px;
     padding: 15px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section3 div.wrap div.figure_box div.figure_boxs {
     width: 100%;
     margin-bottom: 10px;
@@ -3830,12 +3871,12 @@ div#wrap section.car_section3 div.wrap div.figure_box div.figure_boxs div.inset_
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.car_section3 div.wrap div.figure_box div.figure_boxs div.inset_figure {
     height: 50%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section3 div.wrap div.figure_box div.figure_boxs div.inset_figure {
     height: 50%;
   }
@@ -3856,7 +3897,7 @@ div#wrap section.car_section3 div.wrap div.figure_box div.figure_boxs p {
 div#wrap section.car_section3 div.wrap div.figure_box div.figure_boxs p span {
   display: block;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.car_section3 div.wrap div.figure_box div.figure_boxs p {
     letter-spacing: -2px;
   }
@@ -3877,7 +3918,7 @@ div#wrap section.car_section3 div.wrap div.figure_box .figure_box2 {
   margin-left: 10px;
   margin-right: 10px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.car_section3 div.wrap div.figure_box .figure_box2 {
     margin-left: 0px;
     margin-right: 0px;
@@ -3889,12 +3930,12 @@ div#wrap section.home-section2 {
   background: #f0f0f0;
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.home-section2 {
     height: 720px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.home-section2 {
     height: 520px;
   }
@@ -3906,12 +3947,12 @@ div#wrap section.home-section2 div.wrap {
   padding-top: 100px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.home-section2 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.home-section2 div.wrap {
     padding-top: 50px;
   }
@@ -3922,12 +3963,12 @@ div#wrap section.home-section2 div.wrap h3 {
   color: #666666;
   margin-bottom: 10px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.home-section2 div.wrap h3 {
     font-size: 1.125rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.home-section2 div.wrap h3 {
     font-size: 1rem;
   }
@@ -3938,12 +3979,12 @@ div#wrap section.home-section2 div.wrap h2 {
   letter-spacing: -2px;
   margin-bottom: 45px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.home-section2 div.wrap h2 {
     font-size: 2.5rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.home-section2 div.wrap h2 {
     font-size: 1.875rem;
     margin-bottom: 25px;
@@ -3958,12 +3999,12 @@ div#wrap section.home-section2 div.wrap p span {
   color: #e42f20;
   font-weight: bold;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.home-section2 div.wrap p {
     font-size: 1.5rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.home-section2 div.wrap p {
     font-size: 1.125rem;
   }
@@ -3972,14 +4013,14 @@ div#wrap section.home-section2 div.wrap p b {
   font-size: 1.875rem;
   font-weight: bold;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.home-section2 div.wrap p b {
     margin-top: 10px;
     display: block;
     font-size: 1.5rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.home-section2 div.wrap p b {
     margin-top: 10px;
     font-size: 1.125rem;
@@ -3995,12 +4036,12 @@ div#wrap section.home-section2 div.wrap div.ilust {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.home-section2 div.wrap div.ilust {
     background-image: url(../img/section5_il_md.png);
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.home-section2 div.wrap div.ilust {
     height: 300px;
     background-image: url(../img/section5_il_sm.png);
@@ -4012,7 +4053,7 @@ div#wrap section.panel-2 {
   padding-top: 20px;
   margin-bottom: 40px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.panel-2 {
     margin-bottom: 0px;
   }
@@ -4026,38 +4067,171 @@ div#wrap section.panel-2 div.panel_bg {
   background-position: center;
   background-size: cover;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.panel-2 div.panel_bg {
     background-image: url(../img/panel-md-2.png);
     background-size: contain;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.panel-2 div.panel_bg {
     background-image: url(../img/panel-sm-2.png);
     background-size: cover;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.panel-2 {
     height: 335px;
     background-size: cover;
   }
 }
+div#wrap section.home-section5 div.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+div#wrap section.home-section5 div.wrap h2,
+div#wrap section.home-section5 div.wrap h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+@media (min-width: 577px) and (max-width: 1200px) {
+  div#wrap section.home-section5 div.wrap h2,
+  div#wrap section.home-section5 div.wrap h3 {
+    font-size: 1.875rem;
+  }
+}
+@media (max-width:576px) {
+  div#wrap section.home-section5 div.wrap h2,
+  div#wrap section.home-section5 div.wrap h3 {
+    font-size: 1.5rem;
+  }
+}
+div#wrap section.home-section5 div.wrap h3 {
+  color: #e42f20;
+  margin-top: 10px;
+}
+div#wrap section.home-section5 div.wrap div.info_boxs {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs {
+    width: 80%;
+  }
+}
+@media (max-width: 730px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs {
+    width: 100%;
+  }
+}
+@media (max-width: 570px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs {
+    width: 90%;
+  }
+}
+@media (max-width: 450px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs {
+    width: 100%;
+  }
+}
+div#wrap section.home-section5 div.wrap div.info_boxs div.info_box {
+  width: 260px;
+  height: 260px;
+  display: inline-block;
+  margin: 15px;
+  margin-top: 0px;
+  vertical-align: middle;
+}
+@media (max-width: 730px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs div.info_box {
+    width: 230px;
+    height: 230px;
+  }
+}
+@media (max-width: 580px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs div.info_box {
+    margin: 5px;
+  }
+}
+@media (max-width:576px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs div.info_box {
+    width: 190px;
+    height: 190px;
+    margin: 5px;
+  }
+}
+@media (max-width: 450px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs div.info_box {
+    width: 165px;
+    height: 165px;
+  }
+}
+div#wrap section.home-section5 div.wrap div.info_boxs div.info_box {
+  border: 10px solid #d0d0d0;
+  box-sizing: border-box;
+}
+div#wrap section.home-section5 div.wrap div.info_boxs div.info_box h3 {
+  color: #222;
+  font-size: 1.563rem;
+  padding-top: 60px;
+  margin-bottom: 30px;
+}
+@media (max-width: 730px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs div.info_box h3 {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 450px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs div.info_box h3 {
+    padding-top: 20px;
+  }
+}
+div#wrap section.home-section5 div.wrap div.info_boxs div.info_box p {
+  font-size: 1rem;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #666;
+}
+@media (max-width: 730px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs div.info_box p {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 450px) {
+  div#wrap section.home-section5 div.wrap div.info_boxs div.info_box p {
+    font-size: 0.75rem;
+  }
+}
+div#wrap section.home-section5 div.wrap div.info_boxs div.info2 {
+  border-color: #9fddf5;
+}
+div#wrap section.home-section5 div.wrap div.info_boxs div.info3 {
+  border-color: #cbe691;
+}
+div#wrap section.home-section5 div.wrap div.info_boxs div.info4 {
+  border-color: #ffce6f;
+}
 div#wrap section.section6 {
   width: 100%;
-  height: 555px;
   position: relative;
   z-index: 88;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section6 {
     height: 630px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section6 {
-    height: 780px;
+    height: 680px;
+    margin-top: 50px;
   }
 }
 div#wrap section.section6 div.wrap {
@@ -4069,22 +4243,22 @@ div#wrap section.section6 div.wrap {
   text-align: center;
   padding-top: 30px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section6 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section6 div.wrap {
     padding-top: 50px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section6 div.wrap {
     padding: 0px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section6 div.wrap {
     padding: 0px;
   }
@@ -4094,12 +4268,12 @@ div#wrap section.section6 div.wrap h4 {
   margin-bottom: 10px;
   letter-spacing: -2px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section6 div.wrap h4 {
     font-size: 1.125rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section6 div.wrap h3 img {
     width: 80%;
   }
@@ -4111,7 +4285,7 @@ div#wrap section.section6 div.wrap h2 {
   margin-top: 25px;
   color: #222222;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section6 div.wrap h2 {
     font-size: 1.875rem;
   }
@@ -4120,7 +4294,7 @@ div#wrap section.section6 div.wrap div.panel_hexagons {
   width: 100%;
   margin-top: 25px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section6 div.wrap div.panel_hexagons {
     height: 420px;
     background-image: url(../img/hexagon_md.png);
@@ -4130,9 +4304,9 @@ div#wrap section.section6 div.wrap div.panel_hexagons {
     background-size: cover;
   }
 }
-@media (max-width:767px) {
+@media (max-width: 700px) {
   div#wrap section.section6 div.wrap div.panel_hexagons {
-    height: 630px;
+    height: 500px;
     background-image: url(../img/hexagon_sm.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -4143,12 +4317,12 @@ div#wrap section.section6 div.wrap div.panel_hexagons div.hexagon_group {
   width: calc(100%/3);
   float: left;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.section6 div.wrap div.panel_hexagons div.hexagon_group {
     display: none;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section6 div.wrap div.panel_hexagons div.hexagon_group {
     display: none;
   }
@@ -4190,12 +4364,12 @@ div#wrap section.section6 div.wrap div.panel_hexagons div.hexagon_group_3 {
 div#wrap section.baby_section6 {
   height: 300px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section6 {
     height: 200px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section6 {
     margin-top: 50px;
   }
@@ -4208,12 +4382,12 @@ div#wrap section.baby_section6 div.wrap {
   box-sizing: border-box;
   position: relative;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section6 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section6 div.wrap {
     padding-top: 50px;
   }
@@ -4223,7 +4397,7 @@ div#wrap section.baby_section6 div.wrap h2 {
   font-weight: normal;
   margin-top: 10px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section6 div.wrap h2 {
     font-size: 1rem;
   }
@@ -4239,13 +4413,13 @@ div#wrap section.baby_section6 div.wrap h2 span {
 div#wrap section.baby_section6 div.wrap h2 span b {
   color: #e04134;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section6 div.wrap h2 span b.mo_b {
     display: block;
     margin-top: 5px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section6 div.wrap h2 span {
     font-size: 1rem;
   }
@@ -4259,13 +4433,13 @@ div#wrap section.baby_section6 div.wrap .left_fig {
   left: 10%;
   top: 25%;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section6 div.wrap .left_fig {
     top: 5%;
     left: 1%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section6 div.wrap .left_fig {
     width: 60px;
     left: 1%;
@@ -4276,13 +4450,13 @@ div#wrap section.baby_section6 div.wrap .right_fig {
   right: 10%;
   bottom: 25%;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.baby_section6 div.wrap .right_fig {
     right: 1%;
     bottom: 35%;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.baby_section6 div.wrap .right_fig {
     width: 60px;
     right: 1%;
@@ -4296,13 +4470,13 @@ div#wrap section.cancer_section6 {
   background-position: center;
   background-size: cover;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section6 {
     margin-bottom: 50px;
     background-image: url(../img/cancer/page2-section6_md_bg.jpg);
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section6 {
     background-image: url(../img/cancer/page2-section6_sm_bg.jpg);
   }
@@ -4315,22 +4489,22 @@ div#wrap section.cancer_section6 div.wrap {
   padding-top: 130px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section6 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section6 div.wrap {
     padding-top: 50px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section6 div.wrap {
     padding-top: 160px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section6 div.wrap {
     padding-top: 140px;
   }
@@ -4344,12 +4518,12 @@ div#wrap section.cancer_section6 div.wrap h3 {
 div#wrap section.cancer_section6 div.wrap h3 b {
   color: white;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section6 div.wrap h3 {
     font-size: 1.5rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section6 div.wrap h3 {
     font-size: 1.125rem;
   }
@@ -4364,12 +4538,12 @@ div#wrap section.cancer_section6 div.wrap h2 {
   color: white;
   margin-top: 10px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.cancer_section6 div.wrap h2 {
     font-size: 1.5rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.cancer_section6 div.wrap h2 {
     font-size: 1.125rem;
   }
@@ -4377,255 +4551,16 @@ div#wrap section.cancer_section6 div.wrap h2 {
     display: block;
   }
 }
-div#wrap section.introduce_consult {
-  width: 100%;
-  height: 665px;
-  border-top: 1px solid #cccccc;
-  position: relative;
-  z-index: 88;
-  margin-top: 150px;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  div#wrap section.introduce_consult {
-    width: 95%;
-    margin: 0px auto;
-    margin-top: 100px;
-    height: 550px;
-  }
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult {
-    height: 1050px;
-    margin-top: 00px;
-    border: 0px;
-  }
-}
-div#wrap section.introduce_consult div.wrap {
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-  padding-top: 100px;
-  box-sizing: border-box;
-  padding: 0px;
-  text-align: center;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  div#wrap section.introduce_consult div.wrap {
-    padding-top: 50px;
-  }
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap {
-    padding-top: 50px;
-  }
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap {
-    padding: 0px;
-  }
-}
-div#wrap section.introduce_consult div.wrap div.tit_box {
-  display: inline-block;
-  height: 100px;
-  background: white;
-  margin: 0 auto;
-  transform: translateY(-80%);
-  text-align: center;
-  position: relative;
-  z-index: 99;
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.tit_box {
-    display: block;
-    width: 100%;
-    transform: translateY(0%);
-  }
-}
-div#wrap section.introduce_consult div.wrap div.tit_box h2 {
-  font-size: 1.875rem;
-  font-weight: normal;
-  letter-spacing: -1px;
-  color: #f9443b;
-  margin-bottom: 20px;
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.tit_box h2 {
-    font-size: 1.125rem;
-    margin-top: 50px;
-  }
-}
-div#wrap section.introduce_consult div.wrap div.tit_box h3 {
-  font-size: 3.75rem;
-  font-weight: bold;
-  letter-spacing: -3px;
-  text-align: left;
-  text-align: center;
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.tit_box h3 {
-    font-size: 1.875rem;
-  }
-}
-div#wrap section.introduce_consult div.wrap div.profils {
-  width: 100%;
-  height: 500px;
-  text-align: left;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  div#wrap section.introduce_consult div.wrap div.profils {
-    height: 360px;
-  }
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.profils {
-    width: 90%;
-    height: 780px;
-    margin: 0 auto;
-  }
-}
-div#wrap section.introduce_consult div.wrap div.profils div.photo {
-  width: 430px;
-  height: 100%;
-  float: left;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position: top;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.photo {
-    width: 34%;
-    max-width: 250px;
-  }
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.photo {
-    width: 100%;
-    height: 450px;
-    float: inherit;
-  }
-}
-div#wrap section.introduce_consult div.wrap div.profils div.profil_box {
-  width: 720px;
-  height: 415px;
-  float: right;
-  border-top: 1px solid #666666;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.profil_box {
-    width: 64%;
-    height: 330px;
-  }
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.profil_box {
-    width: 100%;
-    border-top: 0px;
-    float: inherit;
-  }
-}
-div#wrap section.introduce_consult div.wrap div.profils div.profil_box h3 {
-  width: 100%;
-  padding-top: 30px;
-  box-sizing: border-box;
-  font-size: 1.1rem;
-  letter-spacing: -1px;
-  line-height: 1.5rem;
-  padding-bottom: 20px;
-}
-div#wrap section.introduce_consult div.wrap div.profils div.profil_box h3 p {
-  margin-bottom: 10px;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.profil_box h3 {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.profil_box h3 {
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-}
-div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume {
-  width: 100%;
-  height: 300px;
-  border-top: 1px solid #666666;
-  padding-top: 20px;
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume {
-    height: 100%;
-  }
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume {
-    height: 80%;
-    margin-top: 20px;
-  }
-}
-div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume ul#resume {
-  width: 100%;
-}
-div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume ul#resume li {
-  width: 100%;
-  height: 100%;
-}
-div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume ul#resume li div.year {
-  width: 15%;
-  height: 100%;
-  float: left;
-}
-div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume ul#resume li div.year p {
-  color: #666666;
-  font-size: 0.85rem;
-  font-weight: bold;
-  letter-spacing: -1px;
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume ul#resume li div.year {
-    width: 15%;
-  }
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume ul#resume li div.year {
-    width: 15%;
-  }
-}
-div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume ul#resume li div.desc {
-  width: 85%;
-  margin-bottom: 25px;
-  word-break: keep-all;
-  float: left;
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume ul#resume li div.desc {
-    width: 85%;
-  }
-}
-@media (max-width:767px) {
-  div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume ul#resume li div.desc {
-    width: 85%;
-  }
-}
-div#wrap section.introduce_consult div.wrap div.profils div.profil_box div.resume ul#resume li div.desc p {
-  height: 20px;
-  padding-bottom: 10px;
-  color: #444444;
-  box-sizing: border-box;
-  letter-spacing: -1px;
-}
 div#wrap section.gene_section5 {
   height: 950px;
   background: #f0f0f0;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section5 {
     height: 800px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section5 {
     height: 500px;
   }
@@ -4638,12 +4573,12 @@ div#wrap section.gene_section5 div.wrap {
   box-sizing: border-box;
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section5 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section5 div.wrap {
     padding-top: 50px;
   }
@@ -4654,12 +4589,12 @@ div#wrap section.gene_section5 div.wrap h2 {
   margin-bottom: 20px;
   letter-spacing: -1px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section5 div.wrap h2 {
     font-size: 2.5rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section5 div.wrap h2 {
     font-size: 1.875rem;
   }
@@ -4673,7 +4608,7 @@ div#wrap section.gene_section5 div.wrap p {
   letter-spacing: -1px;
   color: #444;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section5 div.wrap p {
     font-size: 1rem;
   }
@@ -4687,13 +4622,13 @@ div#wrap section.gene_section5 div.wrap div.in_figure {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section5 div.wrap div.in_figure {
     width: 95%;
     margin: 15px auto;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section5 div.wrap div.in_figure {
     width: 95%;
     height: 280px;
@@ -4701,7 +4636,6 @@ div#wrap section.gene_section5 div.wrap div.in_figure {
 }
 div#wrap section.banner-2 {
   background: #f0f0f0;
-  margin-bottom: 50px;
 }
 div#wrap section.banner-2 div.wrap {
   max-width: 1200px;
@@ -4711,17 +4645,23 @@ div#wrap section.banner-2 div.wrap {
   box-sizing: border-box;
   height: 710px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.banner-2 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.banner-2 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (min-width: 577px) and (max-width: 1200px) {
+  div#wrap section.banner-2 div.wrap {
+    height: 600px;
+    font-size: 1.875rem;
+  }
+}
+@media (max-width:576px) {
   div#wrap section.banner-2 div.wrap {
     height: 480px;
   }
@@ -4735,12 +4675,12 @@ div#wrap section.banner-2 div.wrap h2 {
 div#wrap section.banner-2 div.wrap h2 span {
   color: #e42f20;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.banner-2 div.wrap h2 {
     font-size: 1.875rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.banner-2 div.wrap h2 {
     font-size: 1.576rem;
   }
@@ -4754,7 +4694,7 @@ div#wrap section.banner-2 div.wrap h4 {
   letter-spacing: -1px;
   margin-top: 15px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.banner-2 div.wrap h4 {
     margin-top: 20px;
     font-size: 1rem;
@@ -4767,7 +4707,7 @@ div#wrap section.banner-2 div.wrap h4 {
 div#wrap section.banner-2 div.wrap div.pc_slide {
   width: 800px;
   height: 470px;
-  margin: 50px auto;
+  margin: 40px auto;
   background-image: url(../img/section-banner-2_pc_img.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -4776,7 +4716,12 @@ div#wrap section.banner-2 div.wrap div.pc_slide {
   background-position: top;
   overflow: hidden;
 }
-@media (max-width:767px) {
+@media (min-width: 577px) and (max-width: 1200px) {
+  div#wrap section.banner-2 div.wrap div.pc_slide {
+    width: 600px;
+  }
+}
+@media (max-width:576px) {
   div#wrap section.banner-2 div.wrap div.pc_slide {
     width: 360px;
     background-size: cover;
@@ -4790,10 +4735,16 @@ div#wrap section.banner-2 div.wrap div.pc_slide div.bx-wrapper {
   position: relative;
   top: 27px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.banner-2 div.wrap div.pc_slide div.bx-wrapper {
     width: 240px;
     margin-top: -10px;
+  }
+}
+@media (min-width: 577px) and (max-width: 1200px) {
+  div#wrap section.banner-2 div.wrap div.pc_slide div.bx-wrapper {
+    width: 380px;
+    margin-top: -15px;
   }
 }
 div#wrap section.banner-2 div.wrap div.pc_slide div.sldier_img {
@@ -4807,9 +4758,14 @@ div#wrap section.banner-2 div.wrap div.pc_slide div.sldier_img {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.banner-2 div.wrap div.pc_slide div.sldier_img {
     height: 150px;
+  }
+}
+@media (min-width: 577px) and (max-width: 1200px) {
+  div#wrap section.banner-2 div.wrap div.pc_slide div.sldier_img {
+    height: 260px;
   }
 }
 div#wrap section.banner-2 div.wrap div.pc_slide .sldier_img1 {
@@ -4831,12 +4787,12 @@ div#wrap section.forms {
   width: 100%;
   height: 650px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.forms {
     height: 580px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms {
     height: 680px;
     padding-top: 50px;
@@ -4851,17 +4807,17 @@ div#wrap section.forms div.wrap {
   text-align: center;
   padding-top: 70px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.forms div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap {
     padding: 0px;
   }
@@ -4872,12 +4828,12 @@ div#wrap section.forms div.wrap h2 {
   letter-spacing: -2px;
   margin-bottom: 30px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.forms div.wrap h2 {
     font-size: 2.5rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap h2 {
     font-size: 1.875rem;
   }
@@ -4887,12 +4843,12 @@ div#wrap section.forms div.wrap h3 {
   font-weight: bold;
   letter-spacing: -1px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.forms div.wrap h3 {
     font-size: 1.5rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap h3 {
     font-size: 1.125rem;
   }
@@ -4901,12 +4857,12 @@ div#wrap section.forms div.wrap h3 span {
   color: #e42f20;
   font-size: 2.5rem;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.forms div.wrap h3 span {
     font-size: 1.875rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap h3 span {
     font-size: 1.563rem;
   }
@@ -4915,7 +4871,7 @@ div#wrap section.forms div.wrap h3 span b {
   color: #e42f20;
   margin-top: 10px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap h3.main_span span b {
     display: block;
   }
@@ -4925,17 +4881,17 @@ div#wrap section.forms div.wrap p {
   margin-top: 15px;
   letter-spacing: -2px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.forms div.wrap p {
     font-size: 1.4rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap p {
     font-size: 1.125rem;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap p span {
     display: block;
     margin-top: 5px;
@@ -4947,7 +4903,7 @@ div#wrap section.forms div.wrap div.inputs {
   margin: 80px auto;
   text-align: left;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap div.inputs {
     width: 90%;
     height: 320px;
@@ -4961,7 +4917,7 @@ div#wrap section.forms div.wrap div.inputs div {
   margin-bottom: 1%;
   margin-right: 0.5%;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap div.inputs div {
     width: 100%;
     height: 65px;
@@ -5019,7 +4975,7 @@ div#wrap section.forms div.wrap div.inputs div:nth-child(4) {
   margin-left: 0.5%;
   margin-right: 0%;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap div.inputs div:nth-child(2),
   div#wrap section.forms div.wrap div.inputs div:nth-child(4) {
     margin-left: 0px;
@@ -5044,7 +5000,7 @@ div#wrap section.forms div.wrap div.inputs p.agree_tab .container {
   letter-spacing: -1px;
   color: #222222;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.forms div.wrap div.inputs p.agree_tab .container {
     padding-left: 10px;
     padding-top: 8px;
@@ -5167,14 +5123,14 @@ div#wrap section.gene_section6 {
   background-position: center;
   background-size: cover;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section6 {
     height: 420px;
-    background-size: 100%;
+    background-size: cover;
     background-image: url(../img/gene/section6_md_bg.png);
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section6 {
     height: 420px;
     background-image: url(../img/gene/section6_sm_bg.png);
@@ -5185,12 +5141,12 @@ div#wrap section.gene_section7 {
   width: 100%;
   height: 450px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section7 {
     height: 450px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section7 {
     height: 600px;
   }
@@ -5203,12 +5159,12 @@ div#wrap section.gene_section7 div.wrap {
   box-sizing: border-box;
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section7 div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section7 div.wrap {
     padding-top: 50px;
   }
@@ -5219,7 +5175,7 @@ div#wrap section.gene_section7 div.wrap h2 {
   margin-bottom: 20px;
   letter-spacing: -1px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section7 div.wrap h2 {
     font-size: 1.875rem;
   }
@@ -5231,9 +5187,24 @@ div#wrap section.gene_section7 div.wrap ul.circle_anis {
   margin-top: 50px;
   text-align: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1200px) {
   div#wrap section.gene_section7 div.wrap ul.circle_anis {
-    width: 60%;
+    width: 80%;
+  }
+}
+@media (min-width: 577px) and (max-width: 1200px) {
+  div#wrap section.gene_section7 div.wrap ul.circle_anis {
+    width: 100%;
+  }
+}
+@media (max-width:576px) {
+  div#wrap section.gene_section7 div.wrap ul.circle_anis {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  div#wrap section.gene_section7 div.wrap ul.circle_anis {
+    width: 100%;
   }
 }
 div#wrap section.gene_section7 div.wrap ul.circle_anis li {
@@ -5254,7 +5225,7 @@ div#wrap section.gene_section7 div.wrap ul.circle_anis li {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section7 div.wrap ul.circle_anis li {
     width: 100px;
     height: 100px;
@@ -5288,12 +5259,12 @@ div#wrap section.gene_section7 div.wrap p.line {
   z-index: 1;
   margin-left: 100px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section7 div.wrap p.line {
     left: 110px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section7 div.wrap p.line {
     height: 2px;
     transform: translateY(-130px);
@@ -5304,18 +5275,18 @@ div#wrap section.gene_section7 div.wrap p.mo_line {
   left: -110px;
   display: none;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap section.gene_section7 div.wrap p.mo_line {
     display: block;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.gene_section7 div.wrap p.mo_line {
     display: block;
     top: 100px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap section.section8 {
     padding-top: 50px;
   }
@@ -5331,7 +5302,7 @@ div#wrap div.mo_banner .go_btn {
   border-radius: 30px;
   font-weight: bold;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap div.mo_banner .go_btn {
     width: 30%;
     display: inline-block;
@@ -5343,7 +5314,7 @@ div#wrap div.mo_banner .go_btn img {
   width: 18px;
   margin-right: 10px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap div.mo_banner {
     display: block;
     width: 90%;
@@ -5356,7 +5327,7 @@ div#wrap div.mo_banner .go_btn img {
     margin-bottom: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap div.mo_banner {
     display: block;
     width: 90%;
@@ -5379,7 +5350,7 @@ div#wrap footer {
   border-top: 1px solid #d0d0d0;
   text-align: center;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap footer {
     padding-top: 30px;
     height: 300px;
@@ -5393,12 +5364,12 @@ div#wrap footer div.wrap {
   box-sizing: border-box;
   padding-top: 30px;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap footer div.wrap {
     padding-top: 50px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap footer div.wrap {
     padding-top: 50px;
   }
@@ -5412,7 +5383,7 @@ div#wrap footer div.wrap p {
   margin-bottom: 5px;
   letter-spacing: -1px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap footer div.wrap p span {
     display: none;
   }
@@ -5426,7 +5397,7 @@ div#wrap footer div.wrap p {
 div#wrap footer div.wrap ul {
   margin-top: 30px;
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap footer div.wrap ul {
     width: 80%;
     margin: 20px auto;
@@ -5438,12 +5409,12 @@ div#wrap footer div.wrap ul li {
   margin-right: 20px;
   font-size: 0.875rem;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1200px) {
   div#wrap footer div.wrap ul li {
     margin-right: 15px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:576px) {
   div#wrap footer div.wrap ul li {
     margin-bottom: 10px;
     margin-right: 5px;

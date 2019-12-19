@@ -149,7 +149,7 @@ a {
 
 @mediaVericalMobile: ~"(max-width:576px)"; //basic setting
 // @mediaHorizontalMobile: ~"(min-width: 576px) and (max-width: 767px)"; //HorizontalMobile
-@mediaTablet: ~"(min-width: 577px) and (max-width: 1024px)"; //tablet   
+@mediaTablet: ~"(min-width: 577px) and (max-width: 1200px)"; //tablet   
 
 body {
     overflow-y: hidden;
@@ -170,11 +170,11 @@ body {
     // }
     @media@mediaTablet {
         max-width: 1024px;
-        min-width: 768px;
+        min-width: 577px;
     }
 
     @media@mediaVericalMobile {
-        max-width: 575px;
+        max-width: 576px;
         min-width: 360px;
         // overflow-y: hidden;
     }
@@ -346,20 +346,44 @@ div#wrap {
         }
 
         div.head {
-            width: 100%;
+            // width: 100%;
+            max-width: 1200px;
             height: 80px;
             // background-color: rgba(249,68,59,0.6);;
-            display: none;
-            ;
-            position: fixed;
+            // display: none;
             z-index: 990;
+            margin: 0 auto;
 
             @media@mediaTablet {
                 display: block;
+                // position: fixed;
+                width: 100%;
             }
-
             @media@mediaVericalMobile {
                 display: block;
+                width: 100%;
+            }
+
+            h1{
+                width: 150px;
+                float: left;
+                padding-top: 30px;
+                padding-left: 10px;
+                img{
+                    width: 100%;
+                }
+                @media@mediaTablet {
+                    width: 120px;
+                    padding-top: 20px;
+                    padding-left: 10px;
+                }
+                @media@mediaVericalMobile {
+                    width: 120px;
+                    padding-top: 20px;
+                    padding-left: 10px;
+                }
+
+
             }
         }
 
@@ -369,6 +393,21 @@ div#wrap {
             float: right;
             margin-right:10px;
             margin-top: 10px;
+            display: none;
+                position: fixed;
+                right: 0;
+                top: 0;
+
+            @media@mediaTablet {
+                display: block;
+                padding-top: 20px;
+            }
+            @media@mediaVericalMobile {
+                display: block;
+                padding-top: 15px;
+
+            }
+
             span{
                 width: 100%;
                 height: 2px;
@@ -1109,7 +1148,7 @@ div#wrap {
             padding: 0px;
             margin-top: 0px;
             margin-bottom: 50px;
-            background-image: none;
+            // background-image: none;
 
 
         }
@@ -1130,10 +1169,12 @@ div#wrap {
                 background-position: bottom;;
                 background-size: cover;
                 @media@mediaVericalMobile {
+                    width: 100%;
+                    margin: 0 auto;
                     height: 500px;
                     background-image: url(../img/gene/top_bottom_sm.jpg);
-                    background-size: cover;
-                background-position: bottom;;
+                    background-size: contain;
+                    background-position: 50% 55%;;
 
 
 
@@ -1161,9 +1202,9 @@ div#wrap {
                     height: 230px;                   
                 }
                 @media@mediaVericalMobile {
-                    width: 90%;
+                    width: 100%;
                     height: 370px;
-                    margin: 20px auto;;
+                    margin: 0 auto;
                 }
                 div.tab_bottoms {
                     width: 50%;
@@ -4176,10 +4217,142 @@ div#wrap {
 
 
     }
+    section.home-section5{
+        div.wrap{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 100px;
+            padding-bottom: 50px;
+            h2,h3{
+                text-align: center;
+                font-size: 2.5rem;
+                font-weight: bold;
+                letter-spacing: -2px;
+                @media@mediaTablet {
+                    font-size: 1.875rem;
+                }
+                @media@mediaVericalMobile {
+                    font-size: 1.5rem;
+
+                }
+
+
+            }
+            h3{
+                color:#e42f20;
+                margin-top: 10px;
+            }
+            div.info_boxs{
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 30px;
+                text-align: center;
+
+                @media (max-width:1200px){
+                    width: 80%;
+                    
+                }
+                    @media (max-width:730px) {
+                        width: 100%;
+                    }
+                    @media (max-width:570px) {
+                        width: 90%;
+                    }
+                    @media (max-width:450px) {
+                        width: 100%;
+                    }
+
+
+
+                div.info_box{
+                    width: 260px;
+                    height: 260px;
+                    display: inline-block;
+                    margin:15px;
+                    margin-top: 0px;
+                    vertical-align: middle;
+                    @media (max-width:730px) {
+                        width: 230px;
+                        height: 230px;
+                      
+                    }
+                    @media (max-width:580px) {
+                        margin: 5px;
+                    }
+
+                    @media@mediaVericalMobile {
+                        width: 190px;
+                        height: 190px;
+                        margin: 5px;
+                    }
+                    
+                    @media (max-width:450px) {
+                        width: 165px;
+                        height: 165px;
+
+                    }
+
+
+
+                }
+                div.info_box{
+                    border: 10px solid #d0d0d0;
+                    box-sizing: border-box;
+                    h3{
+                        color: #222;
+                        font-size: 1.563rem;
+                        padding-top: 60px;
+                        margin-bottom: 30px;
+                        @media (max-width:730px) {
+                            padding-top:30px;
+
+                        }
+                        @media (max-width:450px) {
+                            padding-top:20px;
+                        }
+
+                   
+
+                    }
+                    p{
+                        font-size: 1rem;
+                        letter-spacing: -1px;
+                        text-align: center;
+                        margin-bottom: 5px;
+                        color: #666;
+                        @media (max-width:730px) {
+                            font-size: 0.875rem;
+                        }
+                        @media (max-width:450px) {
+                            font-size: 0.75rem;
+
+                        }
+
+                    }
+                }
+                div.info2{
+                    border-color:#9fddf5;
+                }
+                div.info3{
+                    border-color:#cbe691;
+                }
+                div.info4{
+                    border-color:#ffce6f;
+                }
+
+
+
+
+         
+
+                
+            }
+        }
+    }
 
     section.section6 {
         width: 100%;
-        height: 555px;
+        // height: 555px;
         position: relative;
         z-index: 88;
 
@@ -4188,7 +4361,8 @@ div#wrap {
         }
 
         @media@mediaVericalMobile {
-            height: 780px;
+            height: 680px;
+            margin-top: 50px;
         }
 
 
@@ -4249,8 +4423,10 @@ div#wrap {
                     background-size: cover;
                 }
 
-                @media@mediaVericalMobile {
-                    height: 630px;
+                // @media@mediaVericalMobile {
+                    @media (max-width:700px) {
+                        
+                    height: 500px;
                     background-image: url(../img/hexagon_sm.png);
                     .backgroundOption;
 
@@ -4461,323 +4637,7 @@ div#wrap {
 
     }
 
-    section.introduce_consult {
-        width: 100%;
-        height: 665px;
-        border-top: 1px solid #cccccc;
-        position: relative;
-        z-index: 88;
-        margin-top: 150px;
-
-        @media@mediaTablet {
-            width: 95%;
-            margin: 0px auto;
-            margin-top: 100px;
-            height: 550px;
-        }
-
-        @media@mediaVericalMobile {
-            height: 1050px;
-            margin-top: 00px;
-            border: 0px;
-
-        }
-
-
-        div.wrap {
-            .wraps;
-            padding: 0px;
-            text-align: center;
-
-            @media@mediaVericalMobile {
-                padding: 0px;
-
-            }
-
-            div.tit_box {
-                display: inline-block;
-                height: 100px;
-                background: white;
-                margin: 0 auto;
-                transform: translateY(-80%);
-                text-align: center;
-                position: relative;
-                z-index: 99;
-
-                @media@mediaVericalMobile {
-                    display: block;
-                    width: 100%;
-                    transform: translateY(0%);
-
-                }
-
-                h2 {
-                    font-size: 1.875rem;
-                    font-weight: normal;
-                    letter-spacing: -1px;
-                    color: #f9443b;
-                    margin-bottom: 20px;
-
-                    @media@mediaVericalMobile {
-                        font-size: 1.125rem;
-                        margin-top: 50px;
-                    }
-                }
-
-                h3 {
-                    font-size: 3.75rem;
-                    font-weight: bold;
-                    letter-spacing: -3px;
-                    text-align: left;
-                    text-align: center;
-                    @media@mediaVericalMobile {
-                        font-size: 1.875rem;
-
-                    }
-                }
-
-            }
-
-            div.profils {
-                width: 100%;
-                height: 500px;
-                text-align: left;
-
-
-                @media@mediaTablet {
-                    height: 360px;
-                }
-
-                @media@mediaVericalMobile {
-                    width: 90%;
-                    height: 780px;
-                    margin: 0 auto;
-                }
-
-                div.photo {
-                    width: 430px;
-                    height: 100%;
-                    float: left;
-                    .backgroundOption;
-                    background-position: top;
-
-
-                    @media@mediaTablet {
-                        width: 34%;
-                        max-width: 250px;
-                    }
-
-                    @media@mediaVericalMobile {
-                        width: 100%;
-                        height: 450px;
-                        float: inherit;
-                    }
-
-
-                }
-
-                div.profil_box {
-                    width: 720px;
-                    height: 415px;
-                    float: right;
-                    border-top: 1px solid #666666;
-
-                    @media@mediaTablet {
-                        width: 64%;
-                        height: 330px;
-                        ;
-                    }
-
-                    @media@mediaVericalMobile {
-                        width: 100%;
-                        border-top: 0px;
-                        float: inherit;
-                    }
-
-
-                    h3 {
-                        width: 100%;
-                        // height: 105px;
-                        padding-top: 30px;
-                        box-sizing: border-box;
-                        font-size: 1.1rem;
-                        letter-spacing: -1px;
-                        line-height: 1.5rem;
-                        padding-bottom: 20px;
-
-                        p {
-                            margin-bottom: 10px;
-                        }
-
-                        @media@mediaTablet {
-                            padding-top: 15px;
-                            padding-bottom: 15px;
-
-                        }
-
-                        @media@mediaVericalMobile {
-                            padding-top: 25px;
-                            padding-bottom: 25px;
-
-                        }
-
-                    }
-
-                    div.resume {
-                        width: 100%;
-                        height: 300px;
-                        border-top: 1px solid #666666;
-                        padding-top: 20px;
-
-                        @media@mediaVericalMobile {
-                            height: 100%;
-                        }
-
-                        @media@mediaVericalMobile {
-                            height: 80%;
-
-                            margin-top: 20px;
-                        }
-
-                        ul#resume {
-                            width: 100%;
-
-                            li {
-                                width: 100%;
-                                height: 100%;
-
-                                div.year {
-                                    width: 15%;
-                                    height: 100%;
-                                    float: left;
-
-                                    p {
-                                        color: #666666;
-                                        font-size: 0.85rem;
-                                        font-weight: bold;
-                                        letter-spacing: -1px;
-
-                                    }
-
-                                    @media@mediaVericalMobile {
-                                        width: 15%;
-
-                                    }
-
-                                    @media@mediaVericalMobile {
-                                        width: 15%;
-
-
-                                    }
-                                }
-
-                                div.desc {
-                                    width: 85%;
-                                    float: left;
-                                    margin-bottom: 25px;
-                                    word-break: keep-all;
-
-                                    @media@mediaVericalMobile {
-                                        width: 85%;
-                                    }
-
-                                    @media@mediaVericalMobile {
-                                        width: 85%;
-
-                                    }
-
-                                    p {
-                                        height: 20px;
-                                        ;
-                                        padding-bottom: 10px;
-                                        color: #444444;
-                                        box-sizing: border-box;
-                                        letter-spacing: -1px;
-
-                                    }
-
-                                    float: left;
-                                }
-                            }
-                        }
-
-                        // ul {
-                        //     height: 100%;
-                        //     li {
-                        //         padding-top: 5px;
-                        //         width: 100%;
-                        //         // line-height: 60px;
-                        //         // border-bottom: 1px solid #cccccc;
-
-                        //         @media@mediaTablet {
-                        //             line-height: 50px;
-                        //         }
-
-                        //         @media@mediaVericalMobile {
-                        //             line-height: 30px;
-                        //             padding-top: 10px;
-                        //             padding-bottom: 10px;
-
-                        //         }
-
-
-                        //         // div {
-                        //         //     display: inline-block;
-                        //         // }
-
-                        //         div.year {
-                        //             width: 10%;
-                        //             // width: 110px;
-                        //             float: left;
-
-                        //             font-size: 1.0rem;
-                        //             color: #cccccc;
-
-                        //             @media@mediaTablet {
-                        //                 width: 20%;
-                        //                 max-width: 65px;
-                        //             }
-
-                        //             @media@mediaVericalMobile {
-                        //                 width: 20%;
-                        //                 height: 100%;
-                        //                 font-size: 1.0rem;
-                        //             }
-                        //         }
-                        //         div.desc {
-                        //             width: 80%;
-                        //             // height: 100%;
-                        //             font-size: 1.125rem;
-                        //             float: right;
-                        //             p{
-                        //                 height: 40px;
-                        //             }
-                        //             @media@mediaTablet {
-                        //                 font-size: 1.0rem;
-                        //             }
-
-                        //             @media@mediaVericalMobile {
-                        //                 width: 70%;
-                        //                 box-sizing: border-box;
-                        //                 font-size: 1.0rem;
-                        //                 float: right;
-                        //             }
-
-
-                        //         }
-                        //     }
-
-                        //     li:nth-last-child(1) {
-                        //         border-bottom: 1px solid #666666;
-                        //     }
-                        // }
-
-                    }
-                }
-            }
-        }
-
-    }
+  
 
     section.gene_section5 {
         height: 950px;
@@ -4848,16 +4708,16 @@ div#wrap {
 
     section.banner-2 {
         background: #f0f0f0;
-        margin-bottom: 50px;
-        @media@mediaVericalMobile {
-        }
-
+   
         div.wrap {
             .wraps;
             padding-top: 100px;
             box-sizing: border-box;
             height: 710px;
-
+            @media@mediaTablet {
+                height: 600px;
+                font-size: 1.875rem;
+            }
             @media@mediaVericalMobile {
                 height: 480px;
             }
@@ -4914,13 +4774,15 @@ div#wrap {
             div.pc_slide {
                 width: 800px;
                 height: 470px;
-                margin: 50px auto;
+                margin: 40px auto;
                 background-image: url(../img/section-banner-2_pc_img.png);
                 .backgroundOption;
                 background-size: cover;
                 background-position: top;
                 overflow: hidden;
-
+                @media@mediaTablet {
+                    width: 600px;
+                }
                 @media@mediaVericalMobile {
                     width: 360px;
                     background-size: cover;
@@ -4938,6 +4800,11 @@ div#wrap {
                         width: 240px;
                         margin-top: -10px;
                     }
+                    @media@mediaTablet {
+                        width: 380px;
+                        margin-top: -15px;
+
+                    }
 
                 }
 
@@ -4949,10 +4816,14 @@ div#wrap {
                     margin: 0px auto;
                     box-sizing: 0px;
                     .backgroundOption;
-
+                
                     @media@mediaVericalMobile {
                         height: 150px;
                     }
+                    @media@mediaTablet {
+                        height: 260px;
+                    }
+
 
 
                 }
@@ -5358,7 +5229,7 @@ div#wrap {
         background-size: cover;
         @media@mediaTablet {
             height: 420px;
-            background-size: 100%;
+            background-size: cover;
             background-image: url(../img/gene/section6_md_bg.png);
         }
         @media@mediaVericalMobile {
@@ -5407,10 +5278,21 @@ div#wrap {
                 margin: 0 auto;;
                 margin-top: 50px;
                 text-align: center;
-        @media@mediaTablet {
-            width: 60%;
-        }
+                @media (max-width:1200px) {
+                    width: 80%;
+                }
 
+                @media@mediaTablet {
+                    width: 100%;
+                }
+              
+                @media@mediaVericalMobile {
+                    width: 100%;
+                }
+                @media (max-width:400px) {
+                    width: 100%;
+                    
+                }
 
                 li {
                     opacity: 1.0;
