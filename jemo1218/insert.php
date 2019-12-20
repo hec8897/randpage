@@ -10,6 +10,7 @@ $reqBirth = $data->insult[1];
 $reqSexflag = $data->insult[3];
 $reqArea = $data->insult[4];
 $reqMemo = $data->insult[5];
+$reqAd = $data->adget;
 
 switch($reqMemo){
     case "home" :
@@ -45,8 +46,8 @@ $time = date('Y-m-d H:i:s');
 $result = 'no';
 
 
-$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqSexflag,reqArea,reqPhone,reqBirth,Insertdate,reqMemo) 
-VALUES('$site_code','$reqName','$reqSexflag','$reqArea','$reqPhone','$reqBirth','$time','$reqMemo')";
+$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqSexflag,reqArea,reqPhone,reqBirth,Insertdate,reqMemo,reqAd) 
+VALUES('$site_code','$reqName','$reqSexflag','$reqArea','$reqPhone','$reqBirth','$time','$reqMemo','$reqAd')";
 $query = mysqli_query($conn,$sql);
 if(isset($query)){
     $result='ok';

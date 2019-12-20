@@ -1359,7 +1359,7 @@ function insertData() {
     var Checked = document.getElementById('agree_check').checked;
     data = {
         insult: [reqName, reqBirth, reqNumber, reqSexflag,reqArea,ThisFormData],
-        key:params.key,
+        adget: params.id
         // cflag: CflagName
     }
     if (reqName == '') {
