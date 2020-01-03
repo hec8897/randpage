@@ -129,8 +129,6 @@ function popUpOpen(result,mode) {
     event.stopPropagation();     
     return false;
      });
-
-
     Popup.style.display = 'block'
 }
 function popUpClose() {

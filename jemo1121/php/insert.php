@@ -26,7 +26,7 @@ if(isset($data[0]->TestAnsewer[7])){
 else{
     $reqMemo = "$reqConsult\n테스트 미실행";
 }
-$site_code = '재무분석';
+$site_code = '재무분석_1    ';
 $time = date('Y-m-d H:i:s');
 
 

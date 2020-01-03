@@ -1,0 +1,155 @@
+@media (max-width: 1190px) {
+    #header{width:100%; padding:0 30px; box-sizing:border-box}
+    .head_tit{left:0; right:0; margin-left:0; width:100%;}
+    
+    .con>ul{width:100%; padding:0 10px; box-sizing: border-box}
+    .con2>ul>li{float:left; width:32%}
+    .con2>ul>li:nth-child(2n){width:2%}
+    .con2>ul li .panel .ctit h2{font-size:24px}
+    .con2>ul li .panel p{font-size:14px}
+    .con2>ul li .panel ul{padding:10px 15px}
+    
+    .con5 .db_img{width:100%; margin:0 auto; padding-top:30px}
+    .con5 .db_img>div{width:45%}
+    .con5 .db_img>div.db_arrow{width:8%; margin:0}
+    .con5 .db_img>div.db_arrow img{width:80%}
+    
+    .con6{width:100%; padding-left:10px; padding-right:10px; box-sizing:border-box}
+    .privacy{width:100%}
+    .form_area{width:100%}
+}
+@media (max-width: 800px) {
+    #header{height:550px}
+    #header img{width:100%}
+    .title_b{top:130px; left:0; margin-left:0}
+    
+    .con .title p.tit_h{font-size:40px; line-height:40px}
+    .con .title p.tit_h span{font-size:40px}
+    .con .title p.tit_s{font-size:18px}
+    .con .title p.tit_s span{font-size:18px}
+    .con .title p.tit_s2{font-size:24px; line-height:24px}
+    
+    .con>ul>li .panel h4{font-size:16px}
+    .con>ul>li .panel h2{font-size:24px}
+    .con>ul>li .panel h3{font-size:18px}
+    .con>ul>li .panel .scon p{font-size:13px}
+    .con>ul>li.i_plus img{width:30px; margin-top:300%}
+    
+    .con2{padding:70px 0}
+    .con .p_label{top:-40px; left:50%; margin-left:-40px; padding-top:10px; width:80px; height:80px; font-size:16px}
+    .con .p_label span{font-size:28px}
+    .con2>ul li .panel ul{padding:10px 15px}
+    .con2>ul li .panel .ctit{padding-top:50px}
+    .con2>ul li .panel ul li p:first-child{font-size:14px}
+    .con2>ul li .panel ul li p.li_txt{font-size:13px}
+    .con2 .panel{min-height:auto}
+    .con2>ul li .panel a{position:relative}
+    .con2>ul>li:nth-child(2n){height:60px}
+    
+    .con3{padding:70px 0}
+    .con4{padding:70px 0}
+    .con5{padding:70px 0}
+    .con6{padding:70px 10px 70px 10px}
+    .con6 .title p.tit_h{font-size:30px}
+}
+
+@media (max-width: 767px) {
+    .head_tit p.htit_1{margin-top:25px; font-size:18px; font-weight:700; letter-spacing:0}
+    .head_tit p.htit_2{margin-left:0; font-size:16px; font-weight:100; letter-spacing:0}
+    .head_tit p.htit_3{margin:10px 0 25px 0; font-size:40px; font-weight:100}
+    .head_tit p.htit_3 span{font-size:40px; font-weight:600; color:#fff}
+}
+
+@media (max-width: 640px) {
+    #header{height:500px}
+    
+    .con>ul>li .panel h4{font-size:14px}
+    .con>ul>li .panel h2{font-size:24px}
+    .con>ul>li .panel h3{font-size:18px}
+    .con>ul>li .panel .scon p{font-size:13px}
+    .con>ul>li.i_plus img{width:30px; margin-top:300%}
+    
+    .con .sub_txt{padding:30px 0}
+    .con .sub_txt p{font-size:30px; line-height:35px}
+    
+    .con .title p.tit_s{line-height:20px}
+}
+
+@media (max-width: 480px) {
+    #header{height:450px}
+    .head_tit p.htit_1{margin-top:25px; font-size:16px; font-weight:700; letter-spacing:0}
+    .head_tit p.htit_2{margin-left:0; font-size:14px; font-weight:100; letter-spacing:0}
+    .head_tit p.htit_3{margin:10px 0 25px 0; font-size:30px; font-weight:100}
+    .head_tit p.htit_3 span{font-size:30px; font-weight:600; color:#fff}
+    
+    .swiper-button-next{display:none}
+    .swiper-button-prev{display:none}
+    
+    .con .title p.tit_h{font-size:30px; line-height:30px}
+    .con .title p.tit_h span{font-size:30px}
+    .con .title p.tit_s{font-size:16px}
+    .con .title p.tit_s span{font-size:16px}
+    .con .title p.tit_s2{font-size:18px; line-height:18px}
+    
+    .con>ul>li{float:none; width:100%}
+    .con>ul>li:nth-child(2n){width:100%}
+    .con>ul>li.i_plus img{display:inline-block; width:30px; margin:10px 0}
+    .con1>ul>li .panel .ctit{padding:20px 0}
+    
+    .con2 .title .tit_h span{display:block}
+    .con2 .title p.tit_s{font-size:14px}
+    .con2 .title p.tit_s span{font-size:14px}
+    .con5 .title .tit_h span{display:block}
+    .con5 .title p.tit_s{font-size:14px}
+    .con5 .title p.tit_s span{font-size:14px}
+    
+    .con5 .db_img{width:100%; margin:0 auto; padding:30px 10px 0 10px; box-sizing:border-box}
+    .con5 .db_img>div{width:100%}
+    .con5 .db_img>div.db_arrow{
+        width:60px;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-name: bounce;
+    }
+    .con5 .db_img>div.db_arrow img{transform:rotate(360deg)}
+    
+    .con6 .title p.tit_h{font-size:22px}
+    
+}
+
+@media (max-width: 414px) {
+    #header{height:350px}
+    .title_b{top:100px}
+    
+    .con2>ul li .panel ul li{text-align:left; padding:5px 0}
+    .con2>ul li .panel ul li p:first-child{font-weight:700}
+    
+    .form_area{margin-top:30px}
+    .form_area .form_box>div{width:100%; margin-bottom:20px}
+    .form_area p{margin-bottom:5px}
+    
+    .btn{clear:both; margin:0 auto; width:100%; height:60px; padding:20px 0}
+    
+    .form_area .form_select>div div{width:100%; clear:both; margin-bottom:10px}
+    .form_area .form_select>div div:nth-child(1){padding-right:0}
+    .form_area .form_select>div div:nth-child(2){padding:0}
+    .form_area .form_select>div div:nth-child(3){padding-left:0}
+    .form_area .form_select>div div:nth-child(2).radio label:before{left:15px}
+    .form_area .form_select>div div:nth-child(3).radio label:before{left:15px}
+}
+
+@media (max-width: 360px) {
+    .con .sub_txt{padding:30px 0}
+    .con .sub_txt p{font-size:24px; line-height:30px}
+    .con6 .title p.tit_h{font-size:18px}
+}
+
+@media (max-width: 320px) {
+    .con .title p.tit_h{font-size:24px; line-height:24px}
+    .con .title p.tit_h span{font-size:24px}
+    .con .title p.tit_s{font-size:14px}
+    .con .title p.tit_s span{font-size:14px}
+    .con .title p.tit_s2{font-size:16px; line-height:16px}
+    .con6 .title p.tit_h{font-size:16px}
+}
