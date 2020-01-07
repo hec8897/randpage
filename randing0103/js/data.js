@@ -13,6 +13,7 @@ getQueryString = function getQueryString() {
     var ReqPhone = document.getElementById('reqphone');
     var ReqRadio1 = document.getElementById('radio_1');
     var ReqRadio2 = document.getElementById('radio_2');
+    var ReqRadio3 = document.getElementById('radio_3');
     var checkbox = document.getElementById('checkbox_1');
     var RadioValue;
   
@@ -22,20 +23,21 @@ getQueryString = function getQueryString() {
       alert('성함을 입력해주세요');
     } else if (ReqPhone.value == "") {
       alert('연락처를 입력해주세요');
-    } else if (ReqRadio1.checked == false && ReqRadio2.checked == false) {
-      alert('원하시는 상담을 선택해 주세요');
-    } else if (ReqRadio1.checked == true) {
-      RadioValue = "1-랜딩페이지 제작(30만원)";
+    }  else if (ReqRadio1.checked == true) {
+      RadioValue = "1. 개인 홈페이지 제작(30만원)";
     } else if (ReqRadio2.checked == true) {
-      RadioValue = "2-FC맞춤 온라인 마케팅 교육(50만원)";
-    } else {
+      RadioValue = "2. 온라인 마케팅 3주교육(30만원)";
+    } 
+    else if (ReqRadio3.checked == true) {
+      RadioValue = "3. 개인 홈페이지 + 마케팅 3주교육(40만원)";
+    }
+    else {
       InsertdataArray = [{
         adget: params.id,
         reqName: ReqName.value,
         reqPhone: ReqPhone.value,
         ReqRadio: RadioValue
       }];
-      console.log(InsertdataArray);
     }
   }
   
@@ -54,6 +56,8 @@ getQueryString = function getQueryString() {
       var ReqPhone = document.getElementById('reqphone');
       var ReqRadio1 = document.getElementById('radio_1');
       var ReqRadio2 = document.getElementById('radio_2');
+      var ReqRadio3 = document.getElementById('radio_3');
+
       var checkbox = document.getElementById('checkbox_1');
       var RadioValue = "";
   
@@ -61,6 +65,9 @@ getQueryString = function getQueryString() {
         RadioValue = "1-랜딩페이지 제작(30만원)";
       } else if (ReqRadio2.checked == true) {
         RadioValue = "2-FC맞춤 온라인 마케팅 교육(50만원)";
+      }
+      else if (ReqRadio3.checked == true) {
+        RadioValue = "3. 개인 홈페이지 + 마케팅 3주교육(40만원)";
       }
   
       if (checkbox.checked == false) {
