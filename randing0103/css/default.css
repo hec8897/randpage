@@ -152,7 +152,7 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
 .form_area .radio label{display:block; width:100%; height:50px; line-height:49px; border:1px solid #d9d9d9; box-sizing:border-box}
 
 .btn{clear:both; margin:0 auto; width:300px; height:60px; padding:20px 0}
-.btn span{display:block; background:#fc1839; line-height:60px; text-align:center; color:#fff; font-size:18px}
+.btn span{display:block; background:#fc1839; line-height:60px; text-align:center; color:#fff; font-size:18px; cursor: pointer;}
 .btn span:hover{background:#e50526}
 
 
