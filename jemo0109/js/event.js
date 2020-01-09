@@ -222,7 +222,7 @@ const Popup = {
                                     <img src="images/img_smile.png" alt="smile">
                                     <p>
                                         빠른 시간 내에 전문 상담사를 배정하여 전화드릴 수 있도록 하겠습니다.<br>
-                                        한시적으로 운영되는 무료 상담 서비스인 만큼 적극적인 응대와 재무관리에 관한<br>
+                                        한시적으로 운영되는 무료 상담 서비스인 만큼 적극적인 답변과 재무관리에 관한<br>
                                         다양한 질문을 준비해두시면 더욱 발전적인 시간이 될 것입니다.<br>
                                         <br>
                                         2020년도의 성공적인 재테크를 기원합니다.
@@ -341,7 +341,6 @@ function UpdateInsert(data) {
         if (this.readyState == 4 && this.status == 200) {
             returnInsert = JSON.parse(this.responseText)
             if (returnInsert.phpresult == 'ok') {
-                alert('무료 재무설계 신청이 완료되었습니다. 빠른 시간 내에 전문 상담사를 배정하여 전화드릴 수 있도록 하겠습니다.')
                 Popup.ResultRender();
 
             } else {
