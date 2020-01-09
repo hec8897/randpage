@@ -311,7 +311,7 @@ function DataInsert(data) {
         if (this.readyState == 4 && this.status == 200) {
             returnInsert = JSON.parse(this.responseText)
             if (returnInsert.phpresult == 'ok') {
-                alert('무료 재무상담 신청이 완료되었습니다. 빠른 시간 내에 전문 상담사를 배정하여 전화드릴 수 있도록 하겠습니다.')
+                alert('무료 재무 상담을 신청해주셔서 감사합니다. 재무설계에 필요한 몇가지 질문에 답해주시면 더욱 알차고 유익한 상담이 됩니다. (2분 소요) ')
                 Popup.PopupOpen()
             } else {
                 alert('상담신청 실패 관리자에게 문의해주세요')
@@ -341,7 +341,7 @@ function UpdateInsert(data) {
         if (this.readyState == 4 && this.status == 200) {
             returnInsert = JSON.parse(this.responseText)
             if (returnInsert.phpresult == 'ok') {
-                alert('무료 재무상담 신청이 완료되었습니다. 빠른 시간 내에 전문 상담사를 배정하여 전화드릴 수 있도록 하겠습니다.')
+                alert('무료 재무설계 신청이 완료되었습니다. 빠른 시간 내에 전문 상담사를 배정하여 전화드릴 수 있도록 하겠습니다.')
                 Popup.ResultRender();
 
             } else {
