@@ -104,8 +104,16 @@
     
     .con3 .tits p{font-size:14px}
     .panel h3{font-size:18px; margin:20px 0; padding:0 10px; box-sizing:border-box}
-    
+    .panel.result{padding:30px}
+    .panel.result p{font-size:15px}
+    .panel.result br{display:none}
+    .con4 .tits p{font-size:15px; line-height:20px; margin-top:10px}
+    .con4 ul{text-align:center}
     .con4 li{float:left; width:33.33%}
+    .con4 li:nth-child(4){display:inline-block; float:none}
+    .con4 li:nth-child(5){display:inline-block; float:none}
+    
+    .panel button{width:180px; height:50px; border-radius:0}
     
     .bgimg{height:400px}
     .bgimg .tits{margin-top:150px; font-size:24px}
@@ -122,24 +130,30 @@
     .con3 li>div{padding:10px}
     .con3 li p{font-size:14px}
     .con3 li span{font-size:12px}
+    
+    .con4 .tits p{font-size:14px}
+    .con4 .tits p br{display:none}
     .con4 li h3{font-size:14px}
     .con4 li span{font-size:14px}
     .con5{margin-top:0; height:100%}
     .con5 .tits p{font-size:14px; line-height:16px}
     .con6 .tits p{font-size:14px}
+    
+    .panel button{font-size:14px}
 }
 
 @media (max-width: 360px) {
     #header{height:300px}
     .title_b img{width:90%}
-    .panel button{width:140px; height:140px}
-    
+        
     .con4 li{float:left; width:50%}
+    .panel button{width:45%}
+    .panel.result{padding:20px}
+    .panel.result img{width:100px}
 }
 
 @media (max-width: 320px) {
-    .panel{padding-bottom:30px}
-    .panel button{width:100px; height:100px}
+    .panel.result p{font-size:13px}
     .con5 .tits br{display:none}
     .con5 .btn{padding-top:20px}
     .st_cat{margin-top:30px}

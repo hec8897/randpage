@@ -83,6 +83,7 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
 .con3 li img{position:absolute; z-index:-1; top:50%; right:0; width:60px; margin-top:-90px}
 
 .con4{clear:both; overflow:hidden}
+.con4 .tits p{font-size:18px; line-height:25px; margin-top:20px}
 .con4 li{position:relative; float:left; width:20%; padding:5px; box-sizing:border-box}
 .con4 li h3{background:#abd4ee; line-height:25px; padding:20px 0}
 .con4 li span{display:block; font-size:24px; color:#d02816}
@@ -127,12 +128,19 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
 .panel button:active{background:#16b1f2; color:#fff; font-weight:700}
 .panel button:focus{background:#16b1f2; color:#fff; font-weight:700}
 
+.panel.result{padding:50px; box-sizing:border-box}
+.panel.result p{font-size:18px}
+.panel.result img{width:133px; margin-bottom:20px}
+
 .obj>div{position:absolute; left:50%}
 .obj img{display:block}
 .obj .obj_1{top:-50px; margin-left:-690px; width:314px}
 .obj .obj_2{top:280px; margin-left:-700px; width:247px}
 .obj .obj_3{top:470px; margin-left:440px; width:284px}
 .obj .obj_4{top:-160px; margin-left:480px; width:389px}
+
+.panel h1{margin:30px 0}
+
 
 .con6{clear:both; overflow:hidden}
 .con6 .tits p{font-size:30px; font-weight:300}
@@ -162,8 +170,9 @@ input,select,label{display:inline-block}
 .privacy{width:1200px; margin:0 auto}
 .privacy>label{float:left}
 .privacy>div{display:inline-block; width:75%}
-.privacy .p_box{width:100%; height:150px; border:1px solid #d9d9d9; background:#f9f9f9; padding:20px; box-sizing:border-box; overflow:hidden; overflow-y:scroll; margin-top: 10px;}
-.privacy .dp_none{display: none;}
+.privacy .p_box{width:100%; height:150px; border:1px solid #d9d9d9; background:#f9f9f9; padding:20px; box-sizing:border-box; overflow:hidden; overflow-y:scroll;}
+.privacy .p_box.dp_none{display: none;}
+
 .privacy p{font-size:14px; margin-bottom:20px}
 .privacy ol{list-style:decimal; margin-left:10px; margin-bottom:30px}
 .privacy li{font-size:13px; color:#666; line-height:20px; margin-bottom:10px}
@@ -186,7 +195,7 @@ input,select,label{display:inline-block}
 .bgimg{background:url(../images/bg_img1.jpg) no-repeat center; height:600px; margin-top:100px}
 .bgimg .tits{color:#fff; margin-top:200px}
 .bgimg .tits .tyellow{color:#f3bf20}
-.bgimg .tits p{font-size:16px; color:#fff; line-height:30px; margin-top:30px}
+.bgimg .tits p{font-size:24px; color:#fff; line-height:30px; margin-top:30px}
 
 
 
