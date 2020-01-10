@@ -147,6 +147,41 @@ const popupData = [{
                 "point": 0
             }
         ]
+    },
+    {
+        "no": "8",
+        "question": "당신의 연령대는 ?",
+        "answer": [{
+                "qa": "20대",
+                "point": 0
+            },
+            {
+                "qa": "30대",
+                "point": 0
+            },
+            {
+                "qa": "40대",
+                "point": 0
+            },
+            {
+                "qa": "50대이상",
+                "point": 0
+            }
+        ]
+    },
+    {
+        "no": "9",
+        "question": "당신의 성별은?",
+        "answer": [{
+                "qa": "남성",
+                "point": 0
+            },
+            {
+                "qa": "여성",
+                "point": 0
+            },
+         
+        ]
     }
 ]
 
@@ -185,8 +220,7 @@ const Popup = {
                             </div>`
     },
     AnswerDataSave(thisValue) {
-        if (this.QuestionIndex < 7) {
-
+        if (this.QuestionIndex < popupData.length) {
             this.answerDataArray.push(thisValue)
             this.PopupRender(this.QuestionIndex + 1)
             this.QuestionIndex += 1;
@@ -311,7 +345,7 @@ function DataInsert(data) {
         if (this.readyState == 4 && this.status == 200) {
             returnInsert = JSON.parse(this.responseText)
             if (returnInsert.phpresult == 'ok') {
-                alert('무료 재무 상담을 신청해주셔서 감사합니다. 재무설계에 필요한 몇가지 질문에 답해주시면 더욱 알차고 유익한 상담이 됩니다. (2분 소요) ')
+                alert('무료 재무 상담을 신청해주셔서 감사합니다. 재무설계에 필요한 몇가지 질문에 답해주시면 더욱 알차고 유익한 상담이 됩니다. (1분 소요) ')
                 Popup.PopupOpen()
             } else {
                 alert('상담신청 실패 관리자에게 문의해주세요')

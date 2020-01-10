@@ -48,7 +48,9 @@ if(isset($conn)){$phpresult = 'ok';}
 else{$phpresult = 'no';}
 
 $json = json_encode(
-    array("phpresult"=>$phpresult,"result"=>$data,"testd"=>$sql)
+    array("phpresult"=>"ok","result"=>$data,"testd"=>$sql)
+    // array("phpresult"=>$phpresult,"result"=>$data,"testd"=>$sql)
+
 );
 echo urldecode($json);
 header('Content-Type: application/json');
