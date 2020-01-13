@@ -148,29 +148,9 @@ const popupData = [{
             }
         ]
     },
+
     {
         "no": "8",
-        "question": "당신의 연령대는 ?",
-        "answer": [{
-                "qa": "20대",
-                "point": 0
-            },
-            {
-                "qa": "30대",
-                "point": 0
-            },
-            {
-                "qa": "40대",
-                "point": 0
-            },
-            {
-                "qa": "50대이상",
-                "point": 0
-            }
-        ]
-    },
-    {
-        "no": "9",
         "question": "당신의 성별은?",
         "answer": [{
                 "qa": "남성",
@@ -182,7 +162,28 @@ const popupData = [{
             },
          
         ]
-    }
+    },
+    {
+        "no": "9",
+        "question": "당신의 연령대는 ?",
+        "answer": [{
+                "qa": "20",
+                "point": 0
+            },
+            {
+                "qa": "30",
+                "point": 0
+            },
+            {
+                "qa": "40",
+                "point": 0
+            },
+            {
+                "qa": "50",
+                "point": 0
+            }
+        ]
+    },
 ]
 
 String.prototype.replaceAll = function (org, dest) {
@@ -196,10 +197,12 @@ const Popup = {
         this.PopupRender(0)
     },
     PopupClose() {
-        this.PopupHtml.className = 'popover dp_none'
+        this.PopupHtml.className='dp_none';
+        const Panel = document.getElementById('panel');
+
+        Panel.innerHTML = ``;
         this.answerDataArray = [];
         this.QuestionIndex = 0;
-
     },
     QuestionIndex: 0,
     UpdateTableData: [],
@@ -207,8 +210,17 @@ const Popup = {
     PopupRender(QuestionIndex) {
         const Panel = document.getElementById('panel')
         let Buttons = []
-        for (let i = 0; i < popupData[QuestionIndex].answer.length; i++) {
-            Buttons.push(`<button value='${popupData[QuestionIndex].answer[i].qa}' onclick='Popup.AnswerDataSave(this.value)'>${popupData[QuestionIndex].answer[i].qa}</button>`)
+        
+        if(popupData[QuestionIndex].no == "9"){
+            for (let i = 0; i < popupData[QuestionIndex].answer.length; i++) {
+                Buttons.push(`<button value='${popupData[QuestionIndex].answer[i].qa}' onclick='Popup.AnswerDataSave(this.value)'>${popupData[QuestionIndex].answer[i].qa}대</button>`)
+            }
+        }
+        else{
+            for (let i = 0; i < popupData[QuestionIndex].answer.length; i++) {
+                Buttons.push(`<button value='${popupData[QuestionIndex].answer[i].qa}' onclick='Popup.AnswerDataSave(this.value)'>${popupData[QuestionIndex].answer[i].qa}</button>`)
+            }
+
         }
         ButtonRender = Buttons.toString().replaceAll(",", "")
         Panel.innerHTML = `<div>
@@ -220,11 +232,12 @@ const Popup = {
                             </div>`
     },
     AnswerDataSave(thisValue) {
-        if (this.QuestionIndex < popupData.length) {
+        if (this.QuestionIndex < popupData.length-1) {
             this.answerDataArray.push(thisValue)
             this.PopupRender(this.QuestionIndex + 1)
             this.QuestionIndex += 1;
-        } else {
+        } 
+        else {
             this.answerDataArray.push(thisValue)
             let targetTable = returnInsert.result[0]
             UpdateSurvey(this.answerDataArray, targetTable)

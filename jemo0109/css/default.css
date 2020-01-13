@@ -109,14 +109,16 @@ iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
 
 .st_cat{position:relative; margin:0 auto; margin-top:50px; display:block; background:#f0f0f0; width:80%; height:5px}
 .st_cat:before{content:''; position:absolute; left:0; height:5px; background:#16b1f2}
-.st_cat.step_1:before{width:12.5%}
-.st_cat.step_2:before{width:25%}
-.st_cat.step_3:before{width:37.5%}
-.st_cat.step_4:before{width:50%}
-.st_cat.step_5:before{width:62.5%}
-.st_cat.step_6:before{width:75%}
-.st_cat.step_7:before{width:87.5%}
-.st_cat.step_8:before{width:100%}
+.st_cat.step_1:before{width:10%}
+.st_cat.step_2:before{width:20%}
+.st_cat.step_3:before{width:30%}
+.st_cat.step_4:before{width:40%}
+.st_cat.step_5:before{width:50%}
+.st_cat.step_6:before{width:60%}
+.st_cat.step_7:before{width:70%}
+.st_cat.step_8:before{width:80%}
+.st_cat.step_9:before{width:90%}
+.st_cat.step_10:before{width:100%}
 
 .panel h3{margin:30px 0}
 .panel button{
