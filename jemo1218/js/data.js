@@ -1382,7 +1382,7 @@ function insertData() {
                 InputreturnJson = JSON.parse(this.response);
                 if (InputreturnJson.result == 'ok') {
                     alert('상담신청이 완료되었습니다 :)')
-                    // location.reload();
+                    location.reload();
                 } else {
                     alert('no')
                 }
