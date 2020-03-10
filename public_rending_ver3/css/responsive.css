@@ -1,0 +1,11 @@
+@media (max-width:1024px){
+    .pc{display: none;}
+    .tablet{display: block;}
+    div.wrap{max-width: 98%;}
+
+}
+
+@media (max-width:767px){
+    .tablet{display: none;}
+    .mo{display: block;}
+}

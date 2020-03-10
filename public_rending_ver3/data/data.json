@@ -1,0 +1,43 @@
+[
+    {
+        "idx": 0,
+        "userName": "방진수",
+        "spot": "팀장",
+        "headerimg": "images/header-pc",
+        "profilePhoto": "images/photo.jpg",
+        "title": "고객과의 신뢰를 바탕으로, 항상 고객을 먼저 생각하는 최고의 담당자가 되겠습니다.",
+        "resums": [
+            {
+                "key": 0,
+                "year": 2016,
+                "resum": "NEXT AIA 전사 챔피언"
+            },
+            {
+                "key": 1,
+                "year": 2017,
+                "resum": "3W(한 주에 신계약 3건 이상) 100주 연속 달성"
+            },
+            {
+                "key": 2,
+                "year": 2018,
+                "resum": "최연소 지점장 승격 리쿠르팅 챔피언"
+            },
+            {
+                "key": 3,
+                "year": 2019,
+                "resum": "MDRT(세계 억대연봉자) 4회 연속 달성 경제방송 5사 보험 전문가 100회 이상 출연"
+            },
+            {
+                "key": 4,
+                "year": "현재",
+                "resum": "국제 유전자카운셀링 협회 DNA컨설턴트 전문가"
+            }
+        ],
+        "tab1": 1,
+        "tab2": 1,
+        "tab3": 1,
+        "tab4": 1,
+        "tab5": 1,
+        "tab6": 1
+    }
+]

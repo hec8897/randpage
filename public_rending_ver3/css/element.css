@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html,body{position:relative; width:100%; height:auto; font-size: 16px; font-family: 'Roboto', '맑은고딕', sans-serif;}
+
+html,body,ul,ol,img,div,span,iframe,a,p{margin:0; padding:0; border:0; outline:none}
+html,body,ul,ol,li,img,div,span,iframe,a,p,input,textarea,select,i{
+    font-weight:400; font-style:normal; word-break:keep-all; color:#222; letter-spacing:-1px;
+}
+
+a,a:hover,a:active,a:focus{text-decoration:none}
+img{border:none; width:100%; vertical-align: middle;}
+ul,ol{list-style:none}
+iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
+
+div.wrap,section.wrap{max-width: 1200px; margin: 0 auto; padding:100px 0px;}
+.pc{}
+.tablet{display: none;}
+.mo{display: none;}
+
+h1,h2,h3,h4{margin: 0;}
+h2{font-size: 3.75rem; text-align: center;}
+h3{font-size: 1.875rem; text-align: center;}
+h4{font-style: 1.563rem;}/*25px*/
+h5{font-style: 1rem;}
+p{font-size: 1rem;font-weight: 100; letter-spacing: -2px;}
