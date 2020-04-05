@@ -51,7 +51,7 @@ if(isset($conn)){$phpresult = 'ok';}
 else{$phpresult = 'no';}
 
 $json = json_encode(
-    array("phpresult"=>"$phpresult","result"=>$data,"testd"=>$sql)
+    array("phpresult"=>"$phpresult","result"=>$data,"testd"=>$reqAd)
     // array("phpresult"=>$phpresult,"result"=>$data,"testd"=>$sql)
 
 );

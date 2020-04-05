@@ -3,14 +3,14 @@ String.prototype.replaceAll = function (org, dest) {
 }
 
 var dataRender = {
-    params: '',
-    getQueryString: function () {
+    params: '', getQueryString: function () {
         params = {};
         window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) {
             params[key] = value;
         });
         return params;
-    }(),
+    }(
+   ),
     DataRendFn: function () {
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
