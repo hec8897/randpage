@@ -13,6 +13,8 @@ $mode = $data[0]->mode;
 $reqPhone = $data[0]->reqPhone;
 $reqMemo = $data[0]->reqMemo;
 
+
+
 if($mode == "update"){
     $TestAn1 = "직업군=>".$data[1][0];;
     $TestAn2 = "연간총소득=>".$data[1][1];
@@ -27,33 +29,37 @@ if($mode == "update"){
     $reqMemoss = "$reqMemo\n$TestAn1\n$TestAn2\n$TestAn3\n$TestAn4\n$TestAn5\n$TestAn6\n$TestAn7\n$TestAn8";
 }
 else{
+    $Idkey = $data[0]->IdKey;
+    $getuserSql = isset($Idkey)?"SELECT * FROM tb_member WHERE memid = '$Idkey'":"";
+    $getuserData = mysqli_query($conn,$getuserSql);
+    $userData = mysqli_fetch_assoc($getuserData);
+    $userClass = $getuserSql!=""?$userData['classcode']:"";
+    $userName = $getuserSql!=""?$userData['name']:"";
     $reqMemoss = "$reqMemo\n테스트 미실행";
 }
 
 if($mode == "fast"){
     $reqMemos = "빠른입력\n".$reqMemo;
-    $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqMemo,Insertdate,reqAd) 
-    VALUES('$site_code','$reqName','$reqPhone','$reqMemos','$time','$reqAd')";
+    $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqMemo,Insertdate,reqAd,classcode,cflag) 
+    VALUES('$site_code','$reqName','$reqPhone','$reqMemos','$time','$reqAd','$userClass','$userName')";
 }
 else if($mode == "normal"){
     $reqMemos = "하단입력\n".$reqMemo;
-    $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqMemo,Insertdate,reqAd) 
-    VALUES('$site_code','$reqName','$reqPhone','$reqMemos','$time','$reqAd')";
+    $sql ="INSERT INTO `tb_consult` (site_code,reqName,reqPhone,reqMemo,Insertdate,reqAd,classcode,cflag) 
+    VALUES('$site_code','$reqName','$reqPhone','$reqMemos','$time','$reqAd','$userClass','$userName')";
 }
 else if($mode == "update"){
     $sql = "UPDATE `tb_consult` SET `reqSexflag`='$reqSexflag', `reqBirth`='$reqBirth', `reqMemo` = '$reqMemoss ' WHERE `reqPhone` = '$reqPhone' AND `reqName`= '$reqName'";
 }
 
-$conn = mysqli_query($conn,$sql);
+$query = mysqli_query($conn,$sql);
 
 
 if(isset($conn)){$phpresult = 'ok';}
 else{$phpresult = 'no';}
 
 $json = json_encode(
-    array("phpresult"=>"$phpresult","result"=>$data,"testd"=>$reqAd)
-    // array("phpresult"=>$phpresult,"result"=>$data,"testd"=>$sql)
-
+    array("phpresult"=>$phpresult,"result"=>$data)
 );
 echo urldecode($json);
 header('Content-Type: application/json');

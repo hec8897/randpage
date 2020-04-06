@@ -303,6 +303,7 @@ function PrivacyInsertData(mode) {
             getQueryString()
 
             data = [{
+                IdKey:params.idkey,
                 reqAd: params.id,
                 mode: mode,
                 reqName: reqName.value,
@@ -330,6 +331,7 @@ function PrivacyInsertData(mode) {
             getQueryString()
 
             data = [{
+                IdKey:params.idkey,
                 reqAd: params.id,
                 mode: mode,
                 reqName: reqName.value,
