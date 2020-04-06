@@ -11,6 +11,13 @@ $reqArea = $data[1]->reqArea;
 $reqConsult = $data[1]->reqMemo;
 $reqSexflag = $data[1]->reqSexflag;
 $reqAd = $data[1]->adget;
+$Idkey = $data[1]->IdKey;
+$getuserSql = isset($Idkey)?"SELECT * FROM tb_member WHERE memid = '$Idkey'":"";
+$getuserData = mysqli_query($conn,$getuserSql);
+$userData = mysqli_fetch_assoc($getuserData);
+$userClass = $getuserSql!=""?$userData['classcode']:"";
+$userName = $getuserSql!=""?$userData['name']:"";
+
 if(isset($data[0]->TestAnsewer[0])){
     $TestAn0 = $data[0]->TestAnsewer[0]==1?"1.CMA/MMA 라는 단어를 처음 들어봤다(네)":"1.CMA/MMA 라는 단어를 처음 들어봤다(아니요)";
     $TestAn1 = $data[0]->TestAnsewer[1]==1?"2.가계부는 단 한번도 써 본적이 없고, 앞으로도 하고 싶지 않다.(네)":"2.가계부는 단 한번도 써 본적이 없고, 앞으로도 하고 싶지 않다.(아니요)";
@@ -29,13 +36,12 @@ else{
 }
 $site_code = '재무분석';
 $time = date('Y-m-d H:i:s');    
-$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqArea,reqBirth,reqPhone,reqSexflag,reqMemo,Insertdate,reqAd) 
-VALUES('$site_code','$reqName','$reqArea','$reqBirth','$reqPhone','$reqSexflag','$reqMemo','$time','$reqAd')";
+$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqArea,reqBirth,reqPhone,reqSexflag,reqMemo,Insertdate,reqAd,classcode,cflag) VALUES('$site_code','$reqName','$reqArea','$reqBirth','$reqPhone','$reqSexflag','$reqMemo','$time','$reqAd','$userClass','$userName')";
 $conn = mysqli_query($conn,$sql);
 if(isset($conn)){$phpresult = 'ok';}
 else{$phpresult = 'no';}
 $json = json_encode(
-    array("datas" => $data,"phpresult"=>$phpresult)
+    array("datas" => $data,"phpresult"=>$phpresult,'test'=>$sql)
 );
 echo urldecode($json);
 header('Content-Type: application/json');

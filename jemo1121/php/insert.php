@@ -11,6 +11,12 @@ $reqArea = $data[1]->reqArea;
 $reqConsult = $data[1]->reqMemo;
 $reqSexflag = $data[1]->reqSexflag;
 $reqAd = $data[1]->adget;
+$Idkey = $data[1]->Idkey;
+$getuserSql = isset($Idkey)?"SELECT * FROM tb_member WHERE memid = '$Idkey'":"";
+$getuserData = mysqli_query($conn,$getuserSql);
+$userData = mysqli_fetch_assoc($getuserData);
+$userClass = $getuserSql!=""?$userData['classcode']:"";
+$userName = $getuserSql!=""?$userData['name']:"";
 
 if(isset($data[0]->TestAnsewer[7])){
     $TestAn1 = "직업군=>".$data[0]->TestAnsewer[0];
@@ -30,8 +36,8 @@ $site_code = '재무분석_1    ';
 $time = date('Y-m-d H:i:s');
 
 
-$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqArea,reqBirth,reqPhone,reqSexflag,reqMemo,Insertdate,reqAd) 
-VALUES('$site_code','$reqName','$reqArea','$reqBirth','$reqPhone','$reqSexflag','$reqMemo','$time','$reqAd')";
+$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqArea,reqBirth,reqPhone,reqSexflag,reqMemo,Insertdate,reqAd,classcode,cflag) 
+VALUES('$site_code','$reqName','$reqArea','$reqBirth','$reqPhone','$reqSexflag','$reqMemo','$time','$reqAd','$userClass','$userName')";
 
 
 $conn = mysqli_query($conn,$sql);
@@ -39,7 +45,7 @@ if(isset($conn)){$phpresult = 'ok';}
 else{$phpresult = 'no';}
 
 $json = json_encode(
-    array("datas" => $data,"phpresult"=>$phpresult)
+    array("phpresult"=>$phpresult,"sql"=>$sql)
 );
 echo urldecode($json);
 header('Content-Type: application/json');

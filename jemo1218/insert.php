@@ -11,6 +11,12 @@ $reqSexflag = $data->insult[3];
 $reqArea = $data->insult[4];
 $reqMemo = $data->insult[5];
 $reqAd = $data->adget;
+$Idkey = $data->Idkey;
+$getuserSql = isset($Idkey)?"SELECT * FROM tb_member WHERE memid = '$Idkey'":"";
+$getuserData = mysqli_query($conn,$getuserSql);
+$userData = mysqli_fetch_assoc($getuserData);
+$userClass = $getuserSql!=""?$userData['classcode']:"";
+$userName = $getuserSql!=""?$userData['name']:"";
 
 switch($reqMemo){
     case "home" :
@@ -46,14 +52,14 @@ $time = date('Y-m-d H:i:s');
 $result = 'no';
 
 
-$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqSexflag,reqArea,reqPhone,reqBirth,Insertdate,reqMemo,reqAd) 
-VALUES('$site_code','$reqName','$reqSexflag','$reqArea','$reqPhone','$reqBirth','$time','$reqMemo','$reqAd')";
+$sql ="INSERT INTO `tb_consult` (site_code,reqName,reqSexflag,reqArea,reqPhone,reqBirth,Insertdate,reqMemo,reqAd,classcode,cflag) 
+VALUES('$site_code','$reqName','$reqSexflag','$reqArea','$reqPhone','$reqBirth','$time','$reqMemo','$reqAd','$userClass','$userName')";
 $query = mysqli_query($conn,$sql);
 if(isset($query)){
     $result='ok';
 }
 $json = json_encode(
-    array("datas" => $data,"result"=>$result)
+    array("datas" => $data,"result"=>$result,'test'=>$Idkey)
 );
 echo urldecode($json);
 header('Content-Type: application/json');

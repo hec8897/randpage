@@ -34,6 +34,7 @@ getQueryString = function getQueryString() {
     else {
       InsertdataArray = [{
         adget: params.id,
+        Idkey: params.idkey,
         reqName: ReqName.value,
         reqPhone: ReqPhone.value,
         ReqRadio: RadioValue
@@ -84,6 +85,7 @@ getQueryString = function getQueryString() {
         if (insert == true) {
           data = [{
             adget: params.id,
+            Idkey: params.idkey,
             reqName: ReqName.value,
             reqPhone: ReqPhone.value,
             ReqRadio: RadioValue

@@ -150,7 +150,8 @@ var dataInserter = {
                         reqArea: reqArea,
                         reqMemo: reqMemo,
                         reqSexflag: reqSexflag,
-                        adget:params.id
+                        adget:params.id,
+                        Idkey:params.idkey
                     }
                 ]
                 var xhttp = new XMLHttpRequest();

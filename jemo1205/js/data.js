@@ -203,7 +203,8 @@ var dataInserter = {
                         reqArea: reqArea,
                         reqMemo: reqMemo,
                         reqSexflag: reqSexflag,
-                        adget: params.id
+                        adget: params.id,
+                        IdKey: params.idkey
                     }
                 ]
 
